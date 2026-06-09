@@ -1,0 +1,122 @@
+import type { Metadata } from "next";
+import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
+
+export const metadata: Metadata = {
+  metadataBase: new URL("https://www.dammamairporttaxi.com"),
+  title: {
+    default: "Dammam Airport Taxi | Premium GCC Transfer & Chauffeur Services",
+    template: "%s | Dammam Airport Taxi",
+  },
+  description: "Book premium airport taxis & GCC border crossing transfers from Dammam King Fahd International Airport (DMM) to Bahrain, Kuwait, UAE, Riyadh, Khobar, Jubail. 24/7 VIP Chauffeur.",
+  keywords: ["dammam airport taxi", "taxi to bahrain", "dammam to bahrain taxi", "dammam to kuwait taxi", "dammam to riyadh taxi", "dammam airport to khobar", "gcc border crossing taxi", "dammam chauffeur service"],
+  alternates: {
+    canonical: "https://www.dammamairporttaxi.com",
+  },
+  openGraph: {
+    siteName: "Dammam Airport Taxi",
+    locale: "en_US",
+    type: "website",
+    title: "Dammam Airport Taxi | Premium GCC Transfer & Chauffeur Services",
+    description: "Book premium airport taxis & GCC border crossing transfers from Dammam to Bahrain, Kuwait, UAE, Riyadh & more. 24/7 VIP Chauffeur.",
+    url: "https://www.dammamairporttaxi.com",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dammam Airport Taxi - Premium GCC Transfer Service",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dammam Airport Taxi | Premium GCC Transfer & Chauffeur Services",
+    description: "Book premium airport taxis & GCC border crossing transfers from Dammam. 24/7 VIP Chauffeur.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  // Global LocalBusiness schema markup
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Dammam Airport Taxi",
+    "url": "https://www.dammamairporttaxi.com",
+    "logo": "https://www.dammamairporttaxi.com/logo.png",
+    "image": "https://www.dammamairporttaxi.com/hero-bg.jpg",
+    "description": "Premium airport transfers and cross-border taxi services from Dammam to Bahrain, Kuwait, Qatar, Riyadh, and Eastern Province cities.",
+    "telephone": "+966501234567",
+    "priceRange": "$$",
+    "areaServed": [
+      {
+        "@type": "AdministrativeArea",
+        "name": "Dammam"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Bahrain"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Eastern Province"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Kuwait"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Riyadh"
+      }
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Dammam Airport Taxi Service",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "King Fahd International Airport Road",
+        "addressLocality": "Dammam",
+        "addressRegion": "Eastern Province",
+        "postalCode": "31141",
+        "addressCountry": "SA"
+      }
+    }
+  };
+
+  return (
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+        />
+      </head>
+      <body>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
+    </html>
+  );
+}
+

@@ -1,0 +1,1259 @@
+export interface RouteFaq {
+  q: string;
+  a: string;
+}
+
+export interface RouteDetail {
+  slug: string;
+  name: { en: string; ar: string };
+  metaTitle: { en: string; ar: string };
+  metaDescription: { en: string; ar: string };
+  distance: { en: string; ar: string };
+  duration: { en: string; ar: string };
+  basePrice: number; // For Camry
+  pricing: {
+    sedan: number;
+    suv: number;
+    van: number;
+    luxury: number;
+  };
+  mapUrl: string;
+  intro: { en: string; ar: string };
+  contentSections: {
+    title: { en: string; ar: string };
+    body: { en: string[]; ar: string[] };
+  }[];
+  faqs: { en: RouteFaq[]; ar: RouteFaq[] };
+}
+
+export const routesData: RouteDetail[] = [
+  {
+    slug: "dammam-to-bahrain",
+    name: { en: "Dammam to Bahrain Taxi", ar: "تاكسي من الدمام إلى البحرين" },
+    metaTitle: { 
+      en: "Dammam to Bahrain Taxi | Direct Airport & City Transfers", 
+      ar: "تاكسي من الدمام إلى البحرين | توصيل مباشر من المطار والمدينة" 
+    },
+    metaDescription: {
+      en: "Book a premium taxi from Dammam or DMM Airport to Manama, Bahrain. Cross King Fahd Causeway smoothly in GMC Yukon SUVs or Sedan Camry with professional drivers.",
+      ar: "احجز تاكسي فاخر من الدمام أو مطار الملك فهد إلى المنامة البحرين. اعبر جسر الملك فهد بسلاسة مع سيارات جي إم سي يوكن أو كامري وسائقين محترفين."
+    },
+    distance: { en: "85 km", ar: "٨٥ كم" },
+    duration: { en: "1.5 - 2 Hours", ar: "ساعة ونصف إلى ساعتين" },
+    basePrice: 350,
+    pricing: { sedan: 350, suv: 600, van: 750, luxury: 1500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d458022.0298075775!2d49.9868779!3d26.2575293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49faf2ef0b77b1%3A0xe54dbe5c2763f0bb!2sKing%20Fahd%20Causeway!5e0!3m2!1sen!2ssa!4v1716500000000!5m2!1sen!2ssa",
+    intro: {
+      en: "Travel between Dammam and Bahrain seamlessly. Our Dammam to Bahrain taxi service offers professional cross-border transportation via the King Fahd Causeway with door-to-door comfort.",
+      ar: "سافر بين الدمام والبحرين بكل سهولة وأمان. نقدم خدمة تاكسي وتوصيل من الدمام إلى البحرين عبر جسر الملك فهد مع خدمة التوصيل من الباب إلى الباب."
+    },
+    contentSections: [
+      {
+        title: { en: "King Fahd Causeway Cross-Border Process", ar: "إجراءات العبور عبر جسر الملك فهد" },
+        body: {
+          en: [
+            "We handle all causeway toll fees, which are included in your fixed booking fare.",
+            "Please ensure you have a valid Passport, active Saudi Iqama / GCC National ID, and any necessary visas before starting the journey.",
+            "Our professional drivers are highly experienced with border checkpoints, customs lanes, and insurance verifications, saving you valuable travel time."
+          ],
+          ar: [
+            "نحن نتكفل بجميع رسوم بوابات عبور الجسر، وهي مشمولة بالكامل في قيمة رحلتك المحددة مسبقاً.",
+            "يرجى التأكد من حيازة جواز سفر ساري المفعول، إقامة سعودية سارية أو الهوية الوطنية لمواطني الخليج، وتأشيرة الدخول اللازمة قبل بدء الرحلة.",
+            "سائقونا المحترفون على دراية تامة بنقاط التفتيش الجمركية، وممرات الفحص، والتأمين، مما يوفر وقتك الثمين أثناء السفر."
+          ]
+        }
+      },
+      {
+        title: { en: "Convenient Dammam Airport (DMM) Pickups", ar: "استقبال مريح من مطار الدمام (DMM)" },
+        body: {
+          en: [
+            "Flying into King Fahd International Airport? Your driver will monitor your flight schedule and meet you at the arrivals gate holding a customized nameboard.",
+            "We offer a 60-minute complimentary waiting time from the moment your flight lands to ensure you clear customs stress-free.",
+            "Avoid long taxi lines and navigate the border immediately in a comfortable, pre-cooled vehicle."
+          ],
+          ar: [
+            "هل تصل رحلتك إلى مطار الملك فهد الدولي بالدمام؟ سيقوم سائقنا بمتابعة جدول رحلتك واستقبالك عند بوابة الوصول حاملاً لوحة باسمك.",
+            "نقدم ساعة انتظار مجانية من لحظة هبوط الطائرة لضمان إنهاء إجراءات حقائبك دون أي توتر أو عجلة.",
+            "تجنب طوابير الانتظار الطويلة في المطار، وابدأ رحلتك فوراً في سيارة مريحة ومكيفة بشكل ممتاز."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "What documents are required to cross the border to Bahrain?", a: "Passports must be valid for at least 6 months. GCC nationals can travel with their National ID cards. Expatriates require a valid Saudi exit-re-entry visa and a Bahrain eVisa or visa on arrival." },
+        { q: "Does the booking fare include causeway fees?", a: "Yes, our quoted price includes the King Fahd Causeway toll fee and Saudi-Bahrain bridge insurance." },
+        { q: "Can you drop me off at Bahrain International Airport (BAH)?", a: "Yes, we provide direct door-to-door transfer from Dammam directly to Bahrain Airport departures terminal." }
+      ],
+      ar: [
+        { q: "ما هي المستندات المطلوبة لعبور الحدود إلى البحرين؟", a: "يجب أن تكون جوازات السفر صالحة لمدة لا تقل عن 6 أشهر. يمكن لمواطني دول الخليج السفر ببطاقة الهوية الوطنية. المقيمون يحتاجون إلى تأشيرة خروج وعودة سعودية سارية وتأشيرة دخول للبحرين." },
+        { q: "هل يشمل السعر رسوم عبور الجسر؟", a: "نعم، يشمل السعر المقدر رسوم عبور جسر الملك فهد وتأمين جسر السعودية والبحرين." },
+        { q: "هل يمكن توصيلي مباشرة إلى مطار البحرين الدولي (BAH)؟", a: "نعم، نقدم خدمة التوصيل المباشر من الباب إلى الباب من أي مكان في الدمام إلى صالة المغادرة بمطار البحرين الدولي." }
+      ]
+    }
+  },
+  {
+    slug: "dammam-to-kuwait",
+    name: { en: "Dammam to Kuwait Taxi", ar: "تاكسي من الدمام إلى الكويت" },
+    metaTitle: { 
+      en: "Dammam to Kuwait Taxi | Cross-Border Chauffeur Service", 
+      ar: "تاكسي من الدمام إلى الكويت | توصيل دولي عبر الحدود" 
+    },
+    metaDescription: {
+      en: "Hire a direct private taxi from Dammam to Kuwait City. Travel safely with GCC permits, comfortable SUVs, and professional cross-border drivers.",
+      ar: "احجز تاكسي خاص مباشر من الدمام إلى مدينة الكويت. سافر بأمان مع سائقين ذوي خبرة وتراخيص عبور الحدود الخليجية وسيارات عائلية فاخرة."
+    },
+    distance: { en: "420 km", ar: "٤٢٠ كم" },
+    duration: { en: "4 - 4.5 Hours", ar: "٤ إلى ٤.٥ ساعات" },
+    basePrice: 1500,
+    pricing: { sedan: 1500, suv: 2200, van: 2600, luxury: 4500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1777265.8117769915!2d46.7329598!3d29.0884949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc5363fbeea6aa5%3A0xf70026e1074e2d40!2sKuwait!5e0!3m2!1sen!2ssa!4v1716500000001!5m2!1sen!2ssa",
+    intro: {
+      en: "Travel from Dammam to Kuwait in full comfort and style. Our premium intercity taxi service handles long highway miles safely, ensuring you reach Kuwait City refreshed.",
+      ar: "سافر من الدمام إلى الكويت براحة وأمان تامين. تغطي خدمة التاكسي الفاخرة بين المدن المسافات الطويلة بكفاءة عالية، مما يضمن وصولك إلى مدينة الكويت بنشاط وراحة."
+    },
+    contentSections: [
+      {
+        title: { en: "Long Distance Highway Travel Safety", ar: "أمان السفر لمسافات طويلة على الطرق السريعة" },
+        body: {
+          en: [
+            "Our GCC long-distance vehicles are fitted with active safety features, cruise controls, and pre-departure inspections.",
+            "Drivers are trained for highway safety, keeping speed limits and taking rest breaks if necessary for passenger comfort.",
+            "Water, soft drinks, and onboard high-speed Wi-Fi are provided to keep you connected throughout the 400+ km drive."
+          ],
+          ar: [
+            "سياراتنا المخصصة للمسافات الطويلة مجهزة بأنظمة أمان نشطة ومثبتات سرعة، وتخضع لفحص شامل قبل الانطلاق.",
+            "سائقونا مدربون بكفاءة للالتزام بحدود السرعة وقواعد السلامة على الطرق السريعة، مع إمكانية التوقف للاستراحة حسب رغبة الركاب.",
+            "نوفر مياه باردة ومرطبات وإنترنت لاسلكي عالي السرعة لإبقائك على اتصال طوال الرحلة الطويلة التي تزيد عن 400 كم."
+          ]
+        }
+      },
+      {
+        title: { en: "Khafji Border Crossing Details", ar: "تفاصيل عبور منفذ الخفجي الحدودي" },
+        body: {
+          en: [
+            "We pass through the Khafji border terminal, providing swift customs clearance for tourist and business travel.",
+            "Make sure your passport is valid for at least 6 months and you check the Kuwait visa requirements according to your nationality.",
+            "We coordinate border-to-border or direct address drops anywhere in Kuwait."
+          ],
+          ar: [
+            "نعبر من خلال منفذ الخفجي الحدودي، مع توفير تيسير سريع لإجراءات الجوازات والجمارك للمسافرين لغرض السياحة أو العمل.",
+            "يرجى التأكد من صلاحية جواز سفرك لمدة لا تقل عن 6 أشهر ومراجعة شروط تأشيرة دخول الكويت حسب جنسيتك.",
+            "نحن ننسق التوصيل المباشر إلى أي عنوان أو فندق داخل دولة الكويت."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How long is the border clearance at Khafji?", a: "On normal days, border customs take 20 to 40 minutes. On GCC holidays, waiting times may extend." },
+        { q: "Do you offer return taxi service from Kuwait to Dammam?", a: "Yes, we offer discounted round-trip bookings. Contact us on WhatsApp to lock in your return dates." }
+      ],
+      ar: [
+        { q: "كم تستغرق إجراءات التخليص في منفذ الخفجي؟", a: "في الأيام العادية، تستغرق إجراءات الجوازات والجمارك بين 20 إلى 40 دقيقة. وفي الإجازات الرسمية قد يزداد وقت الانتظار." },
+        { q: "هل توفرون خدمة تاكسي عكسية من الكويت إلى الدمام؟", a: "نعم، نقدم خصومات ممتازة لحجوزات الذهاب والعودة معاً. تواصل معنا على الواتساب لتأكيد مواعيد عودتك." }
+      ]
+    }
+  },
+  {
+    slug: "dammam-to-uae",
+    name: { en: "Dammam to UAE Taxi", ar: "تاكسي من الدمام إلى الإمارات" },
+    metaTitle: { 
+      en: "Dammam to UAE Taxi | Luxury Inter-GCC Transfers", 
+      ar: "تاكسي من الدمام إلى الإمارات | توصيل فاخر بين دول الخليج" 
+    },
+    metaDescription: {
+      en: "Premium direct taxi service from Dammam Airport to Abu Dhabi and Dubai. Luxury VIP GMC Yukon SUVs and professional chauffeurs for GCC travel.",
+      ar: "خدمة تاكسي مميزة ومباشرة من مطار الدمام إلى أبوظبي ودبي. سيارات جي إم سي يوكن وسائقين محترفين للسفر البري الفاخر بين دول الخليج."
+    },
+    distance: { en: "950 km", ar: "٩٥٠ كم" },
+    duration: { en: "9 - 10 Hours", ar: "٩ إلى ١٠ ساعات" },
+    basePrice: 3500,
+    pricing: { sedan: 3500, suv: 4800, van: 5500, luxury: 8500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744955.5135118742!2d50.8407886!3d23.4716766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1cd4e1f%3A0x2cb0507d89b301fb!2sUnited%20Arab%20Emirates!5e0!3m2!1sen!2ssa!4v1716500000002!5m2!1sen!2ssa",
+    intro: {
+      en: "Connect Dammam with Abu Dhabi, Dubai, or Sharjah via our elite chauffeured transfers. Avoid airport queues and flight restrictions with a private, luxury overland ride.",
+      ar: "اربط الدمام بأبوظبي، دبي، أو الشارقة من خلال خدمات النقل الفاخرة التي نقدمها. تجنب قيود المطارات ومشاكل الوزن برحلة برية خاصة ومريحة بالكامل."
+    },
+    contentSections: [
+      {
+        title: { en: "Comfortable Overland Journey to UAE", ar: "رحلة برية مريحة وراقية إلى الإمارات" },
+        body: {
+          en: [
+            "With a distance of nearly 950 km, we prioritize ultimate comfort. Our flagship VIP SUVs (GMC Yukon Denali) feature reclining leather seating and multi-zone climate control.",
+            "We plan regular halts at hygienic highway service stations for dining and relaxation.",
+            "Complimentary refreshments, snacks, and device-charging docks are provided for all passengers."
+          ],
+          ar: [
+            "مع مسافة تقارب 950 كم، نضع راحتك القصوى في المقام الأول. سياراتنا الفاخرة (GMC Yukon Denali) تتميز بمقاعد جلدية مريحة ومكيف هواء متعدد المناطق.",
+            "نحن نخطط للتوقف بانتظام في محطات خدمات نظيفة على الطريق السريع لتناول الطعام والراحة.",
+            "نوفر مرطبات مجانية، تسالي، ومنافذ شحن الأجهزة الذكية لجميع الركاب لضمان رحلة ممتعة."
+          ]
+        }
+      },
+      {
+        title: { en: "Border Crossings (Al Batha / Ghuwaifat)", ar: "عبور الحدود (منفذ البطحاء / الغويفات)" },
+        body: {
+          en: [
+            "We cross through the Saudi Al Batha border checkpoint to the UAE Ghuwaifat border checkpoint.",
+            "Our drivers hold valid cross-border permits and auto insurance for both KSA and UAE roads.",
+            "Ensure all visa requirements for entering the UAE and re-entering Saudi Arabia are arranged prior to departure."
+          ],
+          ar: [
+            "نعبر عبر منفذ البطحاء السعودي وصولاً إلى منفذ الغويفات الإماراتي الجمركي.",
+            "سائقونا حاصلون على تصاريح عبور الحدود سارية المفعول وتأمين سيارات معتمد للطرق السعودية والإماراتية.",
+            "يرجى التأكد من استخراج تأشيرة دخول دولة الإمارات وتأشيرة العودة للمملكة مسبقاً قبل بدء الرحلة."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "Can we book a direct transfer from Dammam to Dubai?", a: "Yes, we provide door-to-door transportation from Dammam directly to any hotel or residence in Dubai or Abu Dhabi." },
+        { q: "Is travel health insurance required for border crossing?", a: "Yes, you must hold valid health insurance that covers KSA and UAE territories during travel." }
+      ],
+      ar: [
+        { q: "هل يمكننا حجز رحلة مباشرة من الدمام إلى دبي؟", a: "نعم، نقدم خدمة توصيل مباشرة من الباب إلى الباب من أي مكان في الدمام إلى أي فندق أو سكن في دبي أو أبوظبي." },
+        { q: "هل يلزم تأمين صحي للسفر لعبور الحدود؟", a: "نعم، يجب أن يحمل المسافر تأمين سفر صحي يغطي أراضي المملكة والإمارات أثناء السفر." }
+      ]
+    }
+  },
+  {
+    slug: "dammam-to-riyadh",
+    name: { en: "Dammam to Riyadh Taxi", ar: "تاكسي من الدمام إلى الرياض" },
+    metaTitle: { 
+      en: "Dammam to Riyadh Taxi | Safe Intercity Highway Transfers", 
+      ar: "تاكسي من الدمام إلى الرياض | توصيل بين المدن سريع وآمن" 
+    },
+    metaDescription: {
+      en: "Book a fast, private taxi from Dammam to Riyadh. Affordable fixed rates, experienced highway drivers, and premium comfortable cars.",
+      ar: "احجز تاكسي خاص وسريع من الدمام إلى الرياض. أسعار ثابتة ومناسبة، وسائقون ذوو خبرة على الطرق السريعة وسيارات حديثة ومريحة."
+    },
+    distance: { en: "400 km", ar: "٤٠٠ كم" },
+    duration: { en: "3.5 - 4 Hours", ar: "٣.٥ إلى ٤ ساعات" },
+    basePrice: 900,
+    pricing: { sedan: 900, suv: 1400, van: 1800, luxury: 3500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813470.9329705977!2d46.49265215!3d24.7135517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489783%3A0x861e1de44327a40b!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1716500000003!5m2!1sen!2ssa",
+    intro: {
+      en: "Need to commute between Saudi Arabia's Eastern Province and the capital city? Our Dammam to Riyadh taxi service provides a reliable, flat-rate highway transfer.",
+      ar: "هل تحتاج للتنقل بين المنطقة الشرقية والعاصمة الرياض؟ تقدم خدمة التاكسي من الدمام إلى الرياض توصيلاً آمناً وموثوقاً بأسعار ثابتة ومدروسة."
+    },
+    contentSections: [
+      {
+        title: { en: "Fast & Flexible Business Commutes", ar: "تنقل سريع ومرن لرجال الأعمال والشركات" },
+        body: {
+          en: [
+            "We offer direct transportation from Dammam Airport (DMM) straight to Riyadh business districts, hotels, or Riyadh Airport (RUH).",
+            "Work comfortably on the road with our high-speed Wi-Fi, USB chargers, and comfortable seating, ideal for corporate executives.",
+            "Avoid domestic flight check-in queues, luggage limits, and airport delays."
+          ],
+          ar: [
+            "نقدم توصيلاً مباشراً من مطار الدمام (DMM) إلى مراكز المال والأعمال في الرياض، الفنادق، أو مطار الملك خالد الدولي (RUH).",
+            "أنجز أعمالك أثناء الطريق بفضل الإنترنت اللاسلكي السريع، شواحن الهواتف، والمقاعد المريحة للغاية، وهي الميزة المفضلة لرجال الأعمال.",
+            "تجنب طوابير الرحلات الداخلية، وقيود وزن الأمتعة، والتأخر المعتاد في صالات المطارات."
+          ]
+        }
+      },
+      {
+        title: { en: "Professional Highway Fleet", ar: "أسطول احترافي مخصص للطرق السريعة" },
+        body: {
+          en: [
+            "We operate Toyota Camry (Sedan) for budget trips and GMC Yukon/Suburban for maximum passenger safety and highway stability.",
+            "Our vehicles undergo rigid routine maintenance, tire checks, and AC performance optimization for hot desert climates."
+          ],
+          ar: [
+            "نحن نشغّل سيارات تويوتا كامري (سيدان) للرحلات الاقتصادية، وجي إم سي يوكن / سوبربان لتوفير أقصى درجات الأمان والثبات على الطريق السريع.",
+            "تخضع سياراتنا لصيانة دورية صارمة وفحص للإطارات والتكييف للتكيف مع حرارة الصيف الشديدة."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "What is the price of a taxi from Dammam Airport to Riyadh?", a: "Our prices start from 900 SAR for a Sedan Camry. Luxury options like SUV or Yukon cost 1400 SAR." },
+        { q: "Can we request a return trip on the same day?", a: "Yes, we offer special wait-and-return discounts for business trips. Speak with our WhatsApp agent." }
+      ],
+      ar: [
+        { q: "ما هو سعر التاكسي من مطار الدمام إلى الرياض؟", a: "تبدأ أسعارنا من ٩٠٠ ريال سعودي لسيارة كامري سيدان، وتكلف السيارات العائلية الفاخرة مثل اليوكن ١٤٠٠ ريال." },
+        { q: "هل يمكننا طلب رحلة عودة في نفس اليوم؟", a: "نعم، نقدم خصومات خاصة لرحلات الذهاب والعودة مع الانتظار لقطاع الأعمال. تواصل مع موظف خدمة العملاء بالواتساب." }
+      ]
+    }
+  },
+  {
+    slug: "dammam-airport-to-khobar",
+    name: { en: "Dammam Airport to Khobar", ar: "تاكسي من مطار الدمام إلى الخبر" },
+    metaTitle: { 
+      en: "Dammam Airport to Khobar Taxi | Fast Airport Pickups", 
+      ar: "تاكسي من مطار الدمام إلى الخبر | استقبال سريع من المطار" 
+    },
+    metaDescription: {
+      en: "Direct airport transfers from King Fahd International Airport (DMM) to Khobar city and hotels. Flat rates, meet & greet service, 24/7.",
+      ar: "خدمة توصيل مباشرة من مطار الملك فهد الدولي (DMM) إلى الخبر وفنادقها. أسعار ثابتة، استقبال عند الوصول، خدمة 24 ساعة."
+    },
+    distance: { en: "60 km", ar: "٦٠ كم" },
+    duration: { en: "45 Minutes", ar: "٤٥ دقيقة" },
+    basePrice: 150,
+    pricing: { sedan: 150, suv: 280, van: 320, luxury: 700 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114490.52843444458!2d50.1197779!3d26.2778749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e623a3d5483f%3A0xf639c0fa1a29910d!2sAl%20Khobar%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1716500000004!5m2!1sen!2ssa",
+    intro: {
+      en: "Arrive in Khobar quickly and stress-free. Our professional Dammam Airport to Khobar taxi service guarantees fixed pricing and professional chauffeurs waiting for your arrival.",
+      ar: "صل إلى الخبر بسرعة وراحة تامة. تضمن لك خدمة التاكسي من مطار الدمام إلى الخبر أسعاراً ثابتة وسائقين محترفين بانتظار وصولك في المطار."
+    },
+    contentSections: [
+      {
+        title: { en: "Flight Tracking & Meet & Greet", ar: "تتبع الرحلات الجوية والاستقبال في الصالة" },
+        body: {
+          en: [
+            "We track your flight number for any delays or early arrivals to ensure your driver is on time.",
+            "Your driver will be waiting at the arrival terminal gate with a nameplate, helping you carry your bags directly to the vehicle.",
+            "Save time and avoid peak airport queue surcharges with our pre-booked flat rate service."
+          ],
+          ar: [
+            "نقوم بتتبع رقم رحلتك الجوية لمعرفة أي تأخير أو وصول مبكر لضمان تواجد السائق في الوقت الدقيق.",
+            "سيتواجد سائقك عند بوابة صالة الوصول حاملاً لوحة باسمك، وسيقوم بمساعدتك في حمل الحقائب مباشرة إلى السيارة.",
+            "وفر وقتك وتجنب رسوم طوابير المطار الإضافية في أوقات الذروة من خلال خدمتنا ذات الأسعار الثابتة والطلب المسبق."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much does a taxi from Dammam Airport to Khobar cost?", a: "The price is 150 SAR for a Sedan Camry. For a premium GMC Yukon, it costs 280 SAR." },
+        { q: "Is the airport parking fee included in the price?", a: "Yes, all airport parking, toll fees, and VAT are fully included in the price quote." }
+      ],
+      ar: [
+        { q: "كم تبلغ تكلفة التاكسي من مطار الدمام إلى الخبر؟", a: "تبلغ التكلفة ١٥٠ ريالاً سعودياً لسيارة كامري سيدان، و٢٨٠ ريالاً لسيارة جي إم سي يوكن الفاخرة." },
+        { q: "هل يشمل السعر رسوم مواقف سيارات المطار؟", a: "نعم، جميع رسوم مواقف المطار، ورسوم الطرق، وضريبة القيمة المضافة مشمولة بالكامل في السعر." }
+      ]
+    }
+  },
+  {
+    slug: "dammam-airport-to-jubail",
+    name: { en: "Dammam Airport to Jubail", ar: "تاكسي من مطار الدمام إلى الجبيل" },
+    metaTitle: { 
+      en: "Dammam Airport to Jubail Taxi | Industrial Zone Transfers", 
+      ar: "تاكسي من مطار الدمام إلى الجبيل | توصيل المدن الصناعية" 
+    },
+    metaDescription: {
+      en: "Private chauffeured airport transfers from Dammam Airport (DMM) to Jubail Industrial City. Corporate bookings, modern fleet, and clean vehicles.",
+      ar: "خدمة توصيل مطار خاصة من مطار الدمام إلى مدينة الجبيل الصناعية. حجوزات شركات، أسطول حديث، وسيارات معقمة بالكامل."
+    },
+    distance: { en: "85 km", ar: "٨٥ كم" },
+    duration: { en: "55 Minutes", ar: "٥٥ دقيقة" },
+    basePrice: 200,
+    pricing: { sedan: 200, suv: 350, van: 400, luxury: 900 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114138.83597401736!2d49.5298099!3d26.96025215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e3523588265fa37%3A0xc3f8e77a28cf1bc0!2sAl%20Jubail%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1716500000005!5m2!1sen!2ssa",
+    intro: {
+      en: "Corporate and individual transfers to Jubail Industrial City. Our Dammam Airport to Jubail taxi service is the primary choice for Aramco/SABIC engineers and international consultants.",
+      ar: "خدمات نقل الأفراد والشركات إلى مدينة الجبيل الصناعية. تعد خدمة التاكسي من مطار الدمام إلى الجبيل الخيار الأول لمهندسي أرامكو/سابك والاستشاريين الدوليين."
+    },
+    contentSections: [
+      {
+        title: { en: "Corporate Transportation Specialists", ar: "متخصصون في نقل قطاع الشركات والأعمال" },
+        body: {
+          en: [
+            "We provide seamless invoice facilities for corporate accounts and digital payment receipts.",
+            "Punctual executive transfers from DMM Airport directly to Jubail Industrial Area 1, 2, and residential compounds.",
+            "Our drivers are familiar with security gate access requirements for major industrial sites."
+          ],
+          ar: [
+            "نحن نقدم تسهيلات سداد ممتازة لحسابات الشركات مع توفير فواتير رقمية وإيصالات معتمدة.",
+            "نقل تنفيذي دقيق من مطار الدمام مباشرة إلى الجبيل الصناعية الأولى والثانية والمجمعات السكنية.",
+            "سائقونا على دراية تامة بمتطلبات بوابات التصاريح الأمنية للمواقع الصناعية الكبرى."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "Do you offer corporate invoice packages?", a: "Yes, we support corporate monthly billing and flexible accounts. Get in touch with our team." },
+        { q: "Can we request a baby seat for family travel to Jubail?", a: "Yes, child seats are available and can be added to your booking for no extra charge." }
+      ],
+      ar: [
+        { q: "هل توفرون باقات فواتير شهرية للشركات؟", a: "نعم، نحن ندعم نظام الفوترة الشهرية للشركات وحسابات الدفع المرنة. تواصل مع فريق المبيعات." },
+        { q: "هل يمكن طلب مقعد طفل لرحلة عائلية إلى الجبيل؟", a: "نعم، مقاعد الأطفال متوفرة ويمكن إضافتها لطلب حجزك مجاناً." }
+      ]
+    }
+  },
+  {
+    slug: "dammam-airport-to-dhahran",
+    name: { en: "Dammam Airport to Dhahran", ar: "تاكسي من مطار الدمام إلى الظهران" },
+    metaTitle: { 
+      en: "Dammam Airport to Dhahran Taxi | Aramco HQ Transfers", 
+      ar: "تاكسي من مطار الدمام إلى الظهران | توصيل أرامكو والجامعة" 
+    },
+    metaDescription: {
+      en: "Book a premium airport transfer from Dammam Airport (DMM) to Dhahran, Aramco Camp, and KFUPM. Insured vehicles, elite drivers, flat rates.",
+      ar: "احجز توصيل مطار متميز من مطار الدمام إلى الظهران، سكن أرامكو، وجامعة الملك فهد للبترول والمعادن. سيارات مؤمنة وسائقون نخبة."
+    },
+    distance: { en: "55 km", ar: "٥٥ كم" },
+    duration: { en: "40 Minutes", ar: "٤٠ دقيقة" },
+    basePrice: 150,
+    pricing: { sedan: 150, suv: 280, van: 320, luxury: 700 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114511.96860010996!2d50.10667315!3d26.2625298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e5d41577ffdb%3A0xe5a1768407421110!2sDhahran%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1716500000006!5m2!1sen!2ssa",
+    intro: {
+      en: "Get a safe, premium transfer from Dammam Airport to Dhahran. Servicing Saudi Aramco residential quarters, King Fahd University (KFUPM), and all business towers.",
+      ar: "احصل على توصيل آمن وفاخر من مطار الدمام إلى الظهران. نخدم مجمعات سكن أرامكو السعودية، جامعة الملك فهد (KFUPM)، وجميع الأبراج المكتبية."
+    },
+    contentSections: [
+      {
+        title: { en: "Safe and Reliable Dhahran Travel", ar: "سفر آمن وموثوق إلى الظهران" },
+        body: {
+          en: [
+            "We provide standard and VIP services with full gate compliance checks.",
+            "All vehicles have active tracking (GPS) and are driven by professional, English-speaking chauffeurs.",
+            "Comfortable luxury SUVs are ideal for corporate visitors checking in at Aramco head offices."
+          ],
+          ar: [
+            "نحن نقدم خدمات قياسية و VIP متوافقة تماماً مع تصاريح بوابات الدخول.",
+            "جميع السيارات مزودة بتتبع نشط (GPS) ويقودها سائقون محترفون يتحدثون الإنجليزية والعربية.",
+            "سيارات الدفع الرباعي الفاخرة والمريحة هي الخيار الأمثل لزوار الشركات القادمين إلى مكاتب أرامكو الرئيسية."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "Can your drivers enter Saudi Aramco Camp?", a: "Our drivers can drop off passengers at the designated gates. For inside access, passengers should coordinate with gate security." }
+      ],
+      ar: [
+        { q: "هل يمكن لسائقيكم الدخول إلى سكن أرامكو السعودية؟", a: "يمكن لسائقينا التوصيل إلى البوابات المحددة. وللدخول إلى الداخل، يجب على المسافرين التنسيق المسبق للحصول على تصريح أمني." }
+      ]
+    }
+  },
+  {
+    slug: "dammam-airport-to-hofuf",
+    name: { en: "Dammam Airport to Hofuf (Al-Ahsa)", ar: "تاكسي من مطار الدمام إلى الهفوف" },
+    metaTitle: { 
+      en: "Dammam Airport to Hofuf Taxi | Al-Ahsa Intercity Transfers", 
+      ar: "تاكسي من مطار الدمام إلى الهفوف | توصيل الأحساء بين المدن" 
+    },
+    metaDescription: {
+      en: "Direct private taxi from DMM Airport to Hofuf and Al-Ahsa region. Safe highway travel, competitive flat rates, and professional drivers.",
+      ar: "تاكسي خاص مباشر من مطار الدمام إلى الهفوف ومنطقة الأحساء. سفر آمن على الطريق السريع، أسعار منافسة وسائقون محترفون."
+    },
+    distance: { en: "160 km", ar: "١٦٠ كم" },
+    duration: { en: "1.5 - 2 Hours", ar: "ساعة ونصف إلى ساعتين" },
+    basePrice: 400,
+    pricing: { sedan: 400, suv: 650, van: 800, luxury: 1600 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115160.05436665725!2d49.5298099!3d25.37890985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e37f84742a03cfb%3A0xc3f8e77a28cf1bc1!2sHofuf%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1716500000007!5m2!1sen!2ssa",
+    intro: {
+      en: "Enjoy a smooth, worry-free highway drive from Dammam Airport to Hofuf (Al-Ahsa). We provide reliable intercity taxi services for business travellers and families alike.",
+      ar: "استمتع برحلة سلسة وخالية من المتاعب على الطريق السريع من مطار الدمام إلى الهفوف (الأحساء). نقدم خدمات نقل موثوقة بين المدن لرجال الأعمال والعائلات."
+    },
+    contentSections: [
+      {
+        title: { en: "High-Quality Intercity Transfers", ar: "توصيل عالي الجودة بين المدن" },
+        body: {
+          en: [
+            "The road to Al-Ahsa runs through 160 km of desert highway. Our cars are selected for high stability and powerful AC.",
+            "Punctual and prompt pickups with luggage assistance.",
+            "Fixed rates are locked in at booking, protecting you from meter-tampering or surcharges."
+          ],
+          ar: [
+            "الطريق إلى الأحساء يمتد لـ 160 كم من الطريق السريع الصحراوي. تم اختيار سياراتنا لتوفير أقصى درجات الثبات ونظام تكييف قوي.",
+            "استقبال دقيق ومواعيد منضبطة مع المساعدة الكاملة في حمل الحقائب والأمتعة.",
+            "الأسعار الثابتة يتم تأكيدها عند الحجز، مما يحميك من تلاعب عدادات الأجرة أو الزيادات المفاجئة."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "What is the price from DMM Airport to Hofuf?", a: "It is 400 SAR for a Sedan Camry and 650 SAR for a GMC Yukon SUV." }
+      ],
+      ar: [
+        { q: "ما هو السعر من مطار الدمام إلى الهفوف؟", a: "تبلغ التكلفة ٤٠٠ ريال لسيارة كامري سيدان، و٦٥٠ ريالاً لسيارة جي إم سي يوكن العائلية." }
+      ]
+    }
+  },
+  {
+    slug: "dammam-airport-to-qatar-border",
+    name: { en: "Dammam Airport to Qatar Border", ar: "تاكسي من مطار الدمام إلى حدود قطر" },
+    metaTitle: { 
+      en: "Dammam Airport to Qatar Border Taxi | Salwa Border Transfers", 
+      ar: "تاكسي من مطار الدمام إلى حدود قطر | منفذ سلوى الحدودي" 
+    },
+    metaDescription: {
+      en: "Private taxi transfers from Dammam Airport (DMM) to the Saudi-Qatar Salwa border. Quick customs clearance support, reliable premium vehicles.",
+      ar: "توصيل تاكسي خاص من مطار الدمام إلى منفذ سلوى الحدودي بين السعودية وقطر. دعم التخليص السريع وسيارات حديثة وموثوقة."
+    },
+    distance: { en: "310 km", ar: "٣١٠ كم" },
+    duration: { en: "3 Hours", ar: "٣ ساعات" },
+    basePrice: 1000,
+    pricing: { sedan: 1000, suv: 1600, van: 2000, luxury: 3800 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115682.909062325!2d50.77196025!3d24.96025215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e476fb8a2a03cfb%3A0xc3f8e77a28cf1bc2!2sSalwa%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1716500000008!5m2!1sen!2ssa",
+    intro: {
+      en: "Connecting Dammam Airport to the Salwa border terminal for entry into Qatar. We provide premium highway rides driven by experienced cross-border chauffeurs.",
+      ar: "نربط مطار الدمام بمنفذ سلوى الحدودي للدخول إلى دولة قطر. نوفر رحلات برية متميزة يقودها سائقون ذوو خبرة واسعة في الطرق الحدودية."
+    },
+    contentSections: [
+      {
+        title: { en: "Salwa Checkpoint Pickups and Drops", ar: "التوصيل والاستقبال في منفذ سلوى" },
+        body: {
+          en: [
+            "We offer direct drops at the Salwa border gate where passengers can clear Saudi customs and transfer into Qatar.",
+            "Bilingual drivers are available to assist with luggage and provide navigation advice for border check terminals.",
+            "Water, high-speed Wi-Fi, and absolute passenger comfort are guaranteed."
+          ],
+          ar: [
+            "نقدم خدمة التوصيل المباشر إلى بوابة منفذ سلوى حيث يمكن للركاب إنهاء إجراءات الجمارك السعودية والعبور لقطر.",
+            "سائقون يتحدثون لغتين متوفرون لمساعدتك في الأمتعة وتقديم التوجيهات حول ممرات الفحص في المنفذ.",
+            "نضمن توفير المياه الباردة، الإنترنت اللاسلكي عالي السرعة، والراحة التامة للمسافرين."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "Do you cross inside Doha, Qatar?", a: "Currently, our standard service transfers you directly to the Saudi side of the Salwa border. For direct cross-border drops into Doha, please contact our support team on WhatsApp to confirm custom permits." }
+      ],
+      ar: [
+        { q: "هل تدخل سياراتكم إلى الدوحة بقطر؟", a: "في الوقت الحالي، تنقلك خدمتنا القياسية إلى الجانب السعودي من منفذ سلوى. للتوصيل المباشر داخل الدوحة، يرجى التواصل مع فريق الدعم عبر الواتساب لتأكيد توفر تصاريح العبور الكاملة." }
+      ]
+    }
+  },
+
+  // ─── NEW ROUTES ───────────────────────────────────────────────
+
+  {
+    slug: "dammam-to-doha",
+    name: { en: "Dammam to Doha Taxi", ar: "تاكسي من الدمام إلى الدوحة" },
+    metaTitle: {
+      en: "Dammam to Doha Taxi | Direct Qatar City & Airport Transfer",
+      ar: "تاكسي من الدمام إلى الدوحة | توصيل مباشر لمدينة قطر ومطار حمد"
+    },
+    metaDescription: {
+      en: "Book a direct private taxi from Dammam to Doha, Qatar. Door-to-door service to Souq Waqif, Pearl Qatar, Lusail, and Hamad International Airport (DOH). Cross Salwa border with licensed drivers.",
+      ar: "احجز تاكسي خاص مباشر من الدمام إلى الدوحة قطر. توصيل من الباب إلى الباب لسوق واقف، اللؤلؤة، لوسيل، ومطار حمد الدولي. عبور منفذ سلوى مع سائقين مرخصين."
+    },
+    distance: { en: "400 km", ar: "٤٠٠ كم" },
+    duration: { en: "5 - 6 Hours", ar: "٥ إلى ٦ ساعات" },
+    basePrice: 1400,
+    pricing: { sedan: 1400, suv: 2200, van: 2800, luxury: 5500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924927.0!2d51.1839!3d25.2107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c534ffdce87f%3A0x1a7c6f9e6f5d4f0a!2sDoha%20Qatar!5e0!3m2!1sen!2ssa!4v1717000000010!5m2!1sen!2ssa",
+    intro: {
+      en: "Travel direct from Dammam to Doha, Qatar's spectacular capital. Our private taxi crosses the Salwa–Abu Samra border and delivers you door-to-door to Souq Waqif, The Pearl Qatar, Lusail City, Museum of Islamic Art, or Hamad International Airport (DOH).",
+      ar: "سافر مباشرة من الدمام إلى الدوحة، العاصمة القطرية الرائعة. يعبر تاكسينا الخاص منفذ سلوى-أبو سمرة ويوصلك من الباب إلى الباب إلى سوق واقف، اللؤلؤة، مدينة لوسيل، متحف الفن الإسلامي، أو مطار حمد الدولي."
+    },
+    contentSections: [
+      {
+        title: { en: "Doha Tourist Destinations & City Transfers", ar: "مواقع الدوحة السياحية والتوصيل داخل المدينة" },
+        body: {
+          en: [
+            "Doha is one of the Gulf's fastest-growing tourist destinations, home to Souq Waqif (the restored heritage market), Museum of Islamic Art designed by I.M. Pei on the Corniche, The Pearl Qatar (a luxury man-made island with designer boutiques and fine dining), Katara Cultural Village, and the futuristic Lusail City — venue of the 2022 FIFA World Cup Final.",
+            "Business travellers are delivered to the Qatar Financial Centre, West Bay business district, Msheireb Downtown Doha, or the QNCC Qatar National Convention Centre.",
+            "We also offer direct airport-to-airport transfers from King Fahd International Airport (DMM) to Hamad International Airport (DOH) — rated the world's best airport by Skytrax 2024."
+          ],
+          ar: [
+            "الدوحة من أسرع وجهات السياحة الخليجية نمواً، وتضم سوق واقف (السوق التراثي المرمم)، متحف الفن الإسلامي بتصميم آي إم بي على الكورنيش، اللؤلؤة القطرية (جزيرة اصطناعية فاخرة بمحلات المصممين والمطاعم الراقية)، قرية كتارا الثقافية، ومدينة لوسيل المستقبلية — موقع نهائي كأس العالم 2022.",
+            "يُوصل رجال الأعمال إلى مركز قطر المالي، منطقة الخليج الغربي التجارية، مشيرب داون تاون الدوحة، أو المركز الوطني للمؤتمرات QNCC.",
+            "نقدم أيضاً توصيلاً مباشراً من مطار الملك فهد الدولي (DMM) إلى مطار حمد الدولي (DOH) — صنّفه سكايتراكس أفضل مطار في العالم لعام 2024."
+          ]
+        }
+      },
+      {
+        title: { en: "Salwa–Abu Samra Border Crossing Process", ar: "إجراءات عبور منفذ سلوى – أبو سمرة" },
+        body: {
+          en: [
+            "The Salwa (Saudi) – Abu Samra (Qatar) land border is the only road crossing between Saudi Arabia and Qatar. Saudi-Qatar diplomatic relations were fully restored in January 2021 and the crossing operates 24 hours.",
+            "Required documents: valid passport (minimum 6 months validity), active Exit/Re-Entry visa for Saudi residents, and a Qatar entry visa — many nationalities receive a visa on arrival or via the Hayya digital platform.",
+            "Our drivers hold valid Saudi-Qatar commercial transport permits and guide you through both border posts efficiently, keeping waiting time to a minimum."
+          ],
+          ar: [
+            "منفذ سلوى (السعودية) – أبو سمرة (قطر) هو المعبر البري الوحيد بين المملكة العربية السعودية وقطر. استُعيدت العلاقات الدبلوماسية بالكامل في يناير 2021 والمنفذ يعمل ٢٤ ساعة.",
+            "المستندات المطلوبة: جواز سفر ساري (٦ أشهر على الأقل)، تأشيرة خروج وعودة سارية للمقيمين، وتأشيرة دخول قطر — تتوفر تأشيرة عند الوصول لكثير من الجنسيات أو عبر منصة Hayya الرقمية.",
+            "سائقونا يحملون تصاريح نقل تجاري سعودية-قطرية ويرشدونك عبر المنفذين بكفاءة مع تقليل وقت الانتظار."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Doha?", a: "Dammam to Doha taxi starts from 1,400 SAR for a Toyota Camry Sedan and 2,200 SAR for a GMC Yukon SUV. All prices include Salwa border fees and road tolls." },
+        { q: "How long is the drive from Dammam to Doha?", a: "Approximately 5 to 6 hours including Salwa border clearance (30–60 minutes on normal days). Total driving distance is around 400 km." },
+        { q: "Do you drop off at Hamad International Airport (DOH)?", a: "Yes. We offer direct door-to-door transfers from DMM Airport to Hamad International Airport (DOH) in Doha, and the reverse route as well." },
+        { q: "Which tourist spots in Doha can you take us to?", a: "We deliver to all Doha attractions including Souq Waqif, Museum of Islamic Art, The Pearl Qatar, Katara Cultural Village, Lusail City, Msheireb Downtown, West Bay, and all major Doha hotels." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى الدوحة؟", a: "يبدأ من ١٤٠٠ ريال للكامري و٢٢٠٠ ريال لليوكن. تشمل جميع الأسعار رسوم منفذ سلوى والطرق." },
+        { q: "كم تستغرق الرحلة من الدمام إلى الدوحة؟", a: "حوالي ٥ إلى ٦ ساعات تشمل التخليص على منفذ سلوى (٣٠-٦٠ دقيقة). مسافة القيادة حوالي ٤٠٠ كم." },
+        { q: "هل توصلون إلى مطار حمد الدولي (DOH)؟", a: "نعم، نقدم توصيلاً مباشراً من مطار الدمام إلى مطار حمد الدولي بالدوحة وبالعكس." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-abu-dhabi",
+    name: { en: "Dammam to Abu Dhabi Taxi", ar: "تاكسي من الدمام إلى أبوظبي" },
+    metaTitle: {
+      en: "Dammam to Abu Dhabi Taxi | Sheikh Zayed Mosque & AUH Airport",
+      ar: "تاكسي من الدمام إلى أبوظبي | مسجد الشيخ زايد ومطار أبوظبي"
+    },
+    metaDescription: {
+      en: "Direct private taxi from Dammam to Abu Dhabi — Sheikh Zayed Grand Mosque, Yas Island, Ferrari World, Louvre Abu Dhabi, and Abu Dhabi International Airport (AUH). Luxury SUV & VIP options.",
+      ar: "تاكسي خاص مباشر من الدمام إلى أبوظبي — مسجد الشيخ زايد الكبير، جزيرة ياس، فيراري وورلد، متحف اللوفر، ومطار أبوظبي الدولي. خيارات SUV وVIP فاخرة."
+    },
+    distance: { en: "870 km", ar: "٨٧٠ كم" },
+    duration: { en: "8.5 - 9.5 Hours", ar: "٨.٥ إلى ٩.٥ ساعات" },
+    basePrice: 3200,
+    pricing: { sedan: 3200, suv: 4500, van: 5200, luxury: 8000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924927.0!2d54.3773!3d24.4539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1cd4e1b%3A0x2cb0507d89b301fc!2sAbu%20Dhabi%20UAE!5e0!3m2!1sen!2ssa!4v1717000000011!5m2!1sen!2ssa",
+    intro: {
+      en: "Travel from Dammam to Abu Dhabi, UAE's majestic capital. Visit the Sheikh Zayed Grand Mosque, Yas Island theme parks, Louvre Abu Dhabi, and the iconic Corniche — all accessible by our premium cross-border taxi via the Al Batha-Ghuwaifat border.",
+      ar: "سافر من الدمام إلى أبوظبي، العاصمة الإماراتية الشامخة. زر مسجد الشيخ زايد الكبير، حدائق جزيرة ياس، متحف اللوفر أبوظبي، والكورنيش الأيقوني — بتاكسينا المتميز عبر منفذ البطحاء-الغويفات."
+    },
+    contentSections: [
+      {
+        title: { en: "Abu Dhabi Tourist Attractions & Landmarks", ar: "معالم ومواقع أبوظبي السياحية" },
+        body: {
+          en: [
+            "Abu Dhabi is home to some of the world's most stunning landmarks. The Sheikh Zayed Grand Mosque — one of the largest mosques globally — welcomes visitors of all faiths. Yas Island houses Ferrari World Abu Dhabi (world's fastest roller coaster), Yas Waterworld, and Yas Marina Circuit (Formula 1 Grand Prix venue).",
+            "Cultural highlights include the Louvre Abu Dhabi designed by Jean Nouvel, the Qasr Al Hosn fort (Abu Dhabi's oldest building), and the Mangrove National Park. The vibrant Abu Dhabi Corniche stretches 8 km along the Arabian Gulf waterfront.",
+            "For business travellers, we deliver to Abu Dhabi International Airport (AUH), Abu Dhabi Global Market (ADGM) on Al Maryah Island, ADNOC headquarters, Khalifa City, and all major business hotels."
+          ],
+          ar: [
+            "أبوظبي موطن لبعض أبرز المعالم في العالم. مسجد الشيخ زايد الكبير — أحد أكبر المساجد عالمياً — يرحب بالزوار من جميع الأديان. تضم جزيرة ياس فيراري وورلد (أسرع خطوط الملاهي في العالم)، ياس ووترورلد، وحلبة ياس مارينا (سباق الفورمولا 1).",
+            "من المعالم الثقافية: متحف اللوفر أبوظبي بتصميم جان نوفيل، قصر الحصن (أقدم مبنى في أبوظبي)، والمنتزه الوطني للقرم. يمتد كورنيش أبوظبي 8 كم على الواجهة البحرية.",
+            "لرجال الأعمال، نوصل إلى مطار أبوظبي الدولي (AUH)، سوق أبوظبي العالمي في جزيرة المارية، مقر أدنوك، مدينة خليفة، وجميع فنادق الأعمال الكبرى."
+          ]
+        }
+      },
+      {
+        title: { en: "Al Batha / Ghuwaifat Border Crossing to Abu Dhabi", ar: "عبور منفذ البطحاء / الغويفات إلى أبوظبي" },
+        body: {
+          en: [
+            "We cross via the Al Batha border terminal on the Saudi side and Ghuwaifat on the UAE side — the main Saudi-UAE land crossing located in Abu Dhabi emirate.",
+            "After Ghuwaifat, Abu Dhabi city is approximately 250 km further on the E11 highway. Our vehicles are equipped for the full 870 km journey with GPS, multi-zone AC, USB charging, and complimentary Wi-Fi.",
+            "Required: passport valid 6+ months, UAE entry visa (visa-on-arrival for many nationalities), and valid Saudi Exit/Re-Entry visa for expatriate residents."
+          ],
+          ar: [
+            "نعبر عبر منفذ البطحاء السعودي والغويفات الإماراتي — المعبر البري الرئيسي بين السعودية والإمارات في إمارة أبوظبي.",
+            "بعد الغويفات، أبوظبي على بُعد حوالي ٢٥٠ كم على طريق E11. سياراتنا مجهزة لرحلة ٨٧٠ كم كاملة بنظام GPS وتكييف متعدد المناطق وشحن USB وواي فاي مجاني.",
+            "المطلوب: جواز سفر ساري ٦+ أشهر، تأشيرة دخول الإمارات (متاحة عند الوصول لكثير من الجنسيات)، وتأشيرة خروج وعودة سارية للمقيمين."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Abu Dhabi?", a: "Dammam to Abu Dhabi starts from 3,200 SAR for a Sedan and 4,500 SAR for a GMC Yukon SUV. Prices include Al Batha border fees and all road tolls." },
+        { q: "Can you drop us at Sheikh Zayed Grand Mosque?", a: "Yes. We deliver to Sheikh Zayed Grand Mosque, Yas Island, Louvre Abu Dhabi, Abu Dhabi Corniche, and all hotels across the emirate." },
+        { q: "Do you serve Abu Dhabi International Airport (AUH)?", a: "Yes. We provide direct transfers from Dammam Airport (DMM) to Abu Dhabi International Airport (AUH) — Terminal 1, 3, and the new Midfield Terminal." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى أبوظبي؟", a: "يبدأ من ٣٢٠٠ ريال للسيدان و٤٥٠٠ ريال ليوكن SUV. تشمل الأسعار رسوم منفذ البطحاء وجميع الطرق." },
+        { q: "هل توصلون إلى مسجد الشيخ زايد الكبير؟", a: "نعم، نوصل إلى مسجد الشيخ زايد، جزيرة ياس، اللوفر، كورنيش أبوظبي، وجميع الفنادق في الإمارة." },
+        { q: "هل تخدمون مطار أبوظبي الدولي (AUH)؟", a: "نعم، توصيل مباشر من مطار الدمام (DMM) إلى مطار أبوظبي الدولي (AUH) — جميع الصالات." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-sharjah",
+    name: { en: "Dammam to Sharjah Taxi", ar: "تاكسي من الدمام إلى الشارقة" },
+    metaTitle: {
+      en: "Dammam to Sharjah Taxi | UAE Cultural Capital Transfer",
+      ar: "تاكسي من الدمام إلى الشارقة | توصيل العاصمة الثقافية الإماراتية"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Sharjah, UAE. Visit Sharjah Heritage Area (UNESCO), Al Noor Mosque, Blue Souk, and Museum of Islamic Civilization. Direct cross-border chauffeur service.",
+      ar: "تاكسي خاص من الدمام إلى الشارقة بالإمارات. زيارة منطقة التراث (يونسكو)، مسجد النور، السوق الأزرق، ومتحف الحضارة الإسلامية. خدمة شوفير مباشرة عبر الحدود."
+    },
+    distance: { en: "980 km", ar: "٩٨٠ كم" },
+    duration: { en: "9.5 - 10.5 Hours", ar: "٩.٥ إلى ١٠.٥ ساعات" },
+    basePrice: 3600,
+    pricing: { sedan: 3600, suv: 4900, van: 5600, luxury: 8500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924927.0!2d55.4033!3d25.3573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5933e0fb765e7%3A0x85a9e7a3e3f7faa2!2sSharjah%20UAE!5e0!3m2!1sen!2ssa!4v1717000000012!5m2!1sen!2ssa",
+    intro: {
+      en: "Discover Sharjah — the UAE's Cultural Capital — by private taxi from Dammam. Known for its UNESCO-listed Heritage Area, stunning Al Noor Mosque, the famous Blue Souk, and the Museum of Islamic Civilization, Sharjah offers a richer, more authentic UAE experience.",
+      ar: "اكتشف الشارقة — عاصمة الثقافة الإماراتية — بتاكسي خاص من الدمام. تشتهر بمنطقة التراث المدرجة في يونسكو، مسجد النور الخلاب، السوق الأزرق الشهير، ومتحف الحضارة الإسلامية — الشارقة تقدم تجربة إماراتية أكثر أصالة."
+    },
+    contentSections: [
+      {
+        title: { en: "Sharjah — Cultural Capital of the Arab World", ar: "الشارقة — عاصمة الثقافة في العالم العربي" },
+        body: {
+          en: [
+            "Sharjah holds the title of UNESCO Cultural Capital of the Arab World and is the only emirate bordering both the Arabian Gulf and Gulf of Oman. Its historic Heritage Area is a well-preserved neighbourhood of wind towers, coral-stone buildings, and traditional souqs.",
+            "Top attractions include the Al Noor Mosque (one of the UAE's most photographed), Blue Souk (Central Market) with 600 shops of gold, jewellery and textiles, Sharjah Museum of Islamic Civilization (15,000+ artefacts), Sharjah Aquarium, and the Al Majaz Waterfront.",
+            "Sharjah International Airport (SHJ) — a major hub for Air Arabia — is also accessible for airport transfers from Dammam."
+          ],
+          ar: [
+            "تحمل الشارقة لقب عاصمة الثقافة في العالم العربي وفق اليونسكو، وهي الإمارة الوحيدة المطلة على خليج عُمان والخليج العربي معاً. منطقة التراث التاريخية حي محفوظ من أبراج الهواء والمباني المرجانية والأسواق التقليدية.",
+            "أبرز المعالم: مسجد النور (الأكثر تصويراً في الإمارات)، السوق الأزرق (السوق المركزي) بـ٦٠٠ محل للذهب والمجوهرات والأقمشة، متحف الشارقة للحضارة الإسلامية (١٥٠٠٠+ قطعة أثرية)، أكواريوم الشارقة، وواجهة المجاز المائية.",
+            "مطار الشارقة الدولي (SHJ) — مركز رئيسي للعربية للطيران — متاح أيضاً لتوصيل المطارات من الدمام."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Sharjah?", a: "Dammam to Sharjah starts from 3,600 SAR for a Sedan and 4,900 SAR for an SUV. All tolls and Al Batha border fees are included." },
+        { q: "Can you take us to Sharjah International Airport (SHJ)?", a: "Yes. We provide direct transfers to Sharjah International Airport (SHJ) — major hub for Air Arabia flights." },
+        { q: "Is Sharjah close to Dubai?", a: "Sharjah and Dubai share a border and are approximately 20–30 km apart (30–40 minutes by road). We can arrange split deliveries if your group needs transfers to both emirates." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى الشارقة؟", a: "يبدأ من ٣٦٠٠ ريال للسيدان و٤٩٠٠ ريال للـSUV. تشمل جميع رسوم منفذ البطحاء والطرق." },
+        { q: "هل تخدمون مطار الشارقة الدولي (SHJ)؟", a: "نعم، توصيل مباشر إلى مطار الشارقة الدولي (SHJ) — مركز طيران العربية الرئيسي." },
+        { q: "هل الشارقة قريبة من دبي؟", a: "الشارقة ودبي متجاورتان على بُعد ٢٠-٣٠ كم (٣٠-٤٠ دقيقة). يمكننا ترتيب توصيل مقسّم إذا احتاج مجموعتك إلى إمارتين." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-jeddah",
+    name: { en: "Dammam to Jeddah Taxi", ar: "تاكسي من الدمام إلى جدة" },
+    metaTitle: {
+      en: "Dammam to Jeddah Taxi | Long-Distance Saudi Highway Transfer",
+      ar: "تاكسي من الدمام إلى جدة | توصيل طويل المسافة داخل المملكة"
+    },
+    metaDescription: {
+      en: "Private intercity taxi from Dammam to Jeddah — Al Balad UNESCO Old Town, King Fahd Fountain, Jeddah Corniche, and King Abdulaziz International Airport (JED). 1,260 km with professional highway drivers.",
+      ar: "تاكسي خاص بين المدن من الدمام إلى جدة — البلد التاريخي (يونسكو)، نافورة الملك فهد، كورنيش جدة، ومطار الملك عبدالعزيز الدولي. ١٢٦٠ كم مع سائقين محترفين."
+    },
+    distance: { en: "1,260 km", ar: "١٢٦٠ كم" },
+    duration: { en: "12 - 13 Hours", ar: "١٢ إلى ١٣ ساعة" },
+    basePrice: 4500,
+    pricing: { sedan: 4500, suv: 6500, van: 7500, luxury: 12000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813470.0!2d39.1925!3d21.4858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d01fb1137e59%3A0xb975c0a6e17e697a!2sJeddah%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717000000013!5m2!1sen!2ssa",
+    intro: {
+      en: "Connect Saudi Arabia's Eastern Province to the Kingdom's commercial capital with our Dammam to Jeddah intercity taxi. A 1,260 km highway journey with rest stops, complimentary Wi-Fi, and experienced long-distance drivers — ideal when flying isn't an option.",
+      ar: "اربط المنطقة الشرقية بالعاصمة التجارية للمملكة مع تاكسي الدمام–جدة بين المدن. رحلة طريق سريع ١٢٦٠ كم مع توقفات للراحة وواي فاي مجاني وسائقين ذوي خبرة في المسافات الطويلة — مثالية حين لا يكون السفر الجوي متاحاً."
+    },
+    contentSections: [
+      {
+        title: { en: "Jeddah — Gateway to the Hijaz & Red Sea", ar: "جدة — بوابة الحجاز والبحر الأحمر" },
+        body: {
+          en: [
+            "Jeddah is Saudi Arabia's commercial hub and primary Red Sea port city. Its UNESCO World Heritage Site — Al-Balad (Historic Jeddah) — is a labyrinth of coral-stone buildings, Rawasheen (hanging wooden lattice windows), and centuries-old souqs. The King Fahd Fountain, one of the world's tallest at 312 metres, is visible from across the city.",
+            "Jeddah Corniche stretches 30 km along the Red Sea coast, lined with parks, sculptures, and seafood restaurants. King Abdulaziz International Airport (JED) — with its iconic tent-like Haj Terminal — is also served directly from Dammam.",
+            "The Dammam–Riyadh–Jeddah highway (via the Saudi Expressway system) is well-maintained with frequent service stations. Our drivers take scheduled rest breaks every 3–4 hours for passenger comfort."
+          ],
+          ar: [
+            "جدة مركز تجاري للمملكة وميناؤها الرئيسي على البحر الأحمر. تُعدّ منطقة البلد التاريخية (يونسكو) متاهة من المباني المرجانية والرواشين والأسواق العريقة. نافورة الملك فهد — إحدى أطول النوافير عالمياً بارتفاع ٣١٢ متراً — مرئية من أرجاء المدينة.",
+            "يمتد كورنيش جدة ٣٠ كم على ساحل البحر الأحمر بالمنتزهات والمنحوتات والمطاعم. مطار الملك عبدالعزيز الدولي (JED) — بصالة الحج الأيقونية — يُخدم مباشرة من الدمام.",
+            "طريق الدمام–الرياض–جدة (عبر منظومة الطرق السريعة السعودية) مُصان جيداً مع محطات خدمات متكررة. سائقونا يأخذون استراحات منتظمة كل ٣-٤ ساعات."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Jeddah?", a: "Dammam to Jeddah starts from 4,500 SAR for a Toyota Camry Sedan and 6,500 SAR for a GMC Yukon SUV. This domestic Saudi route has no border fees." },
+        { q: "How long does Dammam to Jeddah take by road?", a: "Approximately 12 to 13 hours including rest stops. The route covers 1,260 km via Riyadh and the Saudi highway system." },
+        { q: "Can you drop us at King Abdulaziz International Airport (JED)?", a: "Yes. Direct transfers to all JED terminals including the iconic Haj Terminal are available." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى جدة؟", a: "يبدأ من ٤٥٠٠ ريال للكامري و٦٥٠٠ ريال ليوكن. هذا طريق داخلي سعودي بلا رسوم حدود." },
+        { q: "كم تستغرق الرحلة من الدمام إلى جدة بالسيارة؟", a: "حوالي ١٢ إلى ١٣ ساعة مع توقفات الراحة. المسافة ١٢٦٠ كم عبر الرياض." },
+        { q: "هل تخدمون مطار الملك عبدالعزيز الدولي (JED)؟", a: "نعم، توصيل مباشر لجميع صالات مطار جدة بما فيها صالة الحج الأيقونية." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-madinah",
+    name: { en: "Dammam to Madinah Taxi", ar: "تاكسي من الدمام إلى المدينة المنورة" },
+    metaTitle: {
+      en: "Dammam to Madinah Taxi | Al-Masjid an-Nabawi & MED Airport",
+      ar: "تاكسي من الدمام إلى المدينة المنورة | المسجد النبوي ومطار الأمير محمد"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Madinah — Al-Masjid an-Nabawi (Prophet's Mosque), Quba Mosque, Al-Baqi Cemetery, and Prince Mohammad Bin Abdulaziz Airport (MED). Comfortable 1,100 km highway transfer.",
+      ar: "تاكسي خاص من الدمام إلى المدينة المنورة — المسجد النبوي، مسجد قباء، البقيع، ومطار الأمير محمد بن عبدالعزيز. توصيل مريح ١١٠٠ كم على الطريق السريع."
+    },
+    distance: { en: "1,100 km", ar: "١١٠٠ كم" },
+    duration: { en: "10 - 11 Hours", ar: "١٠ إلى ١١ ساعة" },
+    basePrice: 4000,
+    pricing: { sedan: 4000, suv: 5800, van: 6800, luxury: 10500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813470.0!2d39.5692!3d24.5247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15bdbf8b18c25e2b%3A0x68a799e0a74b8d7e!2sMadinah%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717000000014!5m2!1sen!2ssa",
+    intro: {
+      en: "Travel from Dammam to Madinah Al-Munawwarah — the City of the Prophet — in a comfortable private taxi. A 1,100 km highway journey through the heart of Saudi Arabia, arriving at the blessed city for Ziyarat (pilgrimage visit) or connecting through Prince Mohammad Bin Abdulaziz Airport (MED).",
+      ar: "سافر من الدمام إلى المدينة المنورة — مدينة النبي — بتاكسي خاص مريح. رحلة ١١٠٠ كم عبر قلب المملكة، وصولاً إلى المدينة المباركة للزيارة أو الاتصال عبر مطار الأمير محمد بن عبدالعزيز."
+    },
+    contentSections: [
+      {
+        title: { en: "Madinah — The Luminous City & Sacred Sites", ar: "المدينة المنورة — المواقع الإسلامية المقدسة" },
+        body: {
+          en: [
+            "Madinah (Al-Madinah Al-Munawwarah) is the second holiest city in Islam, home to Al-Masjid an-Nabawi — the Prophet's Mosque — which surrounds the tomb of Prophet Muhammad (PBUH). The Green Dome is one of the most recognisable landmarks in the Islamic world.",
+            "Other sacred sites include Masjid Quba (the first mosque built in Islam), Masjid al-Qiblatayn (Mosque of the Two Qiblas), the Al-Baqi Cemetery, and Mount Uhud — site of the Battle of Uhud.",
+            "We transport Ziyarat visitors, Umrah travellers (connecting from Dammam before or after Mecca), and pilgrims who need private, reliable transportation rather than shared buses."
+          ],
+          ar: [
+            "المدينة المنورة ثاني أقدس المدن في الإسلام، وفيها المسجد النبوي الشريف الذي يضم قبر النبي محمد ﷺ. القبة الخضراء من أبرز المعالم في العالم الإسلامي.",
+            "من المواقع الإسلامية المقدسة: مسجد قباء (أول مسجد بُني في الإسلام)، مسجد القبلتين، البقيع، وجبل أحد — موقع غزوة أحد.",
+            "ننقل زوار الزيارة ومعتمري الإجازات (للانتقال من الدمام قبل أو بعد مكة المكرمة) والحجاج الذين يحتاجون نقلاً خاصاً موثوقاً بدلاً من الحافلات المشتركة."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Madinah?", a: "Dammam to Madinah starts from 4,000 SAR for a Toyota Camry Sedan and 5,800 SAR for a GMC Yukon SUV. No border fees — this is a domestic Saudi route." },
+        { q: "How long is the drive from Dammam to Madinah?", a: "Approximately 10 to 11 hours including rest stops. The highway covers 1,100 km via Riyadh and Al Qassim region." },
+        { q: "Can non-Muslims travel on this route?", a: "Non-Muslims can travel to Madinah and visit most parts of the city. Entrance to the Al-Masjid an-Nabawi mosque is restricted to Muslims. Our drivers serve all passengers regardless of religion." },
+        { q: "Do you serve Prince Mohammad Bin Abdulaziz Airport (MED)?", a: "Yes. We provide direct transfers to and from Prince Mohammad Bin Abdulaziz Airport (MED) in Madinah." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى المدينة؟", a: "يبدأ من ٤٠٠٠ ريال للكامري و٥٨٠٠ ريال ليوكن. لا رسوم حدود — هذا طريق داخلي سعودي." },
+        { q: "كم تستغرق الرحلة من الدمام إلى المدينة؟", a: "حوالي ١٠ إلى ١١ ساعة مع توقفات. الطريق ١١٠٠ كم عبر الرياض ومنطقة القصيم." },
+        { q: "هل تخدمون مطار الأمير محمد بن عبدالعزيز (MED)؟", a: "نعم، توصيل مباشر من وإلى مطار الأمير محمد بن عبدالعزيز بالمدينة المنورة." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-muscat",
+    name: { en: "Dammam to Muscat Taxi", ar: "تاكسي من الدمام إلى مسقط" },
+    metaTitle: {
+      en: "Dammam to Muscat Taxi | Oman VIP Long-Distance Transfer",
+      ar: "تاكسي من الدمام إلى مسقط | توصيل VIP طويل المسافة إلى عُمان"
+    },
+    metaDescription: {
+      en: "Premium private taxi from Dammam to Muscat, Oman via UAE. Sultan Qaboos Grand Mosque, Mutrah Souq, Royal Opera House, and Muscat International Airport (MCT). 1,400 km with luxury fleet.",
+      ar: "تاكسي فاخر خاص من الدمام إلى مسقط عُمان عبر الإمارات. مسجد السلطان قابوس الكبير، سوق مطرح، دار الأوبرا الملكية، ومطار مسقط الدولي. ١٤٠٠ كم مع أسطول فاخر."
+    },
+    distance: { en: "1,400 km", ar: "١٤٠٠ كم" },
+    duration: { en: "14 - 16 Hours", ar: "١٤ إلى ١٦ ساعة" },
+    basePrice: 5500,
+    pricing: { sedan: 5500, suv: 7500, van: 8500, luxury: 14000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813470.0!2d58.3829!3d23.5880!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91512b9f0b82d3%3A0xa00c7a9973171a0!2sMuscat%20Oman!5e0!3m2!1sen!2ssa!4v1717000000015!5m2!1sen!2ssa",
+    intro: {
+      en: "Connect Dammam to Muscat, Oman's breathtaking capital, with our VIP long-distance taxi service. The 1,400 km journey crosses Saudi Arabia, transits UAE, and enters Oman — covering three GCC nations in one seamless, professionally chauffeured transfer.",
+      ar: "اربط الدمام بمسقط، العاصمة العُمانية الخلابة، مع خدمة التاكسي الفاخرة لمسافات طويلة. رحلة ١٤٠٠ كم تعبر المملكة العربية السعودية وتعبر الإمارات وتدخل عُمان — ثلاث دول خليجية في توصيل واحد سلس."
+    },
+    contentSections: [
+      {
+        title: { en: "Muscat — Oman's Royal Capital & Tourist Highlights", ar: "مسقط — العاصمة العُمانية والمعالم السياحية" },
+        body: {
+          en: [
+            "Muscat is Oman's magnificent capital, blending Arabian heritage with modernity. The Sultan Qaboos Grand Mosque — one of the largest in the world — features a stunning 14-tonne Swarovski crystal chandelier and is open to non-Muslim visitors on weekday mornings.",
+            "Mutrah Souq (one of the oldest markets in the Arabian Peninsula) offers frankincense, silver jewellery, and traditional Omani crafts. The Royal Opera House Muscat hosts world-class performances. Muscat Corniche along the Gulf of Oman is a scenic 5 km waterfront promenade.",
+            "Muscat International Airport (MCT) — now named Muscat International Airport after a major expansion — is also accessible directly from Dammam for airport-to-airport transfers."
+          ],
+          ar: [
+            "مسقط عاصمة عُمان الرائعة تمزج التراث العربي والحداثة. مسجد السلطان قابوس الكبير — أحد أكبر المساجد عالمياً — يتميز بثريا كريستال سواروفسكي بوزن ١٤ طناً ومفتوح لغير المسلمين صباح أيام الأسبوع.",
+            "سوق مطرح (أحد أقدم أسواق شبه الجزيرة العربية) يقدم البخور والمجوهرات الفضية والحرف العُمانية. دار الأوبرا الملكية في مسقط تستضيف عروضاً عالمية. كورنيش مسقط على خليج عُمان منتزه بحري بانورامي ٥ كم.",
+            "مطار مسقط الدولي (MCT) — بعد التوسعة الكبيرة — متاح أيضاً لتوصيل المطارات مباشرة من الدمام."
+          ]
+        }
+      },
+      {
+        title: { en: "Three-Country Border Crossing Route", ar: "مسار عبور ثلاث دول" },
+        body: {
+          en: [
+            "The Dammam to Muscat route crosses three countries: Saudi Arabia → UAE (Al Batha / Ghuwaifat border) → Oman (Hatta border or Al Wajajah border near Al Ain).",
+            "Required documents: passport valid 6+ months, valid Saudi Exit/Re-Entry visa for expatriates, UAE transit entry (usually stamped at Al Batha), and Oman entry visa (most nationalities receive visa on arrival at Oman land borders).",
+            "This is a premium VIP route. We strongly recommend the GMC Yukon Denali for maximum comfort on the 1,400 km journey. Meals, rest stops, Wi-Fi, and refreshments are provided throughout."
+          ],
+          ar: [
+            "مسار الدمام–مسقط يعبر ثلاث دول: المملكة العربية السعودية → الإمارات (منفذ البطحاء/الغويفات) → عُمان (منفذ حتا أو منفذ الوجاجة قرب العين).",
+            "المستندات: جواز سفر ساري ٦+ أشهر، تأشيرة خروج وعودة سارية للمقيمين، ترانزيت الإمارات (يُختم عادة في البطحاء)، وتأشيرة عُمان (متاحة عند الوصول لمعظم الجنسيات).",
+            "هذا مسار VIP فاخر. ننصح بشدة بجي إم سي يوكن دينالي للراحة القصوى في رحلة ١٤٠٠ كم. وجبات ومحطات راحة وواي فاي ومرطبات طوال الرحلة."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Muscat?", a: "Dammam to Muscat starts from 5,500 SAR for a Sedan and 7,500 SAR for a GMC Yukon SUV. Price includes all Saudi, UAE, and Oman border fees and road tolls." },
+        { q: "Which borders do we cross from Dammam to Muscat?", a: "Two borders: Saudi-UAE at Al Batha/Ghuwaifat, and UAE-Oman at the Hatta or Al Wajajah crossing. Our drivers hold permits for all three countries." },
+        { q: "Can you drop us at Muscat International Airport (MCT)?", a: "Yes. Airport-to-airport transfers from Dammam Airport (DMM) to Muscat International Airport (MCT) are available upon request." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى مسقط؟", a: "يبدأ من ٥٥٠٠ ريال للسيدان و٧٥٠٠ ريال ليوكن. تشمل جميع رسوم الحدود السعودية والإماراتية والعُمانية." },
+        { q: "ما الحدود التي نعبرها من الدمام إلى مسقط؟", a: "حدودان: السعودية-الإمارات في البطحاء/الغويفات، والإمارات-عُمان في منفذ حتا أو الوجاجة. سائقونا يحملون تصاريح الدول الثلاث." },
+        { q: "هل تخدمون مطار مسقط الدولي (MCT)؟", a: "نعم، توصيل مطار إلى مطار من الدمام (DMM) إلى مطار مسقط (MCT) متاح عند الطلب." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-airport-to-bahrain-airport",
+    name: { en: "Dammam Airport to Bahrain Airport", ar: "من مطار الدمام إلى مطار البحرين" },
+    metaTitle: {
+      en: "Dammam Airport (DMM) to Bahrain Airport (BAH) | Direct Transfer",
+      ar: "من مطار الدمام (DMM) إلى مطار البحرين (BAH) | توصيل مباشر"
+    },
+    metaDescription: {
+      en: "Direct airport-to-airport taxi from King Fahd International Airport (DMM) to Bahrain International Airport (BAH) via King Fahd Causeway. Fixed rate, meet & greet, 60-min free wait.",
+      ar: "توصيل مباشر من مطار الملك فهد الدولي (DMM) إلى مطار البحرين الدولي (BAH) عبر جسر الملك فهد. سعر ثابت، استقبال في الصالة، ٦٠ دقيقة انتظار مجانية."
+    },
+    distance: { en: "95 km", ar: "٩٥ كم" },
+    duration: { en: "1.5 - 2.5 Hours", ar: "ساعة ونصف إلى ساعتين ونصف" },
+    basePrice: 400,
+    pricing: { sedan: 400, suv: 650, van: 800, luxury: 1600 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114490.52843444458!2d50.4197779!3d26.2708749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49f35bde39c08b%3A0x7a4e8f4f3a2b1c0d!2sBahrain%20International%20Airport!5e0!3m2!1sen!2ssa!4v1717000000016!5m2!1sen!2ssa",
+    intro: {
+      en: "Connecting travellers between King Fahd International Airport (DMM) in Dammam and Bahrain International Airport (BAH) in Muharraq. Our airport-to-airport taxi crosses the King Fahd Causeway with all bridge tolls pre-included — perfect for missed connections, transit passengers, or multi-leg journeys.",
+      ar: "نربط المسافرين بين مطار الملك فهد الدولي (DMM) بالدمام ومطار البحرين الدولي (BAH) في المحرق. يعبر تاكسي المطار-إلى-المطار جسر الملك فهد مع تضمين جميع رسوم الجسر — مثالي لمن فاتهم الاتصال أو المسافرين الترانزيت أو الرحلات متعددة المراحل."
+    },
+    contentSections: [
+      {
+        title: { en: "DMM to BAH — Airport Connection Service", ar: "خدمة الاتصال بين مطار الدمام ومطار البحرين" },
+        body: {
+          en: [
+            "Bahrain International Airport (BAH) — recently expanded with a new modern terminal — is a major Gulf aviation hub served by Gulf Air (national carrier), flydubai, Air Arabia, and many international airlines. It is located in Muharraq, approximately 20 minutes from Manama city centre.",
+            "Our airport connector service is ideal for: passengers arriving at DMM who have a connecting flight from BAH, travellers preferring to fly out of Bahrain for specific routes or lower fares, and corporate groups coordinating cross-country multi-leg itineraries.",
+            "Flight tracking is active for both airports. Your driver monitors both your DMM arrival and your BAH departure time to ensure a stress-free connection, including a 60-minute complimentary wait at DMM arrivals."
+          ],
+          ar: [
+            "مطار البحرين الدولي (BAH) — الذي جرى توسيعه مؤخراً بصالة حديثة — مركز طيران خليجي رئيسي تخدمه طيران الخليج (الناقل الوطني)، فلاي دبي، العربية للطيران، وكثير من الخطوط الدولية. يقع في المحرق على بُعد ٢٠ دقيقة من وسط المنامة.",
+            "خدمة الاتصال بين المطارين مثالية لـ: المسافرين القادمين إلى DMM الذين لديهم رحلة اتصال من BAH، المسافرين الذين يفضلون السفر من البحرين لمسارات معينة أو أسعار أرخص، والمجموعات الشركاتية التي تنسق رحلات متعددة المراحل.",
+            "تتبع الرحلات نشط لكلا المطارين. سائقك يتابع وصولك في DMM ووقت رحلتك من BAH لضمان اتصال سلس، مع ٦٠ دقيقة انتظار مجانية في صالة وصول الدمام."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam Airport (DMM) to Bahrain Airport (BAH)?", a: "The airport-to-airport fare starts from 400 SAR for a Toyota Camry Sedan and 650 SAR for a GMC Yukon. All causeway bridge tolls and airport parking at DMM are included." },
+        { q: "How long does DMM to BAH airport transfer take?", a: "Approximately 1.5 to 2.5 hours depending on King Fahd Causeway traffic. Normal weekdays take around 1.5 hours; busy weekends or holidays may take 2–3 hours." },
+        { q: "Can you wait if my flight lands late at DMM?", a: "Yes. We track your DMM arrival flight live and provide 60 minutes of free waiting. Additional waiting is charged at a nominal rate." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من مطار الدمام (DMM) إلى مطار البحرين (BAH)؟", a: "يبدأ من ٤٠٠ ريال للكامري و٦٥٠ ريال ليوكن. تشمل رسوم جسر الملك فهد ومواقف مطار الدمام." },
+        { q: "كم تستغرق رحلة المطار DMM إلى BAH؟", a: "حوالي ساعة ونصف إلى ساعتين ونصف حسب ازدحام الجسر. أيام الأسبوع العادية تستغرق ١.٥ ساعة؛ العطلات قد تستغرق ٢-٣ ساعات." },
+        { q: "هل تنتظرون إذا تأخرت رحلتي في الدمام؟", a: "نعم، نتتبع رحلة الوصول مباشرة ونوفر ٦٠ دقيقة انتظار مجانية." }
+      ]
+    }
+  },
+
+  // ─── DAMMAM TOPICAL MAP — NEW LOCAL ROUTES ────────────────────
+
+  {
+    slug: "dammam-airport-to-dammam-city",
+    name: { en: "Dammam Airport to Dammam City", ar: "من مطار الدمام إلى مدينة الدمام" },
+    metaTitle: {
+      en: "Dammam Airport to Dammam City Center Taxi | DMM to Downtown",
+      ar: "تاكسي من مطار الدمام إلى مركز مدينة الدمام | المطار إلى وسط البلد"
+    },
+    metaDescription: {
+      en: "Direct taxi from King Fahd International Airport (DMM) to Dammam City Center, Al Muraikabat, Dammam Corniche, Al Marjan Island, and all Dammam hotels. 25 km, 20-25 minutes, fixed rate.",
+      ar: "تاكسي مباشر من مطار الملك فهد الدولي إلى مركز مدينة الدمام، المرايكبة، كورنيش الدمام، جزيرة المرجان، وجميع فنادق الدمام. 25 كم، 20-25 دقيقة، سعر ثابت."
+    },
+    distance: { en: "25 km", ar: "٢٥ كم" },
+    duration: { en: "20 - 25 Minutes", ar: "٢٠ إلى ٢٥ دقيقة" },
+    basePrice: 120,
+    pricing: { sedan: 120, suv: 220, van: 280, luxury: 600 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114490.0!2d50.0999!3d26.4367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e96c8d9f9d8b%3A0xa4e4bbf2d3c1e0f5!2sDammam%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717100000001!5m2!1sen!2ssa",
+    intro: {
+      en: "The fastest private taxi from King Fahd International Airport (DMM) directly into Dammam city. Just 25 km and 20–25 minutes, our airport-to-city transfer delivers you to downtown hotels, Dammam Corniche, Al Marjan Island, Al-Rashid Mall, and all city-centre destinations.",
+      ar: "أسرع تاكسي خاص من مطار الملك فهد الدولي مباشرة إلى مدينة الدمام. 25 كم فقط في 20-25 دقيقة، يوصلك توصيل المطار-إلى-المدينة إلى فنادق وسط المدينة، كورنيش الدمام، جزيرة المرجان، الراشد مول، وجميع وجهات مركز المدينة."
+    },
+    contentSections: [
+      {
+        title: { en: "Dammam City Center — Hotels, Corniche & Key Locations", ar: "مركز مدينة الدمام — الفنادق والكورنيش والمواقع الرئيسية" },
+        body: {
+          en: [
+            "Dammam is the capital of Saudi Arabia's Eastern Province and one of the Kingdom's major commercial cities. Key city-centre districts include Al Muraikabat (the main commercial and banking district), Al Rakah, Al Shula, and Prince Bandar Street — the city's central business corridor.",
+            "The Dammam Corniche extends for 45 km along the Arabian Gulf coast, offering parks, fountains, seafood restaurants, and open-air promenades. Al Marjan Island is a popular beachfront leisure destination with hotels, cafés, and family entertainment.",
+            "Major hotels in Dammam city include Marriott Dammam, Sheraton Dammam Hotel & Convention Centre, Hyatt Regency Dammam, Radisson Blu Hotel Dammam, and Movenpick Hotel Dammam — all reachable within 25 minutes from DMM Airport."
+          ],
+          ar: [
+            "الدمام عاصمة المنطقة الشرقية وإحدى المدن التجارية الكبرى في المملكة. تضم أحياء رئيسية: المرايكبة (الحي التجاري والمصرفي الرئيسي)، الراكة، الشعلة، وشارع الأمير بندر — الممر التجاري المركزي.",
+            "يمتد كورنيش الدمام 45 كم على ساحل الخليج العربي بالحدائق والنوافير والمطاعم البحرية والممشيات المفتوحة. وتُعد جزيرة المرجان وجهة ترفيهية شاطئية شهيرة بالفنادق والمقاهي والترفيه العائلي.",
+            "كبرى فنادق الدمام: ماريوت الدمام، شيراتون الدمام والمؤتمرات، حياة ريجنسي الدمام، راديسون بلو الدمام، وموفنبيك الدمام — جميعها تصل خلال 25 دقيقة من المطار."
+          ]
+        }
+      },
+      {
+        title: { en: "Why Book a Private Taxi Instead of Airport Taxis", ar: "لماذا تحجز تاكسي خاصاً بدلاً من تاكسيات المطار" },
+        body: {
+          en: [
+            "While public taxis are available at DMM Airport, pre-booked private transfers offer significant advantages: your driver meets you at the arrivals gate with a name board, airport parking is pre-included, and the fare is fixed with no meter surprises.",
+            "We offer 60 minutes of complimentary waiting from your actual landing time, so there's no rush through immigration and baggage claim. Your pre-cooled vehicle is ready and waiting outside."
+          ],
+          ar: [
+            "رغم توفر سيارات الأجرة العامة في مطار الدمام، تقدم التوصيلات الخاصة المحجوزة مسبقاً مزايا كبيرة: سائقك ينتظرك عند بوابة الوصول بلوحة اسمك، رسوم المواقف مشمولة مسبقاً، والأجرة ثابتة بدون مفاجآت العداد.",
+            "نوفر 60 دقيقة انتظار مجاني من وقت الهبوط الفعلي، لذا لا داعي للتعجل في الهجرة واستلام الأمتعة. سيارتك المبردة مسبقاً جاهزة وتنتظرك."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam Airport to Dammam City?", a: "The fare from DMM Airport to Dammam City Center starts from 120 SAR for a Toyota Camry Sedan and 220 SAR for a GMC Yukon SUV. All airport parking fees are included." },
+        { q: "How long does it take from Dammam Airport to the city?", a: "Approximately 20 to 25 minutes under normal traffic. During peak hours (7–9 AM and 4–7 PM), allow 30–40 minutes." },
+        { q: "Which Dammam hotels do you serve from the airport?", a: "We serve all Dammam city hotels including Marriott, Sheraton, Hyatt Regency, Radisson Blu, Movenpick, Crown Plaza, Intercontinental, and all other hotels and residential compounds." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من مطار الدمام إلى مدينة الدمام؟", a: "تبدأ التكلفة من ١٢٠ ريالاً للكامري و٢٢٠ ريالاً ليوكن. تشمل جميع رسوم مواقف المطار." },
+        { q: "كم تستغرق الرحلة من مطار الدمام إلى المدينة؟", a: "حوالي ٢٠ إلى ٢٥ دقيقة في الأوقات العادية. في أوقات الذروة (٧-٩ ص و٤-٧ م) خصص ٣٠-٤٠ دقيقة." },
+        { q: "ما الفنادق التي تخدمونها في الدمام من المطار؟", a: "نخدم جميع فنادق الدمام بما فيها ماريوت، شيراتون، حياة ريجنسي، راديسون بلو، موفنبيك، كراون بلازا، إنتركونتيننتال، وجميع الفنادق والمجمعات السكنية." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-airport-to-qatif",
+    name: { en: "Dammam Airport to Qatif", ar: "تاكسي من مطار الدمام إلى القطيف" },
+    metaTitle: {
+      en: "Dammam Airport to Qatif Taxi | Tarout Island & City Transfers",
+      ar: "تاكسي من مطار الدمام إلى القطيف | توصيل جزيرة تاروت والمدينة"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam Airport (DMM) to Qatif City, Tarout Island, and Qatif Corniche. 55 km, 40–50 minutes. Flat rate, meet & greet, 24/7 service.",
+      ar: "تاكسي خاص من مطار الدمام إلى مدينة القطيف، جزيرة تاروت، وكورنيش القطيف. 55 كم، 40-50 دقيقة. سعر ثابت، استقبال في الصالة، خدمة 24/7."
+    },
+    distance: { en: "55 km", ar: "٥٥ كم" },
+    duration: { en: "40 - 50 Minutes", ar: "٤٠ إلى ٥٠ دقيقة" },
+    basePrice: 180,
+    pricing: { sedan: 180, suv: 320, van: 380, luxury: 800 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114490.0!2d50.0087!3d26.5654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e2b003f1e6c5%3A0xa4e4bbf2d3c1e0f7!2sQatif%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717100000002!5m2!1sen!2ssa",
+    intro: {
+      en: "Private taxi from Dammam Airport to Qatif — one of Saudi Arabia's oldest cities and home to the historic Tarout Island. Our 40–50 minute transfer serves Qatif city centre, Tarout Island, Qatif Corniche, and all residential and business locations.",
+      ar: "تاكسي خاص من مطار الدمام إلى القطيف — إحدى أقدم مدن المملكة العربية السعودية وموطن جزيرة تاروت التاريخية. رحلتنا في 40-50 دقيقة تخدم مركز مدينة القطيف، جزيرة تاروت، كورنيش القطيف، وجميع المواقع السكنية والتجارية."
+    },
+    contentSections: [
+      {
+        title: { en: "Qatif & Tarout Island — History and Tourism", ar: "القطيف وجزيرة تاروت — التاريخ والسياحة" },
+        body: {
+          en: [
+            "Qatif is one of the oldest continuously inhabited settlements in the Arabian Peninsula, with a history spanning more than 6,000 years. The city sits on the Arabian Gulf coast in the Eastern Province and is known for its date palm gardens, traditional architecture, and vibrant cultural heritage.",
+            "Tarout Island — connected to the mainland by a short causeway — is a major archaeological site with Tarout Castle, ancient burial mounds from the Dilmun civilisation, and a traditional fishing harbour. The Saudi Ministry of Culture has listed Tarout as a candidate for UNESCO World Heritage status.",
+            "The Qatif Corniche is a popular waterfront promenade with parks, restaurants, and views of the Arabian Gulf. The Qatif Old Town Souq offers traditional dates, local handicrafts, and fresh seafood."
+          ],
+          ar: [
+            "القطيف من أقدم المستوطنات البشرية المتواصلة في شبه الجزيرة العربية بتاريخ يمتد أكثر من 6000 عام. تقع على ساحل الخليج العربي في المنطقة الشرقية وتشتهر بمزارع النخيل وعمارتها التقليدية وتراثها الثقافي الزاخر.",
+            "جزيرة تاروت — المرتبطة بالبر عبر جسر قصير — موقع أثري كبير يضم قلعة تاروت وتلال جنائزية من حضارة دلمون وميناء صيد تقليدي. رشّحت وزارة الثقافة السعودية تاروت للتسجيل في قائمة التراث العالمي لليونسكو.",
+            "كورنيش القطيف ممشى بحري شهير بالحدائق والمطاعم وإطلالات الخليج. يقدم سوق القطيف القديم التمور التقليدية والحرف اليدوية المحلية والمأكولات البحرية الطازجة."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam Airport to Qatif?", a: "The fare from DMM Airport to Qatif starts from 180 SAR for a Sedan and 320 SAR for a GMC Yukon SUV. All airport parking fees are included." },
+        { q: "Can you take us to Tarout Island from Dammam Airport?", a: "Yes. We deliver directly to Tarout Island and all Qatif city locations. Tarout is approximately 55 km from DMM Airport." },
+        { q: "Is Qatif worth visiting as a tourist?", a: "Yes. Qatif and Tarout Island are among the most historically significant sites in the Eastern Province. Tarout Castle, the ancient souq, and the archaeological sites make it a rewarding day trip from Dammam or Khobar." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من مطار الدمام إلى القطيف؟", a: "يبدأ من ١٨٠ ريالاً للسيدان و٣٢٠ ريالاً ليوكن. تشمل جميع رسوم مواقف المطار." },
+        { q: "هل توصلون إلى جزيرة تاروت من مطار الدمام؟", a: "نعم، نوصل مباشرة إلى جزيرة تاروت وجميع مواقع القطيف. تاروت تبعد حوالي 55 كم عن مطار الدمام." },
+        { q: "هل تستحق القطيف الزيارة السياحية؟", a: "نعم. القطيف وجزيرة تاروت من أهم المواقع التاريخية في المنطقة الشرقية. قلعة تاروت والسوق القديم والمواقع الأثرية تجعلها رحلة يوم ممتازة من الدمام أو الخبر." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-airport-to-ras-tanura",
+    name: { en: "Dammam Airport to Ras Tanura", ar: "تاكسي من مطار الدمام إلى رأس تنورة" },
+    metaTitle: {
+      en: "Dammam Airport to Ras Tanura Taxi | Aramco & Industrial Transfers",
+      ar: "تاكسي من مطار الدمام إلى رأس تنورة | توصيل أرامكو والمنطقة الصناعية"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam Airport (DMM) to Ras Tanura — Saudi Aramco's largest oil terminal, residential compound, and refinery. 75 km, 55–65 minutes. Corporate accounts available.",
+      ar: "تاكسي خاص من مطار الدمام إلى رأس تنورة — أكبر محطة نفط لأرامكو السعودية والمجمع السكني والمصفاة. 75 كم، 55-65 دقيقة. حسابات شركات متاحة."
+    },
+    distance: { en: "75 km", ar: "٧٥ كم" },
+    duration: { en: "55 - 65 Minutes", ar: "٥٥ إلى ٦٥ دقيقة" },
+    basePrice: 220,
+    pricing: { sedan: 220, suv: 380, van: 450, luxury: 950 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114490.0!2d50.1622!3d26.6884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e2b003f1e000%3A0xa4e4bbf2d3c1e111!2sRas%20Tanura%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717100000003!5m2!1sen!2ssa",
+    intro: {
+      en: "Professional transfer from Dammam Airport (DMM) to Ras Tanura — home to Saudi Aramco's largest oil export terminal, refinery complex, and residential compound. Our experienced drivers are familiar with all Aramco compound gate procedures.",
+      ar: "توصيل احترافي من مطار الدمام إلى رأس تنورة — موطن أكبر محطة تصدير نفط لأرامكو السعودية ومجمع المصفاة والمجمع السكني. سائقونا ذوو خبرة في جميع إجراءات بوابات مجمعات أرامكو."
+    },
+    contentSections: [
+      {
+        title: { en: "Ras Tanura — Aramco Oil Terminal & Compound", ar: "رأس تنورة — محطة أرامكو النفطية والمجمع السكني" },
+        body: {
+          en: [
+            "Ras Tanura is a small city on the Arabian Gulf coast, approximately 75 km north of Dammam, and is home to Saudi Aramco's Ras Tanura Refinery and Oil Export Terminal — one of the largest oil export terminals in the world, capable of loading over 6 million barrels of crude oil per day.",
+            "The Saudi Aramco Ras Tanura residential compound houses thousands of Aramco employees and their families in a well-maintained campus with schools, recreation facilities, and medical centres. Our drivers are experienced with the compound's security gate procedures.",
+            "We also serve Ras Tanura Beach and the nearby city of Safwa for visitors and employees needing reliable airport transfers."
+          ],
+          ar: [
+            "رأس تنورة مدينة صغيرة على ساحل الخليج العربي على بُعد حوالي 75 كم شمال الدمام، وتضم مصفاة رأس تنورة لأرامكو السعودية ومحطة تصدير النفط — إحدى أكبر محطات تصدير النفط في العالم بطاقة تحميل تفوق 6 ملايين برميل يومياً.",
+            "يضم مجمع رأس تنورة السكني الخاص بأرامكو السعودية آلاف الموظفين وعائلاتهم في حرم منظم يشمل مدارس ومرافق ترفيهية ومراكز طبية. سائقونا على دراية بإجراءات بوابات الأمن.",
+            "نخدم أيضاً شاطئ رأس تنورة ومدينة صفوى المجاورة للزوار والموظفين المحتاجين لتوصيل موثوق من المطار."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam Airport to Ras Tanura?", a: "The fare starts from 220 SAR for a Sedan and 380 SAR for a GMC Yukon. All airport parking fees are included." },
+        { q: "Can your drivers access Aramco Ras Tanura compound?", a: "Our drivers can drop off passengers at designated Aramco Ras Tanura compound gates. For access inside the compound, passengers should coordinate gate passes with Aramco security beforehand." },
+        { q: "Do you offer corporate accounts for Ras Tanura Aramco employees?", a: "Yes. We offer monthly invoicing for corporate Aramco accounts in Ras Tanura. Contact our corporate desk via WhatsApp to set up your account." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من مطار الدمام إلى رأس تنورة؟", a: "يبدأ من ٢٢٠ ريالاً للسيدان و٣٨٠ ريالاً ليوكن. تشمل رسوم مواقف المطار." },
+        { q: "هل يمكن لسائقيكم الدخول لمجمع أرامكو برأس تنورة؟", a: "يمكن توصيل الركاب إلى بوابات مجمع أرامكو المحددة. للدخول داخل المجمع، يجب التنسيق المسبق مع أمن أرامكو." },
+        { q: "هل تقدمون حسابات شركات لموظفي أرامكو برأس تنورة؟", a: "نعم، نوفر فوترة شهرية لحسابات أرامكو الشركاتية في رأس تنورة. تواصل عبر الواتساب لإعداد حسابك." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-airport-to-half-moon-bay",
+    name: { en: "Dammam Airport to Half Moon Bay", ar: "تاكسي من مطار الدمام إلى خليج نصف القمر" },
+    metaTitle: {
+      en: "Dammam Airport to Half Moon Bay Taxi | Beach Resort Transfer",
+      ar: "تاكسي من مطار الدمام إلى خليج نصف القمر | توصيل المنتجع الشاطئي"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam Airport (DMM) to Half Moon Bay beach resort (Khobar area). 85 km, 60–70 minutes. Perfect for weekend trips and family beach getaways from the Eastern Province.",
+      ar: "تاكسي خاص من مطار الدمام إلى منتجع خليج نصف القمر الشاطئي (منطقة الخبر). 85 كم، 60-70 دقيقة. مثالي لرحلات نهاية الأسبوع والعطل الشاطئية العائلية من المنطقة الشرقية."
+    },
+    distance: { en: "85 km", ar: "٨٥ كم" },
+    duration: { en: "60 - 70 Minutes", ar: "٦٠ إلى ٧٠ دقيقة" },
+    basePrice: 250,
+    pricing: { sedan: 250, suv: 420, van: 500, luxury: 1100 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114490.0!2d50.2200!3d26.1600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e3b003f1e222%3A0xa4e4bbf2d3c1e222!2sHalf%20Moon%20Bay%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717100000004!5m2!1sen!2ssa",
+    intro: {
+      en: "Direct taxi from Dammam Airport (DMM) to Half Moon Bay — the Eastern Province's most popular beach resort destination, located 35 km south of Al Khobar. Perfect for weekends, family holidays, and beach getaways straight from your arrival flight.",
+      ar: "تاكسي مباشر من مطار الدمام إلى خليج نصف القمر — أشهر وجهة شاطئية في المنطقة الشرقية، تقع 35 كم جنوب الخبر. مثالي لعطلات نهاية الأسبوع والعطل العائلية والاسترخاء الشاطئي مباشرة من رحلتك."
+    },
+    contentSections: [
+      {
+        title: { en: "Half Moon Bay — Eastern Province's Premier Beach Destination", ar: "خليج نصف القمر — الوجهة الشاطئية الأولى في المنطقة الشرقية" },
+        body: {
+          en: [
+            "Half Moon Bay (Khobar Lakes area) is a natural crescent-shaped bay on the Arabian Gulf coast, approximately 35 km south of Al Khobar city. It is the Eastern Province's most visited beach resort and weekend getaway for residents of Dammam, Khobar, Jubail, and Dhahran.",
+            "The area features several beach resorts, chalets, and recreational facilities including jet skiing, kayaking, and beachside dining. Half Moon Bay Resort is the main resort complex with private beaches, a hotel, and water sports.",
+            "Our Family Van (Hyundai Staria — 8 passengers) is the ideal vehicle for group beach trips, with ample space for luggage, beach equipment, and full family comfort."
+          ],
+          ar: [
+            "خليج نصف القمر (منطقة بحيرات الخبر) خليج طبيعي هلالي الشكل على ساحل الخليج العربي على بُعد حوالي 35 كم جنوب مدينة الخبر. هو الوجهة الشاطئية الأكثر زيارة في المنطقة الشرقية وملجأ نهاية الأسبوع لسكان الدمام والخبر والجبيل والظهران.",
+            "يضم المنطقة عدة منتجعات شاطئية وشاليهات ومرافق ترفيهية بما فيها الجت سكي والكاياك ومطاعم على الشاطئ. منتجع خليج نصف القمر هو المجمع الرئيسي بالشواطئ الخاصة والفندق والرياضات المائية.",
+            "سيارة الفان العائلية (هيونداي ستاريا — 8 ركاب) هي المركبة المثالية لرحلات الشاطئ الجماعية بمساحة واسعة للحقائب ومعدات الشاطئ وراحة الأسرة الكاملة."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam Airport to Half Moon Bay?", a: "The fare starts from 250 SAR for a Sedan and 420 SAR for a GMC Yukon. For families or groups, the Hyundai Staria Van at 500 SAR offers the best value with space for up to 8 passengers and beach equipment." },
+        { q: "Can we book a return trip from Half Moon Bay to the airport?", a: "Yes. We offer round-trip bookings with a return pickup from Half Moon Bay back to DMM Airport. Contact us on WhatsApp to lock in both legs." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من مطار الدمام إلى خليج نصف القمر؟", a: "يبدأ من ٢٥٠ ريالاً للسيدان و٤٢٠ ريالاً ليوكن. للعائلات والمجموعات، الستاريا فان ٥٠٠ ريال توفر أفضل قيمة مع مقاعد 8 ومساحة معدات الشاطئ." },
+        { q: "هل يمكن حجز رحلة ذهاب وإياب من خليج نصف القمر للمطار؟", a: "نعم، نقدم حجوزات ذهاب وإياب مع استلام العودة من خليج نصف القمر لمطار الدمام. تواصل على الواتساب لتثبيت الرحلتين." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-mecca",
+    name: { en: "Dammam to Mecca Taxi", ar: "تاكسي من الدمام إلى مكة المكرمة" },
+    metaTitle: {
+      en: "Dammam to Mecca Taxi | Umrah & Hajj Private Transfer",
+      ar: "تاكسي من الدمام إلى مكة المكرمة | توصيل خاص للعمرة والحج"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Mecca (Makkah) for Umrah and Hajj. Direct transfer to Masjid al-Haram, Mina, Arafat, Aziziah, and all Makkah hotels. 1,280 km with experienced drivers.",
+      ar: "تاكسي خاص من الدمام إلى مكة المكرمة للعمرة والحج. توصيل مباشر للمسجد الحرام، منى، عرفات، العزيزية، وجميع فنادق مكة. 1280 كم مع سائقين ذوي خبرة."
+    },
+    distance: { en: "1,280 km", ar: "١٢٨٠ كم" },
+    duration: { en: "12 - 13 Hours", ar: "١٢ إلى ١٣ ساعة" },
+    basePrice: 4800,
+    pricing: { sedan: 4800, suv: 6800, van: 7800, luxury: 13000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813470.0!2d39.8262!3d21.3891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c21b4ced818db5%3A0xcb57c7a7b2cf3c5!2sMecca%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717100000005!5m2!1sen!2ssa",
+    intro: {
+      en: "Private Umrah and Hajj taxi from Dammam to Mecca Al-Mukarramah — the holiest city in Islam. Our 1,280 km transfer via Riyadh is operated by experienced long-distance drivers who understand the spiritual significance of your journey and deliver you directly to the Grand Mosque area, Mina, or Aziziah.",
+      ar: "تاكسي عمرة وحج خاص من الدمام إلى مكة المكرمة — أقدس مدينة في الإسلام. رحلتنا 1280 كم عبر الرياض يقودها سائقون ذوو خبرة في المسافات الطويلة يدركون الأهمية الروحانية لرحلتك ويوصلونك مباشرة إلى منطقة المسجد الحرام أو منى أو العزيزية."
+    },
+    contentSections: [
+      {
+        title: { en: "Mecca — Sacred Sites & Umrah Transfers", ar: "مكة المكرمة — المواقع المقدسة ورحلات العمرة" },
+        body: {
+          en: [
+            "Mecca (Makkah Al-Mukarramah) is the holiest city in Islam, obligatory for pilgrimage (Hajj) once in a lifetime for able-bodied Muslims, and visited for Umrah throughout the year. Entry to Mecca is restricted to Muslims only.",
+            "Key religious sites include Masjid al-Haram (the Grand Mosque surrounding the Kaaba — the most visited place on Earth), Jabal al-Nour (Cave of Hira), Jabal Thawr, Mina (city of tents during Hajj season), and the plains of Arafat.",
+            "We deliver to all areas of Mecca including the Grand Mosque precincts, Aziziah, Al Shoqiyah, Mina, and all major Makkah hotels (Hilton Makkah, Swissotel Al Maqam, Mövenpick Hajar Tower, and others in the Abraj Al-Bait Towers complex)."
+          ],
+          ar: [
+            "مكة المكرمة أقدس مدينة في الإسلام، فريضة الحج مرة في العمر لكل مسلم مستطيع، وتُزار للعمرة على مدار العام. يقتصر الدخول إلى مكة على المسلمين فقط.",
+            "المواقع الدينية الرئيسية: المسجد الحرام (الجامع الكبير المحيط بالكعبة المشرفة — أكثر أماكن الأرض زيارة)، جبل النور (غار حراء)، جبل ثور، منى (مدينة الخيام في موسم الحج)، وسهل عرفات.",
+            "نوصل إلى جميع مناطق مكة بما فيها الأروقة المحيطة بالمسجد الحرام، العزيزية، الشوقية، منى، وجميع فنادق مكة الكبرى (هيلتون مكة، سويسوتيل المقام، موفنبيك هاجر، وغيرها في مجمع أبراج البيت)."
+          ]
+        }
+      },
+      {
+        title: { en: "Dammam to Mecca Route & Rest Stops", ar: "مسار الدمام إلى مكة ومحطات الراحة" },
+        body: {
+          en: [
+            "The Dammam–Mecca highway route covers 1,280 km via Riyadh, then westward through Taif mountain road or directly via Al Hada. Travel time is 12–13 hours including scheduled rest stops every 3–4 hours.",
+            "Our vehicles for this route are fully prepared: pre-trip safety inspection, multi-zone AC, high-speed Wi-Fi, USB charging docks, prayer time alerts, and complimentary Zamzam water where available.",
+            "We can arrange pickup directly from your home, office, or Dammam Airport (DMM) and deliver straight to your hotel's main entrance or the designated drop-off zones near Masjid al-Haram."
+          ],
+          ar: [
+            "يغطي طريق الدمام-مكة 1280 كم عبر الرياض، ثم غرباً عبر طريق الطائف الجبلي أو مباشرة عبر الهدا. وقت السفر 12-13 ساعة مع محطات راحة منتظمة كل 3-4 ساعات.",
+            "سياراتنا على هذا المسار جاهزة بالكامل: فحص أمان قبل الرحلة، تكييف متعدد المناطق، واي فاي سريع، شواحن USB، تنبيهات أوقات الصلاة، وماء زمزم مجاناً حيث متاح.",
+            "يمكننا الاستلام مباشرة من منزلك أو مكتبك أو مطار الدمام (DMM) والتوصيل مباشرة إلى المدخل الرئيسي لفندقك أو المناطق المخصصة للنزول بجوار المسجد الحرام."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Mecca?", a: "Dammam to Mecca starts from 4,800 SAR for a Toyota Camry Sedan and 6,800 SAR for a GMC Yukon SUV. For families up to 8 passengers, the Hyundai Staria Van costs 7,800 SAR." },
+        { q: "How long is the drive from Dammam to Mecca?", a: "Approximately 12 to 13 hours including rest stops. The route covers 1,280 km via Riyadh." },
+        { q: "Can non-Muslims travel to Mecca?", a: "No. Entry to the Holy City of Mecca is restricted to Muslims only. Non-Muslim passengers can travel to Jeddah or Taif, which are located nearby." },
+        { q: "Can you drop us directly at Masjid al-Haram (Grand Mosque)?", a: "Yes. We deliver to the designated drop-off zones surrounding Masjid al-Haram, all Abraj Al-Bait hotels, Aziziah, Al Shoqiyah, Mina, and all other Makkah locations." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى مكة؟", a: "يبدأ من ٤٨٠٠ ريالاً للكامري و٦٨٠٠ ريالاً ليوكن. للعائلات حتى 8 ركاب، الستاريا فان ٧٨٠٠ ريال." },
+        { q: "كم تستغرق الرحلة من الدمام إلى مكة؟", a: "حوالي ١٢ إلى ١٣ ساعة مع توقفات الراحة. الطريق ١٢٨٠ كم عبر الرياض." },
+        { q: "هل يمكن لغير المسلمين السفر إلى مكة؟", a: "لا. يقتصر الدخول إلى مكة المكرمة على المسلمين فقط. يمكن لغير المسلمين السفر إلى جدة أو الطائف المجاورتين." },
+        { q: "هل توصلون مباشرة إلى المسجد الحرام؟", a: "نعم، نوصل إلى مناطق التوقف المحددة حول المسجد الحرام، وجميع فنادق أبراج البيت، والعزيزية والشوقية ومنى وجميع مواقع مكة." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-qassim",
+    name: { en: "Dammam to Qassim Taxi", ar: "تاكسي من الدمام إلى القصيم" },
+    metaTitle: {
+      en: "Dammam to Qassim Taxi | Buraydah & Unayzah Intercity Transfer",
+      ar: "تاكسي من الدمام إلى القصيم | توصيل بريدة وعنيزة بين المدن"
+    },
+    metaDescription: {
+      en: "Direct private taxi from Dammam to Qassim Region — Buraydah, Unayzah, and Al Rass. 500 km, 5–6 hours on the Saudi highway network. Professional long-distance drivers.",
+      ar: "تاكسي خاص مباشر من الدمام إلى منطقة القصيم — بريدة وعنيزة والرس. 500 كم، 5-6 ساعات على الطريق السريع السعودي. سائقون محترفون للمسافات الطويلة."
+    },
+    distance: { en: "500 km", ar: "٥٠٠ كم" },
+    duration: { en: "5 - 6 Hours", ar: "٥ إلى ٦ ساعات" },
+    basePrice: 1800,
+    pricing: { sedan: 1800, suv: 2800, van: 3200, luxury: 6000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1813470.0!2d43.9742!3d26.3260!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x157f9b93b6a2e4cd%3A0x2b17b3e2d4c1f0a1!2sBuraydah%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717100000006!5m2!1sen!2ssa",
+    intro: {
+      en: "Private intercity taxi from Dammam to Qassim — Saudi Arabia's agricultural heartland and home to Buraydah, Unayzah, and Al Rass. A 500 km highway journey through central Saudi Arabia, covering the Eastern Province to Najd region.",
+      ar: "تاكسي بين المدن من الدمام إلى القصيم — قلب المملكة الزراعي وموطن بريدة وعنيزة والرس. رحلة 500 كم على الطريق السريع عبر وسط المملكة، من المنطقة الشرقية إلى منطقة نجد."
+    },
+    contentSections: [
+      {
+        title: { en: "Qassim Region — Buraydah, Dates Capital of the World", ar: "منطقة القصيم — بريدة، عاصمة التمور في العالم" },
+        body: {
+          en: [
+            "Qassim Region is Saudi Arabia's second most populous region after Riyadh, centred on the cities of Buraydah (the regional capital) and Unayzah. The region is famous as the world's largest date palm-producing area — Buraydah hosts the Buraydah Dates Festival annually, one of the largest date markets in the world.",
+            "Key destinations in Qassim include: Buraydah city centre, Unayzah Old Town (one of Arabia's most charming heritage cities), Al Rass city, Qassim University, and the King Saud University Qassim campus.",
+            "The route from Dammam to Qassim follows the Eastern Ring Road through Riyadh then northwest on the Qassim Highway — a well-maintained, dual-carriageway route."
+          ],
+          ar: [
+            "منطقة القصيم ثاني أكثر مناطق المملكة سكاناً بعد الرياض، تتمحور حول مدينتي بريدة (العاصمة الإقليمية) وعنيزة. تشتهر المنطقة بأنها أكبر منطقة إنتاج تمور في العالم — تستضيف بريدة مهرجان بريدة للتمور سنوياً، أحد أكبر أسواق التمور عالمياً.",
+            "أبرز الوجهات في القصيم: مركز مدينة بريدة، عنيزة القديمة (من أجمل مدن التراث العربي)، مدينة الرس، جامعة القصيم، وحرم جامعة الملك سعود بالقصيم.",
+            "يتبع الطريق من الدمام إلى القصيم الطريق الدائري الشرقي عبر الرياض ثم شمال غرباً على طريق القصيم السريع — مسار ممتاز ثنائي الاتجاه."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Qassim?", a: "Dammam to Qassim (Buraydah) starts from 1,800 SAR for a Sedan and 2,800 SAR for a GMC Yukon SUV." },
+        { q: "How long does Dammam to Buraydah take by road?", a: "Approximately 5 to 6 hours on the Saudi highway network, covering 500 km via Riyadh direction then northwest to Qassim." },
+        { q: "Do you serve Unayzah and Al Rass as well as Buraydah?", a: "Yes. We deliver to all cities in Qassim Region including Buraydah, Unayzah, Al Rass, Al Badayea, and all surrounding areas." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى القصيم؟", a: "يبدأ من ١٨٠٠ ريالاً للسيدان و٢٨٠٠ ريالاً ليوكن." },
+        { q: "كم تستغرق رحلة الدمام إلى بريدة بالسيارة؟", a: "حوالي ٥ إلى ٦ ساعات، 500 كم عبر الرياض ثم شمال غرباً للقصيم." },
+        { q: "هل تخدمون عنيزة والرس إضافة لبريدة؟", a: "نعم، نوصل إلى جميع مدن منطقة القصيم بما فيها بريدة وعنيزة والرس والبدائع وجميع المناطق المحيطة." }
+      ]
+    }
+  }
+];
+
