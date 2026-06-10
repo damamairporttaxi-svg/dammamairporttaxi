@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Dammam Airport (DMM) Taxi Guide – King Fahd International Airport",
   description:
     "Complete taxi and transfer guide for King Fahd International Airport (DMM), Dammam. How to meet your driver at arrivals, flight tracking, available destinations, and booking tips for international travellers.",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/dammam-airport-guide" },
+  alternates: { canonical: "https://dammamairporttaxi.com/dammam-airport-guide" },
   openGraph: {
     title: "Dammam Airport (DMM) Taxi Guide – Arrivals & Transfers",
     description:
       "How to get a private taxi at King Fahd International Airport DMM — meet & greet, flight tracking, local & GCC routes. Complete 2024 guide.",
-    url: "https://www.dammamairporttaxi.com/dammam-airport-guide",
+    url: "https://dammamairporttaxi.com/dammam-airport-guide",
     type: "article",
   },
 };
@@ -25,8 +25,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-    { "@type": "ListItem", position: 2, name: "Dammam Airport Guide", item: "https://www.dammamairporttaxi.com/dammam-airport-guide" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+    { "@type": "ListItem", position: 2, name: "Dammam Airport Guide", item: "https://dammamairporttaxi.com/dammam-airport-guide" },
   ],
 };
 
@@ -73,7 +73,7 @@ const airportSchema = {
     addressCountry: "SA",
   },
   geo: { "@type": "GeoCoordinates", latitude: 26.4712, longitude: 49.7979 },
-  url: "https://www.dammamairporttaxi.com/dammam-airport-guide",
+  url: "https://dammamairporttaxi.com/dammam-airport-guide",
 };
 
 export default function DammamAirportGuidePage() {
@@ -354,4 +354,5 @@ const styles: Record<string, React.CSSProperties> = {
   sideFeat: { fontSize: "0.83rem", color: "var(--text-secondary)", borderBottom: "1px solid var(--border-color)", paddingBottom: "0.4rem" },
   sideRoute: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.6rem 0.8rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "4px", textDecoration: "none", fontSize: "0.88rem", color: "var(--text-secondary)", border: "1px solid var(--border-color)", marginBottom: "0.5rem" },
 };
+
 

@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.dammamairporttaxi.com"),
+  metadataBase: new URL("https://dammamairporttaxi.com"),
   title: {
     default: "Dammam Airport Taxi | Premium GCC Transfer & Chauffeur Services",
     template: "%s | Dammam Airport Taxi",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: "Book premium airport taxis & GCC border crossing transfers from Dammam King Fahd International Airport (DMM) to Bahrain, Kuwait, UAE, Riyadh, Khobar, Jubail. 24/7 VIP Chauffeur.",
   keywords: ["dammam airport taxi", "taxi to bahrain", "dammam to bahrain taxi", "dammam to kuwait taxi", "dammam to riyadh taxi", "dammam airport to khobar", "gcc border crossing taxi", "dammam chauffeur service"],
   alternates: {
-    canonical: "https://www.dammamairporttaxi.com",
+    canonical: "https://dammamairporttaxi.com",
   },
   openGraph: {
     siteName: "Dammam Airport Taxi",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     title: "Dammam Airport Taxi | Premium GCC Transfer & Chauffeur Services",
     description: "Book premium airport taxis & GCC border crossing transfers from Dammam to Bahrain, Kuwait, UAE, Riyadh & more. 24/7 VIP Chauffeur.",
-    url: "https://www.dammamairporttaxi.com",
+    url: "https://dammamairporttaxi.com",
     images: [
       {
         url: "/og-image.jpg",
@@ -47,7 +47,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/icon.svg",
+    shortcut: "/favicon.ico",
   },
 };
 
@@ -61,9 +66,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "TaxiService",
     "name": "Dammam Airport Taxi",
-    "url": "https://www.dammamairporttaxi.com",
-    "logo": "https://www.dammamairporttaxi.com/logo.png",
-    "image": "https://www.dammamairporttaxi.com/hero-bg.jpg",
+    "url": "https://dammamairporttaxi.com",
+    "logo": "https://dammamairporttaxi.com/logo.png",
+    "image": "https://dammamairporttaxi.com/hero-bg.jpg",
     "description": "Premium airport transfers and cross-border taxi services from Dammam to Bahrain, Kuwait, Qatar, Riyadh, and Eastern Province cities.",
     "telephone": "+966501234567",
     "priceRange": "$$",
@@ -119,4 +124,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

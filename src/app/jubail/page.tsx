@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   title: "Jubail Taxi Service | Airport Transfers for Aramco, SABIC & RCJY",
   description:
     "Corporate and private taxi service in Jubail Industrial City — airport transfers from DMM, monthly invoicing for Aramco, SABIC & RCJY employees, and intercity transfers to Riyadh, Bahrain, and all GCC countries.",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/jubail" },
+  alternates: { canonical: "https://dammamairporttaxi.com/jubail" },
   openGraph: {
     title: "Jubail Taxi Service | Corporate & Airport Transfers",
     description: "Jubail Industrial City taxi — Aramco, SABIC, RCJY corporate accounts, airport transfers, and GCC routes. Monthly invoicing, priority dispatch.",
-    url: "https://www.dammamairporttaxi.com/jubail",
+    url: "https://dammamairporttaxi.com/jubail",
     type: "website",
   },
 };
@@ -23,9 +23,9 @@ const schemas = [
   {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-      { "@type": "ListItem", position: 2, name: "Dammam Guide", item: "https://www.dammamairporttaxi.com/dammam-guide" },
-      { "@type": "ListItem", position: 3, name: "Jubail", item: "https://www.dammamairporttaxi.com/jubail" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+      { "@type": "ListItem", position: 2, name: "Dammam Guide", item: "https://dammamairporttaxi.com/dammam-guide" },
+      { "@type": "ListItem", position: 3, name: "Jubail", item: "https://dammamairporttaxi.com/jubail" },
     ],
   },
   {
@@ -244,4 +244,5 @@ const s: Record<string, React.CSSProperties> = {
   sl: { color: "var(--text-muted)" },
   sv: { color: "#fff", fontWeight: "600" },
 };
+
 

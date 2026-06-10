@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   title: "GCC Tourist Destinations from Dammam | Day Trips & Weekend Getaways",
   description:
     "Explore all GCC tourist destinations reachable by private taxi from Dammam — Bahrain, Doha Qatar, Dubai, Abu Dhabi, Sharjah, Kuwait, Muscat Oman, Jeddah & Madinah. Fixed rates, luxury fleet.",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/tourist-destinations" },
+  alternates: { canonical: "https://dammamairporttaxi.com/tourist-destinations" },
   openGraph: {
     title: "GCC Tourist Destinations from Dammam by Taxi",
     description:
       "Day trips, weekend getaways & long-distance transfers from Dammam to all GCC tourist spots. Bahrain Causeway, Doha Souq Waqif, Dubai, Abu Dhabi, Muscat & more.",
-    url: "https://www.dammamairporttaxi.com/tourist-destinations",
+    url: "https://dammamairporttaxi.com/tourist-destinations",
     type: "article",
   },
 };
@@ -23,8 +23,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-    { "@type": "ListItem", position: 2, name: "Tourist Destinations from Dammam", item: "https://www.dammamairporttaxi.com/tourist-destinations" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+    { "@type": "ListItem", position: 2, name: "Tourist Destinations from Dammam", item: "https://dammamairporttaxi.com/tourist-destinations" },
   ],
 };
 
@@ -34,15 +34,15 @@ const itemListSchema = {
   name: "GCC Tourist Destinations Reachable by Taxi from Dammam",
   description: "All tourist cities and destinations accessible by private taxi from Dammam, Saudi Arabia",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Bahrain — Manama, Bahrain Fort, Tree of Life", url: "https://www.dammamairporttaxi.com/routes/dammam-to-bahrain" },
-    { "@type": "ListItem", position: 2, name: "Doha, Qatar — Souq Waqif, Pearl Qatar, Museum of Islamic Art", url: "https://www.dammamairporttaxi.com/routes/dammam-to-doha" },
-    { "@type": "ListItem", position: 3, name: "Kuwait City — Kuwait Towers, The Avenues", url: "https://www.dammamairporttaxi.com/routes/dammam-to-kuwait" },
-    { "@type": "ListItem", position: 4, name: "Dubai, UAE — Burj Khalifa, Palm Jumeirah, Dubai Mall", url: "https://www.dammamairporttaxi.com/routes/dammam-to-uae" },
-    { "@type": "ListItem", position: 5, name: "Abu Dhabi, UAE — Sheikh Zayed Grand Mosque, Yas Island", url: "https://www.dammamairporttaxi.com/routes/dammam-to-abu-dhabi" },
-    { "@type": "ListItem", position: 6, name: "Sharjah, UAE — Heritage Area, Blue Souk, Al Noor Mosque", url: "https://www.dammamairporttaxi.com/routes/dammam-to-sharjah" },
-    { "@type": "ListItem", position: 7, name: "Muscat, Oman — Sultan Qaboos Mosque, Mutrah Souq", url: "https://www.dammamairporttaxi.com/routes/dammam-to-muscat" },
-    { "@type": "ListItem", position: 8, name: "Jeddah, Saudi Arabia — Al-Balad UNESCO, King Fahd Fountain", url: "https://www.dammamairporttaxi.com/routes/dammam-to-jeddah" },
-    { "@type": "ListItem", position: 9, name: "Madinah, Saudi Arabia — Al-Masjid an-Nabawi, Quba Mosque", url: "https://www.dammamairporttaxi.com/routes/dammam-to-madinah" },
+    { "@type": "ListItem", position: 1, name: "Bahrain — Manama, Bahrain Fort, Tree of Life", url: "https://dammamairporttaxi.com/routes/dammam-to-bahrain" },
+    { "@type": "ListItem", position: 2, name: "Doha, Qatar — Souq Waqif, Pearl Qatar, Museum of Islamic Art", url: "https://dammamairporttaxi.com/routes/dammam-to-doha" },
+    { "@type": "ListItem", position: 3, name: "Kuwait City — Kuwait Towers, The Avenues", url: "https://dammamairporttaxi.com/routes/dammam-to-kuwait" },
+    { "@type": "ListItem", position: 4, name: "Dubai, UAE — Burj Khalifa, Palm Jumeirah, Dubai Mall", url: "https://dammamairporttaxi.com/routes/dammam-to-uae" },
+    { "@type": "ListItem", position: 5, name: "Abu Dhabi, UAE — Sheikh Zayed Grand Mosque, Yas Island", url: "https://dammamairporttaxi.com/routes/dammam-to-abu-dhabi" },
+    { "@type": "ListItem", position: 6, name: "Sharjah, UAE — Heritage Area, Blue Souk, Al Noor Mosque", url: "https://dammamairporttaxi.com/routes/dammam-to-sharjah" },
+    { "@type": "ListItem", position: 7, name: "Muscat, Oman — Sultan Qaboos Mosque, Mutrah Souq", url: "https://dammamairporttaxi.com/routes/dammam-to-muscat" },
+    { "@type": "ListItem", position: 8, name: "Jeddah, Saudi Arabia — Al-Balad UNESCO, King Fahd Fountain", url: "https://dammamairporttaxi.com/routes/dammam-to-jeddah" },
+    { "@type": "ListItem", position: 9, name: "Madinah, Saudi Arabia — Al-Masjid an-Nabawi, Quba Mosque", url: "https://dammamairporttaxi.com/routes/dammam-to-madinah" },
   ],
 };
 
@@ -386,4 +386,5 @@ const styles: Record<string, React.CSSProperties> = {
   faqQ: { fontSize: "1rem", color: "#fff", marginBottom: "0.5rem", fontWeight: "700" },
   faqA: { fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.6" },
 };
+
 

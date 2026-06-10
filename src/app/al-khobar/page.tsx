@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Al Khobar Taxi Service | Airport Transfers & GCC Routes",
   description:
     "Premium taxi service in Al Khobar — airport pickups from DMM, transfers to Bahrain via King Fahd Causeway, Jubail, Dhahran, Half Moon Bay, and all GCC countries. 24/7 fixed rates.",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/al-khobar" },
+  alternates: { canonical: "https://dammamairporttaxi.com/al-khobar" },
   openGraph: {
     title: "Al Khobar Taxi Service | Airport & GCC Transfers",
     description:
       "Al Khobar taxi — DMM Airport pickups, Bahrain via King Fahd Causeway, Half Moon Bay, Jubail, and all GCC routes. Fixed rates, licensed drivers, 24/7.",
-    url: "https://www.dammamairporttaxi.com/al-khobar",
+    url: "https://dammamairporttaxi.com/al-khobar",
     type: "website",
   },
 };
@@ -24,9 +24,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-    { "@type": "ListItem", position: 2, name: "Dammam Guide", item: "https://www.dammamairporttaxi.com/dammam-guide" },
-    { "@type": "ListItem", position: 3, name: "Al Khobar", item: "https://www.dammamairporttaxi.com/al-khobar" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+    { "@type": "ListItem", position: 2, name: "Dammam Guide", item: "https://dammamairporttaxi.com/dammam-guide" },
+    { "@type": "ListItem", position: 3, name: "Al Khobar", item: "https://dammamairporttaxi.com/al-khobar" },
   ],
 };
 
@@ -247,4 +247,5 @@ const s: Record<string, React.CSSProperties> = {
   sl: { color: "var(--text-muted)" },
   sv: { color: "#fff", fontWeight: "600" },
 };
+
 

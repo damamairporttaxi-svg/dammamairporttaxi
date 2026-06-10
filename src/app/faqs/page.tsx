@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { FAQsPageClient } from "@/components/FAQsPageClient";
 
 export const metadata: Metadata = {
   title: "Frequently Asked Questions | Dammam Airport Taxi Bookings",
   description: "Get answers to common questions about Dammam Airport Taxi — pricing, GCC border crossings, vehicle types, flight tracking, and free cancellation policy.",
   alternates: {
-    canonical: "https://www.dammamairporttaxi.com/faqs",
+    canonical: "https://dammamairporttaxi.com/faqs",
   },
   openGraph: {
     title: "FAQ | Dammam Airport Taxi",
     description: "Answers to frequently asked questions about our airport taxi and GCC border crossing services. Pricing, cancellations, fleet & more.",
-    url: "https://www.dammamairporttaxi.com/faqs",
+    url: "https://dammamairporttaxi.com/faqs",
     type: "website",
   },
 };
@@ -81,4 +81,5 @@ export default function FAQsPage() {
     </>
   );
 }
+
 

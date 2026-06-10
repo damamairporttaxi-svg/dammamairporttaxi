@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Corporate & Executive Chauffeur Service – Dammam, Jubail, Dhahran",
   description:
     "Corporate taxi and executive chauffeur services from Dammam Airport for Aramco, SABIC, RCJY, and business travellers. Monthly invoicing, priority dispatch, and a premium vehicle fleet.",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/corporate-transfers" },
+  alternates: { canonical: "https://dammamairporttaxi.com/corporate-transfers" },
   openGraph: {
     title: "Corporate Chauffeur Service – Dammam & Eastern Province",
     description:
       "Executive transfers for Saudi Aramco, SABIC & corporate clients. Monthly invoicing, priority dispatch, GMC Yukon & Camry fleet from Dammam Airport.",
-    url: "https://www.dammamairporttaxi.com/corporate-transfers",
+    url: "https://dammamairporttaxi.com/corporate-transfers",
     type: "website",
   },
 };
@@ -25,8 +25,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-    { "@type": "ListItem", position: 2, name: "Corporate Transfers", item: "https://www.dammamairporttaxi.com/corporate-transfers" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+    { "@type": "ListItem", position: 2, name: "Corporate Transfers", item: "https://dammamairporttaxi.com/corporate-transfers" },
   ],
 };
 
@@ -39,7 +39,7 @@ const serviceSchema = {
     "@type": "LocalBusiness",
     name: "Dammam Airport Taxi",
     telephone: "+966501234567",
-    url: "https://www.dammamairporttaxi.com",
+    url: "https://dammamairporttaxi.com",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Dammam",
@@ -303,4 +303,5 @@ const styles: Record<string, React.CSSProperties> = {
   sideVal: { color: "#fff", fontWeight: "600" },
   sideRoute: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.6rem 0.8rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "4px", textDecoration: "none", fontSize: "0.88rem", color: "var(--text-secondary)", border: "1px solid var(--border-color)", marginBottom: "0.5rem" },
 };
+
 

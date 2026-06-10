@@ -1,8 +1,8 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 import { routesData } from "@/data/routesData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.dammamairporttaxi.com";
+  const baseUrl = "https://dammamairporttaxi.com";
 
   const routeUrls = routesData.map((route) => ({
     url: `${baseUrl}/routes/${route.slug}`,
@@ -33,4 +33,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/terms`,                          lastModified: new Date(), changeFrequency: "yearly",  priority: 0.3 },
   ];
 }
+
 

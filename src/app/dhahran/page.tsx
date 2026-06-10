@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   title: "Dhahran Taxi Service | Saudi Aramco HQ & KFUPM Airport Transfers",
   description:
     "Premium taxi service in Dhahran — airport transfers from DMM to Saudi Aramco compound, KFUPM university, and all Dhahran business locations. Corporate accounts, 24/7 executive transfers.",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/dhahran" },
+  alternates: { canonical: "https://dammamairporttaxi.com/dhahran" },
   openGraph: {
     title: "Dhahran Taxi Service | Saudi Aramco HQ & Airport Transfers",
     description: "Dhahran taxi — DMM Airport to Saudi Aramco compound, KFUPM, and all Dhahran business areas. Executive corporate service, fixed rates, 24/7.",
-    url: "https://www.dammamairporttaxi.com/dhahran",
+    url: "https://dammamairporttaxi.com/dhahran",
     type: "website",
   },
 };
@@ -23,9 +23,9 @@ const schemas = [
   {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-      { "@type": "ListItem", position: 2, name: "Dammam Guide", item: "https://www.dammamairporttaxi.com/dammam-guide" },
-      { "@type": "ListItem", position: 3, name: "Dhahran", item: "https://www.dammamairporttaxi.com/dhahran" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+      { "@type": "ListItem", position: 2, name: "Dammam Guide", item: "https://dammamairporttaxi.com/dammam-guide" },
+      { "@type": "ListItem", position: 3, name: "Dhahran", item: "https://dammamairporttaxi.com/dhahran" },
     ],
   },
   {
@@ -229,4 +229,5 @@ const s: Record<string, React.CSSProperties> = {
   sl: { color: "var(--text-muted)" },
   sv: { color: "#fff", fontWeight: "600" },
 };
+
 

@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -7,8 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/_next/"],
     },
-    sitemap: "https://www.dammamairporttaxi.com/sitemap.xml",
-    host: "https://www.dammamairporttaxi.com",
+    sitemap: "https://dammamairporttaxi.com/sitemap.xml",
+    host: "https://dammamairporttaxi.com",
   };
 }
+
 

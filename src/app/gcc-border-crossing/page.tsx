@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "GCC Border Crossing by Taxi – Complete Guide (Saudi Arabia)",
   description:
     "Complete guide to crossing Saudi Arabia's GCC borders by private taxi — King Fahd Causeway to Bahrain, Khafji to Kuwait, Al Batha to UAE, and Salwa to Qatar. Required documents, fees, and tips.",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/gcc-border-crossing" },
+  alternates: { canonical: "https://dammamairporttaxi.com/gcc-border-crossing" },
   openGraph: {
     title: "GCC Border Crossing by Taxi – Complete Guide",
     description:
       "King Fahd Causeway, Khafji, Al Batha/Ghuwaifat, Salwa — required documents, fees, crossing times, and taxi booking tips from Dammam.",
-    url: "https://www.dammamairporttaxi.com/gcc-border-crossing",
+    url: "https://dammamairporttaxi.com/gcc-border-crossing",
     type: "article",
   },
 };
@@ -25,8 +25,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-    { "@type": "ListItem", position: 2, name: "GCC Border Crossing Guide", item: "https://www.dammamairporttaxi.com/gcc-border-crossing" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+    { "@type": "ListItem", position: 2, name: "GCC Border Crossing Guide", item: "https://dammamairporttaxi.com/gcc-border-crossing" },
   ],
 };
 
@@ -351,4 +351,5 @@ const styles: Record<string, React.CSSProperties> = {
   factLabel: { fontSize: "0.78rem", color: "var(--accent-gold)", fontWeight: "700", textTransform: "uppercase" },
   factVal: { fontSize: "0.85rem", color: "var(--text-secondary)", marginTop: "0.2rem" },
 };
+
 

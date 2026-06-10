@@ -29,12 +29,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: route.metaTitle.en,
     description: route.metaDescription.en,
     alternates: {
-      canonical: `https://www.dammamairporttaxi.com/routes/${slug}`,
+      canonical: `https://dammamairporttaxi.com/routes/${slug}`,
     },
     openGraph: {
       title: route.metaTitle.en,
       description: route.metaDescription.en,
-      url: `https://www.dammamairporttaxi.com/routes/${slug}`,
+      url: `https://dammamairporttaxi.com/routes/${slug}`,
       type: "website",
     },
   };
@@ -57,12 +57,12 @@ export default async function RoutePage({ params }: PageProps) {
     "@type": "TaxiService",
     name: route.metaTitle.en,
     description: route.metaDescription.en,
-    url: `https://www.dammamairporttaxi.com/routes/${slug}`,
+    url: `https://dammamairporttaxi.com/routes/${slug}`,
     provider: {
       "@type": "LocalBusiness",
       name: "Dammam Airport Taxi",
       telephone: "+966501234567",
-      url: "https://www.dammamairporttaxi.com",
+      url: "https://dammamairporttaxi.com",
     },
     areaServed: [
       { "@type": "AdministrativeArea", name: fromArea },
@@ -94,9 +94,9 @@ export default async function RoutePage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-      { "@type": "ListItem", position: 2, name: "Routes", item: "https://www.dammamairporttaxi.com/#routes" },
-      { "@type": "ListItem", position: 3, name: route.name.en, item: `https://www.dammamairporttaxi.com/routes/${slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+      { "@type": "ListItem", position: 2, name: "Routes", item: "https://dammamairporttaxi.com/#routes" },
+      { "@type": "ListItem", position: 3, name: route.name.en, item: `https://dammamairporttaxi.com/routes/${slug}` },
     ],
   };
 

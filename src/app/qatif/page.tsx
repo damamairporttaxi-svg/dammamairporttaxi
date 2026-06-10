@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -10,11 +10,11 @@ export const metadata: Metadata = {
   title: "Qatif Taxi Service | Tarout Island & Airport Transfers",
   description:
     "Private taxi service in Qatif — airport transfers from DMM, transfers to Tarout Island, Qatif Corniche, and all Eastern Province destinations. 55 km from King Fahd Airport.",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/qatif" },
+  alternates: { canonical: "https://dammamairporttaxi.com/qatif" },
   openGraph: {
     title: "Qatif Taxi Service | Tarout Island & DMM Airport Transfers",
     description: "Qatif taxi — DMM Airport transfers, Tarout Island tours, and Eastern Province routes. Fixed rates, meet & greet, 24/7.",
-    url: "https://www.dammamairporttaxi.com/qatif",
+    url: "https://dammamairporttaxi.com/qatif",
     type: "website",
   },
 };
@@ -23,9 +23,9 @@ const schemas = [
   {
     "@context": "https://schema.org", "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-      { "@type": "ListItem", position: 2, name: "Dammam Guide", item: "https://www.dammamairporttaxi.com/dammam-guide" },
-      { "@type": "ListItem", position: 3, name: "Qatif", item: "https://www.dammamairporttaxi.com/qatif" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+      { "@type": "ListItem", position: 2, name: "Dammam Guide", item: "https://dammamairporttaxi.com/dammam-guide" },
+      { "@type": "ListItem", position: 3, name: "Qatif", item: "https://dammamairporttaxi.com/qatif" },
     ],
   },
   {
@@ -228,4 +228,5 @@ const s: Record<string, React.CSSProperties> = {
   sl: { color: "var(--text-muted)" },
   sv: { color: "#fff", fontWeight: "600" },
 };
+
 

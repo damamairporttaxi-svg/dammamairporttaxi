@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
   title: "Dammam City Guide | Eastern Province Taxi, Tourism & Transfer Hub",
   description:
     "Complete guide to Dammam — capital of Saudi Arabia's Eastern Province. Taxi routes, tourist attractions (Corniche, Tarout, Half Moon Bay), business districts (Aramco, SABIC), and King Fahd International Airport (DMM).",
-  alternates: { canonical: "https://www.dammamairporttaxi.com/dammam-guide" },
+  alternates: { canonical: "https://dammamairporttaxi.com/dammam-guide" },
   openGraph: {
     title: "Dammam City Complete Guide | Tourist, Business & Transfer Info",
     description:
       "Everything about Dammam — Eastern Province capital. Tourist spots, Aramco, Jubail, airport guide, taxi routes to Bahrain, Riyadh, and all GCC countries.",
-    url: "https://www.dammamairporttaxi.com/dammam-guide",
+    url: "https://dammamairporttaxi.com/dammam-guide",
     type: "article",
   },
 };
@@ -25,8 +25,8 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.dammamairporttaxi.com" },
-    { "@type": "ListItem", position: 2, name: "Dammam City Guide", item: "https://www.dammamairporttaxi.com/dammam-guide" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://dammamairporttaxi.com" },
+    { "@type": "ListItem", position: 2, name: "Dammam City Guide", item: "https://dammamairporttaxi.com/dammam-guide" },
   ],
 };
 
@@ -42,7 +42,7 @@ const citySchema = {
     containedInPlace: { "@type": "Country", name: "Saudi Arabia" },
   },
   geo: { "@type": "GeoCoordinates", latitude: 26.4367, longitude: 50.1033 },
-  url: "https://www.dammamairporttaxi.com/dammam-guide",
+  url: "https://dammamairporttaxi.com/dammam-guide",
 };
 
 const faqSchema = {
@@ -383,4 +383,5 @@ const s: Record<string, React.CSSProperties> = {
   sideVal: { color: "#fff", fontWeight: "600", textAlign: "right", maxWidth: "55%" },
   sideRoute: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.5rem 0.7rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "4px", textDecoration: "none", fontSize: "0.83rem", color: "var(--text-secondary)", border: "1px solid var(--border-color)", marginBottom: "0.4rem" },
 };
+
 
