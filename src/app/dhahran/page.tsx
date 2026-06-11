@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -9,7 +9,7 @@ import { RelatedRoutes } from "@/components/RelatedRoutes";
 export const metadata: Metadata = {
   title: "Dhahran Taxi Service | Saudi Aramco HQ & KFUPM Airport Transfers",
   description:
-    "Premium taxi service in Dhahran — airport transfers from DMM to Saudi Aramco compound, KFUPM university, and all Dhahran business locations. Corporate accounts, 24/7 executive transfers.",
+    "private taxi service in Dhahran — airport transfers from DMM to Saudi Aramco compound, KFUPM university, and all Dhahran business locations. Corporate accounts, 24/7 executive transfers.",
   alternates: { canonical: "https://dammamairporttaxi.com/dhahran" },
   openGraph: {
     title: "Dhahran Taxi Service | Saudi Aramco HQ & Airport Transfers",

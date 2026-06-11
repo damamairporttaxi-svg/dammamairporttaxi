@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -9,7 +9,7 @@ import { RelatedRoutes } from "@/components/RelatedRoutes";
 export const metadata: Metadata = {
   title: "Corporate & Executive Chauffeur Service – Dammam, Jubail, Dhahran",
   description:
-    "Corporate taxi and executive chauffeur services from Dammam Airport for Aramco, SABIC, RCJY, and business travellers. Monthly invoicing, priority dispatch, and a premium vehicle fleet.",
+    "Corporate taxi and executive chauffeur services from Dammam Airport for Aramco, SABIC, RCJY, and business travellers. Monthly invoicing, priority dispatch, and a executive vehicle fleet.",
   alternates: { canonical: "https://dammamairporttaxi.com/corporate-transfers" },
   openGraph: {
     title: "Corporate Chauffeur Service – Dammam & Eastern Province",
@@ -34,7 +34,7 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Corporate & Executive Chauffeur Service – Dammam Airport Taxi",
-  description: "Premium corporate taxi and executive transfer service for businesses, oil & gas employees, and international corporate travellers in Saudi Arabia's Eastern Province.",
+  description: "professional corporate taxi and executive transfer service for businesses, oil & gas employees, and international corporate travellers in Saudi Arabia's Eastern Province.",
   provider: {
     "@type": "LocalBusiness",
     name: "Dammam Airport Taxi",
@@ -64,7 +64,7 @@ const faqSchema = {
   mainEntity: [
     { "@type": "Question", name: "Do you offer monthly corporate invoicing for company accounts?", acceptedAnswer: { "@type": "Answer", text: "Yes. We support monthly billing for corporate accounts. Your company receives a detailed invoice at the end of each billing month covering all employee trips, which can be submitted to your accounts payable department. Contact us to set up your corporate account." } },
     { "@type": "Question", name: "Can your drivers enter Saudi Aramco and SABIC facilities in Dhahran and Jubail?", acceptedAnswer: { "@type": "Answer", text: "Our drivers can deliver passengers to the designated visitor gates at all major facilities including Saudi Aramco Dhahran HQ, Aramco compounds, Jubail Industrial Area 1 & 2, and SABIC headquarters. For access inside secured areas, passengers should pre-arrange gate passes with their host company's security department." } },
-    { "@type": "Question", name: "What vehicle types are available for corporate bookings?", acceptedAnswer: { "@type": "Answer", text: "For executive single passengers we offer Toyota Camry (Sedan). For senior management and groups we offer the GMC Yukon (6 passengers) or Hyundai Staria Van (8 passengers). For VIP delegations we provide a premium chauffeured luxury class. All vehicles have USB charging, Wi-Fi, and are sanitized before each trip." } },
+    { "@type": "Question", name: "What vehicle types are available for corporate bookings?", acceptedAnswer: { "@type": "Answer", text: "For executive single passengers we offer Toyota Camry (Sedan). For senior management and groups we offer the GMC Yukon (6 passengers) or Hyundai Staria Van (8 passengers). For VIP delegations we provide a VIP luxury class. All vehicles have USB charging, Wi-Fi, and are sanitized before each trip." } },
     { "@type": "Question", name: "Can we book multiple vehicles simultaneously for a corporate group?", acceptedAnswer: { "@type": "Answer", text: "Yes. We support fleet-level bookings for large corporate groups — for example, multiple vehicles dispatched from King Fahd International Airport to different company compounds simultaneously. Contact our corporate desk on WhatsApp with your group size and travel dates for a coordinated fleet quote." } },
     { "@type": "Question", name: "Do you serve the RCJY Royal Commission compounds in Jubail?", acceptedAnswer: { "@type": "Answer", text: "Yes. We regularly serve transfers to and from the Royal Commission for Jubail and Yanbu (RCJY) facilities, residential compounds, and the Jubail Industrial City visitor centre. Our drivers are familiar with RCJY security gate procedures." } },
   ],
@@ -93,7 +93,7 @@ export default function CorporateTransfersPage() {
               Corporate & Executive Chauffeur Services — Eastern Province
             </h1>
             <p style={styles.heroSub}>
-              Dedicated airport transfers and intercity transportation for Saudi Aramco, SABIC, RCJY, and corporate clients across Dammam, Jubail, Dhahran, Khobar, and Riyadh. Monthly invoicing · Priority dispatch · Premium fleet.
+              Dedicated airport transfers and intercity transportation for Saudi Aramco, SABIC, RCJY, and corporate clients across Dammam, Jubail, Dhahran, Khobar, and Riyadh. Monthly invoicing · Priority dispatch · Executive fleet.
             </p>
             <div style={styles.heroBadges}>
               {["Monthly Invoicing", "Priority Dispatch", "GPS Tracked", "24/7 Operations", "All Tolls Included"].map((b) => (

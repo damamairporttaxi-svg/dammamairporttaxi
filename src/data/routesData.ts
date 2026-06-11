@@ -35,7 +35,7 @@ export const routesData: RouteDetail[] = [
       ar: "تاكسي من الدمام إلى البحرين | توصيل مباشر من المطار والمدينة" 
     },
     metaDescription: {
-      en: "Book a premium taxi from Dammam or DMM Airport to Manama, Bahrain. Cross King Fahd Causeway smoothly in GMC Yukon SUVs or Sedan Camry with professional drivers.",
+      en: "Book a private taxi from Dammam or DMM Airport to Manama, Bahrain. Cross King Fahd Causeway smoothly in GMC Yukon SUVs or Sedan Camry with professional drivers.",
       ar: "احجز تاكسي فاخر من الدمام أو مطار الملك فهد إلى المنامة البحرين. اعبر جسر الملك فهد بسلاسة مع سيارات جي إم سي يوكن أو كامري وسائقين محترفين."
     },
     distance: { en: "85 km", ar: "٨٥ كم" },
@@ -109,7 +109,7 @@ export const routesData: RouteDetail[] = [
     pricing: { sedan: 1500, suv: 2200, van: 2600, luxury: 4500 },
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1777265.8117769915!2d46.7329598!3d29.0884949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fc5363fbeea6aa5%3A0xf70026e1074e2d40!2sKuwait!5e0!3m2!1sen!2ssa!4v1716500000001!5m2!1sen!2ssa",
     intro: {
-      en: "Travel from Dammam to Kuwait in full comfort and style. Our premium intercity taxi service handles long highway miles safely, ensuring you reach Kuwait City refreshed.",
+      en: "Travel from Dammam to Kuwait in full comfort and style. Our intercity taxi service handles long highway miles safely, ensuring you reach Kuwait City refreshed.",
       ar: "سافر من الدمام إلى الكويت براحة وأمان تامين. تغطي خدمة التاكسي الفاخرة بين المدن المسافات الطويلة بكفاءة عالية، مما يضمن وصولك إلى مدينة الكويت بنشاط وراحة."
     },
     contentSections: [
@@ -163,7 +163,7 @@ export const routesData: RouteDetail[] = [
       ar: "تاكسي من الدمام إلى الإمارات | توصيل فاخر بين دول الخليج" 
     },
     metaDescription: {
-      en: "Premium direct taxi service from Dammam Airport to Abu Dhabi and Dubai. Luxury VIP GMC Yukon SUVs and professional chauffeurs for GCC travel.",
+      en: "Direct taxi service from Dammam Airport to Abu Dhabi and Dubai. Luxury VIP GMC Yukon SUVs and professional chauffeurs for GCC travel.",
       ar: "خدمة تاكسي مميزة ومباشرة من مطار الدمام إلى أبوظبي ودبي. سيارات جي إم سي يوكن وسائقين محترفين للسفر البري الفاخر بين دول الخليج."
     },
     distance: { en: "950 km", ar: "٩٥٠ كم" },
@@ -226,7 +226,7 @@ export const routesData: RouteDetail[] = [
       ar: "تاكسي من الدمام إلى الرياض | توصيل بين المدن سريع وآمن" 
     },
     metaDescription: {
-      en: "Book a fast, private taxi from Dammam to Riyadh. Affordable fixed rates, experienced highway drivers, and premium comfortable cars.",
+      en: "Book a fast, private taxi from Dammam to Riyadh. Affordable fixed rates, experienced highway drivers, and comfortable vehicles.",
       ar: "احجز تاكسي خاص وسريع من الدمام إلى الرياض. أسعار ثابتة ومناسبة، وسائقون ذوو خبرة على الطرق السريعة وسيارات حديثة ومريحة."
     },
     distance: { en: "400 km", ar: "٤٠٠ كم" },
@@ -318,7 +318,7 @@ export const routesData: RouteDetail[] = [
     ],
     faqs: {
       en: [
-        { q: "How much does a taxi from Dammam Airport to Khobar cost?", a: "The price is 150 SAR for a Sedan Camry. For a premium GMC Yukon, it costs 280 SAR." },
+        { q: "How much does a taxi from Dammam Airport to Khobar cost?", a: "The price is 150 SAR for a Sedan Camry. For a VIP GMC Yukon, it costs 280 SAR." },
         { q: "Is the airport parking fee included in the price?", a: "Yes, all airport parking, toll fees, and VAT are fully included in the price quote." }
       ],
       ar: [
@@ -383,7 +383,7 @@ export const routesData: RouteDetail[] = [
       ar: "تاكسي من مطار الدمام إلى الظهران | توصيل أرامكو والجامعة" 
     },
     metaDescription: {
-      en: "Book a premium airport transfer from Dammam Airport (DMM) to Dhahran, Aramco Camp, and KFUPM. Insured vehicles, elite drivers, flat rates.",
+      en: "Book a private airport transfer from Dammam Airport (DMM) to Dhahran, Aramco Camp, and KFUPM. Insured vehicles, elite drivers, flat rates.",
       ar: "احجز توصيل مطار متميز من مطار الدمام إلى الظهران، سكن أرامكو، وجامعة الملك فهد للبترول والمعادن. سيارات مؤمنة وسائقون نخبة."
     },
     distance: { en: "55 km", ar: "٥٥ كم" },
@@ -392,7 +392,7 @@ export const routesData: RouteDetail[] = [
     pricing: { sedan: 150, suv: 280, van: 320, luxury: 700 },
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114511.96860010996!2d50.10667315!3d26.2625298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49e5d41577ffdb%3A0xe5a1768407421110!2sDhahran%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1716500000006!5m2!1sen!2ssa",
     intro: {
-      en: "Get a safe, premium transfer from Dammam Airport to Dhahran. Servicing Saudi Aramco residential quarters, King Fahd University (KFUPM), and all business towers.",
+      en: "Get a safe, professional transfer from Dammam Airport to Dhahran. Servicing Saudi Aramco residential quarters, King Fahd University (KFUPM), and all business towers.",
       ar: "احصل على توصيل آمن وفاخر من مطار الدمام إلى الظهران. نخدم مجمعات سكن أرامكو السعودية، جامعة الملك فهد (KFUPM)، وجميع الأبراج المكتبية."
     },
     contentSections: [
@@ -475,7 +475,7 @@ export const routesData: RouteDetail[] = [
       ar: "تاكسي من مطار الدمام إلى حدود قطر | منفذ سلوى الحدودي" 
     },
     metaDescription: {
-      en: "Private taxi transfers from Dammam Airport (DMM) to the Saudi-Qatar Salwa border. Quick customs clearance support, reliable premium vehicles.",
+      en: "Private taxi transfers from Dammam Airport (DMM) to the Saudi-Qatar Salwa border. Quick customs clearance support, reliable executive vehicles.",
       ar: "توصيل تاكسي خاص من مطار الدمام إلى منفذ سلوى الحدودي بين السعودية وقطر. دعم التخليص السريع وسيارات حديثة وموثوقة."
     },
     distance: { en: "310 km", ar: "٣١٠ كم" },
@@ -484,7 +484,7 @@ export const routesData: RouteDetail[] = [
     pricing: { sedan: 1000, suv: 1600, van: 2000, luxury: 3800 },
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115682.909062325!2d50.77196025!3d24.96025215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e476fb8a2a03cfb%3A0xc3f8e77a28cf1bc2!2sSalwa%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1716500000008!5m2!1sen!2ssa",
     intro: {
-      en: "Connecting Dammam Airport to the Salwa border terminal for entry into Qatar. We provide premium highway rides driven by experienced cross-border chauffeurs.",
+      en: "Connecting Dammam Airport to the Salwa border terminal for entry into Qatar. We provide highway rides driven by experienced cross-border chauffeurs.",
       ar: "نربط مطار الدمام بمنفذ سلوى الحدودي للدخول إلى دولة قطر. نوفر رحلات برية متميزة يقودها سائقون ذوو خبرة واسعة في الطرق الحدودية."
     },
     contentSections: [
@@ -600,7 +600,7 @@ export const routesData: RouteDetail[] = [
     pricing: { sedan: 3200, suv: 4500, van: 5200, luxury: 8000 },
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d924927.0!2d54.3773!3d24.4539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e48dfb1cd4e1b%3A0x2cb0507d89b301fc!2sAbu%20Dhabi%20UAE!5e0!3m2!1sen!2ssa!4v1717000000011!5m2!1sen!2ssa",
     intro: {
-      en: "Travel from Dammam to Abu Dhabi, UAE's majestic capital. Visit the Sheikh Zayed Grand Mosque, Yas Island theme parks, Louvre Abu Dhabi, and the iconic Corniche — all accessible by our premium cross-border taxi via the Al Batha-Ghuwaifat border.",
+      en: "Travel from Dammam to Abu Dhabi, UAE's majestic capital. Visit the Sheikh Zayed Grand Mosque, Yas Island theme parks, Louvre Abu Dhabi, and the iconic Corniche — all accessible by our cross-border taxi via the Al Batha-Ghuwaifat border.",
       ar: "سافر من الدمام إلى أبوظبي، العاصمة الإماراتية الشامخة. زر مسجد الشيخ زايد الكبير، حدائق جزيرة ياس، متحف اللوفر أبوظبي، والكورنيش الأيقوني — بتاكسينا المتميز عبر منفذ البطحاء-الغويفات."
     },
     contentSections: [
@@ -811,7 +811,7 @@ export const routesData: RouteDetail[] = [
       ar: "تاكسي من الدمام إلى مسقط | توصيل VIP طويل المسافة إلى عُمان"
     },
     metaDescription: {
-      en: "Premium private taxi from Dammam to Muscat, Oman via UAE. Sultan Qaboos Grand Mosque, Mutrah Souq, Royal Opera House, and Muscat International Airport (MCT). 1,400 km with luxury fleet.",
+      en: "private taxi from Dammam to Muscat, Oman via UAE. Sultan Qaboos Grand Mosque, Mutrah Souq, Royal Opera House, and Muscat International Airport (MCT). 1,400 km with luxury fleet.",
       ar: "تاكسي فاخر خاص من الدمام إلى مسقط عُمان عبر الإمارات. مسجد السلطان قابوس الكبير، سوق مطرح، دار الأوبرا الملكية، ومطار مسقط الدولي. ١٤٠٠ كم مع أسطول فاخر."
     },
     distance: { en: "1,400 km", ar: "١٤٠٠ كم" },
@@ -845,7 +845,7 @@ export const routesData: RouteDetail[] = [
           en: [
             "The Dammam to Muscat route crosses three countries: Saudi Arabia → UAE (Al Batha / Ghuwaifat border) → Oman (Hatta border or Al Wajajah border near Al Ain).",
             "Required documents: passport valid 6+ months, valid Saudi Exit/Re-Entry visa for expatriates, UAE transit entry (usually stamped at Al Batha), and Oman entry visa (most nationalities receive visa on arrival at Oman land borders).",
-            "This is a premium VIP route. We strongly recommend the GMC Yukon Denali for maximum comfort on the 1,400 km journey. Meals, rest stops, Wi-Fi, and refreshments are provided throughout."
+            "This is a professional VIP route. We strongly recommend the GMC Yukon Denali for maximum comfort on the 1,400 km journey. Meals, rest stops, Wi-Fi, and refreshments are provided throughout."
           ],
           ar: [
             "مسار الدمام–مسقط يعبر ثلاث دول: المملكة العربية السعودية → الإمارات (منفذ البطحاء/الغويفات) → عُمان (منفذ حتا أو منفذ الوجاجة قرب العين).",
@@ -1110,7 +1110,7 @@ export const routesData: RouteDetail[] = [
     },
     contentSections: [
       {
-        title: { en: "Half Moon Bay — Eastern Province's Premier Beach Destination", ar: "خليج نصف القمر — الوجهة الشاطئية الأولى في المنطقة الشرقية" },
+        title: { en: "Half Moon Bay — Eastern Province's leading Beach Destination", ar: "خليج نصف القمر — الوجهة الشاطئية الأولى في المنطقة الشرقية" },
         body: {
           en: [
             "Half Moon Bay (Khobar Lakes area) is a natural crescent-shaped bay on the Arabian Gulf coast, approximately 35 km south of Al Khobar city. It is the Eastern Province's most visited beach resort and weekend getaway for residents of Dammam, Khobar, Jubail, and Dhahran.",
@@ -1252,6 +1252,353 @@ export const routesData: RouteDetail[] = [
         { q: "كم تكلفة التاكسي من الدمام إلى القصيم؟", a: "يبدأ من ١٨٠٠ ريالاً للسيدان و٢٨٠٠ ريالاً ليوكن." },
         { q: "كم تستغرق رحلة الدمام إلى بريدة بالسيارة؟", a: "حوالي ٥ إلى ٦ ساعات، 500 كم عبر الرياض ثم شمال غرباً للقصيم." },
         { q: "هل تخدمون عنيزة والرس إضافة لبريدة؟", a: "نعم، نوصل إلى جميع مدن منطقة القصيم بما فيها بريدة وعنيزة والرس والبدائع وجميع المناطق المحيطة." }
+      ]
+    }
+  },
+
+  // ─── COMPREHENSIVE SAUDI + UAE COVERAGE ──────────────────────
+
+  {
+    slug: "dammam-to-taif",
+    name: { en: "Dammam to Taif Taxi", ar: "تاكسي من الدمام إلى الطائف" },
+    metaTitle: {
+      en: "Dammam to Taif Taxi | City of Roses Mountain Transfer",
+      ar: "تاكسي من الدمام إلى الطائف | مدينة الورد والجبال"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Taif — Al Shafa, Al Hada mountain resorts, Taif Roses, Souq Okaz, and Taif Regional Airport (TIF). 850 km highway transfer with experienced long-distance drivers.",
+      ar: "تاكسي خاص من الدمام إلى الطائف — الشفا والهدا والمنتجعات الجبلية، ورد الطائف، سوق عكاظ، ومطار الطائف. 850 كم مع سائقين محترفين."
+    },
+    distance: { en: "850 km", ar: "٨٥٠ كم" },
+    duration: { en: "8 - 9 Hours", ar: "٨ إلى ٩ ساعات" },
+    basePrice: 3200,
+    pricing: { sedan: 3200, suv: 4500, van: 5200, luxury: 8500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.0!2d40.4168!3d21.2854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15e979c93e3d27cd%3A0x6db7d7ef47ed65c1!2sTaif%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717200000001!5m2!1sen!2ssa",
+    intro: {
+      en: "Travel from Dammam to Taif — Saudi Arabia's beloved 'City of Roses' perched at 1,800 metres above sea level in the Hejaz Mountains. Escape the Eastern Province heat for Taif's cool mountain air, world-famous roses, and stunning Al Shafa and Al Hada resorts.",
+      ar: "سافر من الدمام إلى الطائف — 'مدينة الورد' المحبوبة على ارتفاع ١٨٠٠ متر في جبال الحجاز. اهرب من حرارة المنطقة الشرقية إلى هواء الطائف الجبلي المنعش وورده العالمي الشهير ومنتجعات الشفا والهدا."
+    },
+    contentSections: [
+      {
+        title: { en: "Taif — Saudi Arabia's Mountain Resort City", ar: "الطائف — المدينة الجبلية والمنتجع الصيفي للمملكة" },
+        body: {
+          en: [
+            "Taif (الطائف) is Saudi Arabia's famous summer retreat, renowned globally for producing 70% of the world's rose oil used in fine perfumes and oud. The city sits at 1,800 metres in the Hejaz Mountains, giving it a cool climate that contrasts with the heat of the surrounding lowlands.",
+            "Top attractions include Al Shafa Mountain Resort (2,200m altitude), Al Hada Village and Cable Car, Al Rudaf Park, Souq Okaz (ancient Arabian poetry market recently revived), Shubra Palace Museum, Al-Taif Zoo, and the famous Taif Roses Festival held every spring.",
+            "Taif Regional Airport (TIF) is also accessible directly from Dammam for airport-to-airport connections."
+          ],
+          ar: [
+            "الطائف أشهر منتجع صيفي في المملكة العربية السعودية، وتشتهر عالمياً بإنتاج 70% من زيت الورد العالمي المستخدم في أرقى العطور والعود. تقع على ارتفاع 1800 متر في جبال الحجاز بمناخ بارد منعش.",
+            "أبرز معالمها: منتجع الشفا الجبلي (2200م)، قرية الهدا والتلفريك، حديقة الردف، سوق عكاظ التاريخي، قصر شبرا المتحف، حديقة حيوان الطائف، ومهرجان ورد الطائف الربيعي الشهير.",
+            "مطار الطائف الإقليمي (TIF) متاح للتوصيل المباشر من الدمام لرحلات الاتصال."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Taif?", a: "Dammam to Taif starts from 3,200 SAR for a Sedan and 4,500 SAR for a GMC Yukon SUV. No border fees — domestic Saudi route." },
+        { q: "How long does Dammam to Taif take by road?", a: "Approximately 8 to 9 hours covering 850 km via the Saudi highway network through Riyadh then towards Mecca/Taif." },
+        { q: "What is Taif famous for?", a: "Taif is famous for its cool mountain climate (1,800m altitude), the world-renowned Taif Roses used in luxury perfumes, Al Shafa and Al Hada mountain resorts, Souq Okaz ancient market, and being a leading Saudi summer destination." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى الطائف؟", a: "يبدأ من ٣٢٠٠ ريالاً للسيدان و٤٥٠٠ ريالاً ليوكن. لا رسوم حدود — طريق داخلي سعودي." },
+        { q: "كم تستغرق الرحلة من الدمام إلى الطائف؟", a: "حوالي ٨ إلى ٩ ساعات، ٨٥٠ كم عبر الرياض باتجاه مكة والطائف." },
+        { q: "بماذا تشتهر مدينة الطائف؟", a: "تشتهر الطائف بمناخها الجبلي المعتدل (١٨٠٠م)، ورودها العالمية المستخدمة في أفخر العطور، منتجعات الشفا والهدا، سوق عكاظ، وكونها المنتجع الصيفي الأول بالمملكة." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-yanbu",
+    name: { en: "Dammam to Yanbu Taxi", ar: "تاكسي من الدمام إلى ينبع" },
+    metaTitle: {
+      en: "Dammam to Yanbu Taxi | Red Sea Port & Industrial City Transfer",
+      ar: "تاكسي من الدمام إلى ينبع | مدينة الصناعة والبحر الأحمر"
+    },
+    metaDescription: {
+      en: "Direct private taxi from Dammam to Yanbu — Yanbu Industrial City (Royal Commission), Yanbu Corniche, Red Sea diving sites, and Yanbu Airport (YNB). 1,200 km professional transfer.",
+      ar: "تاكسي خاص مباشر من الدمام إلى ينبع — مدينة ينبع الصناعية، كورنيش ينبع، مواقع غوص البحر الأحمر، ومطار ينبع. ١٢٠٠ كم مع سائقين محترفين."
+    },
+    distance: { en: "1,200 km", ar: "١٢٠٠ كم" },
+    duration: { en: "11 - 12 Hours", ar: "١١ إلى ١٢ ساعة" },
+    basePrice: 4500,
+    pricing: { sedan: 4500, suv: 6200, van: 7200, luxury: 12000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.0!2d38.0618!3d24.0894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a3b93a56d87a6f%3A0x6db7d7ef47ed65c2!2sYanbu%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717200000002!5m2!1sen!2ssa",
+    intro: {
+      en: "Private transfer from Dammam to Yanbu (Yanbu al-Bahr) — Saudi Arabia's second major Red Sea port city and a critical industrial hub with refineries and petrochemical plants operated by Saudi Aramco and SABIC under the Royal Commission for Jubail and Yanbu (RCJY).",
+      ar: "توصيل خاص من الدمام إلى ينبع (ينبع البحر) — ثاني موانئ البحر الأحمر السعودية وأحد مراكز الصناعة الكبرى بمصافي البترول والصناعات البتروكيماوية لأرامكو وسابك تحت الهيئة الملكية."
+    },
+    contentSections: [
+      {
+        title: { en: "Yanbu Industrial City & Red Sea Coastline", ar: "مدينة ينبع الصناعية وساحل البحر الأحمر" },
+        body: {
+          en: [
+            "Yanbu Industrial City is Saudi Arabia's second-largest industrial city after Jubail, administered by the Royal Commission for Jubail and Yanbu (RCJY). The city hosts Saudi Aramco's Yanbu export terminal, major petrochemical plants, and one of the world's largest oil refineries (Yasref and Petro Rabigh).",
+            "Beyond its industrial importance, Yanbu has a beautiful Red Sea coastline with clear waters ideal for snorkelling, diving, and beach tourism. The Yanbu Corniche is a popular waterfront promenade, and the Old Yanbu Historical Town preserves traditional Hejazi architecture.",
+            "Yanbu Airport (YNB) is accessible directly from Dammam for airport-to-airport transfers."
+          ],
+          ar: [
+            "ينبع الصناعية ثاني أكبر مدينة صناعية في المملكة بعد الجبيل، تديرها الهيئة الملكية للجبيل وينبع. تستضيف محطة تصدير أرامكو ومصافي البتروكيماويات الكبرى (ياسرف وبترو رابغ).",
+            "إلى جانب أهميتها الصناعية، تمتلك ينبع ساحلاً على البحر الأحمر بمياه صافية مثالية للغوص والسياحة الشاطئية. كورنيش ينبع منتزه بحري شهير، وينبع البلد التاريخية تحفظ العمارة الحجازية التقليدية.",
+            "مطار ينبع (YNB) متاح مباشرة من الدمام لتوصيل المطارات."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Yanbu?", a: "Dammam to Yanbu starts from 4,500 SAR for a Sedan and 6,200 SAR for a GMC Yukon. No border fees — domestic Saudi route." },
+        { q: "How long does the drive from Dammam to Yanbu take?", a: "Approximately 11 to 12 hours, covering 1,200 km via Riyadh and the Madinah-Yanbu highway." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى ينبع؟", a: "يبدأ من ٤٥٠٠ ريالاً للسيدان و٦٢٠٠ ريالاً ليوكن. لا رسوم حدود." },
+        { q: "كم تستغرق الرحلة من الدمام إلى ينبع؟", a: "حوالي ١١ إلى ١٢ ساعة، ١٢٠٠ كم عبر الرياض وطريق المدينة-ينبع." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-abha",
+    name: { en: "Dammam to Abha Taxi", ar: "تاكسي من الدمام إلى أبها" },
+    metaTitle: {
+      en: "Dammam to Abha Taxi | Asir Mountain Tourism Transfer",
+      ar: "تاكسي من الدمام إلى أبها | توصيل السياحة الجبلية بعسير"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Abha — Al Soudah Park, Green Mountain, Abha Cable Car, Asir National Park, and Abha International Airport (AHB). 1,400 km mountain transfer to Saudi Arabia's coolest city.",
+      ar: "تاكسي خاص من الدمام إلى أبها — منتزه السودة، الجبل الأخضر، تلفريك أبها، المنتزه الوطني بعسير، ومطار أبها الدولي. ١٤٠٠ كم إلى أبرد مدن المملكة."
+    },
+    distance: { en: "1,400 km", ar: "١٤٠٠ كم" },
+    duration: { en: "13 - 14 Hours", ar: "١٣ إلى ١٤ ساعة" },
+    basePrice: 5200,
+    pricing: { sedan: 5200, suv: 7200, van: 8200, luxury: 13500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.0!2d42.5053!3d18.2164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15fb34c8ab3e7f2d%3A0x6db7d7ef47ed65c3!2sAbha%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717200000003!5m2!1sen!2ssa",
+    intro: {
+      en: "Journey from Dammam to Abha — capital of Asir Province and Saudi Arabia's most scenic mountain city. Sitting at 2,200 metres, Abha enjoys a cool, misty climate year-round and is a leading domestic tourism destination known for Al Soudah Park, cable cars, and traditional Asiri heritage.",
+      ar: "رحلة من الدمام إلى أبها — عاصمة منطقة عسير وأكثر مدن المملكة جمالاً الجبلية. على ارتفاع ٢٢٠٠ متر، تتمتع أبها بمناخ بارد ضبابي طوال العام وهي وجهة سياحية داخلية متميزة تشتهر بمنتزه السودة والتلفريك والتراث العسيري."
+    },
+    contentSections: [
+      {
+        title: { en: "Abha — Saudi Arabia's Green Mountain City", ar: "أبها — مدينة المملكة الجبلية الخضراء" },
+        body: {
+          en: [
+            "Abha (أبها) sits at 2,200 metres in the Asir Mountains, making it one of the coolest and most scenic cities in the Kingdom. The city receives significant rainfall and is covered in lush greenery — a rarity in Saudi Arabia — earning it the nickname 'Bride of the South' (عروس الجنوب).",
+            "Al Soudah Park, located 30 km from Abha at 2,800 metres, is the highest point in Saudi Arabia and home to the spectacular Al Soudah cable car offering breathtaking mountain views. Other key attractions include the Green Mountain (Jabal Akhdar) with its illuminated terraced park, Abha Dam Lake, Heritage Village, and Asir National Park.",
+            "Abha International Airport (AHB) is served directly from Dammam for airport-to-airport connections."
+          ],
+          ar: [
+            "تقع أبها على ارتفاع 2200 متر في جبال عسير، وهي من أبرد وأجمل مدن المملكة. تحظى بأمطار وفيرة وخضرة نادرة في المملكة، مما أكسبها لقب 'عروس الجنوب'.",
+            "منتزه السودة على بُعد 30 كم من أبها عند ارتفاع 2800م هو أعلى نقطة في المملكة ويضم تلفريك السودة الرائع. ومن معالمها الأخرى: الجبل الأخضر بحدائقه المدرجة المضاءة، بحيرة سد أبها، قرية التراث، والمنتزه الوطني بعسير.",
+            "مطار أبها الدولي (AHB) متاح للتوصيل المباشر من الدمام."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Abha?", a: "Dammam to Abha starts from 5,200 SAR for a Sedan and 7,200 SAR for a GMC Yukon SUV." },
+        { q: "Why is Abha a popular tourist destination?", a: "Abha is Saudi Arabia's leading mountain resort — at 2,200m altitude with cool year-round weather, stunning mountain scenery, Al Soudah Park cable car, green terraced valleys, and rich Asiri cultural heritage. It's completely different from any other Saudi city." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى أبها؟", a: "يبدأ من ٥٢٠٠ ريالاً للسيدان و٧٢٠٠ ريالاً ليوكن." },
+        { q: "لماذا تعد أبها وجهة سياحية مميزة؟", a: "أبها منتجع جبلي على ارتفاع ٢٢٠٠م بمناخ بارد طوال العام، مناظر جبلية خلابة، تلفريك السودة، أودية خضراء مدرجة، وتراث عسيري أصيل — مختلفة تماماً عن أي مدينة سعودية أخرى." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-tabuk",
+    name: { en: "Dammam to Tabuk Taxi", ar: "تاكسي من الدمام إلى تبوك" },
+    metaTitle: {
+      en: "Dammam to Tabuk Taxi | NEOM, AlUla & Red Sea Transfers",
+      ar: "تاكسي من الدمام إلى تبوك | توصيل نيوم والعُلا والبحر الأحمر"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Tabuk — gateway to NEOM, Wadi Disah, Umluj Red Sea beaches, and Prince Sultan bin Abdulaziz Airport (TUU). 1,500 km northwest Saudi Arabia transfer.",
+      ar: "تاكسي خاص من الدمام إلى تبوك — بوابة نيوم، وادي الدسه، شواطئ أملج بالبحر الأحمر، ومطار الأمير سلطان. ١٥٠٠ كم شمال غرب المملكة."
+    },
+    distance: { en: "1,500 km", ar: "١٥٠٠ كم" },
+    duration: { en: "13 - 15 Hours", ar: "١٣ إلى ١٥ ساعة" },
+    basePrice: 5500,
+    pricing: { sedan: 5500, suv: 7500, van: 8500, luxury: 14000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.0!2d36.5662!3d28.3838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15a2de1e51ba73b7%3A0x6db7d7ef47ed65c4!2sTabuk%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717200000004!5m2!1sen!2ssa",
+    intro: {
+      en: "Transfer from Dammam to Tabuk — the gateway to Saudi Arabia's most ambitious projects including NEOM (the futuristic megacity), the ancient Nabataean wonders of AlUla and Hegra, and stunning Red Sea coastal towns like Umluj and Sharma.",
+      ar: "توصيل من الدمام إلى تبوك — بوابة أضخم مشاريع المملكة بما فيها نيوم (المدينة المستقبلية)، عجائب الأنباط في العُلا والحِجر، ومدن الساحل الجميلة على البحر الأحمر كأملج وشرما."
+    },
+    contentSections: [
+      {
+        title: { en: "Tabuk — Gateway to NEOM & Northwest Saudi Arabia", ar: "تبوك — بوابة نيوم وشمال غرب المملكة" },
+        body: {
+          en: [
+            "Tabuk Region is home to some of Saudi Arabia's most spectacular landscapes and Vision 2030 flagship projects. NEOM — the $500 billion futuristic megacity being built on the Red Sea coast — is located within Tabuk Region, making Tabuk the logistics hub for NEOM-related business travel.",
+            "Wadi Disah (Valley of the Inscriptions) is a dramatic sandstone canyon with ancient rock art. Umluj, known as the 'Maldives of Saudi Arabia', offers pristine Red Sea beaches and clear turquoise waters. AlUla — home to the UNESCO World Heritage Hegra Nabataean tombs — is approximately 300 km south of Tabuk.",
+            "Prince Sultan bin Abdulaziz Airport (TUU) in Tabuk is served directly from Dammam."
+          ],
+          ar: [
+            "منطقة تبوك موطن بعض أروع مناظر المملكة الطبيعية ومشاريع رؤية 2030 الكبرى. نيوم — المدينة المستقبلية بـ500 مليار دولار على ساحل البحر الأحمر — تقع في نطاق منطقة تبوك، مما يجعلها مركز لوجستي للسفر التجاري.",
+            "وادي الدسه مضيق رملي درامي بنقوش صخرية أثرية. أملج 'مالديف السعودية' بشواطئ بحر أحمر بكر ومياه فيروزية صافية. والعُلا — موطن مقابر الأنباط في الحِجر (يونسكو) — على بُعد 300 كم جنوب تبوك.",
+            "مطار الأمير سلطان بن عبدالعزيز (TUU) بتبوك متاح مباشرة من الدمام."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Tabuk?", a: "Dammam to Tabuk starts from 5,500 SAR for a Sedan and 7,500 SAR for a GMC Yukon. No border fees — domestic Saudi route." },
+        { q: "Can you take us to NEOM from Dammam?", a: "Yes. We provide transfers from Dammam to the Tabuk Region and NEOM access points. Contact us on WhatsApp for specific NEOM site requirements and current access routes." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى تبوك؟", a: "يبدأ من ٥٥٠٠ ريالاً للسيدان و٧٥٠٠ ريالاً ليوكن. لا رسوم حدود." },
+        { q: "هل توصلون إلى نيوم من الدمام؟", a: "نعم، نقدم توصيلاً من الدمام إلى منطقة تبوك ونقاط الوصول لنيوم. تواصل عبر الواتساب للمتطلبات الخاصة بالموقع." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-hail",
+    name: { en: "Dammam to Hail Taxi", ar: "تاكسي من الدمام إلى حائل" },
+    metaTitle: {
+      en: "Dammam to Hail Taxi | North Saudi Arabia Intercity Transfer",
+      ar: "تاكسي من الدمام إلى حائل | توصيل شمال المملكة"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Hail — Jubbah Rock Art (UNESCO), Hail Castle, Samra Ancient City, and Ha'il Regional Airport (HAS). 800 km central Saudi Arabia highway transfer.",
+      ar: "تاكسي خاص من الدمام إلى حائل — نقوش جبة الصخرية (يونسكو)، قلعة حائل، مدينة سمراء الأثرية، ومطار حائل. ٨٠٠ كم وسط المملكة."
+    },
+    distance: { en: "800 km", ar: "٨٠٠ كم" },
+    duration: { en: "7 - 8 Hours", ar: "٧ إلى ٨ ساعات" },
+    basePrice: 3000,
+    pricing: { sedan: 3000, suv: 4200, van: 4900, luxury: 8000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.0!2d41.6867!3d27.5219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x157ef7b3a1f823cd%3A0x6db7d7ef47ed65c5!2sHail%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1717200000005!5m2!1sen!2ssa",
+    intro: {
+      en: "Direct taxi from Dammam to Hail — a historic north-central Saudi city known for its remarkable prehistoric rock art at Jubbah (UNESCO World Heritage site), ancient camel trading routes, and the dramatic landscapes of the Nafud Desert.",
+      ar: "تاكسي مباشر من الدمام إلى حائل — مدينة تاريخية في وسط شمال المملكة تشتهر بنقوشها الصخرية قبل التاريخية في جبة (التراث العالمي لليونسكو) وطرق تجارة الإبل القديمة وتضاريس صحراء النفود."
+    },
+    contentSections: [
+      {
+        title: { en: "Hail — Gateway to Nafud Desert & Rock Art Heritage", ar: "حائل — بوابة صحراء النفود والتراث الصخري" },
+        body: {
+          en: [
+            "Hail (حائل) is the capital of Ha'il Province in north-central Saudi Arabia, serving as the historical gateway to the Great Nafud Desert. The city is famous for being the home of the powerful Al Rashid dynasty and for producing some of Saudi Arabia's finest dates and finest falconry birds.",
+            "Jubbah Rock Art (100 km north of Hail) is a UNESCO World Heritage Site featuring thousands of rock engravings spanning 10,000 years of human history — from prehistoric animals and ancient camel caravans to early Arabic inscriptions.",
+            "Ha'il Regional Airport (HAS) provides connections from Dammam for airport-to-airport transfers."
+          ],
+          ar: [
+            "حائل عاصمة منطقة حائل في وسط شمال المملكة، البوابة التاريخية لصحراء النفود الكبرى. تشتهر بكونها موطن أسرة آل رشيد القوية وبأجود تمورها وأعرق طيور الصقور.",
+            "نقوش جبة الصخرية (100 كم شمال حائل) موقع تراث عالمي لليونسكو يضم آلاف النقوش الصخرية عبر 10000 سنة من التاريخ البشري — من الحيوانات قبل التاريخية إلى القوافل والنقوش العربية القديمة.",
+            "مطار حائل الإقليمي (HAS) متاح للتوصيل من الدمام."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Hail?", a: "Dammam to Hail starts from 3,000 SAR for a Sedan and 4,200 SAR for a GMC Yukon. No border fees." },
+        { q: "How long does Dammam to Hail take by road?", a: "Approximately 7 to 8 hours covering 800 km on the Saudi highway network." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى حائل؟", a: "يبدأ من ٣٠٠٠ ريالاً للسيدان و٤٢٠٠ ريالاً ليوكن." },
+        { q: "كم تستغرق الرحلة من الدمام إلى حائل؟", a: "حوالي ٧ إلى ٨ ساعات، ٨٠٠ كم على الطرق السريعة السعودية." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-ajman",
+    name: { en: "Dammam to Ajman Taxi", ar: "تاكسي من الدمام إلى عجمان" },
+    metaTitle: {
+      en: "Dammam to Ajman Taxi | UAE Emirate Transfer",
+      ar: "تاكسي من الدمام إلى عجمان | توصيل إمارة عجمان"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Ajman, UAE — Ajman Corniche, Ajman Museum, Al Zorah Nature Reserve, and easy connection to Sharjah and Dubai. Cross-border transfer via Al Batha border.",
+      ar: "تاكسي خاص من الدمام إلى عجمان بالإمارات — كورنيش عجمان، متحف عجمان، محمية الزوراء الطبيعية، وقرب الشارقة ودبي. عبور منفذ البطحاء."
+    },
+    distance: { en: "1,000 km", ar: "١٠٠٠ كم" },
+    duration: { en: "9.5 - 10.5 Hours", ar: "٩.٥ إلى ١٠.٥ ساعات" },
+    basePrice: 3800,
+    pricing: { sedan: 3800, suv: 5200, van: 6000, luxury: 9500 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.0!2d55.5136!3d25.4052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef581cf88d58d37%3A0x6db7d7ef47ed65c6!2sAjman%20UAE!5e0!3m2!1sen!2ssa!4v1717200000006!5m2!1sen!2ssa",
+    intro: {
+      en: "Direct transfer from Dammam to Ajman — the UAE's smallest emirate by area, located between Sharjah and Umm Al Quwain on the Arabian Gulf coast. Ajman is known for its relaxed atmosphere, Ajman Corniche, traditional dhow-building yards, and the beautiful Al Zorah Nature Reserve.",
+      ar: "توصيل مباشر من الدمام إلى عجمان — أصغر إمارات الإمارات مساحةً، تقع بين الشارقة وأم القيوين على ساحل الخليج. تشتهر عجمان بجوها الهادئ وكورنيشها وأحواض بناء السفن التقليدية ومحمية الزوراء."
+    },
+    contentSections: [
+      {
+        title: { en: "Ajman — The Relaxed UAE Emirate", ar: "عجمان — إمارة الإمارات الهادئة" },
+        body: {
+          en: [
+            "Ajman is the smallest of the UAE's seven emirates by land area but has a distinct character as one of the most relaxed and authentic Gulf coastal communities. The Ajman Corniche stretches along a beautiful beach bay, and the city retains traditional elements including active dhow (traditional boat) building yards.",
+            "Ajman Museum, housed in an 18th-century fort, is one of the finest heritage museums in the UAE. Al Zorah Nature Reserve is a 5,600-acre protected mangrove and creek area with kayaking, birdwatching, and eco-tourism.",
+            "Ajman is adjacent to Sharjah (15-minute drive) and Dubai (30-minute drive), making it an excellent base for exploring multiple UAE emirates."
+          ],
+          ar: [
+            "عجمان أصغر إمارات الإمارات مساحةً لكنها تتميز بطابعها الهادئ الأصيل. يمتد كورنيش عجمان على طول خليج شاطئي جميل، وتحتفظ المدينة بعناصر تقليدية منها أحواض بناء السفن الخشبية النشطة.",
+            "متحف عجمان في قلعة تعود للقرن الثامن عشر من أرقى متاحف التراث في الإمارات. محمية الزوراء منطقة قرم ومجرى مائي محمية تبلغ 5600 فدان للتجديف ومراقبة الطيور والسياحة البيئية.",
+            "عجمان مجاورة للشارقة (15 دقيقة) ودبي (30 دقيقة) — قاعدة ممتازة لاستكشاف إمارات متعددة."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Ajman?", a: "Dammam to Ajman starts from 3,800 SAR for a Sedan and 5,200 SAR for a GMC Yukon SUV. All Al Batha border fees and road tolls are included." },
+        { q: "Is Ajman close to Sharjah and Dubai?", a: "Yes. Ajman is 15 minutes from Sharjah and 30 minutes from Dubai. We can arrange combined deliveries to multiple UAE emirates if required." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى عجمان؟", a: "يبدأ من ٣٨٠٠ ريالاً للسيدان و٥٢٠٠ ريالاً ليوكن. تشمل رسوم منفذ البطحاء والطرق." },
+        { q: "هل عجمان قريبة من الشارقة ودبي؟", a: "نعم. عجمان على بُعد 15 دقيقة من الشارقة و30 دقيقة من دبي. يمكننا ترتيب توصيل متعدد الإمارات عند الطلب." }
+      ]
+    }
+  },
+
+  {
+    slug: "dammam-to-ras-al-khaimah",
+    name: { en: "Dammam to Ras Al Khaimah Taxi", ar: "تاكسي من الدمام إلى رأس الخيمة" },
+    metaTitle: {
+      en: "Dammam to Ras Al Khaimah Taxi | Jebel Jais & RAK Airport",
+      ar: "تاكسي من الدمام إلى رأس الخيمة | جبل جيس ومطار RAK"
+    },
+    metaDescription: {
+      en: "Private taxi from Dammam to Ras Al Khaimah (RAK), UAE — Jebel Jais mountain (world's longest zipline), RAK Archaeological Sites, Dhayah Fort, and Ras Al Khaimah International Airport (RKT).",
+      ar: "تاكسي خاص من الدمام إلى رأس الخيمة بالإمارات — جبل جيس (أطول زيب لاين عالمي)، المواقع الأثرية، قلعة الضاية، ومطار رأس الخيمة الدولي."
+    },
+    distance: { en: "1,050 km", ar: "١٠٥٠ كم" },
+    duration: { en: "10 - 11 Hours", ar: "١٠ إلى ١١ ساعة" },
+    basePrice: 4000,
+    pricing: { sedan: 4000, suv: 5500, van: 6200, luxury: 10000 },
+    mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462560.0!2d55.9432!3d25.7895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f425fdf7f3a7%3A0x6db7d7ef47ed65c7!2sRas%20Al%20Khaimah%20UAE!5e0!3m2!1sen!2ssa!4v1717200000007!5m2!1sen!2ssa",
+    intro: {
+      en: "Transfer from Dammam to Ras Al Khaimah (RAK) — the northernmost and fastest-growing tourism emirate in the UAE. Known for the dramatic Hajar Mountains, Jebel Jais (UAE's highest peak at 1,934m), ancient forts, and some of the UAE's finest beaches.",
+      ar: "توصيل من الدمام إلى رأس الخيمة (RAK) — أشمالي وأسرع إمارات الإمارات نمواً سياحياً. تشتهر بجبال الحجر الدرامية، جبل جيس (أعلى قمة في الإمارات 1934م)، القلاع الأثرية، وأجمل شواطئ الإمارات."
+    },
+    contentSections: [
+      {
+        title: { en: "Ras Al Khaimah — Adventure & Heritage Emirates", ar: "رأس الخيمة — إمارة المغامرة والتراث" },
+        body: {
+          en: [
+            "Ras Al Khaimah is rapidly emerging as one of the UAE's top tourism destinations, offering a completely different experience from Dubai. Jebel Jais Mountain (1,934m) hosts the world's longest zipline (2.83km) and the region's highest hotel. The mountain is cooler in summer, making it ideal for outdoor activities.",
+            "RAK has remarkable historical depth — Dhayah Fort (the only hilltop fort in the UAE) overlooks ancient agricultural plains, and the area around Khatt and Wadi Ghalilah has fascinating archaeological sites spanning thousands of years.",
+            "Ras Al Khaimah International Airport (RKT) provides direct connections and is accessible for airport-to-airport transfers from Dammam."
+          ],
+          ar: [
+            "رأس الخيمة تبرز سريعاً كأحد أبرز وجهات السياحة في الإمارات بتجربة مختلفة تماماً عن دبي. جبل جيس (1934م) يضم أطول زيب لاين في العالم (2.83كم) وأعلى فندق في المنطقة. الجبل أبرد صيفاً مثالي للأنشطة الخارجية.",
+            "رأس الخيمة تمتلك عمقاً تاريخياً استثنائياً — قلعة الضاية (القلعة الجبلية الوحيدة في الإمارات) تطل على السهول الزراعية القديمة، ومنطقة خت ووادي غليلة بها مواقع أثرية تمتد آلاف السنين.",
+            "مطار رأس الخيمة الدولي (RKT) متاح للتوصيل المباشر من الدمام."
+          ]
+        }
+      }
+    ],
+    faqs: {
+      en: [
+        { q: "How much is a taxi from Dammam to Ras Al Khaimah?", a: "Dammam to RAK starts from 4,000 SAR for a Sedan and 5,500 SAR for a GMC Yukon SUV. All Al Batha border fees and tolls are included." },
+        { q: "What is Ras Al Khaimah famous for?", a: "RAK is famous for Jebel Jais mountain with the world's longest zipline, beautiful beaches on both Arabian Gulf and Gulf of Oman sides, ancient archaeological sites, Dhayah hilltop fort, and a growing luxury resort scene." }
+      ],
+      ar: [
+        { q: "كم تكلفة التاكسي من الدمام إلى رأس الخيمة؟", a: "يبدأ من ٤٠٠٠ ريالاً للسيدان و٥٥٠٠ ريالاً ليوكن. تشمل رسوم منفذ البطحاء والطرق." },
+        { q: "بماذا تشتهر رأس الخيمة؟", a: "تشتهر رأس الخيمة بجبل جيس وأطول زيب لاين عالمي، شواطئ جميلة على الخليج العربي وخليج عُمان، مواقع أثرية، قلعة الضاية، وتطور منتجعات الفاخرة." }
       ]
     }
   }

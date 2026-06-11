@@ -20,8 +20,6 @@ export const BookingForm: React.FC = () => {
   const [passengerName, setPassengerName] = useState("");
   const [passengerPhone, setPassengerPhone] = useState("");
   const [specialNotes, setSpecialNotes] = useState("");
-
-  // Pricing State
   const [estimatedPrice, setEstimatedPrice] = useState<number | null>(null);
 
   // Success Modal State

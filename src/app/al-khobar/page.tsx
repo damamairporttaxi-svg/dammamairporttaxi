@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -9,7 +9,7 @@ import { RelatedRoutes } from "@/components/RelatedRoutes";
 export const metadata: Metadata = {
   title: "Al Khobar Taxi Service | Airport Transfers & GCC Routes",
   description:
-    "Premium taxi service in Al Khobar — airport pickups from DMM, transfers to Bahrain via King Fahd Causeway, Jubail, Dhahran, Half Moon Bay, and all GCC countries. 24/7 fixed rates.",
+    "private taxi service in Al Khobar — airport pickups from DMM, transfers to Bahrain via King Fahd Causeway, Jubail, Dhahran, Half Moon Bay, and all GCC countries. 24/7 fixed rates.",
   alternates: { canonical: "https://dammamairporttaxi.com/al-khobar" },
   openGraph: {
     title: "Al Khobar Taxi Service | Airport & GCC Transfers",
@@ -82,7 +82,7 @@ export default function AlKhobarPage() {
             </nav>
             <span className="badge-gold">Al Khobar — Eastern Province</span>
             <h1 style={s.h1}>Al Khobar Taxi Service — Airport, Bahrain & GCC Transfers</h1>
-            <p style={s.sub}>Premium private taxi service in Al Khobar — airport pickups from King Fahd International Airport (DMM), transfers to Bahrain via King Fahd Causeway, and all GCC destinations. Fixed rates · Meet & Greet · 24/7.</p>
+            <p style={s.sub}>private taxi service in Al Khobar — airport pickups from King Fahd International Airport (DMM), transfers to Bahrain via King Fahd Causeway, and all GCC destinations. Fixed rates · Meet & Greet · 24/7.</p>
             <div style={s.chips}>
               {["60 km from DMM Airport", "King Fahd Causeway to Bahrain", "Saudi Aramco HQ Area", "Half Moon Bay Beach", "International Business Hub"].map(c => (
                 <span key={c} style={s.chip}>{c}</span>
@@ -125,8 +125,8 @@ export default function AlKhobarPage() {
                   { icon: "🌊", name: "Al Khobar Corniche", desc: "A beautifully landscaped waterfront promenade stretching along the Arabian Gulf coast with parks, sculptures, walking tracks, and seafood restaurants. The iconic Khobar Water Tower is the city's most recognisable landmark." },
                   { icon: "🏖️", name: "Half Moon Bay Beach Resort", desc: "35 km south of Al Khobar, Half Moon Bay is the Eastern Province's most popular beach destination — a crescent-shaped Arabian Gulf bay with private resorts, chalets, jet skiing, and waterfront dining." },
                   { icon: "🇧🇭", name: "King Fahd Causeway Gateway", desc: "The causeway to Bahrain begins just 15 km from Khobar city centre. Bahrain is the most popular weekend destination for Khobar residents, with the full crossing taking 1–1.5 hours by private taxi." },
-                  { icon: "🛍️", name: "Dhahran Mall & Al Rashid Mall", desc: "Khobar and Dhahran have some of the best shopping malls in the Eastern Province, including the premium Dhahran Mall and Al Rashid Mall — major retail and dining destinations." },
-                  { icon: "🍽️", name: "Prince Faisal Bin Fahd Street (Restaurant Row)", desc: "Al Khobar's premier dining street, lined with international restaurants, coffee shops, and cafés catering to the city's large expat and business community." },
+                  { icon: "🛍️", name: "Dhahran Mall & Al Rashid Mall", desc: "Khobar and Dhahran have some of the best shopping malls in the Eastern Province, including the professional Dhahran Mall and Al Rashid Mall — major retail and dining destinations." },
+                  { icon: "🍽️", name: "Prince Faisal Bin Fahd Street (Restaurant Row)", desc: "Al Khobar's leading dining street, lined with international restaurants, coffee shops, and cafés catering to the city's large expat and business community." },
                   { icon: "🏢", name: "Al Khobar Business District", desc: "Al Khobar's downtown is home to dozens of multinational company offices, banks, and professional service firms supporting the Eastern Province's oil & gas sector." },
                 ].map(a => (
                   <div key={a.name} style={s.attrItem}>

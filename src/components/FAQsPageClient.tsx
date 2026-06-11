@@ -43,7 +43,7 @@ export function FAQsPageClient() {
     {
       q: locale === "en" ? "What vehicles do you offer for family travel?" : "ما هي السيارات التي توفرونها للسفر العائلي؟",
       a: locale === "en"
-        ? "For families, we recommend our VIP GMC Yukon (up to 6 passengers with 5 bags) or our Hyundai Staria Family Van (up to 8 passengers with 7 bags). Both vehicles offer spacious cargo room and premium tri-zone climate controls."
+        ? "For families, we recommend our VIP GMC Yukon (up to 6 passengers with 5 bags) or our Hyundai Staria Family Van (up to 8 passengers with 7 bags). Both vehicles offer spacious cargo room and tri-zone climate controls."
         : "للعائلات، نوصي بسيارة GMC Yukon VIP (حتى 6 ركاب مع 5 حقائب) أو سيارة الفان العائلية هيونداي ستاريا (حتى 8 ركاب مع 7 حقائب). توفر كلتا السيارتين مساحة تخزين واسعة للحقائب ونظام تكييف ثلاثي المناطق.",
     },
   ];
@@ -61,7 +61,7 @@ export function FAQsPageClient() {
           </h1>
           <p style={styles.heroSub}>
             {locale === "en"
-              ? "Everything you need to know about our premium airport transfers and GCC cross-border routes."
+              ? "Everything you need to know about our private airport transfers and GCC cross-border routes."
               : "كل ما تحتاج إلى معرفته حول خدمات توصيل المطارات الفاخرة ورحلات السفر عبر حدود الخليج."}
           </p>
         </div>

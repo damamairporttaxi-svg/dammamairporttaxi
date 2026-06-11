@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { FAQsPageClient } from "@/components/FAQsPageClient";
 
 export const metadata: Metadata = {
@@ -64,7 +64,7 @@ const faqSchema = {
       name: "What vehicles do you offer for family travel?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For families, we recommend our VIP GMC Yukon (up to 6 passengers with 5 bags) or our Hyundai Staria Family Van (up to 8 passengers with 7 bags). Both vehicles offer spacious cargo room and premium tri-zone climate controls.",
+        text: "For families, we recommend our VIP GMC Yukon (up to 6 passengers with 5 bags) or our Hyundai Staria Family Van (up to 8 passengers with 7 bags). Both vehicles offer spacious cargo room and tri-zone climate controls.",
       },
     },
   ],

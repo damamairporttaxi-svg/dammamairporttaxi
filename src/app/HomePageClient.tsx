@@ -38,7 +38,7 @@ export function HomePageClient() {
             </span>
             <h1 style={styles.heroTitle}>
               {locale === "en" ? (
-                <>Premium Dammam Airport <span style={{ color: "var(--accent-gold)" }}>Transfers</span> & GCC Services</>
+                <>Dammam Airport <span style={{ color: "var(--accent-gold)" }}>Transfers</span> & GCC Services</>
               ) : (
                 <>خدمات <span style={{ color: "var(--accent-gold)" }}>تاكسي مطار الدمام</span> الفاخرة والنقل البري للخليج</>
               )}

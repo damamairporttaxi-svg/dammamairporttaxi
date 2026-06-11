@@ -19,7 +19,7 @@ export function FleetPageClient() {
         <div className="container" style={styles.heroContainer}>
           <span className="badge-gold">{t("navFleet")}</span>
           <h1 style={styles.heroTitle}>
-            {locale === "en" ? "Our Premium Fleet & Chauffeurs" : "أسطول سياراتنا الفاخرة وسائقينا"}
+            {locale === "en" ? "Our Fleet & Chauffeurs" : "أسطول سياراتنا الفاخرة وسائقينا"}
           </h1>
           <p style={styles.heroSub}>
             {locale === "en"
@@ -32,7 +32,7 @@ export function FleetPageClient() {
       {/* Fleet Showcase Embedded */}
       <FleetShowcase />
 
-      {/* Premium Comfort & Service Standard */}
+      {/* professional Comfort & Service Standard */}
       <section className="section-padding" style={{ backgroundColor: "var(--bg-primary)", borderTop: "1px solid var(--border-color)" }}>
         <div className="container text-center">
           <span className="badge-gold" style={{ marginBottom: "1rem" }}>{locale === "en" ? "Extra Comfort" : "رفاهية إضافية"}</span>

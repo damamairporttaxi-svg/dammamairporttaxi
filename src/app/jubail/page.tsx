@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -80,7 +80,7 @@ export default function JubailPage() {
             </nav>
             <span className="badge-gold">Jubail Industrial City</span>
             <h1 style={s.h1}>Jubail Taxi Service — Corporate, Airport & GCC Transfers</h1>
-            <p style={s.sub}>Premium taxi service for Jubail Industrial City — airport transfers from DMM, corporate accounts for Aramco, SABIC & RCJY employees, and intercity transfers to Riyadh, Bahrain, and all GCC destinations.</p>
+            <p style={s.sub}>private taxi service for Jubail Industrial City — airport transfers from DMM, corporate accounts for Aramco, SABIC & RCJY employees, and intercity transfers to Riyadh, Bahrain, and all GCC destinations.</p>
             <div style={s.chips}>
               {["85 km from DMM Airport", "Aramco & SABIC Hub", "Monthly Corporate Invoicing", "RCJY Compound Transfers", "24/7 Priority Dispatch"].map(c => (
                 <span key={c} style={s.chip}>{c}</span>

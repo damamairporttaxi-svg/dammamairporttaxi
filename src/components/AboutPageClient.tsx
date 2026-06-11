@@ -39,7 +39,7 @@ export function AboutPageClient() {
             </h2>
             <p style={styles.paragraph}>
               {locale === "en"
-                ? "Dammam Airport Taxi is the premier transportation service provider in the Eastern Province of Saudi Arabia. Based at King Fahd International Airport (DMM), we specialize in local airport transfers, intercity travel to Riyadh and other provinces, and luxury cross-border transfers to Bahrain, Kuwait, UAE, and Qatar."
+                ? "Dammam Airport Taxi is the leading transportation service provider in the Eastern Province of Saudi Arabia. Based at King Fahd International Airport (DMM), we specialize in local airport transfers, intercity travel to Riyadh and other provinces, and luxury cross-border transfers to Bahrain, Kuwait, UAE, and Qatar."
                 : "تعد شركة تاكسي مطار الدمام المزود الرائد لخدمات النقل والمواصلات الفاخرة في المنطقة الشرقية بالمملكة العربية السعودية. يقع مقرنا الرئيسي في مطار الملك فهد الدولي (DMM)، ونتميز بتقديم خدمات التوصيل المحلي للمطارات، السفر بين المدن إلى الرياض والمحافظات الأخرى، وخدمات النقل البري الدولي الفاخرة إلى البحرين، الكويت، الإمارات، وقطر."}
             </p>
             <p style={styles.paragraph}>
@@ -57,7 +57,7 @@ export function AboutPageClient() {
             <ul style={styles.list}>
               <li style={styles.listItem}>
                 <strong>✨ {locale === "en" ? "Luxury & Cleanliness" : "الفخامة والنظافة"}:</strong>{" "}
-                {locale === "en" ? "Sanitized premium vehicles for executive class travel." : "سيارات فاخرة ومعقمة بالكامل لرحلات تليق بك."}
+                {locale === "en" ? "Sanitized executive vehicles for executive class travel." : "سيارات فاخرة ومعقمة بالكامل لرحلات تليق بك."}
               </li>
               <li style={styles.listItem}>
                 <strong>🕒 {locale === "en" ? "Punctuality" : "الالتزام بالوقت"}:</strong>{" "}

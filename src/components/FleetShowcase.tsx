@@ -11,7 +11,6 @@ const VEHICLES = [
   {
     id: "sedan",
     badge: "Standard",
-    price: "150 SAR",
     img: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=800&q=80",
     fallback: "linear-gradient(135deg,#1a1500,#0d0d00)",
     passengers: 4,
@@ -20,7 +19,6 @@ const VEHICLES = [
   {
     id: "suv",
     badge: "VIP SUV",
-    price: "280 SAR",
     img: "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=800&q=80",
     fallback: "linear-gradient(135deg,#001530,#000818)",
     passengers: 6,
@@ -29,7 +27,6 @@ const VEHICLES = [
   {
     id: "van",
     badge: "Family Van",
-    price: "320 SAR",
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
     fallback: "linear-gradient(135deg,#001e00,#001000)",
     passengers: 8,
@@ -38,7 +35,6 @@ const VEHICLES = [
   {
     id: "luxury",
     badge: "First Class",
-    price: "700 SAR",
     img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&w=800&q=80",
     fallback: "linear-gradient(135deg,#200015,#0f0008)",
     passengers: 3,
@@ -46,7 +42,7 @@ const VEHICLES = [
   },
 ];
 
-export const FleetShowcase: React.FC<FleetShowcaseProps> = ({ showPrices = true }) => {
+export const FleetShowcase: React.FC<FleetShowcaseProps> = ({ showPrices: _showPrices = true }) => {
   const { t } = useLanguage();
 
   const handleSelectVehicle = (id: string) => {
@@ -89,9 +85,7 @@ export const FleetShowcase: React.FC<FleetShowcaseProps> = ({ showPrices = true 
               vehicle={v}
               name={names[v.id]}
               desc={descs[v.id]}
-              showPrices={showPrices}
               features={features}
-              priceLabel={t("priceStarts")}
               passLabel={t("maxPassengers")}
               lugLabel={t("maxLuggage")}
               bookLabel={t("bookNow")}
@@ -106,12 +100,12 @@ export const FleetShowcase: React.FC<FleetShowcaseProps> = ({ showPrices = true 
 
 /* ── Single vehicle card ────────────────────────────────────────── */
 function VehicleCard({
-  vehicle, name, desc, showPrices, features,
-  priceLabel, passLabel, lugLabel, bookLabel, onBook,
+  vehicle, name, desc, features,
+  passLabel, lugLabel, bookLabel, onBook,
 }: {
   vehicle: typeof VEHICLES[0];
-  name: string; desc: string; showPrices: boolean;
-  features: string[]; priceLabel: string;
+  name: string; desc: string;
+  features: string[];
   passLabel: string; lugLabel: string;
   bookLabel: string; onBook: () => void;
 }) {
@@ -150,13 +144,6 @@ function VehicleCard({
 
         {/* badge */}
         <span style={s.badge}>{vehicle.badge}</span>
-
-        {/* price */}
-        {showPrices && (
-          <span style={s.priceTag}>
-            {priceLabel} <strong style={{ color: "var(--accent-gold)" }}>{vehicle.price}</strong>
-          </span>
-        )}
 
         {/* bottom gradient fade */}
         <div style={s.imgFade} />

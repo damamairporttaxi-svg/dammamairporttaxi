@@ -1,9 +1,9 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { FleetPageClient } from "@/components/FleetPageClient";
 
 export const metadata: Metadata = {
   title: "Our Fleet | Sedan, SUV, Family Van & VIP Luxury Vehicles",
-  description: "Explore our premium vehicle fleet — Toyota Camry Sedan, GMC Yukon VIP SUV, Hyundai Staria Family Van, and luxury VIP class for Dammam airport transfers and GCC routes.",
+  description: "Explore our executive vehicle fleet — Toyota Camry Sedan, GMC Yukon VIP SUV, Hyundai Staria Family Van, and luxury VIP class for Dammam airport transfers and GCC routes.",
   alternates: {
     canonical: "https://dammamairporttaxi.com/fleet",
   },

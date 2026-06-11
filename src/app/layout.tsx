@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -6,10 +6,10 @@ import { LanguageProvider } from "@/context/LanguageContext";
 export const metadata: Metadata = {
   metadataBase: new URL("https://dammamairporttaxi.com"),
   title: {
-    default: "Dammam Airport Taxi | Premium GCC Transfer & Chauffeur Services",
+    default: "Dammam Airport Taxi | GCC Transfer & Chauffeur Services",
     template: "%s | Dammam Airport Taxi",
   },
-  description: "Book premium airport taxis & GCC border crossing transfers from Dammam King Fahd International Airport (DMM) to Bahrain, Kuwait, UAE, Riyadh, Khobar, Jubail. 24/7 VIP Chauffeur.",
+  description: "Book private airport taxis & GCC border crossing transfers from Dammam King Fahd International Airport (DMM) to Bahrain, Kuwait, UAE, Riyadh, Khobar, Jubail. 24/7 VIP Chauffeur.",
   keywords: ["dammam airport taxi", "taxi to bahrain", "dammam to bahrain taxi", "dammam to kuwait taxi", "dammam to riyadh taxi", "dammam airport to khobar", "gcc border crossing taxi", "dammam chauffeur service"],
   alternates: {
     canonical: "https://dammamairporttaxi.com",
@@ -18,22 +18,22 @@ export const metadata: Metadata = {
     siteName: "Dammam Airport Taxi",
     locale: "en_US",
     type: "website",
-    title: "Dammam Airport Taxi | Premium GCC Transfer & Chauffeur Services",
-    description: "Book premium airport taxis & GCC border crossing transfers from Dammam to Bahrain, Kuwait, UAE, Riyadh & more. 24/7 VIP Chauffeur.",
+    title: "Dammam Airport Taxi | GCC Transfer & Chauffeur Services",
+    description: "Book private airport taxis & GCC border crossing transfers from Dammam to Bahrain, Kuwait, UAE, Riyadh & more. 24/7 VIP Chauffeur.",
     url: "https://dammamairporttaxi.com",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Dammam Airport Taxi - Premium GCC Transfer Service",
+        alt: "Dammam Airport Taxi - professional GCC Transfer Service",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dammam Airport Taxi | Premium GCC Transfer & Chauffeur Services",
-    description: "Book premium airport taxis & GCC border crossing transfers from Dammam. 24/7 VIP Chauffeur.",
+    title: "Dammam Airport Taxi | GCC Transfer & Chauffeur Services",
+    description: "Book private airport taxis & GCC border crossing transfers from Dammam. 24/7 VIP Chauffeur.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -71,7 +71,7 @@ export default function RootLayout({
     "url": "https://dammamairporttaxi.com",
     "logo": "https://dammamairporttaxi.com/logo.png",
     "image": "https://dammamairporttaxi.com/hero-bg.jpg",
-    "description": "Premium airport transfers and cross-border taxi services from Dammam to Bahrain, Kuwait, Qatar, Riyadh, and Eastern Province cities.",
+    "description": "private airport transfers and cross-border taxi services from Dammam to Bahrain, Kuwait, Qatar, Riyadh, and Eastern Province cities.",
     "telephone": "+966501234567",
     "priceRange": "$$",
     "areaServed": [

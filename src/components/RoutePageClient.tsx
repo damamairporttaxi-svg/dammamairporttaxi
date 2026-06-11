@@ -68,40 +68,6 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
                 <span style={styles.statLabel}>{t("travelTime")}</span>
                 <strong style={styles.statValue}>{duration}</strong>
               </div>
-              <div style={styles.statItem}>
-                <span style={styles.statLabel}>{t("startingFrom")}</span>
-                <strong style={{ ...styles.statValue, color: "var(--accent-gold)" }}>{route.pricing.sedan} SAR</strong>
-              </div>
-            </div>
-
-            {/* Vehicle Pricing Table */}
-            <div className="glass-card" style={styles.tableCard}>
-              <h2 style={styles.sectionTitle}>
-                {locale === "en" ? "Pricing Estimates by Vehicle" : "تقديرات الأسعار حسب نوع السيارة"}
-              </h2>
-              <div style={styles.pricingTable}>
-                <div style={styles.tableRowHeader}>
-                  <span>{locale === "en" ? "Vehicle Category" : "فئة السيارة"}</span>
-                  <span>{locale === "en" ? "Price (One Way)" : "السعر (اتجاه واحد)"}</span>
-                </div>
-                
-                <div style={styles.tableRow}>
-                  <span style={{ fontWeight: 600 }}>🚗 Camry Sedan (Standard)</span>
-                  <span style={{ color: "var(--accent-gold)", fontWeight: 700 }}>{route.pricing.sedan} SAR</span>
-                </div>
-                <div style={styles.tableRow}>
-                  <span style={{ fontWeight: 600 }}>SUV GMC Yukon (VIP SUV)</span>
-                  <span style={{ color: "var(--accent-gold)", fontWeight: 700 }}>{route.pricing.suv} SAR</span>
-                </div>
-                <div style={styles.tableRow}>
-                  <span style={{ fontWeight: 600 }}>🚐 Hyundai Staria (Family Van)</span>
-                  <span style={{ color: "var(--accent-gold)", fontWeight: 700 }}>{route.pricing.van} SAR</span>
-                </div>
-                <div style={styles.tableRow}>
-                  <span style={{ fontWeight: 600 }}>👑 VIP Chauffeur Class</span>
-                  <span style={{ color: "var(--accent-gold)", fontWeight: 700 }}>{route.pricing.luxury} SAR</span>
-                </div>
-              </div>
             </div>
 
             {/* SEO Content Sections */}

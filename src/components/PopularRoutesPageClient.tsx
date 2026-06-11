@@ -8,7 +8,7 @@ import { Footer } from "./Footer";
 import { StickyCTA } from "./StickyCTA";
 import { routesData } from "../data/routesData";
 
-/* ─── Category definitions ─────────────────────────────────────── */
+/* ─── Category slugs ───────────────────────────────────────────── */
 const GCC_SLUGS = [
   "dammam-to-bahrain","dammam-to-kuwait","dammam-to-uae",
   "dammam-airport-to-qatar-border","dammam-to-doha","dammam-to-abu-dhabi",
@@ -24,498 +24,533 @@ const AIRPORT_SLUGS = [
   "dammam-airport-to-ras-tanura","dammam-airport-to-half-moon-bay",
 ];
 
-/* ─── Flag / icon per slug ──────────────────────────────────────── */
+/* ─── Per-route flags ──────────────────────────────────────────── */
 const FLAG: Record<string, string> = {
-  "dammam-to-bahrain": "🇧🇭", "dammam-to-kuwait": "🇰🇼",
-  "dammam-to-uae": "🇦🇪", "dammam-airport-to-qatar-border": "🇶🇦",
-  "dammam-to-doha": "🇶🇦", "dammam-to-abu-dhabi": "🇦🇪",
-  "dammam-to-sharjah": "🇦🇪", "dammam-to-muscat": "🇴🇲",
-  "dammam-airport-to-bahrain-airport": "🇧🇭",
-  "dammam-to-riyadh": "🏙️", "dammam-to-jeddah": "🌊",
-  "dammam-to-madinah": "🕌", "dammam-to-mecca": "🕋",
-  "dammam-to-qassim": "🌾",
+  "dammam-to-bahrain":"🇧🇭","dammam-to-kuwait":"🇰🇼","dammam-to-uae":"🇦🇪",
+  "dammam-airport-to-qatar-border":"🇶🇦","dammam-to-doha":"🇶🇦",
+  "dammam-to-abu-dhabi":"🇦🇪","dammam-to-sharjah":"🇦🇪","dammam-to-muscat":"🇴🇲",
+  "dammam-airport-to-bahrain-airport":"🇧🇭",
+  "dammam-to-riyadh":"🏙️","dammam-to-jeddah":"🌊","dammam-to-madinah":"🕌",
+  "dammam-to-mecca":"🕋","dammam-to-qassim":"🌾",
 };
 
-function getCategory(slug: string): "gcc" | "saudi" | "airport" {
-  if (GCC_SLUGS.includes(slug)) return "gcc";
-  if (SAUDI_SLUGS.includes(slug)) return "saudi";
+/* ─── Category config ──────────────────────────────────────────── */
+const CAT = {
+  gcc:     { color:"#c8920a", bg:"rgba(200,146,10,0.08)", icon:"🌍", label_en:"International GCC",  label_ar:"دولي / خليجي" },
+  saudi:   { color:"#2a9d2a", bg:"rgba(42,157,42,0.08)",  icon:"🕌", label_en:"Saudi City",          label_ar:"مدينة سعودية" },
+  airport: { color:"#3a7fd4", bg:"rgba(58,127,212,0.08)", icon:"✈️", label_en:"Airport Transfer",   label_ar:"من المطار"    },
+};
+
+function getCat(slug:string):"gcc"|"saudi"|"airport"{
+  if(GCC_SLUGS.includes(slug)) return "gcc";
+  if(SAUDI_SLUGS.includes(slug)) return "saudi";
   return "airport";
 }
 
-const CAT_CONFIG = {
-  gcc: {
-    gradient: "linear-gradient(135deg, #1a1000 0%, #2d1f00 100%)",
-    border: "#b8860b",
-    label_en: "International GCC",
-    label_ar: "دولي / خليجي",
-    icon: "🌍",
-  },
-  saudi: {
-    gradient: "linear-gradient(135deg, #001200 0%, #002800 100%)",
-    border: "#1a7a1a",
-    label_en: "Saudi City",
-    label_ar: "مدينة سعودية",
-    icon: "🕌",
-  },
-  airport: {
-    gradient: "linear-gradient(135deg, #000a18 0%, #001030 100%)",
-    border: "#1a4a8a",
-    label_en: "Airport Transfer",
-    label_ar: "من المطار",
-    icon: "✈️",
-  },
-};
+/* ─── Featured (top 3 most popular) ───────────────────────────── */
+const FEATURED = ["dammam-to-bahrain","dammam-to-riyadh","dammam-airport-to-khobar"];
 
-type Tab = "all" | "gcc" | "saudi" | "airport";
+type Tab = "all"|"gcc"|"saudi"|"airport";
 
 /* ══════════════════════════════════════════════════════════════════ */
 export function PopularRoutesPageClient() {
   const { locale } = useLanguage();
-  const isAr = locale === "ar";
-  const [activeTab, setActiveTab] = useState<Tab>("all");
+  const ar = locale==="ar";
+  const [tab, setTab] = useState<Tab>("all");
 
-  const tabDefs: { id: Tab; label_en: string; label_ar: string; count: number }[] = [
-    { id: "all",     label_en: "All Routes",        label_ar: "جميع الوجهات",    count: routesData.length },
-    { id: "gcc",     label_en: "International GCC", label_ar: "دول الخليج",      count: GCC_SLUGS.length },
-    { id: "saudi",   label_en: "Saudi Cities",      label_ar: "المدن السعودية",  count: SAUDI_SLUGS.length },
-    { id: "airport", label_en: "Airport Transfers", label_ar: "من المطار",       count: AIRPORT_SLUGS.length },
+  const tabs: {id:Tab;en:string;ar:string;n:number;icon:string}[] = [
+    {id:"all",    en:"All Routes",         ar:"جميع الوجهات",    n:routesData.length, icon:"🗺️"},
+    {id:"gcc",    en:"International GCC",  ar:"دول الخليج",      n:GCC_SLUGS.length,  icon:"🌍"},
+    {id:"saudi",  en:"Saudi Cities",       ar:"المدن السعودية",  n:SAUDI_SLUGS.length, icon:"🕌"},
+    {id:"airport",en:"Airport Transfers",  ar:"توصيل من المطار", n:AIRPORT_SLUGS.length,icon:"✈️"},
   ];
 
-  const filtered =
-    activeTab === "gcc"     ? routesData.filter(r => GCC_SLUGS.includes(r.slug)) :
-    activeTab === "saudi"   ? routesData.filter(r => SAUDI_SLUGS.includes(r.slug)) :
-    activeTab === "airport" ? routesData.filter(r => AIRPORT_SLUGS.includes(r.slug)) :
+  const routes =
+    tab==="gcc"     ? routesData.filter(r=>GCC_SLUGS.includes(r.slug)) :
+    tab==="saudi"   ? routesData.filter(r=>SAUDI_SLUGS.includes(r.slug)) :
+    tab==="airport" ? routesData.filter(r=>AIRPORT_SLUGS.includes(r.slug)) :
     routesData;
 
+  const featured = routesData.filter(r=>FEATURED.includes(r.slug));
+
   return (
-    <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
+    <div style={{minHeight:"100vh",display:"flex",flexDirection:"column",backgroundColor:"var(--bg-primary)"}}>
       <Navbar />
 
-      {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section style={styles.hero}>
-        <div className="container" style={styles.heroInner}>
-          <span className="badge-gold">{isAr ? "الوجهات الشائعة" : "Popular Routes"}</span>
-          <h1 style={styles.heroTitle}>
-            {isAr ? "جميع وجهات التاكسي من الدمام" : "All Taxi Routes from Dammam"}
+      {/* ── Hero ──────────────────────────────────────────────── */}
+      <section style={S.hero}>
+        <div className="container" style={S.heroInner}>
+          {/* breadcrumb */}
+          <nav style={S.crumb}>
+            <Link href="/" style={S.crumbLink}>{ar?"الرئيسية":"Home"}</Link>
+            <span style={S.crumbSep}>›</span>
+            <span style={S.crumbCurrent}>{ar?"الوجهات":"Routes"}</span>
+          </nav>
+
+          <span className="badge-gold">{ar?"الوجهات الشائعة":"Popular Routes"}</span>
+
+          <h1 style={S.heroH1}>
+            {ar
+              ? <><span style={{color:"var(--accent-gold)"}}>جميع وجهات التاكسي</span> من الدمام</>
+              : <>All Taxi Routes <span style={{color:"var(--accent-gold)"}}>from Dammam</span></>
+            }
           </h1>
-          <p style={styles.heroSub}>
-            {isAr
-              ? "خدمة تاكسي خاص وفاخر إلى دول الخليج والمدن السعودية — أسعار ثابتة، سائقون محترفون، 24/7."
-              : "Premium private taxi to GCC countries & Saudi cities — fixed rates, pro drivers, 24/7."}
+          <p style={S.heroP}>
+            {ar
+              ? "تاكسي خاص وفاخر إلى دول الخليج، المدن السعودية، ومن مطار الملك فهد — أسعار ثابتة، سائقون محترفون."
+              : "private taxi to GCC countries, Saudi cities & from King Fahd Airport — fixed prices, professional drivers."}
           </p>
 
-          {/* Stats row */}
-          <div style={styles.statsRow}>
+          {/* Stats */}
+          <div style={S.statsRow}>
             {[
-              { val: `${routesData.length}+`, lbl_en: "Routes Covered",   lbl_ar: "وجهة مغطاة" },
-              { val: "4",                      lbl_en: "Vehicle Classes",  lbl_ar: "فئات سيارات" },
-              { val: "24/7",                   lbl_en: "Available",        lbl_ar: "متاح دائماً" },
-              { val: "100%",                   lbl_en: "Fixed Rates",      lbl_ar: "أسعار ثابتة" },
-            ].map((s, i) => (
-              <div key={i} style={styles.statBox}>
-                <span style={styles.statVal}>{s.val}</span>
-                <span style={styles.statLbl}>{isAr ? s.lbl_ar : s.lbl_en}</span>
+              {n:`${routesData.length}+`, en:"Routes",         ar:"وجهة"},
+              {n:"4",                      en:"Vehicle Classes", ar:"فئة سيارة"},
+              {n:"24/7",                   en:"Available",       ar:"متاح"},
+              {n:"SAR",                    en:"Fixed Rates",     ar:"أسعار ثابتة"},
+            ].map((s,i)=>(
+              <div key={i} style={S.stat}>
+                <span style={S.statN}>{s.n}</span>
+                <span style={S.statL}>{ar?s.ar:s.en}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Filter Tabs ──────────────────────────────────────────── */}
-      <div style={styles.tabsBar}>
-        <div className="container" style={styles.tabsInner}>
-          {tabDefs.map(tab => (
+      {/* ── Featured routes ───────────────────────────────────── */}
+      {tab==="all" && (
+        <section style={S.featSection}>
+          <div className="container">
+            <h2 style={S.featTitle}>
+              <span style={{color:"var(--accent-gold)"}}>⭐</span>{" "}
+              {ar?"الوجهات الأكثر طلباً":"Most Popular Routes"}
+            </h2>
+            <div style={S.featGrid}>
+              {featured.map(r=>(
+                <FeaturedCard key={r.slug} route={r} ar={ar} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── Sticky tabs ───────────────────────────────────────── */}
+      <div style={S.tabsWrap}>
+        <div className="container" style={S.tabsInner}>
+          {tabs.map(t=>(
             <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              style={{ ...styles.tab, ...(activeTab === tab.id ? styles.tabActive : {}) }}
+              key={t.id}
+              onClick={()=>setTab(t.id)}
+              style={{...S.tabBtn,...(tab===t.id?S.tabActive:{})}}
             >
-              {isAr ? tab.label_ar : tab.label_en}
-              <span style={{ ...styles.tabCount, ...(activeTab === tab.id ? styles.tabCountActive : {}) }}>
-                {tab.count}
-              </span>
+              <span>{t.icon}</span>
+              <span>{ar?t.ar:t.en}</span>
+              <span style={{...S.tabBadge,...(tab===t.id?S.tabBadgeActive:{})}}>{t.n}</span>
             </button>
           ))}
         </div>
       </div>
 
-      {/* ── Routes Grid ──────────────────────────────────────────── */}
-      <section className="section-padding" style={{ flex: 1, backgroundColor: "var(--bg-primary)" }}>
+      {/* ── Route list ────────────────────────────────────────── */}
+      <section style={S.listSection}>
         <div className="container">
-          {activeTab === "all" ? (
+          {tab==="all" ? (
             <>
-              <RouteGroup
-                title={isAr ? "دول الخليج الدولية" : "International GCC Routes"}
-                catKey="gcc"
-                routes={routesData.filter(r => GCC_SLUGS.includes(r.slug))}
-                isAr={isAr}
+              <CatSection
+                titleEn="International GCC Routes"  titleAr="رحلات دول الخليج الدولية"
+                descEn="Cross-border transfers to Bahrain, Kuwait, UAE, Qatar & Oman with full customs support."
+                descAr="توصيل عبر الحدود إلى البحرين والكويت والإمارات وقطر وعُمان مع دعم جمركي كامل."
+                cat="gcc" routes={routesData.filter(r=>GCC_SLUGS.includes(r.slug))} ar={ar}
               />
-              <RouteGroup
-                title={isAr ? "المدن السعودية" : "Saudi City Routes"}
-                catKey="saudi"
-                routes={routesData.filter(r => SAUDI_SLUGS.includes(r.slug))}
-                isAr={isAr}
+              <CatSection
+                titleEn="Saudi City Routes"  titleAr="رحلات المدن السعودية"
+                descEn="Intercity highway transfers to Riyadh, Jeddah, Madinah, Mecca and more."
+                descAr="توصيل سريع بين المدن إلى الرياض وجدة والمدينة ومكة وغيرها."
+                cat="saudi" routes={routesData.filter(r=>SAUDI_SLUGS.includes(r.slug))} ar={ar}
               />
-              <RouteGroup
-                title={isAr ? "توصيل من مطار الدمام" : "Dammam Airport Transfers"}
-                catKey="airport"
-                routes={routesData.filter(r => AIRPORT_SLUGS.includes(r.slug))}
-                isAr={isAr}
+              <CatSection
+                titleEn="Dammam Airport Transfers"  titleAr="توصيل من مطار الدمام"
+                descEn="Fast pickups from King Fahd International Airport (DMM) to all Eastern Province destinations."
+                descAr="استقبال سريع من مطار الملك فهد الدولي إلى جميع وجهات المنطقة الشرقية."
+                cat="airport" routes={routesData.filter(r=>AIRPORT_SLUGS.includes(r.slug))} ar={ar}
               />
             </>
           ) : (
-            <div style={styles.grid}>
-              {filtered.map(r => (
-                <RouteCard key={r.slug} route={r} isAr={isAr} />
-              ))}
+            <div style={S.grid}>
+              {routes.map(r=><RouteCard key={r.slug} route={r} ar={ar}/>)}
             </div>
           )}
         </div>
       </section>
 
-      {/* ── Bottom CTA ───────────────────────────────────────────── */}
-      <section style={styles.ctaSection}>
-        <div className="container" style={styles.ctaInner}>
-          <div>
-            <h2 style={styles.ctaTitle}>
-              {isAr ? "لم تجد وجهتك؟" : "Don't see your destination?"}
-            </h2>
-            <p style={styles.ctaSub}>
-              {isAr
-                ? "تواصل معنا عبر واتساب وسنرتب رحلتك فوراً."
-                : "Contact us on WhatsApp and we'll arrange your trip instantly."}
+      {/* ── Bottom CTA ────────────────────────────────────────── */}
+      <section style={S.cta}>
+        <div className="container" style={S.ctaInner}>
+          <div style={S.ctaText}>
+            <h2 style={S.ctaH2}>{ar?"لم تجد وجهتك؟":"Don't see your destination?"}</h2>
+            <p style={S.ctaP}>
+              {ar
+                ? "تواصل معنا عبر واتساب وسنرتب رحلتك فوراً — أي وجهة، أي وقت."
+                : "Message us on WhatsApp — we cover any destination, any time."}
             </p>
           </div>
-          <Link
-            href="https://wa.me/966569487569"
-            target="_blank"
-            className="btn btn-whatsapp"
-            style={styles.ctaBtn}
-          >
-            {isAr ? "تواصل على واتساب" : "Chat on WhatsApp"}
+          <Link href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" style={S.ctaBtn}>
+            <WaIcon/> {ar?"احجز عبر واتساب":"Book via WhatsApp"}
           </Link>
         </div>
       </section>
 
-      <Footer />
-      <StickyCTA />
+      <Footer/>
+      <StickyCTA/>
     </div>
   );
 }
 
-/* ══════════════════════════════════════════════════════════════════ */
-function RouteGroup({
-  title, catKey, routes, isAr,
-}: {
-  title: string;
-  catKey: "gcc" | "saudi" | "airport";
-  routes: typeof routesData;
-  isAr: boolean;
-}) {
-  const cfg = CAT_CONFIG[catKey];
+/* ── Featured card ─────────────────────────────────────────────── */
+function FeaturedCard({route,ar}:{route:typeof routesData[0];ar:boolean}){
+  const [hov,setHov]=useState(false);
+  const cat=getCat(route.slug);
+  const cfg=CAT[cat];
+  const flag=FLAG[route.slug]??"📍";
   return (
-    <div style={{ marginBottom: "3.5rem" }}>
-      <div style={styles.groupHeader}>
-        <span style={styles.groupIcon}>{cfg.icon}</span>
-        <h2 style={styles.groupTitle}>{title}</h2>
-        <span style={{ ...styles.groupCount, borderColor: cfg.border, color: cfg.border }}>
-          {routes.length} {isAr ? "وجهة" : "routes"}
+    <Link
+      href={`/routes/${route.slug}`}
+      onMouseEnter={()=>setHov(true)}
+      onMouseLeave={()=>setHov(false)}
+      style={{
+        ...S.featCard,
+        borderColor: hov?cfg.color:"var(--border-color)",
+        boxShadow: hov?`0 8px 30px rgba(0,0,0,0.5),0 0 0 1px ${cfg.color}50`:"var(--shadow-sm)",
+        transform: hov?"translateY(-4px)":"none",
+        textDecoration:"none",
+      }}
+    >
+      <div style={{...S.featTop,backgroundColor:cfg.bg}}>
+        <span style={S.featFlag}>{flag}</span>
+        <span style={{...S.featCat,color:cfg.color}}>{cfg.icon} {ar?cfg.label_ar:cfg.label_en}</span>
+      </div>
+      <div style={S.featBody}>
+        <h3 style={S.featName}>{ar?route.name.ar:route.name.en}</h3>
+        <div style={S.featMeta}>
+          <span style={S.featPill}>📍 {ar?route.distance.ar:route.distance.en}</span>
+          <span style={S.featPill}>⏱ {ar?route.duration.ar:route.duration.en}</span>
+        </div>
+        <span style={{...S.featArrow,color:cfg.color}}>
+          {ar?"عرض التفاصيل ←":"View Details →"}
         </span>
       </div>
-      <div style={styles.grid}>
-        {routes.map(r => (
-          <RouteCard key={r.slug} route={r} isAr={isAr} />
-        ))}
+    </Link>
+  );
+}
+
+/* ── Category section ──────────────────────────────────────────── */
+function CatSection({titleEn,titleAr,descEn,descAr,cat,routes,ar}:{
+  titleEn:string;titleAr:string;descEn:string;descAr:string;
+  cat:"gcc"|"saudi"|"airport";routes:typeof routesData;ar:boolean;
+}){
+  const cfg=CAT[cat];
+  return (
+    <div style={S.catBlock}>
+      {/* Section header */}
+      <div style={{...S.catHeader,borderLeftColor:cfg.color}}>
+        <div style={S.catHeaderLeft}>
+          <span style={S.catIcon}>{cfg.icon}</span>
+          <div>
+            <h2 style={S.catTitle}>{ar?titleAr:titleEn}</h2>
+            <p style={S.catDesc}>{ar?descAr:descEn}</p>
+          </div>
+        </div>
+        <span style={{...S.catCount,color:cfg.color,borderColor:`${cfg.color}40`,background:cfg.bg}}>
+          {routes.length} {ar?"وجهة":"routes"}
+        </span>
+      </div>
+      {/* Route list */}
+      <div style={S.routeList}>
+        {routes.map(r=><RouteCard key={r.slug} route={r} ar={ar}/>)}
       </div>
     </div>
   );
 }
 
-/* ══════════════════════════════════════════════════════════════════ */
-function RouteCard({ route, isAr }: { route: (typeof routesData)[0]; isAr: boolean }) {
-  const [hovered, setHovered] = useState(false);
-  const cat = getCategory(route.slug);
-  const cfg = CAT_CONFIG[cat];
-  const flag = FLAG[route.slug] ?? "📍";
-  const intro = isAr ? route.intro.ar : route.intro.en;
-  const shortIntro = intro.length > 90 ? intro.slice(0, 90).trimEnd() + "…" : intro;
+/* ── Route card ────────────────────────────────────────────────── */
+function RouteCard({route,ar}:{route:typeof routesData[0];ar:boolean}){
+  const [hov,setHov]=useState(false);
+  const cat=getCat(route.slug);
+  const cfg=CAT[cat];
+  const flag=FLAG[route.slug]??"📍";
+  const intro=ar?route.intro.ar:route.intro.en;
 
   return (
     <div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={()=>setHov(true)}
+      onMouseLeave={()=>setHov(false)}
       style={{
-        ...styles.card,
-        transform: hovered ? "translateY(-4px)" : "translateY(0)",
-        boxShadow: hovered ? `0 12px 32px rgba(0,0,0,0.6), 0 0 0 1px ${cfg.border}40` : "var(--shadow-md)",
-        borderColor: hovered ? cfg.border : "var(--border-color)",
+        ...S.card,
+        borderColor: hov?cfg.color:"var(--border-color)",
+        boxShadow: hov?`0 4px 20px rgba(0,0,0,0.4),0 0 0 1px ${cfg.color}40`:"none",
       }}
     >
-      {/* Card visual header */}
-      <div style={{ ...styles.cardBanner, background: cfg.gradient, borderBottom: `2px solid ${cfg.border}` }}>
-        <span style={styles.bannerFlag}>{flag}</span>
-        <span style={{ ...styles.catChip, borderColor: cfg.border, color: cfg.border }}>
-          {cfg.icon} {isAr ? cfg.label_ar : cfg.label_en}
-        </span>
+      {/* Left: flag */}
+      <div style={{...S.cardFlag,backgroundColor:cfg.bg}}>
+        <span style={S.cardFlagEmoji}>{flag}</span>
       </div>
 
-      {/* Card body */}
-      <div style={styles.cardBody}>
-        <h3 style={styles.cardTitle}>
-          {isAr ? route.name.ar : route.name.en}
-        </h3>
-
-        <p style={styles.cardIntro}>{shortIntro}</p>
-
-        <div style={styles.metaRow}>
-          <span style={styles.metaBadge}>📍 {isAr ? route.distance.ar : route.distance.en}</span>
-          <span style={styles.metaBadge}>⏱ {isAr ? route.duration.ar : route.duration.en}</span>
+      {/* Middle: info */}
+      <div style={S.cardInfo}>
+        <div style={S.cardTopRow}>
+          <span style={{...S.cardCatChip,color:cfg.color,backgroundColor:cfg.bg}}>
+            {cfg.icon} {ar?cfg.label_ar:cfg.label_en}
+          </span>
         </div>
+        <h3 style={S.cardTitle}>{ar?route.name.ar:route.name.en}</h3>
+        <p style={S.cardIntro}>
+          {intro.length>100?intro.slice(0,100).trimEnd()+"…":intro}
+        </p>
+        <div style={S.cardMeta}>
+          <span style={S.cardMetaBadge}>📍 {ar?route.distance.ar:route.distance.en}</span>
+          <span style={S.cardMetaBadge}>⏱ {ar?route.duration.ar:route.duration.en}</span>
+        </div>
+      </div>
 
+      {/* Right: CTAs */}
+      <div style={{...S.cardCtas,opacity:hov?1:0.6,transform:hov?"translateX(0)":"translateX(4px)"}}>
         <Link
           href={`/routes/${route.slug}`}
-          style={{ ...styles.detailsBtn, backgroundColor: hovered ? cfg.border : "transparent", color: hovered ? "#000" : cfg.border, borderColor: cfg.border }}
+          style={{...S.btnDetails,borderColor:cfg.color,color:cfg.color}}
         >
-          {isAr ? "عرض التفاصيل ←" : "View Details →"}
+          {ar?"التفاصيل":"Details"}
+        </Link>
+        <Link
+          href={`https://wa.me/966569487569?text=${encodeURIComponent(ar?`أريد حجز: ${route.name.ar}`:`Book: ${route.name.en}`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={S.btnBook}
+        >
+          {ar?"احجز":"Book"}
         </Link>
       </div>
     </div>
   );
 }
 
-/* ══════════════════════════════════════════════════════════════════ */
-const styles: Record<string, React.CSSProperties> = {
+/* ── WhatsApp icon ─────────────────────────────────────────────── */
+function WaIcon(){
+  return(
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style={{flexShrink:0}}>
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.116 1.522 5.845L0 24l6.277-1.497A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.655-.492-5.19-1.352l-.374-.222-3.726.888.944-3.638-.244-.386A9.952 9.952 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  );
+}
+
+/* ── Styles ─────────────────────────────────────────────────────── */
+const S: Record<string,React.CSSProperties> = {
+  /* Hero */
   hero: {
-    background: "radial-gradient(ellipse at 60% 40%, rgba(35,28,5,0.9) 0%, #0c0c0c 65%)",
-    padding: "5rem 0 3.5rem",
+    background: "radial-gradient(ellipse at 60% 30%, rgba(40,30,0,0.95) 0%, #080808 70%)",
+    padding: "4.5rem 0 3rem",
     borderBottom: "1px solid var(--border-color)",
   },
-  heroInner: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    textAlign: "center",
-    gap: "1.25rem",
+  heroInner: { display:"flex", flexDirection:"column", gap:"1.2rem" },
+  crumb:     { display:"flex", alignItems:"center", gap:"0.4rem", fontSize:"0.8rem" },
+  crumbLink: { color:"var(--text-muted)", textDecoration:"none" },
+  crumbSep:  { color:"var(--text-muted)" },
+  crumbCurrent: { color:"var(--accent-gold)", fontWeight:600 },
+  heroH1: {
+    fontSize:"clamp(2rem,4.5vw,3.2rem)", fontWeight:800,
+    color:"#fff", lineHeight:1.15, maxWidth:"700px",
   },
-  heroTitle: {
-    fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-    fontWeight: 800,
-    color: "#fff",
-    lineHeight: 1.2,
-  },
-  heroSub: {
-    fontSize: "1rem",
-    color: "var(--text-secondary)",
-    maxWidth: "600px",
-    lineHeight: 1.7,
+  heroP: {
+    fontSize:"1.05rem", color:"var(--text-secondary)",
+    maxWidth:"600px", lineHeight:1.7,
   },
   statsRow: {
-    display: "flex",
-    gap: "0",
-    marginTop: "1.5rem",
-    border: "1px solid var(--border-color)",
-    borderRadius: "12px",
-    overflow: "hidden",
-    backgroundColor: "var(--bg-secondary)",
+    display:"flex", gap:"0", marginTop:"0.5rem",
+    border:"1px solid var(--border-color)", borderRadius:"10px",
+    overflow:"hidden", backgroundColor:"var(--bg-secondary)",
+    width:"fit-content",
   },
-  statBox: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    padding: "1.25rem 2rem",
-    borderRight: "1px solid var(--border-color)",
-    gap: "0.2rem",
-    flex: 1,
+  stat: {
+    display:"flex", flexDirection:"column", alignItems:"center",
+    padding:"1rem 2rem", gap:"0.15rem",
+    borderRight:"1px solid var(--border-color)",
   },
-  statVal: {
-    fontSize: "1.6rem",
-    fontWeight: 800,
-    color: "var(--accent-gold)",
+  statN: { fontSize:"1.5rem", fontWeight:800, color:"var(--accent-gold)" },
+  statL: { fontSize:"0.7rem", color:"var(--text-secondary)", textTransform:"uppercase", letterSpacing:"0.05em", whiteSpace:"nowrap" },
+
+  /* Featured */
+  featSection: {
+    backgroundColor:"var(--bg-secondary)",
+    borderBottom:"1px solid var(--border-color)",
+    padding:"2.5rem 0",
   },
-  statLbl: {
-    fontSize: "0.72rem",
-    color: "var(--text-secondary)",
-    textTransform: "uppercase",
-    letterSpacing: "0.05em",
-    whiteSpace: "nowrap",
+  featTitle: {
+    fontSize:"1.15rem", fontWeight:700, color:"#fff",
+    marginBottom:"1.5rem", display:"flex", alignItems:"center", gap:"0.5rem",
   },
-  tabsBar: {
-    backgroundColor: "var(--bg-secondary)",
-    borderBottom: "1px solid var(--border-color)",
-    padding: "1rem 0",
-    position: "sticky",
-    top: "60px",
-    zIndex: 50,
+  featGrid: {
+    display:"grid",
+    gridTemplateColumns:"repeat(auto-fill,minmax(260px,1fr))",
+    gap:"1rem",
+  },
+  featCard: {
+    display:"flex", flexDirection:"column",
+    backgroundColor:"var(--bg-tertiary)",
+    border:"1px solid var(--border-color)",
+    borderRadius:"12px", overflow:"hidden",
+    transition:"all 0.25s ease", cursor:"pointer",
+  },
+  featTop: {
+    display:"flex", justifyContent:"space-between", alignItems:"center",
+    padding:"0.85rem 1.2rem",
+  },
+  featFlag: { fontSize:"2rem" },
+  featCat:  { fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.04em" },
+  featBody: { padding:"1rem 1.2rem", display:"flex", flexDirection:"column", gap:"0.6rem" },
+  featName: { fontSize:"0.95rem", fontWeight:700, color:"#fff", lineHeight:1.4 },
+  featMeta: { display:"flex", gap:"0.4rem", flexWrap:"wrap" },
+  featPill: {
+    fontSize:"0.72rem", color:"var(--text-secondary)",
+    backgroundColor:"rgba(255,255,255,0.05)", border:"1px solid var(--border-color)",
+    padding:"0.2rem 0.5rem", borderRadius:"4px",
+  },
+  featArrow: { fontSize:"0.8rem", fontWeight:700, marginTop:"0.25rem" },
+
+  /* Tabs */
+  tabsWrap: {
+    backgroundColor:"var(--bg-secondary)",
+    borderBottom:"1px solid var(--border-color)",
+    padding:"0.9rem 0",
+    position:"sticky", top:"60px", zIndex:40,
   },
   tabsInner: {
-    display: "flex",
-    gap: "0.5rem",
-    flexWrap: "wrap",
-    justifyContent: "center",
+    display:"flex", gap:"0.5rem", flexWrap:"wrap",
   },
-  tab: {
-    padding: "0.45rem 1.1rem",
-    borderRadius: "50px",
-    border: "1px solid var(--border-color)",
-    background: "transparent",
-    color: "var(--text-secondary)",
-    cursor: "pointer",
-    fontSize: "0.875rem",
-    fontWeight: 500,
-    display: "flex",
-    alignItems: "center",
-    gap: "0.4rem",
-    transition: "all 0.2s",
+  tabBtn: {
+    display:"flex", alignItems:"center", gap:"0.45rem",
+    padding:"0.5rem 1.1rem",
+    borderRadius:"50px", border:"1px solid var(--border-color)",
+    background:"transparent", color:"var(--text-secondary)",
+    cursor:"pointer", fontSize:"0.85rem", fontWeight:500,
+    transition:"all 0.18s",
   },
   tabActive: {
-    background: "var(--accent-gold)",
-    borderColor: "var(--accent-gold)",
-    color: "#000",
-    fontWeight: 700,
+    background:"var(--accent-gold)", borderColor:"var(--accent-gold)",
+    color:"#000", fontWeight:700,
   },
-  tabCount: {
-    backgroundColor: "rgba(255,255,255,0.1)",
-    color: "var(--text-muted)",
-    fontSize: "0.72rem",
-    fontWeight: 700,
-    padding: "0.1rem 0.45rem",
-    borderRadius: "20px",
+  tabBadge: {
+    backgroundColor:"rgba(255,255,255,0.1)", color:"var(--text-muted)",
+    fontSize:"0.7rem", fontWeight:700, padding:"0.1rem 0.45rem",
+    borderRadius:"20px",
   },
-  tabCountActive: {
-    backgroundColor: "rgba(0,0,0,0.2)",
-    color: "#000",
+  tabBadgeActive: { backgroundColor:"rgba(0,0,0,0.2)", color:"#000" },
+
+  /* List section */
+  listSection: { flex:1, padding:"3rem 0" },
+
+  /* Category section */
+  catBlock: { marginBottom:"3rem" },
+  catHeader: {
+    display:"flex", justifyContent:"space-between", alignItems:"flex-start",
+    borderLeft:"4px solid", paddingLeft:"1rem", marginBottom:"1.5rem",
+    gap:"1rem",
   },
-  groupHeader: {
-    display: "flex",
-    alignItems: "center",
-    gap: "0.75rem",
-    marginBottom: "1.5rem",
-    paddingBottom: "0.75rem",
-    borderBottom: "1px solid var(--border-color)",
+  catHeaderLeft: { display:"flex", alignItems:"flex-start", gap:"0.75rem" },
+  catIcon: { fontSize:"1.6rem", lineHeight:1, marginTop:"2px" },
+  catTitle: { fontSize:"1.2rem", fontWeight:700, color:"#fff", marginBottom:"0.3rem" },
+  catDesc:  { fontSize:"0.83rem", color:"var(--text-secondary)", lineHeight:1.5, maxWidth:"500px" },
+  catCount: {
+    fontSize:"0.75rem", fontWeight:700, padding:"0.25rem 0.75rem",
+    borderRadius:"20px", border:"1px solid", flexShrink:0, marginTop:"4px",
   },
-  groupIcon: { fontSize: "1.4rem" },
-  groupTitle: {
-    fontSize: "1.3rem",
-    fontWeight: 700,
-    color: "#fff",
-    flex: 1,
-  },
-  groupCount: {
-    fontSize: "0.75rem",
-    fontWeight: 700,
-    border: "1px solid",
-    borderRadius: "20px",
-    padding: "0.15rem 0.6rem",
-  },
+  routeList: { display:"flex", flexDirection:"column", gap:"0.65rem" },
+
+  /* Grid (filtered mode) */
   grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fill, minmax(290px, 1fr))",
-    gap: "1.25rem",
+    display:"grid",
+    gridTemplateColumns:"repeat(auto-fill,minmax(320px,1fr))",
+    gap:"0.75rem",
   },
+
+  /* Route card (list item) */
   card: {
-    backgroundColor: "var(--bg-secondary)",
-    border: "1px solid var(--border-color)",
-    borderRadius: "12px",
-    overflow: "hidden",
-    display: "flex",
-    flexDirection: "column",
-    transition: "transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease",
-    cursor: "pointer",
+    display:"flex", alignItems:"center", gap:"0",
+    backgroundColor:"var(--bg-secondary)",
+    border:"1px solid var(--border-color)",
+    borderRadius:"10px", overflow:"hidden",
+    transition:"border-color 0.2s, box-shadow 0.2s",
+    cursor:"default",
   },
-  cardBanner: {
-    height: "80px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: "0 1.2rem",
-    flexShrink: 0,
+  cardFlag: {
+    width:"72px", flexShrink:0,
+    display:"flex", alignItems:"center", justifyContent:"center",
+    alignSelf:"stretch",
   },
-  bannerFlag: {
-    fontSize: "2.2rem",
-    lineHeight: 1,
+  cardFlagEmoji: { fontSize:"1.8rem" },
+  cardInfo: {
+    flex:1, padding:"1rem 1.1rem", display:"flex",
+    flexDirection:"column", gap:"0.4rem",
+    borderRight:"1px solid var(--border-color)",
+    minWidth:0,
   },
-  catChip: {
-    fontSize: "0.7rem",
-    fontWeight: 700,
-    border: "1px solid",
-    borderRadius: "20px",
-    padding: "0.2rem 0.6rem",
-    textTransform: "uppercase",
-    letterSpacing: "0.04em",
-    backgroundColor: "rgba(0,0,0,0.4)",
-  },
-  cardBody: {
-    padding: "1.2rem",
-    display: "flex",
-    flexDirection: "column",
-    gap: "0.75rem",
-    flex: 1,
+  cardTopRow: { display:"flex", alignItems:"center", gap:"0.5rem" },
+  cardCatChip: {
+    fontSize:"0.68rem", fontWeight:700, padding:"0.15rem 0.5rem",
+    borderRadius:"20px", letterSpacing:"0.04em",
   },
   cardTitle: {
-    fontSize: "1rem",
-    fontWeight: 700,
-    color: "#fff",
-    lineHeight: 1.4,
+    fontSize:"0.97rem", fontWeight:700, color:"#fff",
+    lineHeight:1.35, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
   },
   cardIntro: {
-    fontSize: "0.8rem",
-    color: "var(--text-secondary)",
-    lineHeight: 1.6,
-    margin: 0,
+    fontSize:"0.78rem", color:"var(--text-secondary)",
+    lineHeight:1.5, display:"-webkit-box", overflow:"hidden",
   },
-  metaRow: {
-    display: "flex",
-    gap: "0.4rem",
-    flexWrap: "wrap",
+  cardMeta: { display:"flex", gap:"0.4rem", flexWrap:"wrap" },
+  cardMetaBadge: {
+    fontSize:"0.72rem", color:"var(--text-secondary)",
+    backgroundColor:"rgba(255,255,255,0.04)",
+    border:"1px solid var(--border-color)",
+    padding:"0.18rem 0.5rem", borderRadius:"4px",
   },
-  metaBadge: {
-    fontSize: "0.75rem",
-    color: "var(--text-secondary)",
-    backgroundColor: "rgba(255,255,255,0.04)",
-    padding: "0.2rem 0.55rem",
-    borderRadius: "4px",
-    border: "1px solid var(--border-color)",
+  cardCtas: {
+    display:"flex", flexDirection:"column", gap:"0.5rem",
+    padding:"0.9rem 1.1rem", flexShrink:0,
+    transition:"opacity 0.2s, transform 0.2s",
   },
-  detailsBtn: {
-    display: "inline-block",
-    marginTop: "auto",
-    padding: "0.5rem 1rem",
-    borderRadius: "6px",
-    border: "1px solid",
-    fontSize: "0.82rem",
-    fontWeight: 700,
-    textAlign: "center",
-    transition: "all 0.2s",
-    textDecoration: "none",
+  btnDetails: {
+    padding:"0.45rem 1rem", borderRadius:"6px",
+    border:"1.5px solid", fontSize:"0.78rem", fontWeight:700,
+    textDecoration:"none", textAlign:"center",
+    backgroundColor:"transparent",
+    whiteSpace:"nowrap",
   },
-  ctaSection: {
-    backgroundColor: "var(--bg-secondary)",
-    borderTop: "1px solid var(--border-color)",
-    padding: "3rem 0",
+  btnBook: {
+    padding:"0.45rem 1rem", borderRadius:"6px",
+    backgroundColor:"#25d366", color:"#fff",
+    fontSize:"0.78rem", fontWeight:700,
+    textDecoration:"none", textAlign:"center",
+    whiteSpace:"nowrap",
+  },
+
+  /* Bottom CTA */
+  cta: {
+    background:"linear-gradient(135deg,#075e54 0%,#128c7e 100%)",
+    padding:"3.5rem 0",
   },
   ctaInner: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    gap: "2rem",
-    flexWrap: "wrap",
+    display:"flex", justifyContent:"space-between",
+    alignItems:"center", gap:"2rem", flexWrap:"wrap",
   },
-  ctaTitle: {
-    fontSize: "1.5rem",
-    fontWeight: 800,
-    color: "#fff",
-    marginBottom: "0.5rem",
-  },
-  ctaSub: {
-    color: "var(--text-secondary)",
-    fontSize: "0.95rem",
-  },
+  ctaText: {},
+  ctaH2: { fontSize:"1.6rem", fontWeight:800, color:"#fff", marginBottom:"0.4rem" },
+  ctaP:  { color:"rgba(255,255,255,0.85)", fontSize:"0.95rem" },
   ctaBtn: {
-    padding: "0.85rem 2rem",
-    fontSize: "0.95rem",
-    fontWeight: 700,
-    whiteSpace: "nowrap",
-    flexShrink: 0,
+    display:"inline-flex", alignItems:"center", gap:"0.6rem",
+    padding:"0.9rem 2rem", borderRadius:"8px",
+    backgroundColor:"#fff", color:"#075e54",
+    fontSize:"1rem", fontWeight:700, textDecoration:"none",
+    flexShrink:0, whiteSpace:"nowrap",
   },
 };
-

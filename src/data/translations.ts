@@ -3,7 +3,7 @@ export type Locale = "en" | "ar";
 export const translations = {
   en: {
     logoTitle: "Dammam Airport Taxi",
-    logoSub: "Premium GCC Transfer Services",
+    logoSub: "GCC Transfer Services",
     navHome: "Home",
     navFleet: "Our Fleet",
     navRoutes: "Popular Routes",
@@ -16,7 +16,7 @@ export const translations = {
     whatsAppUs: "WhatsApp Us",
 
     // Hero Section
-    heroTitle: "Premium Dammam Airport Transfers & GCC Chauffeur Services",
+    heroTitle: "Dammam Airport Transfers & GCC Chauffeur Services",
     heroSub: "Experience safe, comfortable, and luxury cross-border transfers from Dammam Airport to Bahrain, Kuwait, Riyadh, Khobar, Jubail, Qatar Border, and across the GCC.",
     heroActionBook: "Instant Booking",
     heroActionFleet: "Explore Fleet",
@@ -63,7 +63,7 @@ export const translations = {
     closeBtn: "Close",
 
     // Fleet
-    fleetTitle: "Our Premium Fleet",
+    fleetTitle: "Our Fleet",
     fleetSub: "Choose from our range of clean, fully-insured, modern vehicles driven by professional bilingual chauffeurs.",
     capacity: "Capacity",
     maxPassengers: "Max Passengers",
@@ -82,7 +82,7 @@ export const translations = {
     camryName: "Standard Sedan (Camry or similar)",
     camryDesc: "Comfortable and cost-effective daily travel. Ideal for small families, business professionals, or solo airport runs.",
     yukonName: "Luxury VIP SUV (GMC Yukon / Suburban)",
-    yukonDesc: "Premium spacious travel with executive styling. High safety and luxury comfort, preferred for GCC border crossing.",
+    yukonDesc: "Spacious travel with executive styling. High safety and luxury comfort, preferred for GCC border crossing.",
     stariaName: "Executive Family Van (Hyundai Staria / HiAce)",
     stariaDesc: "Highly comfortable multi-purpose vehicle. Perfect for larger families, corporate groups, and excessive luggage transfers.",
     luxuryName: "VIP Chauffeur (Mercedes S-Class or similar)",
@@ -102,7 +102,7 @@ export const translations = {
 
     // Popular Routes Homepage
     routesTitle: "Our Popular GCC & Regional Routes",
-    routesSub: "Direct premium taxi services from Dammam and Dammam Airport to major destinations across Saudi Arabia and neighboring countries.",
+    routesSub: "Direct private taxi services from Dammam and Dammam Airport to major destinations across Saudi Arabia and neighboring countries.",
     travelTime: "Est. Travel Time",
     distanceLabel: "Distance",
     startingFrom: "Starting from",
@@ -155,7 +155,7 @@ export const translations = {
     blog1Title: "Ultimate Guide to Dammam to Bahrain Taxi Services",
     blog1Desc: "Everything you need to know about crossing the King Fahd Causeway, border requirements, travel times, and vehicle options.",
     blog2Title: "Dammam Airport Transfers: Why Chauffeurs Beat Rentals",
-    blog2Desc: "Discover the stress-free way to travel. Compare self-drive car rentals with booking a premium airport transfer in KSA.",
+    blog2Desc: "Discover the stress-free way to travel. Compare self-drive car rentals with booking a private airport transfer in KSA.",
     blog3Title: "GCC Travel: Road Tripping from Dammam to Qatar, Kuwait & UAE",
     blog3Desc: "A complete guide on distance, routes, border checkpoints, and road conditions for intercity transfers from Saudi Arabia.",
 
