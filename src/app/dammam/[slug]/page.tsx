@@ -4,7 +4,7 @@ import { locationPages, getLocationBySlug } from "@/data/locationData";
 import { LocationPageClient } from "@/components/LocationPageClient";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
@@ -12,7 +12,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const page = getLocationBySlug(params.slug);
+  const { slug } = await params;
+  const page = getLocationBySlug(slug);
   if (!page) return {};
   return {
     title: page.metaTitle.en,
@@ -29,8 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function DammamLocationPage({ params }: Props) {
-  const page = getLocationBySlug(params.slug);
+export default async function DammamLocationPage({ params }: Props) {
+  const { slug } = await params;
+  const page = getLocationBySlug(slug);
   if (!page) notFound();
   return <LocationPageClient page={page} />;
 }
