@@ -141,13 +141,13 @@ a {
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  transition: var(--transition-normal);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .glass-card:hover {
-  border-color: var(--border-color-light);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  border-color: rgba(245,197,24,0.25);
+  transform: translateY(-6px) perspective(800px) rotateX(-2deg);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.7), 0 0 0 1px rgba(245,197,24,0.1);
 }
 
 /* Buttons */
@@ -234,14 +234,81 @@ body.rtl .title-accent::after {
   transform: translateX(-50%);
 }
 
-/* Animations */
+/* ── Animations ─────────────────────────────────────────── */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245,197,24,0); }
+  50%       { box-shadow: 0 0 20px 4px rgba(245,197,24,0.18); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes glow-border {
+  0%, 100% { border-color: rgba(245,197,24,0.2); }
+  50%       { border-color: rgba(245,197,24,0.6); box-shadow: 0 0 20px rgba(245,197,24,0.15); }
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.6s ease forwards;
+.animate-fade-in  { animation: fadeIn  0.6s ease forwards; }
+.animate-float    { animation: float   4s ease-in-out infinite; }
+.animate-slide-up { animation: slideUp 0.5s ease forwards; }
+.animate-shimmer  {
+  background: linear-gradient(90deg, transparent 0%, rgba(245,197,24,0.08) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+/* ── 3D Card Effect ─────────────────────────────────────── */
+.card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-3d:hover {
+  transform: perspective(1000px) rotateX(-3deg) translateY(-6px);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.8), 0 0 0 1px rgba(245,197,24,0.2);
+}
+
+/* ── Glow Border ────────────────────────────────────────── */
+.glow-border {
+  animation: glow-border 3s ease-in-out infinite;
+}
+
+/* ── Gradient Border ────────────────────────────────────── */
+.gradient-border {
+  position: relative;
+  background: var(--bg-secondary);
+  border-radius: 16px;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 17px;
+  background: linear-gradient(135deg, rgba(245,197,24,0.5), transparent 40%, rgba(245,197,24,0.2));
+  z-index: -1;
+}
+
+/* ── Shimmer Loader ─────────────────────────────────────── */
+.shimmer-line {
+  height: 12px; border-radius: 6px;
+  background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--bg-secondary) 50%, var(--bg-tertiary) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
 
 /* RTL Layout Fixes */
