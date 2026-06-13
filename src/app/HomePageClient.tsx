@@ -275,6 +275,181 @@ export function HomePageClient() {
         </div>
       </section>
 
+      {/* SEO Article — above FAQs */}
+      <section style={art.wrap}>
+        <div className="container">
+
+          {/* ── 3D Hero Intro Banner ── */}
+          <div style={art.heroBanner}>
+            <div style={art.heroBannerGlow} />
+            <div style={art.heroBannerContent}>
+              <span className="badge-gold" style={{ marginBottom: "0.75rem", display: "inline-block" }}>Eastern Province — Saudi Arabia</span>
+              <h2 style={art.mainTitle}>
+                Dammam Airport Taxi — Your Trusted Private Transfer from King Fahd International Airport
+              </h2>
+              <p style={art.lead}>
+                King Fahd International Airport (IATA: DMM) handles over 9 million travellers a year — yet finding a <strong>reliable, fixed-price private taxi</strong> at arrivals remains the number-one concern for business travellers, expat families, and GCC tourists alike. We solve that problem completely. Pre-book in 2 minutes via WhatsApp, and your driver will be standing at the arrivals exit with your name board before you clear customs — fare agreed, flight tracked, 60 minutes of free waiting included. No apps. No queues. No surprises.
+              </p>
+              <p style={art.lead}>
+                Whether you need an airport transfer to Al Khobar or Dhahran, a corporate shuttle to Jubail Industrial City, or a cross-border taxi to Bahrain, Doha, Dubai, or Kuwait — this complete guide covers every route, every fare, and everything you need to book with confidence.
+              </p>
+              {/* 3D stat cards */}
+              <div style={art.statsRow}>
+                {[
+                  { val: "780 km²", lbl: "World's Largest Airport by Area" },
+                  { val: "9M+",     lbl: "Annual Passengers at DMM" },
+                  { val: "60 min",  lbl: "Free Waiting — Every Booking" },
+                  { val: "24 / 7",  lbl: "365 Days — Always Available" },
+                  { val: "4",       lbl: "GCC Borders We Cross" },
+                  { val: "< 2 min", lbl: "Average WhatsApp Response" },
+                ].map(s => (
+                  <div key={s.val} style={art.statCard3d}>
+                    <strong style={art.statVal}>{s.val}</strong>
+                    <span style={art.statLbl}>{s.lbl}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* ── Why pre-book ── */}
+          <div style={art.block}>
+            <h3 style={art.h3}>Why Pre-Book a Private Taxi from Dammam Airport?</h3>
+            <p style={art.p}>
+              Arrivals at DMM have several options — Uber, Careem, street taxis, or hotel shuttles. But for international arrivals, business travellers, and families with luggage, a pre-booked private taxi is the only option that guarantees a fixed price, a driver waiting at arrivals before you exit customs, live flight tracking, and 60 minutes of free waiting from your actual landing time.
+            </p>
+            <div style={art.featureGrid}>
+              {[
+                { title: "Fixed Price — No Surprises",    desc: "Fare agreed before travel. No meter, no surge pricing, no hidden parking or VAT." },
+                { title: "Live Flight Tracking",          desc: "We monitor your flight. Delayed 2 hours? Your driver adjusts automatically at zero extra charge." },
+                { title: "Name-Board Meet & Greet",       desc: "Driver waits at the arrivals exit with your name. Photo & direct number sent 2 hrs before landing." },
+                { title: "Executive Air-Con Fleet",       desc: "Camry Sedan · GMC Yukon SUV · Staria Van · VIP Class — Wi-Fi, USB charging, chilled water on board." },
+                { title: "GCC Cross-Border Licensed",     desc: "Our drivers hold valid permits for Bahrain, Kuwait, UAE & Qatar crossings — most local taxis cannot cross borders." },
+                { title: "Corporate Monthly Invoicing",   desc: "VAT-compliant consolidated invoices for Aramco, SABIC, RCJY & multinational corporate accounts." },
+              ].map(f => (
+                <div key={f.title} style={art.featureCard}>
+                  <div style={art.featureLine} />
+                  <strong style={art.featureTitle}>{f.title}</strong>
+                  <p style={art.featureDesc}>{f.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Route price table ── */}
+          <div style={art.block}>
+            <h3 style={art.h3}>Dammam Airport Taxi Fares — All Routes &amp; Prices</h3>
+            <p style={art.p}>All fares below are for a <strong>full private taxi</strong> (not per seat) and include airport parking, road tolls, and VAT.</p>
+            <div style={art.routeGrid}>
+              {[
+                { route: "DMM Airport → Al Khobar",          dist: "60 km · 45 min",    from: "150 SAR", note: "All hotels, compounds & districts" },
+                { route: "DMM Airport → Jubail Industrial",   dist: "85 km · 55 min",    from: "200 SAR", note: "SABIC, RCJY, Aramco contractors" },
+                { route: "DMM Airport → Dhahran (Aramco HQ)", dist: "55 km · 40 min",    from: "150 SAR", note: "All Aramco gates + KFUPM" },
+                { route: "DMM Airport → Dammam City",         dist: "30 km · 25 min",    from: "120 SAR", note: "All districts, hotels & offices" },
+                { route: "DMM Airport → Hofuf (Al-Ahsa)",     dist: "160 km · 1.5 hrs",  from: "400 SAR", note: "UNESCO oasis gateway" },
+                { route: "Dammam → Bahrain (Causeway)",        dist: "85 km · 1.5–2 hrs", from: "350 SAR", note: "Tolls included · door-to-door" },
+                { route: "Dammam → Riyadh",                    dist: "400 km · 3.5 hrs",  from: "900 SAR", note: "Wi-Fi · rest stops included" },
+                { route: "Dammam → Kuwait (Khafji Border)",    dist: "420 km · 4 hrs",    from: "1,500 SAR", note: "Cross-border permits held" },
+                { route: "Dammam → Dubai / Abu Dhabi (UAE)",   dist: "950 km · 9–10 hrs", from: "3,500 SAR", note: "Al Batha–Ghuwaifat crossing" },
+                { route: "Dammam → Doha, Qatar (Salwa)",       dist: "400 km · 5–6 hrs",  from: "1,400 SAR", note: "Full city delivery available" },
+              ].map(r => (
+                <div key={r.route} style={art.routeRow}>
+                  <div style={art.routeLeft}>
+                    <strong style={art.routeName}>{r.route}</strong>
+                    <span style={art.routeMeta}>{r.dist} &nbsp;·&nbsp; {r.note}</span>
+                  </div>
+                  <span style={art.routePrice}>from {r.from}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Two-col: Corporate + GCC ── */}
+          <div style={art.twoCol}>
+            <div style={art.infoBox}>
+              <h3 style={art.infoBoxTitle}>Corporate & Executive Service</h3>
+              <p style={art.p}>
+                The Eastern Province hosts Saudi Aramco, SABIC, Halliburton, Baker Hughes, SLB, and hundreds of international contractors. Our corporate service delivers:
+              </p>
+              <ul style={art.ul}>
+                <li>Monthly VAT-compliant consolidated invoices</li>
+                <li>Priority dispatch for corporate accounts</li>
+                <li>Fleet-level bookings for large delegations at DMM</li>
+                <li>English &amp; Arabic-speaking professional chauffeurs</li>
+                <li>GPS-tracked vehicles reported to your travel desk</li>
+                <li>All compounds: Dhahran, Jubail, Ras Tanura, Abqaiq</li>
+              </ul>
+              <Link href="/corporate-transfers" style={art.infoLink}>Set up a corporate account →</Link>
+            </div>
+            <div style={{ ...art.infoBox, borderColor: "rgba(58,127,212,0.4)", background: "rgba(58,127,212,0.04)" }}>
+              <h3 style={{ ...art.infoBoxTitle, color: "#5ba3e8" }}>GCC Cross-Border Taxi</h3>
+              <p style={art.p}>
+                Most local Eastern Province taxis cannot legally cross Saudi land borders. Our drivers hold valid commercial transport permits for every active crossing:
+              </p>
+              <ul style={art.ul}>
+                <li><strong>Bahrain</strong> — King Fahd Causeway · 85 km · tolls included</li>
+                <li><strong>Kuwait</strong> — Khafji–Nuwaiseeb border · 420 km</li>
+                <li><strong>UAE</strong> — Al Batha / Ghuwaifat · 950 km to Dubai</li>
+                <li><strong>Qatar</strong> — Salwa–Abu Samra · 400 km to Doha</li>
+              </ul>
+              <p style={{ ...art.p, fontSize: "0.82rem", marginTop: "0.5rem" }}>
+                Saudi residents need a valid Exit &amp; Re-Entry visa. GCC nationals travel on national ID. Our team advises on visa requirements when you book.
+              </p>
+              <Link href="/gcc-border-crossing" style={{ ...art.infoLink, color: "#5ba3e8" }}>GCC border crossing guide →</Link>
+            </div>
+          </div>
+
+          {/* ── Booking steps ── */}
+          <div style={art.block}>
+            <h3 style={art.h3}>How to Book Your Dammam Airport Taxi in Under 2 Minutes</h3>
+            <p style={art.p}>No app downloads. No account creation. No pre-payment. Just WhatsApp — and you're set.</p>
+            <div style={art.stepsRow}>
+              {[
+                { n: "1", title: "Send WhatsApp",        desc: "Share your name, flight number, date & time, destination, passenger count & vehicle preference." },
+                { n: "2", title: "Get Instant Confirmation", desc: "Receive driver name, plate number & fixed fare within minutes. Booking confirmed." },
+                { n: "3", title: "We Track Your Flight", desc: "If delayed, your driver adjusts automatically. 60-min free wait from actual landing time." },
+                { n: "4", title: "Name-Board Pickup",    desc: "Exit arrivals — your driver is there with your name board. Luggage loaded, journey starts." },
+              ].map(s => (
+                <div key={s.n} style={art.step}>
+                  <div style={art.stepNum}>{s.n}</div>
+                  <strong style={art.stepTitle}>{s.title}</strong>
+                  <p style={art.stepDesc}>{s.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p style={{ ...art.p, marginTop: "1rem" }}>
+              We are available <strong>24 / 7 / 365</strong> — including Eid and Saudi public holidays. Average WhatsApp response time: <strong>under 2 minutes</strong>. We take bookings up to 90 days ahead and same-day with as little as 2 hours' notice.
+            </p>
+          </div>
+
+          {/* ── vs Uber callout ── */}
+          <div style={art.compareBox}>
+            <div style={art.compareSide}>
+              <p style={art.compareLabel}>Pre-Booked Dammam Airport Taxi</p>
+              {["Fixed fare — agreed before travel", "Driver waiting at arrivals exit", "Live flight tracking & free delay buffer", "GCC cross-border licensed", "Corporate monthly invoicing", "Wi-Fi · water · USB charging onboard"].map(i => (
+                <p key={i} style={art.compareItem}><span style={{ color: "var(--accent-gold)", marginRight: "0.5rem" }}>✓</span>{i}</p>
+              ))}
+            </div>
+            <div style={art.compareDivider} />
+            <div style={art.compareSide}>
+              <p style={art.compareLabel}>Uber / Careem / Street Taxi</p>
+              {["Surge pricing at peak & Eid", "45+ min queue at busy arrivals", "No flight tracking, driver may leave", "Cannot cross GCC borders", "No corporate invoicing", "No amenities guaranteed"].map(i => (
+                <p key={i} style={{ ...art.compareItem, color: "var(--text-muted)" }}><span style={{ color: "#555", marginRight: "0.5rem" }}>✗</span>{i}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* ── About DMM ── */}
+          <div style={art.block}>
+            <h3 style={art.h3}>About King Fahd International Airport — DMM</h3>
+            <p style={art.p}>
+              King Fahd International Airport (مطار الملك فهد الدولي) opened 28 November 1999 and is the primary airport for Dammam, Al Khobar, Dhahran, Qatif, and Jubail. At <strong>780 square kilometres</strong>, it is the <strong>world's largest airport by land area</strong> — bigger than Bahrain itself. The airport serves ~9 million passengers annually with two terminals (domestic + international). Major carriers: Saudia, flynas, flyadeal, Qatar Airways, Emirates, Lufthansa, Turkish Airlines, Gulf Air, Air Arabia. Location: 35 km north-west of Dammam · 25 km from Al Khobar. IATA: DMM · ICAO: OEDF · Coordinates: 26.47°N, 49.80°E.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
       {/* FAQs */}
       <section className="section-padding" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container">
@@ -297,137 +472,6 @@ export function HomePageClient() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* SEO Article */}
-      <section style={styles.articleSection}>
-        <div className="container">
-          <article style={styles.article}>
-
-            <h2 style={styles.articleH2}>
-              Dammam Airport Taxi — The Complete Guide to Private Transfers from King Fahd International Airport (DMM)
-            </h2>
-            <p style={styles.articleP}>
-              King Fahd International Airport (IATA: DMM) is the gateway to Saudi Arabia's Eastern Province — the heartland of the Kingdom's oil & gas industry and home to Dammam, Al Khobar, Dhahran, Jubail, and the King Fahd Causeway to Bahrain. Whether you are a corporate traveller arriving for meetings at Saudi Aramco, an expatriate family relocating to the Eastern Province, or a tourist heading onward to Bahrain or the UAE, finding a reliable, fixed-rate private taxi from Dammam Airport is your first priority after landing. This guide covers everything you need to know about Dammam Airport taxi services, prices, routes, and how to book in minutes via WhatsApp.
-            </p>
-
-            <h2 style={styles.articleH2}>About King Fahd International Airport (DMM)</h2>
-            <p style={styles.articleP}>
-              King Fahd International Airport — locally known as Matar Al-Malik Fahd Al-Dawli (مطار الملك فهد الدولي) — opened on 28 November 1999 and serves as the primary commercial airport for Dammam, Al Khobar, Dhahran, Qatif, Jubail, and the broader Eastern Province. With a total land area of 780 square kilometres, DMM holds the record as the <strong>largest airport in the world by total land area</strong> — larger than the entire country of Bahrain. Despite its scale, the passenger terminals are efficient, well-signposted, and equipped with fast-track immigration lanes for Saudi citizens and GCC nationals.
-            </p>
-            <p style={styles.articleP}>
-              The airport handles approximately 9 million passengers annually across both its domestic and international terminals. Major carriers operating at DMM include Saudia (Saudi Arabian Airlines), flynas, flyadeal, Qatar Airways, Emirates, Lufthansa, Turkish Airlines, Air Arabia, and Gulf Air. The airport is located approximately 35 km north-west of Dammam city centre and 25 km from Al Khobar — making a pre-booked private taxi the most convenient and cost-effective arrival transport option.
-            </p>
-
-            <h2 style={styles.articleH2}>Why Book a Private Taxi from Dammam Airport?</h2>
-            <p style={styles.articleP}>
-              Arrivals at King Fahd International Airport have several ground transport options: ride-hailing apps such as Uber or Careem, unregulated street taxis queuing outside the terminal, hotel shuttles, or a pre-booked private airport taxi. For business travellers and families with luggage, a pre-booked Dammam Airport taxi offers clear advantages that no other option can match.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Fixed, transparent pricing</strong> — Our Dammam Airport taxi fares are fixed and quoted before you travel. There are no meters, no surge pricing, and no hidden airport parking fees or VAT additions. The price you agree via WhatsApp is the total price you pay at the end of your journey.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Live flight tracking and 60-minute free waiting</strong> — Once you provide your flight number, our dispatch team tracks your flight in real time. Whether your flight lands on time, 30 minutes early, or 2 hours late — your driver adjusts automatically. We provide 60 minutes of complimentary waiting time from your actual landing time, giving you ample time to clear immigration, collect luggage, and exit the arrivals hall without any rush.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Professional meet-and-greet at DMM arrivals</strong> — Your driver waits at the public arrivals meeting zone just outside the exit gate, holding a personalised name board with your name. Two hours before landing, we send you your driver's name, photo, and direct mobile number via WhatsApp so you can contact them directly if needed.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Executive, air-conditioned fleet</strong> — Our vehicles are cleaned, sanitised, and pre-cooled before every pickup. All cars carry commercial liability insurance, GPS tracking, USB charging ports, in-car Wi-Fi hotspot, and complimentary bottled water. We offer four vehicle classes: Toyota Camry Sedan (up to 4 passengers), GMC Yukon SUV (up to 6 passengers), Hyundai Staria Family Van (up to 8 passengers), and VIP Luxury Class for delegations and senior executives.
-            </p>
-
-            <h2 style={styles.articleH2}>Dammam Airport Taxi Fares — All Routes & Prices</h2>
-            <p style={styles.articleP}>
-              Below is a summary of our most commonly booked routes from King Fahd International Airport (DMM). All prices are for a full private taxi — not per seat — and include airport parking fees, road tolls, and VAT.
-            </p>
-            <p style={styles.articleP}>
-              <strong>DMM Airport to Al Khobar:</strong> 60 km · 45 minutes · from 150 SAR (Sedan). Al Khobar is the Eastern Province's most cosmopolitan city and the primary residential hub for international companies and expatriates. Our drivers are familiar with all Al Khobar hotels, business compounds, and residential districts.
-            </p>
-            <p style={styles.articleP}>
-              <strong>DMM Airport to Jubail Industrial City:</strong> 85 km · 55 minutes · from 200 SAR (Sedan). Jubail is Saudi Arabia's largest industrial city and the home of SABIC, the Royal Commission for Jubail and Yanbu (RCJY), and dozens of petrochemical plants. We provide regular corporate transfers for Aramco contractors, SABIC employees, and international engineers arriving at DMM.
-            </p>
-            <p style={styles.articleP}>
-              <strong>DMM Airport to Dhahran (Saudi Aramco HQ):</strong> 55 km · 40 minutes · from 150 SAR (Sedan). Dhahran is the global headquarters of Saudi Aramco — the world's most valuable company. Our drivers deliver to all designated visitor gates at the Aramco compound. We also serve King Fahd University of Petroleum and Minerals (KFUPM) directly.
-            </p>
-            <p style={styles.articleP}>
-              <strong>DMM Airport to Dammam City Centre:</strong> 30 km · 25 minutes · from 120 SAR (Sedan). We transfer to all Dammam city districts, hotels, and government offices.
-            </p>
-            <p style={styles.articleP}>
-              <strong>DMM Airport to Hofuf (Al-Ahsa):</strong> 160 km · 1.5–2 hours · from 400 SAR (Sedan). Hofuf is the capital of Al-Ahsa Governorate and gateway to the Al-Ahsa Oasis — a UNESCO World Heritage Site.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Dammam to Bahrain (via King Fahd Causeway):</strong> 85 km · 1.5–2 hours · from 350 SAR (Sedan). This is our most popular route. The King Fahd Causeway is a 25 km dual-carriageway bridge linking Al Khobar to Manama, Bahrain. All causeway toll fees (approximately 35 SAR) are included in our quoted price. We deliver door-to-door to any address in Bahrain — Manama, Riffa, Muharraq, Bahrain International Airport (BAH), or the Bahrain Financial Harbour.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Dammam to Riyadh:</strong> 400 km · 3.5–4 hours · from 900 SAR (Sedan). Our intercity Dammam–Riyadh highway transfer is a popular choice for corporate travellers avoiding the time cost of domestic flights. We provide vehicles with Wi-Fi, USB charging, and scheduled rest stops.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Dammam to Kuwait City (via Khafji Border):</strong> 420 km · 4–4.5 hours · from 1,500 SAR (Sedan). Our Kuwait route uses the Khafji border terminal. Drivers hold valid Saudi–Kuwait commercial transport permits. Kuwait eVisa or arrival permit is required for non-GCC nationals — check your requirements before travel.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Dammam to Dubai or Abu Dhabi (UAE):</strong> 950 km · 9–10 hours · from 3,500 SAR (Sedan). For UAE-bound travellers, we recommend the GMC Yukon or our VIP class with scheduled meal stops at highway service stations. Two border clearances are required (Saudi exit at Al Batha + UAE entry at Ghuwaifat).
-            </p>
-            <p style={styles.articleP}>
-              <strong>Dammam to Doha, Qatar (via Salwa Border):</strong> 400 km · 5–6 hours · from 1,400 SAR (Sedan). The Salwa–Abu Samra crossing between Saudi Arabia and Qatar was restored to full operation in January 2021. We provide full-route transfers from DMM Airport to Doha city centre.
-            </p>
-
-            <h2 style={styles.articleH2}>Corporate & Executive Taxi Services from Dammam Airport</h2>
-            <p style={styles.articleP}>
-              Saudi Arabia's Eastern Province is the business capital of the Gulf — hosting Saudi Aramco, SABIC, Halliburton, Baker Hughes, SLB (Schlumberger), Honeywell, and hundreds of international oil & gas contractors. Dammam Airport Taxi has been the preferred ground transport provider for corporate clients in the region, offering services that meet the precise demands of business travel.
-            </p>
-            <p style={styles.articleP}>
-              Our corporate services include: <strong>monthly consolidated invoicing</strong> (VAT-compliant for Saudi Arabia), <strong>priority dispatch</strong> for corporate accounts during peak hours, <strong>fleet-level bookings</strong> for large delegations arriving simultaneously at DMM, <strong>English and Arabic-speaking professional chauffeurs</strong>, and GPS-tracked vehicles for corporate travel desk oversight. We serve all major corporate compounds in Dhahran, Jubail, Ras Tanura, and Abqaiq.
-            </p>
-
-            <h2 style={styles.articleH2}>GCC Cross-Border Taxi from Dammam — What You Need to Know</h2>
-            <p style={styles.articleP}>
-              One of the most important distinctions about Dammam Airport Taxi is our full licensing for GCC cross-border transport. Many local taxis in the Eastern Province are not authorised to cross international borders. Our drivers hold valid cross-border commercial transport permits for all active Saudi land borders — the King Fahd Causeway (Bahrain), Khafji border (Kuwait), Al Batha–Ghuwaifat (UAE), and Salwa–Abu Samra (Qatar).
-            </p>
-            <p style={styles.articleP}>
-              For Saudi residents (expatriates) travelling by land, a valid Exit and Re-Entry visa is required to leave and return to Saudi Arabia. Saudi citizens and GCC nationals travel with their national ID card. For each GCC destination, check your nationality's entry requirements: Bahrain (eVisa or VOA for most), Qatar (eVisa or Hayya card), UAE (VOA for many nationalities), and Kuwait (eVisa portal). Our team is happy to advise you on document requirements when you book via WhatsApp.
-            </p>
-
-            <h2 style={styles.articleH2}>How to Book a Dammam Airport Taxi in Minutes</h2>
-            <p style={styles.articleP}>
-              Booking a Dammam Airport taxi with us takes less than 2 minutes. We have deliberately kept our booking process simple — no apps to download, no accounts to create, no pre-payment required. Simply send a WhatsApp message to our dispatch number with the following details: your full name, flight number and arrival date/time, number of passengers, luggage count, your destination, and your preferred vehicle class.
-            </p>
-            <p style={styles.articleP}>
-              You will receive a booking confirmation within minutes — including your driver's name, vehicle number plate, and the fixed fare for your journey. Two hours before your flight lands, we send you the driver's photo and direct mobile number. On arrival at DMM, your driver is waiting with your name board at the arrivals meeting point.
-            </p>
-            <p style={styles.articleP}>
-              We are available 24 hours a day, 7 days a week, 365 days a year — including Saudi public holidays and Eid periods. Our average WhatsApp response time is under 2 minutes during all operating hours. We accept bookings up to 90 days in advance and can accommodate same-day bookings with as little as 2 hours notice for most routes.
-            </p>
-
-            <h2 style={styles.articleH2}>Dammam Airport Taxi vs. Uber & Careem</h2>
-            <p style={styles.articleP}>
-              Uber and Careem operate in Saudi Arabia and can be booked from King Fahd International Airport. However, for airport transfers — especially for international arrivals — a pre-booked private taxi offers significant advantages. Ride-hailing apps use dynamic surge pricing, which can make your airport fare unpredictable — particularly during Eid holidays, peak summer, or late-night arrivals. Our fares are fixed and agreed before travel.
-            </p>
-            <p style={styles.articleP}>
-              For GCC cross-border routes, Uber and Careem do not operate. A licensed private taxi with cross-border permits is the only practical and legal road transport option for Bahrain, Kuwait, UAE, and Qatar journeys from Dammam. For corporate travellers requiring monthly invoicing, flight tracking, or meet-and-greet service, a dedicated private taxi service is the professional standard.
-            </p>
-
-            <h2 style={styles.articleH2}>Frequently Asked Questions — Dammam Airport Taxi</h2>
-            <p style={styles.articleP}>
-              <strong>What is the cheapest taxi from Dammam Airport?</strong> The most affordable private taxi from DMM Airport starts from 120 SAR for Dammam city districts and 150 SAR for Al Khobar or Dhahran in a Toyota Camry Sedan. All prices are fixed and include parking and VAT.
-            </p>
-            <p style={styles.articleP}>
-              <strong>How early should I book my Dammam Airport taxi?</strong> We recommend booking at least 4 hours before your flight lands. However, we can accommodate same-day requests with as little as 2 hours' notice. For busy travel periods (Eid, summer season, major conferences), booking 24–48 hours in advance is advisable.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Can I get a taxi from Dammam Airport to Bahrain?</strong> Yes. Dammam to Bahrain via the King Fahd Causeway is our most popular route. From 350 SAR for a sedan. All causeway tolls are included. Delivery door-to-door to any Bahrain address.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Are child seats available in Dammam Airport taxis?</strong> Yes. Complimentary infant and toddler safety seats are provided upon advance request at the time of booking. Please mention this in your WhatsApp booking message.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Is Wi-Fi available in Dammam Airport taxis?</strong> Yes. All our vehicles are equipped with a high-speed mobile Wi-Fi hotspot, USB charging ports for all passengers, and complimentary chilled water.
-            </p>
-            <p style={styles.articleP}>
-              <strong>Do you serve Ras Tanura and Qatif from Dammam Airport?</strong> Yes. We provide direct transfers from DMM Airport to Ras Tanura (Saudi Aramco oil terminal area), Qatif city, Tarout Island, and all other Eastern Province destinations. Contact us for a custom quote.
-            </p>
-
-          </article>
         </div>
       </section>
 
@@ -671,31 +715,6 @@ const styles: Record<string, React.CSSProperties> = {
   stars: { color: "var(--accent-gold)", fontSize: "1.2rem", marginBottom: "1rem", letterSpacing: "2px" },
   testText: { fontSize: "0.95rem", lineHeight: "1.6", color: "var(--text-secondary)", fontStyle: "italic", marginBottom: "1.5rem" },
   testAuthor: { fontSize: "0.85rem", color: "#ffffff" },
-  articleSection: {
-    backgroundColor: "var(--bg-secondary)",
-    borderTop: "1px solid var(--border-color)",
-    padding: "5rem 0",
-  },
-  article: {
-    maxWidth: "860px",
-    margin: "0 auto",
-    display: "flex",
-    flexDirection: "column" as const,
-    gap: "1.2rem",
-  },
-  articleH2: {
-    fontSize: "1.45rem",
-    fontWeight: 700,
-    color: "#ffffff",
-    marginTop: "1.5rem",
-    marginBottom: "0.25rem",
-    lineHeight: 1.3,
-  },
-  articleP: {
-    fontSize: "0.96rem",
-    color: "var(--text-secondary)",
-    lineHeight: 1.8,
-  },
   faqList: {
     display: "flex",
     flexDirection: "column" as const,
@@ -711,4 +730,160 @@ const styles: Record<string, React.CSSProperties> = {
   },
   faqQ: { fontSize: "1.05rem", color: "#ffffff", marginBottom: "0.5rem" },
   faqA: { fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: "1.5" },
+};
+
+const art: Record<string, React.CSSProperties> = {
+  wrap: {
+    backgroundColor: "var(--bg-primary)",
+    borderTop: "1px solid var(--border-color)",
+    padding: "5rem 0 4rem",
+  },
+
+  /* ── 3D Hero Banner ── */
+  heroBanner: {
+    position: "relative",
+    background: "linear-gradient(135deg, rgba(20,15,0,0.95) 0%, rgba(8,8,8,1) 60%, rgba(15,10,0,0.95) 100%)",
+    border: "1px solid rgba(245,197,24,0.25)",
+    borderRadius: "20px",
+    padding: "3.5rem",
+    marginBottom: "4rem",
+    overflow: "hidden",
+    boxShadow: "0 30px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(245,197,24,0.1), inset 0 1px 0 rgba(245,197,24,0.15)",
+  },
+  heroBannerGlow: {
+    position: "absolute",
+    top: "-80px", left: "-80px",
+    width: "400px", height: "400px",
+    borderRadius: "50%",
+    background: "radial-gradient(circle, rgba(245,197,24,0.12) 0%, transparent 70%)",
+    pointerEvents: "none",
+  },
+  heroBannerContent: { position: "relative", zIndex: 1 },
+  mainTitle: {
+    fontSize: "clamp(1.5rem,3vw,2.3rem)", fontWeight: 800,
+    color: "#ffffff", lineHeight: 1.2, margin: "0.75rem 0 1.25rem",
+    textShadow: "0 2px 20px rgba(0,0,0,0.5)",
+  },
+  lead: {
+    fontSize: "0.97rem", color: "var(--text-secondary)", lineHeight: 1.85,
+    maxWidth: "820px", marginBottom: "1.25rem",
+  },
+
+  /* 3D stat cards row */
+  statsRow: {
+    display: "flex", flexWrap: "wrap", gap: "0.9rem", marginTop: "2rem",
+  },
+  statCard3d: {
+    display: "flex", flexDirection: "column", alignItems: "center",
+    padding: "1rem 1.4rem", gap: "0.2rem",
+    background: "linear-gradient(145deg, rgba(40,32,0,0.9), rgba(20,15,0,0.95))",
+    border: "1px solid rgba(245,197,24,0.3)",
+    borderRadius: "12px",
+    boxShadow: "0 8px 24px rgba(0,0,0,0.5), 0 2px 0 rgba(245,197,24,0.2), inset 0 1px 0 rgba(255,255,255,0.05)",
+    transform: "translateY(0)",
+  },
+  statVal: { fontSize: "1.3rem", fontWeight: 800, color: "var(--accent-gold)" },
+  statLbl: { fontSize: "0.65rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.06em", whiteSpace: "nowrap", textAlign: "center" },
+
+  /* content blocks */
+  block: { marginBottom: "3.5rem" },
+  h3: {
+    fontSize: "1.2rem", fontWeight: 700, color: "#fff",
+    borderLeft: "3px solid var(--accent-gold)", paddingLeft: "0.8rem",
+    marginBottom: "1.2rem",
+  },
+  p: { fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.85, marginBottom: "0.75rem" },
+
+  /* 3D feature grid */
+  featureGrid: {
+    display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+    gap: "1.2rem", marginTop: "1.5rem",
+  },
+  featureCard: {
+    background: "linear-gradient(145deg, rgba(25,20,5,0.9), rgba(12,10,2,0.95))",
+    border: "1px solid rgba(245,197,24,0.2)",
+    borderRadius: "12px", padding: "1.5rem",
+    boxShadow: "0 10px 30px rgba(0,0,0,0.45), 0 2px 0 rgba(245,197,24,0.15), inset 0 1px 0 rgba(255,255,255,0.04)",
+  },
+  featureLine: {
+    width: "36px", height: "3px",
+    background: "linear-gradient(90deg, var(--accent-gold), rgba(245,197,24,0.3))",
+    borderRadius: "2px", marginBottom: "1rem",
+  },
+  featureTitle: { fontSize: "0.9rem", color: "#fff", display: "block", fontWeight: 700, marginBottom: "0.45rem" },
+  featureDesc: { fontSize: "0.81rem", color: "var(--text-secondary)", lineHeight: 1.65 },
+
+  /* route table */
+  routeGrid: { display: "flex", flexDirection: "column", gap: "0.55rem", marginTop: "1.2rem" },
+  routeRow: {
+    display: "flex", justifyContent: "space-between", alignItems: "center",
+    background: "linear-gradient(135deg, rgba(20,16,3,0.8), rgba(10,8,1,0.9))",
+    border: "1px solid rgba(245,197,24,0.15)", borderRadius: "10px",
+    padding: "0.9rem 1.3rem", gap: "1rem",
+    boxShadow: "0 4px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03)",
+  },
+  routeLeft: { display: "flex", flexDirection: "column", gap: "0.2rem" },
+  routeName: { fontSize: "0.9rem", color: "#fff", fontWeight: 600 },
+  routeMeta: { fontSize: "0.73rem", color: "var(--text-muted)" },
+  routePrice: {
+    fontSize: "0.88rem", fontWeight: 800, color: "var(--accent-gold)",
+    whiteSpace: "nowrap", flexShrink: 0,
+    textShadow: "0 0 12px rgba(245,197,24,0.4)",
+  },
+
+  /* two col */
+  twoCol: {
+    display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
+    gap: "1.5rem", marginBottom: "3.5rem",
+  },
+  infoBox: {
+    border: "1px solid rgba(245,197,24,0.3)", borderRadius: "14px",
+    padding: "2rem",
+    background: "linear-gradient(145deg, rgba(25,20,5,0.85), rgba(10,8,1,0.95))",
+    boxShadow: "0 12px 40px rgba(0,0,0,0.5), 0 2px 0 rgba(245,197,24,0.2), inset 0 1px 0 rgba(255,255,255,0.04)",
+  },
+  infoBoxTitle: { fontSize: "1.05rem", fontWeight: 700, color: "var(--accent-gold)", marginBottom: "0.9rem" },
+  ul: {
+    paddingLeft: "1.2rem", color: "var(--text-secondary)",
+    fontSize: "0.87rem", lineHeight: 2.1, margin: "0.5rem 0 1rem",
+  },
+  infoLink: { fontSize: "0.85rem", fontWeight: 700, color: "var(--accent-gold)", textDecoration: "none" },
+
+  /* booking steps */
+  stepsRow: {
+    display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
+    gap: "1.2rem", marginTop: "1.5rem",
+  },
+  step: {
+    background: "linear-gradient(145deg, rgba(22,18,4,0.9), rgba(10,8,1,0.95))",
+    border: "1px solid rgba(245,197,24,0.18)", borderRadius: "12px",
+    padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.6rem",
+    boxShadow: "0 8px 24px rgba(0,0,0,0.4), 0 2px 0 rgba(245,197,24,0.12), inset 0 1px 0 rgba(255,255,255,0.04)",
+  },
+  stepNum: {
+    width: "40px", height: "40px", borderRadius: "50%",
+    background: "linear-gradient(145deg, #f5c518, #c8920a)",
+    boxShadow: "0 4px 14px rgba(245,197,24,0.45), 0 2px 0 rgba(255,255,255,0.2) inset",
+    color: "#000", display: "flex", alignItems: "center", justifyContent: "center",
+    fontWeight: 800, fontSize: "0.9rem",
+  },
+  stepTitle: { fontSize: "0.9rem", color: "#fff", fontWeight: 700 },
+  stepDesc: { fontSize: "0.79rem", color: "var(--text-secondary)", lineHeight: 1.65 },
+
+  /* compare box */
+  compareBox: {
+    display: "grid", gridTemplateColumns: "1fr auto 1fr",
+    gap: 0,
+    border: "1px solid rgba(245,197,24,0.2)", borderRadius: "14px", overflow: "hidden",
+    background: "linear-gradient(145deg, rgba(18,14,3,0.95), rgba(8,8,8,0.98))",
+    marginBottom: "3.5rem",
+    boxShadow: "0 16px 50px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04)",
+  },
+  compareSide: { padding: "2rem 2.2rem" },
+  compareDivider: { width: "1px", backgroundColor: "rgba(245,197,24,0.15)" },
+  compareLabel: {
+    fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.06em",
+    textTransform: "uppercase", color: "var(--accent-gold)", marginBottom: "1.1rem",
+  },
+  compareItem: { fontSize: "0.84rem", color: "var(--text-secondary)", marginBottom: "0.55rem", display: "flex", alignItems: "flex-start" },
 };
