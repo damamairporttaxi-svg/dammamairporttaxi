@@ -48,7 +48,7 @@ export function ContactPageClient() {
 
             <div style={styles.detailsGroup}>
               <div style={styles.detailItem}>
-                <span style={styles.detailIcon}>📍</span>
+                <span style={styles.detailIcon}></span>
                 <div style={styles.detailText}>
                   <strong style={styles.detailLabel}>{t("addressLabel")}</strong>
                   <p style={styles.detailVal}>{t("addressVal")}</p>
@@ -56,7 +56,7 @@ export function ContactPageClient() {
               </div>
 
               <div style={styles.detailItem}>
-                <span style={styles.detailIcon}>📞</span>
+                <span style={styles.detailIcon}></span>
                 <div style={styles.detailText}>
                   <strong style={styles.detailLabel}>{t("phoneLabel")}</strong>
                   <p style={styles.detailVal}>{t("phoneVal")}</p>
@@ -64,7 +64,7 @@ export function ContactPageClient() {
               </div>
 
               <div style={styles.detailItem}>
-                <span style={styles.detailIcon}>✉️</span>
+                <span style={styles.detailIcon}></span>
                 <div style={styles.detailText}>
                   <strong style={styles.detailLabel}>{t("emailLabel")}</strong>
                   <p style={styles.detailVal}>{t("emailVal")}</p>
@@ -72,7 +72,7 @@ export function ContactPageClient() {
               </div>
 
               <div style={styles.detailItem}>
-                <span style={styles.detailIcon}>⏰</span>
+                <span style={styles.detailIcon}></span>
                 <div style={styles.detailText}>
                   <strong style={styles.detailLabel}>{locale === "en" ? "Business Hours" : "ساعات العمل"}</strong>
                   <p style={styles.detailVal}>{locale === "en" ? "24/7 / 365 Days" : "على مدار الساعة ٢٤/٧ طوال العام"}</p>

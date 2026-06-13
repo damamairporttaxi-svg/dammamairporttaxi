@@ -47,7 +47,6 @@ export function FleetPageClient() {
 
           <div style={styles.comfortGrid}>
             <div className="glass-card" style={styles.comfortCard}>
-              <span style={styles.comfortIcon}>🍼</span>
               <h3>{locale === "en" ? "Child & Baby Seats" : "مقاعد للأطفال والرضع"}</h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginTop: "0.5rem" }}>
                 {locale === "en" ? "Complimentary child safety seat upon advance booking request." : "نقدم مقاعد أمان مجانية للأطفال عند طلبها مسبقاً أثناء الحجز."}
@@ -55,7 +54,6 @@ export function FleetPageClient() {
             </div>
 
             <div className="glass-card" style={styles.comfortCard}>
-              <span style={styles.comfortIcon}>💧</span>
               <h3>{locale === "en" ? "Refreshments & Wipes" : "مرطبات ومناديل مبللة"}</h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginTop: "0.5rem" }}>
                 {locale === "en" ? "Chilled mineral water bottles and sanitized towels in every ride." : "مياه معدنية مبردة ومناديل معقمة متوفرة في كل رحلة."}
@@ -63,7 +61,6 @@ export function FleetPageClient() {
             </div>
 
             <div className="glass-card" style={styles.comfortCard}>
-              <span style={styles.comfortIcon}>📱</span>
               <h3>{locale === "en" ? "USB Charging Ports" : "منافذ شحن USB"}</h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginTop: "0.5rem" }}>
                 {locale === "en" ? "High-speed multi-socket device chargers for all passengers." : "شواحن سريعة متعددة المقابس لجميع الأجهزة الذكية."}
@@ -71,7 +68,6 @@ export function FleetPageClient() {
             </div>
 
             <div className="glass-card" style={styles.comfortCard}>
-              <span style={styles.comfortIcon}>📶</span>
               <h3>{locale === "en" ? "In-Car Wi-Fi Hotspot" : "إنترنت لاسلكي داخل السيارة"}</h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginTop: "0.5rem" }}>
                 {locale === "en" ? "High speed internet connectivity for business travelers." : "اتصال إنترنت عالي السرعة لرجال الأعمال والمسافرين."}

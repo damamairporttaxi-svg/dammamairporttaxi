@@ -12,7 +12,6 @@ interface Faq { q_en: string; q_ar: string; a_en: string; a_ar: string; link?: s
 const CATEGORIES = [
   {
     id: "fares",
-    icon: "💰",
     title_en: "Taxi Fares & Pricing",
     title_ar: "أسعار التاكسي",
     faqs: [
@@ -26,7 +25,6 @@ const CATEGORIES = [
   },
   {
     id: "distance",
-    icon: "📍",
     title_en: "Distances & Travel Times",
     title_ar: "المسافات وأوقات السفر",
     faqs: [
@@ -39,7 +37,6 @@ const CATEGORIES = [
   },
   {
     id: "booking",
-    icon: "📱",
     title_en: "Booking & Service Questions",
     title_ar: "أسئلة الحجز والخدمة",
     faqs: [
@@ -53,7 +50,6 @@ const CATEGORIES = [
   },
   {
     id: "vehicles",
-    icon: "🚗",
     title_en: "Vehicles & Comfort",
     title_ar: "السيارات والراحة",
     faqs: [
@@ -65,7 +61,6 @@ const CATEGORIES = [
   },
   {
     id: "gcc",
-    icon: "🛂",
     title_en: "GCC Border Crossings",
     title_ar: "عبور حدود الخليج",
     faqs: [
@@ -134,7 +129,7 @@ export function VoiceSearchFaqsClient() {
           <div className="container" style={s.catBarInner}>
             {CATEGORIES.map(cat => (
               <a key={cat.id} href={`#${cat.id}`} style={s.catLink}>
-                {cat.icon} {ar ? cat.title_ar : cat.title_en}
+                {ar ? cat.title_ar : cat.title_en}
               </a>
             ))}
           </div>
@@ -146,7 +141,7 @@ export function VoiceSearchFaqsClient() {
             {CATEGORIES.map(cat => (
               <section key={cat.id} id={cat.id} style={s.section}>
                 <h2 style={s.sectionTitle}>
-                  <span>{cat.icon}</span> {ar ? cat.title_ar : cat.title_en}
+                  {ar ? cat.title_ar : cat.title_en}
                 </h2>
 
                 {cat.faqs.map((faq, i) => {

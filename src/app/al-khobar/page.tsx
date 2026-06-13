@@ -122,15 +122,14 @@ export default function AlKhobarPage() {
               <section style={s.sec}>
                 <h2 style={s.h2}>Al Khobar — Key Areas & Attractions</h2>
                 {[
-                  { icon: "🌊", name: "Al Khobar Corniche", desc: "A beautifully landscaped waterfront promenade stretching along the Arabian Gulf coast with parks, sculptures, walking tracks, and seafood restaurants. The iconic Khobar Water Tower is the city's most recognisable landmark." },
-                  { icon: "🏖️", name: "Half Moon Bay Beach Resort", desc: "35 km south of Al Khobar, Half Moon Bay is the Eastern Province's most popular beach destination — a crescent-shaped Arabian Gulf bay with private resorts, chalets, jet skiing, and waterfront dining." },
-                  { icon: "🇧🇭", name: "King Fahd Causeway Gateway", desc: "The causeway to Bahrain begins just 15 km from Khobar city centre. Bahrain is the most popular weekend destination for Khobar residents, with the full crossing taking 1–1.5 hours by private taxi." },
-                  { icon: "🛍️", name: "Dhahran Mall & Al Rashid Mall", desc: "Khobar and Dhahran have some of the best shopping malls in the Eastern Province, including the professional Dhahran Mall and Al Rashid Mall — major retail and dining destinations." },
-                  { icon: "🍽️", name: "Prince Faisal Bin Fahd Street (Restaurant Row)", desc: "Al Khobar's leading dining street, lined with international restaurants, coffee shops, and cafés catering to the city's large expat and business community." },
-                  { icon: "🏢", name: "Al Khobar Business District", desc: "Al Khobar's downtown is home to dozens of multinational company offices, banks, and professional service firms supporting the Eastern Province's oil & gas sector." },
+                  { name: "Al Khobar Corniche", desc: "A beautifully landscaped waterfront promenade stretching along the Arabian Gulf coast with parks, sculptures, walking tracks, and seafood restaurants. The iconic Khobar Water Tower is the city's most recognisable landmark." },
+                  { name: "Half Moon Bay Beach Resort", desc: "35 km south of Al Khobar, Half Moon Bay is the Eastern Province's most popular beach destination — a crescent-shaped Arabian Gulf bay with private resorts, chalets, jet skiing, and waterfront dining." },
+                  { name: "King Fahd Causeway Gateway", desc: "The causeway to Bahrain begins just 15 km from Khobar city centre. Bahrain is the most popular weekend destination for Khobar residents, with the full crossing taking 1–1.5 hours by private taxi." },
+                  { name: "Dhahran Mall & Al Rashid Mall", desc: "Khobar and Dhahran have some of the best shopping malls in the Eastern Province, including the professional Dhahran Mall and Al Rashid Mall — major retail and dining destinations." },
+                  { name: "Prince Faisal Bin Fahd Street (Restaurant Row)", desc: "Al Khobar's leading dining street, lined with international restaurants, coffee shops, and cafés catering to the city's large expat and business community." },
+                  { name: "Al Khobar Business District", desc: "Al Khobar's downtown is home to dozens of multinational company offices, banks, and professional service firms supporting the Eastern Province's oil & gas sector." },
                 ].map(a => (
                   <div key={a.name} style={s.attrItem}>
-                    <span style={s.aIcon}>{a.icon}</span>
                     <div><h3 style={s.aName}>{a.name}</h3><p style={s.aDesc}>{a.desc}</p></div>
                   </div>
                 ))}

@@ -56,19 +56,19 @@ export function AboutPageClient() {
             </h3>
             <ul style={styles.list}>
               <li style={styles.listItem}>
-                <strong>✨ {locale === "en" ? "Luxury & Cleanliness" : "الفخامة والنظافة"}:</strong>{" "}
+                <strong>{locale === "en" ? "Luxury & Cleanliness" : "الفخامة والنظافة"}:</strong>{" "}
                 {locale === "en" ? "Sanitized executive vehicles for executive class travel." : "سيارات فاخرة ومعقمة بالكامل لرحلات تليق بك."}
               </li>
               <li style={styles.listItem}>
-                <strong>🕒 {locale === "en" ? "Punctuality" : "الالتزام بالوقت"}:</strong>{" "}
+                <strong>{locale === "en" ? "Punctuality" : "الالتزام بالوقت"}:</strong>{" "}
                 {locale === "en" ? "Active flight tracking and strictly punctual pickups." : "متابعة مباشرة للرحلات الجوية والتزام تام بالمواعيد."}
               </li>
               <li style={styles.listItem}>
-                <strong>🛂 {locale === "en" ? "GCC Border Experts" : "خبراء حدود الخليج"}:</strong>{" "}
+                <strong>{locale === "en" ? "GCC Border Experts" : "خبراء حدود الخليج"}:</strong>{" "}
                 {locale === "en" ? "Fully permitted drivers for quick customs clearance." : "سائقون ذوو خبرة وتصاريح كاملة للتخليص الجمركي السريع."}
               </li>
               <li style={styles.listItem}>
-                <strong>💳 {locale === "en" ? "Corporate Support" : "دعم الشركات والأعمال"}:</strong>{" "}
+                <strong>{locale === "en" ? "Corporate Support" : "دعم الشركات والأعمال"}:</strong>{" "}
                 {locale === "en" ? "Invoice systems and corporate transfers." : "أنظمة فوترة مرنة وتوصيل تنفيذي مخصص للشركات."}
               </li>
             </ul>
@@ -90,21 +90,18 @@ export function AboutPageClient() {
 
           <div style={styles.safetyGrid}>
             <div style={styles.safetyItem}>
-              <div style={styles.safetyIcon}>🛡️</div>
               <h3>{locale === "en" ? "Comprehensive Insurance" : "تأمين شامل بالكامل"}</h3>
               <p style={{ fontSize: "0.85rem", marginTop: "0.5rem" }}>
                 {locale === "en" ? "Every trip is backed by full Saudi and GCC liability coverage." : "كل رحلة مغطاة بتأمين مسؤولية مدنية كامل في المملكة والخليج."}
               </p>
             </div>
             <div style={styles.safetyItem}>
-              <div style={styles.safetyIcon}>🔧</div>
               <h3>{locale === "en" ? "Rigid Maintenance" : "صيانة دورية صارمة"}</h3>
               <p style={{ fontSize: "0.85rem", marginTop: "0.5rem" }}>
                 {locale === "en" ? "Weekly multi-point checks on brakes, tires, and cooling systems." : "فحوصات أسبوعية متعددة النقاط للمكابح، الإطارات، وأنظمة التبريد."}
               </p>
             </div>
             <div style={styles.safetyItem}>
-              <div style={styles.safetyIcon}>👨‍✈️</div>
               <h3>{locale === "en" ? "Vetted Chauffeurs" : "سائقون معتمدون وفحص دقيق"}</h3>
               <p style={{ fontSize: "0.85rem", marginTop: "0.5rem" }}>
                 {locale === "en" ? "Background verified drivers with clean record history." : "سائقون معتمدون ومفحوصو السيرة والسلوك مع سجل قيادة نظيف."}

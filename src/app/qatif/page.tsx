@@ -112,15 +112,14 @@ export default function QatifPage() {
               <section style={s.sec}>
                 <h2 style={s.h2}>Qatif & Tarout Island — Key Attractions</h2>
                 {[
-                  { icon: "🏰", name: "Tarout Castle (Portuguese Fort)", desc: "A 16th-century Portuguese fort built on the ruins of much earlier civilisations on Tarout Island. The castle overlooks the sea and is surrounded by the old Qatif Souk. It is one of the best-preserved historical forts in the Eastern Province." },
-                  { icon: "🏺", name: "Dilmun Burial Mounds & Archaeological Sites", desc: "Tarout Island contains numerous burial mounds and artefacts from the ancient Dilmun civilisation (c. 3000 BC). Saudi Arabia has nominated the Dilmun burial mounds for UNESCO World Heritage status." },
-                  { icon: "🐟", name: "Tarout Traditional Fishing Harbour", desc: "A picturesque working harbour where traditional fishing boats dock alongside coral-stone warehouses. Fresh seafood is sold daily at the Tarout fish market — one of the most authentic seafood markets in the Eastern Province." },
-                  { icon: "🌊", name: "Qatif Corniche", desc: "A scenic waterfront promenade along the Arabian Gulf coast with parks, family seating areas, and views across to Tarout Island. Popular for evening walks and weekend gatherings." },
-                  { icon: "🌴", name: "Qatif Date Palm Gardens", desc: "Qatif has been famous for its high-quality Khalas dates for thousands of years. The city's date markets are especially active during the Ramadan and Eid seasons when the finest varieties are sold." },
-                  { icon: "🕌", name: "Qatif Old Town (Al Balad Al Qadim)", desc: "The historic old quarter of Qatif features traditional coral-stone houses with ornate wooden doorways and wind towers (barjeels) — a remarkable example of traditional Gulf architecture." },
+                  { name: "Tarout Castle (Portuguese Fort)", desc: "A 16th-century Portuguese fort built on the ruins of much earlier civilisations on Tarout Island. The castle overlooks the sea and is surrounded by the old Qatif Souk. It is one of the best-preserved historical forts in the Eastern Province." },
+                  { name: "Dilmun Burial Mounds & Archaeological Sites", desc: "Tarout Island contains numerous burial mounds and artefacts from the ancient Dilmun civilisation (c. 3000 BC). Saudi Arabia has nominated the Dilmun burial mounds for UNESCO World Heritage status." },
+                  { name: "Tarout Traditional Fishing Harbour", desc: "A picturesque working harbour where traditional fishing boats dock alongside coral-stone warehouses. Fresh seafood is sold daily at the Tarout fish market — one of the most authentic seafood markets in the Eastern Province." },
+                  { name: "Qatif Corniche", desc: "A scenic waterfront promenade along the Arabian Gulf coast with parks, family seating areas, and views across to Tarout Island. Popular for evening walks and weekend gatherings." },
+                  { name: "Qatif Date Palm Gardens", desc: "Qatif has been famous for its high-quality Khalas dates for thousands of years. The city's date markets are especially active during the Ramadan and Eid seasons when the finest varieties are sold." },
+                  { name: "Qatif Old Town (Al Balad Al Qadim)", desc: "The historic old quarter of Qatif features traditional coral-stone houses with ornate wooden doorways and wind towers (barjeels) — a remarkable example of traditional Gulf architecture." },
                 ].map(a => (
                   <div key={a.name} style={s.attrItem}>
-                    <span style={s.aIcon}>{a.icon}</span>
                     <div><h3 style={s.aName}>{a.name}</h3><p style={s.aDesc}>{a.desc}</p></div>
                   </div>
                 ))}

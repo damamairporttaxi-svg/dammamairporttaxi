@@ -112,13 +112,12 @@ export default function DhahranPage() {
               <section style={s.sec}>
                 <h2 style={s.h2}>Key Locations in Dhahran</h2>
                 {[
-                  { icon: "🏢", name: "Saudi Aramco Headquarters", desc: "The global headquarters of Saudi Aramco, the world's most valuable company. The Dhahran compound houses thousands of employees in a secured campus with residential, educational, and recreational facilities. Visitor gate drop-offs available." },
-                  { icon: "🎓", name: "King Fahd University of Petroleum and Minerals (KFUPM)", desc: "Saudi Arabia's foremost engineering and technology university, ranked among the top universities in the Arab world. Home to 15,000+ students and leading petroleum engineering research programs." },
-                  { icon: "🛢️", name: "Saudi Aramco Exhibit (Oil Museum)", desc: "A world-class museum documenting the history of oil discovery in Saudi Arabia and Saudi Aramco's role in the global energy industry. Open to visitors with prior arrangement." },
-                  { icon: "✈️", name: "King Fahd International Airport (DMM)", desc: "Located within Dhahran's administrative boundaries, DMM is the primary airport for the entire Eastern Province. Serving 9+ million passengers annually with domestic and international routes." },
+                  { name: "Saudi Aramco Headquarters", desc: "The global headquarters of Saudi Aramco, the world's most valuable company. The Dhahran compound houses thousands of employees in a secured campus with residential, educational, and recreational facilities. Visitor gate drop-offs available." },
+                  { name: "King Fahd University of Petroleum and Minerals (KFUPM)", desc: "Saudi Arabia's foremost engineering and technology university, ranked among the top universities in the Arab world. Home to 15,000+ students and leading petroleum engineering research programs." },
+                  { name: "Saudi Aramco Exhibit (Oil Museum)", desc: "A world-class museum documenting the history of oil discovery in Saudi Arabia and Saudi Aramco's role in the global energy industry. Open to visitors with prior arrangement." },
+                  { name: "King Fahd International Airport (DMM)", desc: "Located within Dhahran's administrative boundaries, DMM is the primary airport for the entire Eastern Province. Serving 9+ million passengers annually with domestic and international routes." },
                 ].map(a => (
                   <div key={a.name} style={s.attrItem}>
-                    <span style={s.aIcon}>{a.icon}</span>
                     <div><h3 style={s.aName}>{a.name}</h3><p style={s.aDesc}>{a.desc}</p></div>
                   </div>
                 ))}

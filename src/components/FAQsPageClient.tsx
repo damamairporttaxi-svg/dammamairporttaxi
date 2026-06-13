@@ -73,7 +73,7 @@ export function FAQsPageClient() {
           <div style={styles.faqList}>
             {generalFAQs.map((faq, idx) => (
               <div key={idx} className="glass-card" style={styles.faqCard}>
-                <h2 style={styles.faqQ}>❓ {faq.q}</h2>
+                <h2 style={styles.faqQ}>{faq.q}</h2>
                 <p style={styles.faqA}>{faq.a}</p>
               </div>
             ))}

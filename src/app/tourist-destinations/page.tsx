@@ -221,13 +221,12 @@ export default function TouristDestinationsPage() {
               </p>
               <div style={styles.benefitGrid}>
                 {[
-                  { icon: "💰", title: "Fixed Transparent Rates", desc: "One price quoted upfront — no meters, no surge pricing, no surprise border fees." },
-                  { icon: "✈️", title: "Flight Tracking at Origin", desc: "Arriving by air into Dammam? We track your flight and wait 60 minutes at no extra charge." },
-                  { icon: "🛂", title: "Border-Crossing Experts", desc: "Our licensed drivers hold permits for Saudi, Bahrain, Kuwait, UAE, Qatar, and Oman crossings." },
-                  { icon: "🚙", title: "Luxury Fleet", desc: "Toyota Camry, GMC Yukon, Hyundai Staria Van, and GMC Yukon Denali VIP class available." },
+                  { title: "Fixed Transparent Rates", desc: "One price quoted upfront — no meters, no surge pricing, no surprise border fees." },
+                  { title: "Flight Tracking at Origin", desc: "Arriving by air into Dammam? We track your flight and wait 60 minutes at no extra charge." },
+                  { title: "Border-Crossing Experts", desc: "Our licensed drivers hold permits for Saudi, Bahrain, Kuwait, UAE, Qatar, and Oman crossings." },
+                  { title: "Luxury Fleet", desc: "Toyota Camry, GMC Yukon, Hyundai Staria Van, and GMC Yukon Denali VIP class available." },
                 ].map((b) => (
                   <div key={b.title} className="glass-card" style={styles.benefitCard}>
-                    <span style={styles.benefitIcon}>{b.icon}</span>
                     <h3 style={styles.benefitTitle}>{b.title}</h3>
                     <p style={styles.benefitDesc}>{b.desc}</p>
                   </div>
@@ -242,7 +241,6 @@ export default function TouristDestinationsPage() {
                 {destinations.map((d, idx) => (
                   <article key={idx} id={d.country.toLowerCase().split(" ")[0]} className="glass-card" style={styles.destCard}>
                     <div style={styles.destTop}>
-                      <span style={styles.destFlag}>{d.flag}</span>
                       <div>
                         <h3 style={styles.destCountry}>{d.country}</h3>
                         <p style={styles.destCity}>{d.city}</p>
@@ -251,8 +249,8 @@ export default function TouristDestinationsPage() {
                     </div>
 
                     <div style={styles.destMeta}>
-                      <span style={styles.destDist}>📍 {d.distance}</span>
-                      <span style={styles.destAirport}>✈️ {d.airports}</span>
+                      <span style={styles.destDist}>{d.distance}</span>
+                      <span style={styles.destAirport}>{d.airports}</span>
                     </div>
 
                     <div style={styles.highlightSection}>

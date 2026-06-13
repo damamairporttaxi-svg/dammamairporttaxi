@@ -80,12 +80,12 @@ const intercityRoutes = [
 ];
 
 const gccRoutes = [
-  { name: "Dammam → Bahrain", dist: "85 km", time: "1.5–2 hrs", flag: "🇧🇭", href: "/routes/dammam-to-bahrain" },
-  { name: "Dammam → Doha, Qatar", dist: "400 km", time: "5–6 hrs", flag: "🇶🇦", href: "/routes/dammam-to-doha" },
-  { name: "Dammam → Kuwait City", dist: "420 km", time: "4–4.5 hrs", flag: "🇰🇼", href: "/routes/dammam-to-kuwait" },
-  { name: "Dammam → Dubai, UAE", dist: "950 km", time: "9–10 hrs", flag: "🇦🇪", href: "/routes/dammam-to-uae" },
-  { name: "Dammam → Abu Dhabi", dist: "870 km", time: "8.5–9.5 hrs", flag: "🇦🇪", href: "/routes/dammam-to-abu-dhabi" },
-  { name: "Dammam → Muscat, Oman", dist: "1,400 km", time: "14–16 hrs", flag: "🇴🇲", href: "/routes/dammam-to-muscat" },
+  { name: "Dammam → Bahrain", dist: "85 km", time: "1.5–2 hrs", href: "/routes/dammam-to-bahrain" },
+  { name: "Dammam → Doha, Qatar", dist: "400 km", time: "5–6 hrs", href: "/routes/dammam-to-doha" },
+  { name: "Dammam → Kuwait City", dist: "420 km", time: "4–4.5 hrs", href: "/routes/dammam-to-kuwait" },
+  { name: "Dammam → Dubai, UAE", dist: "950 km", time: "9–10 hrs", href: "/routes/dammam-to-uae" },
+  { name: "Dammam → Abu Dhabi", dist: "870 km", time: "8.5–9.5 hrs", href: "/routes/dammam-to-abu-dhabi" },
+  { name: "Dammam → Muscat, Oman", dist: "1,400 km", time: "14–16 hrs", href: "/routes/dammam-to-muscat" },
 ];
 
 export default function DammamGuidePage() {
@@ -185,17 +185,16 @@ export default function DammamGuidePage() {
                   <h2 style={s.h2}>Dammam & Eastern Province — Top Tourist Attractions</h2>
                   <div style={s.attrList}>
                     {[
-                      { icon: "🌊", name: "Dammam Corniche (45 km)", desc: "One of the longest waterfront promenades in Saudi Arabia, lined with parks, fountains, seafood restaurants, cycling tracks, and the King Fahd Fountain viewpoint." },
-                      { icon: "🏝️", name: "Al Marjan Island", desc: "A popular man-made beach island in Dammam with hotels, family entertainment, beachside cafés, and open-air waterfront spaces." },
-                      { icon: "🏰", name: "Tarout Island & Castle (Qatif)", desc: "A 6,000-year-old settlement on Tarout Island in Qatif with the Portuguese-era Tarout Castle, Dilmun-era burial mounds, and a traditional fishing harbour. UNESCO tentative list candidate." },
-                      { icon: "🏖️", name: "Half Moon Bay Beach Resort", desc: "The Eastern Province's most popular beach destination, 35 km south of Khobar. A crescent-shaped bay with private beaches, chalets, jet skiing, kayaking, and waterfront dining." },
-                      { icon: "🌴", name: "Al-Ahsa Oasis — Hofuf (UNESCO)", desc: "160 km south of Dammam, Al-Ahsa is the world's largest natural oasis (UNESCO World Heritage Site), featuring 2.5 million date palms, the historic Qasr Ibrahim, and Ibrahim's Well." },
-                      { icon: "🏛️", name: "Regional Museum of Dammam", desc: "One of Saudi Arabia's premier historical museums, covering Eastern Province archaeological finds, Dilmun civilisation artefacts, and the region's oil discovery story." },
-                      { icon: "🇧🇭", name: "Bahrain via King Fahd Causeway", desc: "Just 85 km from Dammam, Bahrain is the most popular weekend destination for Eastern Province residents. The 25 km causeway connects Al Khobar to Manama in 1.5–2 hours." },
-                      { icon: "🔭", name: "Prince Sultan Science Oasis", desc: "A science and technology museum in Dammam with interactive exhibits, a planetarium, and STEM education programmes — popular for school and family visits." },
+                      { name: "Dammam Corniche (45 km)", desc: "One of the longest waterfront promenades in Saudi Arabia, lined with parks, fountains, seafood restaurants, cycling tracks, and the King Fahd Fountain viewpoint." },
+                      { name: "Al Marjan Island", desc: "A popular man-made beach island in Dammam with hotels, family entertainment, beachside cafés, and open-air waterfront spaces." },
+                      { name: "Tarout Island & Castle (Qatif)", desc: "A 6,000-year-old settlement on Tarout Island in Qatif with the Portuguese-era Tarout Castle, Dilmun-era burial mounds, and a traditional fishing harbour. UNESCO tentative list candidate." },
+                      { name: "Half Moon Bay Beach Resort", desc: "The Eastern Province's most popular beach destination, 35 km south of Khobar. A crescent-shaped bay with private beaches, chalets, jet skiing, kayaking, and waterfront dining." },
+                      { name: "Al-Ahsa Oasis — Hofuf (UNESCO)", desc: "160 km south of Dammam, Al-Ahsa is the world's largest natural oasis (UNESCO World Heritage Site), featuring 2.5 million date palms, the historic Qasr Ibrahim, and Ibrahim's Well." },
+                      { name: "Regional Museum of Dammam", desc: "One of Saudi Arabia's premier historical museums, covering Eastern Province archaeological finds, Dilmun civilisation artefacts, and the region's oil discovery story." },
+                      { name: "Bahrain via King Fahd Causeway", desc: "Just 85 km from Dammam, Bahrain is the most popular weekend destination for Eastern Province residents. The 25 km causeway connects Al Khobar to Manama in 1.5–2 hours." },
+                      { name: "Prince Sultan Science Oasis", desc: "A science and technology museum in Dammam with interactive exhibits, a planetarium, and STEM education programmes — popular for school and family visits." },
                     ].map(a => (
                       <div key={a.name} style={s.attrItem}>
-                        <span style={s.attrIcon}>{a.icon}</span>
                         <div>
                           <h3 style={s.attrName}>{a.name}</h3>
                           <p style={s.attrDesc}>{a.desc}</p>
@@ -235,7 +234,7 @@ export default function DammamGuidePage() {
                   <div style={s.routeTable}>
                     {gccRoutes.map(r => (
                       <Link key={r.href} href={r.href} style={s.routeRow}>
-                        <span style={s.routeName}>{r.flag} {r.name}</span>
+                        <span style={s.routeName}>{r.name}</span>
                         <span style={s.routeMeta}>{r.dist} · {r.time}</span>
                         <span style={s.routeArrow}>→</span>
                       </Link>

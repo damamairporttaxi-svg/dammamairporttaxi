@@ -113,15 +113,14 @@ export default function CorporateTransfersPage() {
                 <p style={styles.p}>Operating in Saudi Arabia's Eastern Province — the heart of the Gulf's oil & gas, petrochemical, and industrial sector — we understand the transport needs of corporate clients. Our corporate service is trusted by project managers, expatriate employees, and visiting executives from companies including <strong>Saudi Aramco, SABIC, Halliburton, Baker Hughes, Schlumberger (SLB), SABIC Affiliates</strong>, and dozens of international contractors based in <strong>Jubail Industrial City</strong> and <strong>Dhahran</strong>.</p>
                 <div style={styles.featureGrid}>
                   {[
-                    { icon: "🧾", title: "Monthly Invoicing", desc: "Consolidated monthly tax invoice for all employee trips. Compatible with SAP and Oracle ERP procurement systems." },
-                    { icon: "⚡", title: "Priority Dispatch", desc: "Corporate accounts receive priority over standard bookings during peak hours and high-demand periods." },
-                    { icon: "📍", title: "Real-Time GPS", desc: "Live vehicle tracking shared with your travel desk. Know exactly where your employee's taxi is at all times." },
-                    { icon: "🛡️", title: "Full Insurance", desc: "All vehicles carry full commercial liability insurance compliant with Saudi Transport General Authority requirements." },
-                    { icon: "🌐", title: "Bilingual Drivers", desc: "English and Arabic-speaking professional chauffeurs for seamless communication with international visitors." },
-                    { icon: "📋", title: "Custom Contracts", desc: "Volume-based pricing agreements for companies with regular travel needs — get a tailored corporate rate card." },
+                    { title: "Monthly Invoicing", desc: "Consolidated monthly tax invoice for all employee trips. Compatible with SAP and Oracle ERP procurement systems." },
+                    { title: "Priority Dispatch", desc: "Corporate accounts receive priority over standard bookings during peak hours and high-demand periods." },
+                    { title: "Real-Time GPS", desc: "Live vehicle tracking shared with your travel desk. Know exactly where your employee's taxi is at all times." },
+                    { title: "Full Insurance", desc: "All vehicles carry full commercial liability insurance compliant with Saudi Transport General Authority requirements." },
+                    { title: "Bilingual Drivers", desc: "English and Arabic-speaking professional chauffeurs for seamless communication with international visitors." },
+                    { title: "Custom Contracts", desc: "Volume-based pricing agreements for companies with regular travel needs — get a tailored corporate rate card." },
                   ].map((f) => (
                     <div key={f.title} className="glass-card" style={styles.featureCard}>
-                      <span style={styles.featureIcon}>{f.icon}</span>
                       <h3 style={styles.featureTitle}>{f.title}</h3>
                       <p style={styles.featureDesc}>{f.desc}</p>
                     </div>
@@ -165,7 +164,7 @@ export default function CorporateTransfersPage() {
                   ].map((v) => (
                     <div key={v.name} className="glass-card" style={styles.fleetCard}>
                       <h3 style={styles.fleetName}>{v.name}</h3>
-                      <p style={styles.fleetPax}>👥 {v.pax}</p>
+                      <p style={styles.fleetPax}>{v.pax}</p>
                       <p style={styles.fleetUse}>{v.use}</p>
                       <span style={styles.fleetPrice}>{v.price}</span>
                     </div>

@@ -23,19 +23,15 @@ export default function NotFound() {
         {/* Quick links */}
         <div style={styles.linksGrid}>
           <Link href="/" style={styles.card}>
-            <span style={styles.cardIcon}>🏠</span>
             <span style={styles.cardLabel}>Home</span>
           </Link>
           <Link href="/routes/dammam-to-bahrain" style={styles.card}>
-            <span style={styles.cardIcon}>🇧🇭</span>
             <span style={styles.cardLabel}>Dammam → Bahrain</span>
           </Link>
           <Link href="/routes/dammam-to-riyadh" style={styles.card}>
-            <span style={styles.cardIcon}>🚗</span>
             <span style={styles.cardLabel}>Dammam → Riyadh</span>
           </Link>
           <Link href="/contact" style={styles.card}>
-            <span style={styles.cardIcon}>💬</span>
             <span style={styles.cardLabel}>Contact Us</span>
           </Link>
         </div>

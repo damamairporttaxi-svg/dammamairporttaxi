@@ -98,13 +98,12 @@ export default function GCCBorderCrossingPage() {
         <section style={styles.quickNav}>
           <div className="container" style={styles.quickGrid}>
             {[
-              { href: "#bahrain", flag: "🇧🇭", label: "Bahrain", sub: "King Fahd Causeway · 85 km" },
-              { href: "#kuwait", flag: "🇰🇼", label: "Kuwait", sub: "Khafji Border · 420 km" },
-              { href: "#uae", flag: "🇦🇪", label: "UAE", sub: "Al Batha / Ghuwaifat · 950 km" },
-              { href: "#qatar", flag: "🇶🇦", label: "Qatar", sub: "Salwa Border · 310 km" },
+              { href: "#bahrain", label: "Bahrain", sub: "King Fahd Causeway · 85 km" },
+              { href: "#kuwait", label: "Kuwait", sub: "Khafji Border · 420 km" },
+              { href: "#uae", label: "UAE", sub: "Al Batha / Ghuwaifat · 950 km" },
+              { href: "#qatar", label: "Qatar", sub: "Salwa Border · 310 km" },
             ].map((item) => (
               <a key={item.href} href={item.href} style={styles.qCard}>
-                <span style={styles.qFlag}>{item.flag}</span>
                 <strong style={styles.qLabel}>{item.label}</strong>
                 <span style={styles.qSub}>{item.sub}</span>
               </a>
@@ -119,7 +118,7 @@ export default function GCCBorderCrossingPage() {
 
               {/* BAHRAIN */}
               <article id="bahrain" style={styles.section}>
-                <h2 style={styles.h2}>🇧🇭 Saudi Arabia → Bahrain: King Fahd Causeway</h2>
+                <h2 style={styles.h2}>Saudi Arabia → Bahrain: King Fahd Causeway</h2>
                 <p style={styles.p}>The <strong>King Fahd Causeway</strong> (Arabic: جسر الملك فهد) is a 25-kilometre dual-carriageway bridge linking <strong>Al Khobar, Eastern Province, Saudi Arabia</strong> with <strong>Manama, Kingdom of Bahrain</strong>. It is the most heavily used land border crossing in the Arabian Peninsula, handling over 12 million crossings annually.</p>
                 <p style={styles.p}>The total taxi transfer distance from <strong>King Fahd International Airport (DMM)</strong> to Manama city centre via the causeway is approximately <strong>85 km</strong> and takes <strong>1.5 to 2 hours</strong> under normal conditions, or up to 3–5 hours on peak holiday weekends.</p>
 
@@ -147,7 +146,7 @@ export default function GCCBorderCrossingPage() {
 
               {/* KUWAIT */}
               <article id="kuwait" style={styles.section}>
-                <h2 style={styles.h2}>🇰🇼 Saudi Arabia → Kuwait: Khafji Border Terminal</h2>
+                <h2 style={styles.h2}>Saudi Arabia → Kuwait: Khafji Border Terminal</h2>
                 <p style={styles.p}>The <strong>Khafji Land Border</strong> (also known as the Saudi–Kuwait Khafji/Nuwaiseeb crossing) connects <strong>Al Khafji city, Eastern Province</strong> with the <strong>Kuwait Nuwaiseeb border terminal</strong>. It is the only operational road border between Saudi Arabia and Kuwait for private vehicles.</p>
                 <p style={styles.p}>Distance from Dammam Airport to Kuwait City via the Khafji border: <strong>420 km</strong> · Estimated travel time: <strong>4 to 4.5 hours</strong> excluding border waiting time of 20–40 minutes on normal days.</p>
 
@@ -169,7 +168,7 @@ export default function GCCBorderCrossingPage() {
 
               {/* UAE */}
               <article id="uae" style={styles.section}>
-                <h2 style={styles.h2}>🇦🇪 Saudi Arabia → UAE: Al Batha / Ghuwaifat Border</h2>
+                <h2 style={styles.h2}>Saudi Arabia → UAE: Al Batha / Ghuwaifat Border</h2>
                 <p style={styles.p}>The <strong>Al Batha Border Terminal</strong> (Saudi side) and <strong>Ghuwaifat Port of Entry</strong> (UAE side) form the main land crossing between the Kingdom of Saudi Arabia and the United Arab Emirates. Located in Abu Dhabi emirate, this is the gateway for overland travel to Abu Dhabi, Dubai, and Sharjah.</p>
                 <p style={styles.p}>The journey from <strong>Dammam Airport (DMM)</strong> to Dubai or Abu Dhabi covers approximately <strong>950 km</strong> and takes <strong>9 to 10 hours</strong> including two border clearances, meal stops, and fuel breaks.</p>
 
@@ -192,7 +191,7 @@ export default function GCCBorderCrossingPage() {
 
               {/* QATAR */}
               <article id="qatar" style={styles.section}>
-                <h2 style={styles.h2}>🇶🇦 Saudi Arabia → Qatar: Salwa Border Terminal</h2>
+                <h2 style={styles.h2}>Saudi Arabia → Qatar: Salwa Border Terminal</h2>
                 <p style={styles.p}>The <strong>Salwa–Abu Samra Land Border</strong> is the only road crossing between Saudi Arabia and Qatar. The Saudi side is called <strong>Salwa Border Terminal</strong>; the Qatari side is the <strong>Abu Samra Port of Entry</strong>. The crossing is located approximately 310 km south of Dammam, a 3-hour drive.</p>
                 <p style={styles.p}>Diplomatic relations between Saudi Arabia and Qatar were fully restored in January 2021, and the Salwa crossing is now fully operational for tourist and business travel.</p>
 

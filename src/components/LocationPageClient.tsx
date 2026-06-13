@@ -8,12 +8,12 @@ import { Footer } from "./Footer";
 import { StickyCTA } from "./StickyCTA";
 import type { LocationPage, LocationType } from "../data/locationData";
 
-const TYPE_CONFIG: Record<LocationType, { icon: string; color: string; label_en: string; label_ar: string }> = {
-  district:   { icon: "🏘️", color: "#c8920a", label_en: "Dammam District",     label_ar: "حي بالدمام" },
-  hotel:      { icon: "🏨", color: "#3a7fd4", label_en: "Hotel Transfer",        label_ar: "توصيل فندقي" },
-  hospital:   { icon: "🏥", color: "#2a9d2a", label_en: "Medical Transfer",      label_ar: "نقل طبي" },
-  attraction: { icon: "🗺️", color: "#9b59b6", label_en: "Tourist Attraction",   label_ar: "معلم سياحي" },
-  industrial: { icon: "🏭", color: "#e67e22", label_en: "Business & Industrial", label_ar: "أعمال وصناعة" },
+const TYPE_CONFIG: Record<LocationType, { color: string; label_en: string; label_ar: string }> = {
+  district:   { color: "#c8920a", label_en: "Dammam District",     label_ar: "حي بالدمام" },
+  hotel:      { color: "#3a7fd4", label_en: "Hotel Transfer",        label_ar: "توصيل فندقي" },
+  hospital:   { color: "#2a9d2a", label_en: "Medical Transfer",      label_ar: "نقل طبي" },
+  attraction: { color: "#9b59b6", label_en: "Tourist Attraction",   label_ar: "معلم سياحي" },
+  industrial: { color: "#e67e22", label_en: "Business & Industrial", label_ar: "أعمال وصناعة" },
 };
 
 interface Props { page: LocationPage }
@@ -94,7 +94,7 @@ export function LocationPageClient({ page }: Props) {
 
             {/* Type badge */}
             <span style={{ ...s.typeBadge, backgroundColor: `${cfg.color}18`, color: cfg.color, borderColor: `${cfg.color}40` }}>
-              {cfg.icon} {ar ? cfg.label_ar : cfg.label_en}
+              {ar ? cfg.label_ar : cfg.label_en}
             </span>
 
             <h1 style={s.h1}>
@@ -105,7 +105,6 @@ export function LocationPageClient({ page }: Props) {
             {/* Quick stats */}
             <div style={s.quickStats}>
               <div style={s.qStat}>
-                <span style={s.qStatIcon}>📍</span>
                 <div>
                   <div style={s.qStatVal}>{ar ? page.distanceFromAirport.ar : page.distanceFromAirport.en}</div>
                   <div style={s.qStatLbl}>{ar ? "من المطار" : "From Airport"}</div>
@@ -113,7 +112,6 @@ export function LocationPageClient({ page }: Props) {
               </div>
               <div style={s.qStatDiv} />
               <div style={s.qStat}>
-                <span style={s.qStatIcon}>⏱</span>
                 <div>
                   <div style={s.qStatVal}>{ar ? page.durationFromAirport.ar : page.durationFromAirport.en}</div>
                   <div style={s.qStatLbl}>{ar ? "مدة الرحلة" : "Travel Time"}</div>
@@ -121,7 +119,6 @@ export function LocationPageClient({ page }: Props) {
               </div>
               <div style={s.qStatDiv} />
               <div style={s.qStat}>
-                <span style={s.qStatIcon}>💰</span>
                 <div>
                   <div style={{ ...s.qStatVal, color: "var(--accent-gold)" }}>
                     {ar ? `من ${page.startingPrice} ر.س` : `From ${page.startingPrice} SAR`}
@@ -131,7 +128,6 @@ export function LocationPageClient({ page }: Props) {
               </div>
               <div style={s.qStatDiv} />
               <div style={s.qStat}>
-                <span style={s.qStatIcon}>📍</span>
                 <div>
                   <div style={s.qStatVal}>{landmark}</div>
                   <div style={s.qStatLbl}>{ar ? "الموقع" : "Location"}</div>
@@ -208,15 +204,14 @@ export function LocationPageClient({ page }: Props) {
                 </h2>
                 <div style={s.vehicleGrid}>
                   {[
-                    { name_en: "Sedan (Camry)", name_ar: "سيدان (كامري)", pax: "1–4", price_en: `From ${page.startingPrice} SAR`, price_ar: `من ${page.startingPrice} ر.س`, icon: "🚗" },
-                    { name_en: "VIP SUV (Yukon)", name_ar: "SUV فاخر (يوكن)", pax: "1–6", price_en: `From ${Math.round(page.startingPrice * 1.9)} SAR`, price_ar: `من ${Math.round(page.startingPrice * 1.9)} ر.س`, icon: "🚙" },
-                    { name_en: "Family Van (Staria)", name_ar: "فان عائلي (ستاريا)", pax: "1–8", price_en: `From ${Math.round(page.startingPrice * 2.2)} SAR`, price_ar: `من ${Math.round(page.startingPrice * 2.2)} ر.س`, icon: "🚐" },
+                    { name_en: "Sedan (Camry)", name_ar: "سيدان (كامري)", pax: "1–4", price_en: `From ${page.startingPrice} SAR`, price_ar: `من ${page.startingPrice} ر.س` },
+                    { name_en: "VIP SUV (Yukon)", name_ar: "SUV فاخر (يوكن)", pax: "1–6", price_en: `From ${Math.round(page.startingPrice * 1.9)} SAR`, price_ar: `من ${Math.round(page.startingPrice * 1.9)} ر.س` },
+                    { name_en: "Family Van (Staria)", name_ar: "فان عائلي (ستاريا)", pax: "1–8", price_en: `From ${Math.round(page.startingPrice * 2.2)} SAR`, price_ar: `من ${Math.round(page.startingPrice * 2.2)} ر.س` },
                   ].map((v, i) => (
                     <div key={i} style={s.vehicleCard}>
-                      <span style={s.vehicleIcon}>{v.icon}</span>
                       <div style={s.vehicleInfo}>
                         <strong style={s.vehicleName}>{ar ? v.name_ar : v.name_en}</strong>
-                        <span style={s.vehiclePax}>👥 {v.pax} {ar ? "ركاب" : "pax"}</span>
+                        <span style={s.vehiclePax}>{v.pax} {ar ? "ركاب" : "pax"}</span>
                         <span style={{ ...s.vehiclePrice, color: cfg.color }}>{ar ? v.price_ar : v.price_en}</span>
                       </div>
                     </div>

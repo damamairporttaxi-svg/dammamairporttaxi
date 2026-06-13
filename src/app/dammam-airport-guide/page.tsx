@@ -103,14 +103,8 @@ export default function DammamAirportGuidePage() {
               Everything you need to know about getting a private taxi at <strong>King Fahd International Airport (DMM)</strong> — meet & greet process, free flight tracking, waiting times, available destinations, and practical tips for international arrivals.
             </p>
             <div style={styles.infoChips}>
-              {[
-                { icon: "✈️", label: "IATA: DMM" },
-                { icon: "📍", label: "Dammam, Eastern Province" },
-                { icon: "🕐", label: "60 min free wait" },
-                { icon: "🛩️", label: "Flight tracking included" },
-                { icon: "💰", label: "Parking & VAT included" },
-              ].map((c) => (
-                <span key={c.label} style={styles.chip}>{c.icon} {c.label}</span>
+              {["IATA: DMM", "Dammam, Eastern Province", "60 min free wait", "Flight tracking included", "Parking & VAT included"].map((label) => (
+                <span key={label} style={styles.chip}>{label}</span>
               ))}
             </div>
           </div>
@@ -158,7 +152,7 @@ export default function DammamAirportGuidePage() {
                 </ol>
 
                 <div style={styles.tipBox}>
-                  <strong>💡 Tip:</strong> We send your driver's photo, name, and direct mobile number via WhatsApp 2 hours before your landing. You can call or message them directly if you cannot locate them.
+                  <strong>Tip:</strong> We send your driver's photo, name, and direct mobile number via WhatsApp 2 hours before your landing. You can call or message them directly if you cannot locate them.
                 </div>
               </section>
 
@@ -167,7 +161,7 @@ export default function DammamAirportGuidePage() {
                 <h2 style={styles.h2}>Why Pre-Book vs. Hailing a Taxi at DMM Airport</h2>
                 <div style={styles.compareGrid}>
                   <div style={styles.compareCol}>
-                    <h3 style={{ ...styles.h3, color: "var(--accent-gold)" }}>✅ Pre-Booked Private Taxi</h3>
+                    <h3 style={{ ...styles.h3, color: "var(--accent-gold)" }}>Pre-Booked Private Taxi</h3>
                     <ul style={styles.ul}>
                       <li>Driver waiting at arrivals before you exit</li>
                       <li>Fixed, transparent price — no meter, no surge</li>
@@ -179,7 +173,7 @@ export default function DammamAirportGuidePage() {
                     </ul>
                   </div>
                   <div style={styles.compareCol}>
-                    <h3 style={{ ...styles.h3, color: "#888" }}>❌ Street Taxi / Unregulated App</h3>
+                    <h3 style={{ ...styles.h3, color: "#888" }}>Street Taxi / Unregulated App</h3>
                     <ul style={styles.ul}>
                       <li>45+ min queue wait at peak hours</li>
                       <li>Meter fares + airport surcharges + parking</li>
@@ -224,14 +218,13 @@ export default function DammamAirportGuidePage() {
                 <h2 style={styles.h2}>Practical Tips for International Arrivals at DMM</h2>
                 <div style={styles.tipsList}>
                   {[
-                    { icon: "🛂", title: "Immigration fast lanes", tip: "Saudi citizens and GCC nationals use dedicated e-gate lanes which are significantly faster. International passengers queue at staffed counters. Average immigration time: 15–30 minutes off-peak, 30–60 minutes during peak periods." },
-                    { icon: "🧳", title: "Oversized luggage", tip: "If travelling with golf bags, large instruments, or excess luggage, book a GMC Yukon SUV (5 bags + 6 passengers) or Hyundai Staria Van (7 bags + 8 passengers) to ensure sufficient boot space." },
-                    { icon: "📱", title: "SIM card and connectivity", tip: "STC, Mobily, and Zain SIM cards are available at the arrivals hall. The airport also provides free passenger Wi-Fi. Our vehicles have their own high-speed mobile Wi-Fi hotspot available free of charge." },
-                    { icon: "💰", title: "Currency exchange", tip: "Al Rajhi Bank and several exchange counters are located in the arrivals hall. ATMs are widely available throughout the terminal. Most taxis and businesses in the Eastern Province accept card payment." },
-                    { icon: "🕌", title: "Prayer facilities", tip: "Prayer rooms are located throughout both terminals. Prayer times follow local Dammam timings. Flights may have brief taxi delays during Azan prayer times." },
+                    { title: "Immigration fast lanes", tip: "Saudi citizens and GCC nationals use dedicated e-gate lanes which are significantly faster. International passengers queue at staffed counters. Average immigration time: 15–30 minutes off-peak, 30–60 minutes during peak periods." },
+                    { title: "Oversized luggage", tip: "If travelling with golf bags, large instruments, or excess luggage, book a GMC Yukon SUV (5 bags + 6 passengers) or Hyundai Staria Van (7 bags + 8 passengers) to ensure sufficient boot space." },
+                    { title: "SIM card and connectivity", tip: "STC, Mobily, and Zain SIM cards are available at the arrivals hall. The airport also provides free passenger Wi-Fi. Our vehicles have their own high-speed mobile Wi-Fi hotspot available free of charge." },
+                    { title: "Currency exchange", tip: "Al Rajhi Bank and several exchange counters are located in the arrivals hall. ATMs are widely available throughout the terminal. Most taxis and businesses in the Eastern Province accept card payment." },
+                    { title: "Prayer facilities", tip: "Prayer rooms are located throughout both terminals. Prayer times follow local Dammam timings. Flights may have brief taxi delays during Azan prayer times." },
                   ].map((t) => (
                     <div key={t.title} style={styles.tipItem}>
-                      <span style={styles.tipIcon}>{t.icon}</span>
                       <div>
                         <h3 style={styles.tipTitle}>{t.title}</h3>
                         <p style={styles.tipText}>{t.tip}</p>

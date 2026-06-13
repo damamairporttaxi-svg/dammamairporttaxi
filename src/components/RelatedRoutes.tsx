@@ -32,7 +32,6 @@ export function RelatedRoutes({ currentUrl, items, title }: RelatedRoutesProps) 
         <div style={styles.grid}>
           {pages.map((page, idx) => (
             <Link key={idx} href={page.url} style={styles.card}>
-              <span style={styles.icon}>{page.icon}</span>
               <div style={styles.cardBody}>
                 <span style={styles.cardTitle}>
                   {locale === "en" ? page.title.en : page.title.ar}
@@ -77,10 +76,6 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "1rem",
     textDecoration: "none",
     transition: "border-color 0.2s ease, background 0.2s ease",
-  },
-  icon: {
-    fontSize: "1.8rem",
-    flexShrink: 0,
   },
   cardBody: {
     display: "flex",

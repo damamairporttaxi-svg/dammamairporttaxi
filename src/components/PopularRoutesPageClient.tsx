@@ -24,21 +24,11 @@ const AIRPORT_SLUGS = [
   "dammam-airport-to-ras-tanura","dammam-airport-to-half-moon-bay",
 ];
 
-/* ─── Per-route flags ──────────────────────────────────────────── */
-const FLAG: Record<string, string> = {
-  "dammam-to-bahrain":"🇧🇭","dammam-to-kuwait":"🇰🇼","dammam-to-uae":"🇦🇪",
-  "dammam-airport-to-qatar-border":"🇶🇦","dammam-to-doha":"🇶🇦",
-  "dammam-to-abu-dhabi":"🇦🇪","dammam-to-sharjah":"🇦🇪","dammam-to-muscat":"🇴🇲",
-  "dammam-airport-to-bahrain-airport":"🇧🇭",
-  "dammam-to-riyadh":"🏙️","dammam-to-jeddah":"🌊","dammam-to-madinah":"🕌",
-  "dammam-to-mecca":"🕋","dammam-to-qassim":"🌾",
-};
-
 /* ─── Category config ──────────────────────────────────────────── */
 const CAT = {
-  gcc:     { color:"#c8920a", bg:"rgba(200,146,10,0.08)", icon:"🌍", label_en:"International GCC",  label_ar:"دولي / خليجي" },
-  saudi:   { color:"#2a9d2a", bg:"rgba(42,157,42,0.08)",  icon:"🕌", label_en:"Saudi City",          label_ar:"مدينة سعودية" },
-  airport: { color:"#3a7fd4", bg:"rgba(58,127,212,0.08)", icon:"✈️", label_en:"Airport Transfer",   label_ar:"من المطار"    },
+  gcc:     { color:"#c8920a", bg:"rgba(200,146,10,0.08)", label_en:"International GCC",  label_ar:"دولي / خليجي" },
+  saudi:   { color:"#2a9d2a", bg:"rgba(42,157,42,0.08)",  label_en:"Saudi City",          label_ar:"مدينة سعودية" },
+  airport: { color:"#3a7fd4", bg:"rgba(58,127,212,0.08)", label_en:"Airport Transfer",   label_ar:"من المطار"    },
 };
 
 function getCat(slug:string):"gcc"|"saudi"|"airport"{
@@ -58,11 +48,11 @@ export function PopularRoutesPageClient() {
   const ar = locale==="ar";
   const [tab, setTab] = useState<Tab>("all");
 
-  const tabs: {id:Tab;en:string;ar:string;n:number;icon:string}[] = [
-    {id:"all",    en:"All Routes",         ar:"جميع الوجهات",    n:routesData.length, icon:"🗺️"},
-    {id:"gcc",    en:"International GCC",  ar:"دول الخليج",      n:GCC_SLUGS.length,  icon:"🌍"},
-    {id:"saudi",  en:"Saudi Cities",       ar:"المدن السعودية",  n:SAUDI_SLUGS.length, icon:"🕌"},
-    {id:"airport",en:"Airport Transfers",  ar:"توصيل من المطار", n:AIRPORT_SLUGS.length,icon:"✈️"},
+  const tabs: {id:Tab;en:string;ar:string;n:number}[] = [
+    {id:"all",    en:"All Routes",         ar:"جميع الوجهات",    n:routesData.length},
+    {id:"gcc",    en:"International GCC",  ar:"دول الخليج",      n:GCC_SLUGS.length},
+    {id:"saudi",  en:"Saudi Cities",       ar:"المدن السعودية",  n:SAUDI_SLUGS.length},
+    {id:"airport",en:"Airport Transfers",  ar:"توصيل من المطار", n:AIRPORT_SLUGS.length},
   ];
 
   const routes =
@@ -123,7 +113,6 @@ export function PopularRoutesPageClient() {
         <section style={S.featSection}>
           <div className="container">
             <h2 style={S.featTitle}>
-              <span style={{color:"var(--accent-gold)"}}>⭐</span>{" "}
               {ar?"الوجهات الأكثر طلباً":"Most Popular Routes"}
             </h2>
             <div style={S.featGrid}>
@@ -144,7 +133,6 @@ export function PopularRoutesPageClient() {
               onClick={()=>setTab(t.id)}
               style={{...S.tabBtn,...(tab===t.id?S.tabActive:{})}}
             >
-              <span>{t.icon}</span>
               <span>{ar?t.ar:t.en}</span>
               <span style={{...S.tabBadge,...(tab===t.id?S.tabBadgeActive:{})}}>{t.n}</span>
             </button>
@@ -212,7 +200,6 @@ function FeaturedCard({route,ar}:{route:typeof routesData[0];ar:boolean}){
   const [hov,setHov]=useState(false);
   const cat=getCat(route.slug);
   const cfg=CAT[cat];
-  const flag=FLAG[route.slug]??"📍";
   return (
     <Link
       href={`/routes/${route.slug}`}
@@ -227,14 +214,13 @@ function FeaturedCard({route,ar}:{route:typeof routesData[0];ar:boolean}){
       }}
     >
       <div style={{...S.featTop,backgroundColor:cfg.bg}}>
-        <span style={S.featFlag}>{flag}</span>
-        <span style={{...S.featCat,color:cfg.color}}>{cfg.icon} {ar?cfg.label_ar:cfg.label_en}</span>
+        <span style={{...S.featCat,color:cfg.color}}>{ar?cfg.label_ar:cfg.label_en}</span>
       </div>
       <div style={S.featBody}>
         <h3 style={S.featName}>{ar?route.name.ar:route.name.en}</h3>
         <div style={S.featMeta}>
-          <span style={S.featPill}>📍 {ar?route.distance.ar:route.distance.en}</span>
-          <span style={S.featPill}>⏱ {ar?route.duration.ar:route.duration.en}</span>
+          <span style={S.featPill}>{ar?route.distance.ar:route.distance.en}</span>
+          <span style={S.featPill}>{ar?route.duration.ar:route.duration.en}</span>
         </div>
         <span style={{...S.featArrow,color:cfg.color}}>
           {ar?"عرض التفاصيل ←":"View Details →"}
@@ -255,7 +241,6 @@ function CatSection({titleEn,titleAr,descEn,descAr,cat,routes,ar}:{
       {/* Section header */}
       <div style={{...S.catHeader,borderLeftColor:cfg.color}}>
         <div style={S.catHeaderLeft}>
-          <span style={S.catIcon}>{cfg.icon}</span>
           <div>
             <h2 style={S.catTitle}>{ar?titleAr:titleEn}</h2>
             <p style={S.catDesc}>{ar?descAr:descEn}</p>
@@ -278,7 +263,6 @@ function RouteCard({route,ar}:{route:typeof routesData[0];ar:boolean}){
   const [hov,setHov]=useState(false);
   const cat=getCat(route.slug);
   const cfg=CAT[cat];
-  const flag=FLAG[route.slug]??"📍";
   const intro=ar?route.intro.ar:route.intro.en;
 
   return (
@@ -291,16 +275,11 @@ function RouteCard({route,ar}:{route:typeof routesData[0];ar:boolean}){
         boxShadow: hov?`0 4px 20px rgba(0,0,0,0.4),0 0 0 1px ${cfg.color}40`:"none",
       }}
     >
-      {/* Left: flag */}
-      <div style={{...S.cardFlag,backgroundColor:cfg.bg}}>
-        <span style={S.cardFlagEmoji}>{flag}</span>
-      </div>
-
       {/* Middle: info */}
       <div style={S.cardInfo}>
         <div style={S.cardTopRow}>
           <span style={{...S.cardCatChip,color:cfg.color,backgroundColor:cfg.bg}}>
-            {cfg.icon} {ar?cfg.label_ar:cfg.label_en}
+            {ar?cfg.label_ar:cfg.label_en}
           </span>
         </div>
         <h3 style={S.cardTitle}>{ar?route.name.ar:route.name.en}</h3>
@@ -308,8 +287,8 @@ function RouteCard({route,ar}:{route:typeof routesData[0];ar:boolean}){
           {intro.length>100?intro.slice(0,100).trimEnd()+"…":intro}
         </p>
         <div style={S.cardMeta}>
-          <span style={S.cardMetaBadge}>📍 {ar?route.distance.ar:route.distance.en}</span>
-          <span style={S.cardMetaBadge}>⏱ {ar?route.duration.ar:route.duration.en}</span>
+          <span style={S.cardMetaBadge}>{ar?route.distance.ar:route.distance.en}</span>
+          <span style={S.cardMetaBadge}>{ar?route.duration.ar:route.duration.en}</span>
         </div>
       </div>
 
