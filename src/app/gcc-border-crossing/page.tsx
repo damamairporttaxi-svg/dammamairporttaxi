@@ -311,7 +311,7 @@ const styles: Record<string, React.CSSProperties> = {
   breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
-  h1: { fontSize: "2.4rem", color: "#fff", fontWeight: "800", lineHeight: "1.2", maxWidth: "800px" },
+  h1: { fontSize: "clamp(1.35rem, 3.2vw, 2.2rem)", color: "#fff", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
   heroSub: { fontSize: "1.05rem", color: "var(--text-secondary)", maxWidth: "700px", lineHeight: "1.7" },
   heroStats: { display: "flex", gap: "3rem", marginTop: "1rem", flexWrap: "wrap" },
   stat: { display: "flex", flexDirection: "column", gap: "0.2rem" },

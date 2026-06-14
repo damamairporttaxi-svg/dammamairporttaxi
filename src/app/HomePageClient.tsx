@@ -280,7 +280,7 @@ export function HomePageClient() {
         <div className="container">
 
           {/* ── 3D Hero Intro Banner ── */}
-          <div style={art.heroBanner}>
+          <div className="art-hero-banner" style={art.heroBanner}>
             <div style={art.heroBannerGlow} />
             <div style={art.heroBannerContent}>
               <span className="badge-gold" style={{ marginBottom: "0.75rem", display: "inline-block" }}>Eastern Province — Saudi Arabia</span>
@@ -294,7 +294,7 @@ export function HomePageClient() {
                 Whether you need an airport transfer to Al Khobar or Dhahran, a corporate shuttle to Jubail Industrial City, or a cross-border taxi to Bahrain, Doha, Dubai, or Kuwait — this complete guide covers every route, every fare, and everything you need to book with confidence.
               </p>
               {/* 3D stat cards */}
-              <div style={art.statsRow}>
+              <div className="art-stats-row" style={art.statsRow}>
                 {[
                   { val: "780 km²", lbl: "World's Largest Airport by Area" },
                   { val: "9M+",     lbl: "Annual Passengers at DMM" },
@@ -423,14 +423,14 @@ export function HomePageClient() {
           </div>
 
           {/* ── vs Uber callout ── */}
-          <div style={art.compareBox}>
+          <div className="art-compare-box" style={art.compareBox}>
             <div style={art.compareSide}>
               <p style={art.compareLabel}>Pre-Booked Dammam Airport Taxi</p>
               {["Fixed fare — agreed before travel", "Driver waiting at arrivals exit", "Live flight tracking & free delay buffer", "GCC cross-border licensed", "Corporate monthly invoicing", "Wi-Fi · water · USB charging onboard"].map(i => (
                 <p key={i} style={art.compareItem}><span style={{ color: "var(--accent-gold)", marginRight: "0.5rem" }}>✓</span>{i}</p>
               ))}
             </div>
-            <div style={art.compareDivider} />
+            <div className="art-compare-divider" style={art.compareDivider} />
             <div style={art.compareSide}>
               <p style={art.compareLabel}>Uber / Careem / Street Taxi</p>
               {["Surge pricing at peak & Eid", "45+ min queue at busy arrivals", "No flight tracking, driver may leave", "Cannot cross GCC borders", "No corporate invoicing", "No amenities guaranteed"].map(i => (
@@ -507,9 +507,9 @@ const styles: Record<string, React.CSSProperties> = {
     paddingTop: "2rem",
   },
   heroTitle: {
-    fontSize: "3.6rem",
+    fontSize: "clamp(1.6rem, 4vw, 3.2rem)",
     color: "#ffffff",
-    lineHeight: "1.15",
+    lineHeight: "1.2",
     fontWeight: "800",
     textShadow: "0 4px 20px rgba(0,0,0,0.5)",
   },
@@ -760,8 +760,8 @@ const art: Record<string, React.CSSProperties> = {
   },
   heroBannerContent: { position: "relative", zIndex: 1 },
   mainTitle: {
-    fontSize: "clamp(1.5rem,3vw,2.3rem)", fontWeight: 800,
-    color: "#ffffff", lineHeight: 1.2, margin: "0.75rem 0 1.25rem",
+    fontSize: "clamp(1.25rem, 2.5vw, 2rem)", fontWeight: 800,
+    color: "#ffffff", lineHeight: 1.25, margin: "0.75rem 0 1.25rem",
     textShadow: "0 2px 20px rgba(0,0,0,0.5)",
   },
   lead: {

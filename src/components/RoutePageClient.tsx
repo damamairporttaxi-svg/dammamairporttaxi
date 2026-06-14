@@ -148,9 +148,10 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "1.2rem",
   },
   heroTitle: {
-    fontSize: "2.8rem",
+    fontSize: "clamp(1.4rem, 3.5vw, 2.4rem)",
     color: "#ffffff",
     maxWidth: "800px",
+    lineHeight: 1.25,
   },
   heroSub: {
     fontSize: "1.1rem",

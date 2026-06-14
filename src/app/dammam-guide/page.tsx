@@ -339,7 +339,7 @@ const s: Record<string, React.CSSProperties> = {
   breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
-  h1: { fontSize: "2.4rem", color: "#fff", fontWeight: "800", lineHeight: "1.2", maxWidth: "900px" },
+  h1: { fontSize: "clamp(1.35rem, 3.2vw, 2.2rem)", color: "#fff", fontWeight: "800", lineHeight: "1.25", maxWidth: "900px" },
   heroSub: { fontSize: "1.05rem", color: "var(--text-secondary)", maxWidth: "750px", lineHeight: "1.7" },
   chips: { display: "flex", gap: "0.6rem", flexWrap: "wrap", marginTop: "0.5rem" },
   chip: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.3)", color: "var(--accent-gold)", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.8rem", fontWeight: "600" },
