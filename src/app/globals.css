@@ -314,9 +314,9 @@ body.rtl .title-accent::after {
 /* ── Mobile Responsive — H1/H2/H3 sizes ───────────────────── */
 @media (max-width: 768px) {
   /* shrink all inline-styled hero h1s that can't use media queries */
-  h1 { font-size: clamp(1.35rem, 5.5vw, 2rem) !important; line-height: 1.25 !important; }
-  h2 { font-size: clamp(1.1rem, 4vw, 1.5rem) !important; line-height: 1.3 !important; }
-  h3 { font-size: clamp(0.95rem, 3.5vw, 1.2rem) !important; }
+  h1 { font-size: clamp(1.1rem, 4.5vw, 1.6rem) !important; line-height: 1.25 !important; }
+  h2 { font-size: clamp(1rem, 3.5vw, 1.35rem) !important; line-height: 1.3 !important; }
+  h3 { font-size: clamp(0.9rem, 3vw, 1.1rem) !important; }
 
   /* hero section */
   .section-padding { padding: 3rem 0; }

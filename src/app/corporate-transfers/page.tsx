@@ -263,7 +263,7 @@ const styles: Record<string, React.CSSProperties> = {
   breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
-  h1: { fontSize: "clamp(1.35rem, 3.2vw, 2.2rem)", color: "#fff", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
+  h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "#fff", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
   heroSub: { fontSize: "1.05rem", color: "var(--text-secondary)", maxWidth: "700px", lineHeight: "1.7" },
   heroBadges: { display: "flex", gap: "0.8rem", flexWrap: "wrap", marginTop: "0.5rem" },
   badge: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.3)", color: "var(--accent-gold)", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.82rem", fontWeight: "600" },

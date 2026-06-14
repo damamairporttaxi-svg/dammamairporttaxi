@@ -507,7 +507,7 @@ const styles: Record<string, React.CSSProperties> = {
     paddingTop: "2rem",
   },
   heroTitle: {
-    fontSize: "clamp(1.6rem, 4vw, 3.2rem)",
+    fontSize: "clamp(1.3rem, 2.8vw, 2.2rem)",
     color: "#ffffff",
     lineHeight: "1.2",
     fontWeight: "800",

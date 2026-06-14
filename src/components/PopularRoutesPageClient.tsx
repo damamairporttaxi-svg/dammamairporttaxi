@@ -337,7 +337,7 @@ const S: Record<string,React.CSSProperties> = {
   crumbSep:  { color:"var(--text-muted)" },
   crumbCurrent: { color:"var(--accent-gold)", fontWeight:600 },
   heroH1: {
-    fontSize:"clamp(1.4rem,4vw,2.8rem)", fontWeight:800,
+    fontSize:"clamp(1.2rem,2.5vw,1.9rem)", fontWeight:800,
     color:"#fff", lineHeight:1.15, maxWidth:"700px",
   },
   heroP: {

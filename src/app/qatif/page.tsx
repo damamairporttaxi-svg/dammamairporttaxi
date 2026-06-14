@@ -194,7 +194,7 @@ const s: Record<string, React.CSSProperties> = {
   bL: { color: "var(--accent-gold)", textDecoration: "none" },
   bS: { color: "var(--text-muted)" },
   bC: { color: "var(--text-secondary)" },
-  h1: { fontSize: "clamp(1.35rem, 3vw, 2.1rem)", color: "#fff", fontWeight: "800", lineHeight: "1.25", maxWidth: "850px" },
+  h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "#fff", fontWeight: "800", lineHeight: "1.25", maxWidth: "850px" },
   sub: { fontSize: "1rem", color: "var(--text-secondary)", maxWidth: "700px", lineHeight: "1.7" },
   chips: { display: "flex", gap: "0.6rem", flexWrap: "wrap", marginTop: "0.5rem" },
   chip: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.3)", color: "var(--accent-gold)", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.78rem", fontWeight: "600" },
