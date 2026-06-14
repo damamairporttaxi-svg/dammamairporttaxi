@@ -336,32 +336,124 @@ export function HomePageClient() {
             </div>
           </div>
 
-          {/* ── Route price table ── */}
+          {/* ── Complete Route & Distance Table ── */}
           <div style={art.block}>
-            <h3 style={art.h3}>Dammam Airport Taxi Fares — All Routes &amp; Prices</h3>
-            <p style={art.p}>All fares below are for a <strong>full private taxi</strong> (not per seat) and include airport parking, road tolls, and VAT.</p>
+            <h3 style={art.h3}>Dammam Airport Taxi — All Routes, Distances &amp; Fares</h3>
+            <p style={art.p}>
+              Every fare below is for a <strong>full private taxi</strong> (not per seat). Airport parking, road tolls, and VAT are all included. Distances are door-to-door from King Fahd International Airport (DMM) unless stated.
+            </p>
+
+            {/* Local / Airport transfers */}
+            <p style={{ ...art.p, fontWeight: 700, color: "var(--accent-gold)", marginTop: "1.5rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+              Local Airport Transfers — Eastern Province
+            </p>
             <div style={art.routeGrid}>
               {[
-                { route: "DMM Airport → Al Khobar",          dist: "60 km · 45 min",    from: "150 SAR", note: "All hotels, compounds & districts" },
-                { route: "DMM Airport → Jubail Industrial",   dist: "85 km · 55 min",    from: "200 SAR", note: "SABIC, RCJY, Aramco contractors" },
-                { route: "DMM Airport → Dhahran (Aramco HQ)", dist: "55 km · 40 min",    from: "150 SAR", note: "All Aramco gates + KFUPM" },
-                { route: "DMM Airport → Dammam City",         dist: "30 km · 25 min",    from: "120 SAR", note: "All districts, hotels & offices" },
-                { route: "DMM Airport → Hofuf (Al-Ahsa)",     dist: "160 km · 1.5 hrs",  from: "400 SAR", note: "UNESCO oasis gateway" },
-                { route: "Dammam → Bahrain (Causeway)",        dist: "85 km · 1.5–2 hrs", from: "350 SAR", note: "Tolls included · door-to-door" },
-                { route: "Dammam → Riyadh",                    dist: "400 km · 3.5 hrs",  from: "900 SAR", note: "Wi-Fi · rest stops included" },
-                { route: "Dammam → Kuwait (Khafji Border)",    dist: "420 km · 4 hrs",    from: "1,500 SAR", note: "Cross-border permits held" },
-                { route: "Dammam → Dubai / Abu Dhabi (UAE)",   dist: "950 km · 9–10 hrs", from: "3,500 SAR", note: "Al Batha–Ghuwaifat crossing" },
-                { route: "Dammam → Doha, Qatar (Salwa)",       dist: "400 km · 5–6 hrs",  from: "1,400 SAR", note: "Full city delivery available" },
+                { route: "Dammam Airport Taxi to Al Khobar",      dist: "60 km",    time: "45 min",     from: "150 SAR", note: "All hotels, compounds & residential districts" },
+                { route: "Dammam Airport Taxi to Dhahran",         dist: "55 km",    time: "40 min",     from: "150 SAR", note: "Saudi Aramco HQ · KFUPM · all gates" },
+                { route: "Dammam Airport Taxi to Dammam City",     dist: "30 km",    time: "25 min",     from: "120 SAR", note: "All city districts, hotels & government offices" },
+                { route: "Dammam Airport Taxi to Jubail",          dist: "85 km",    time: "55 min",     from: "200 SAR", note: "SABIC · RCJY · Jubail Industrial City" },
+                { route: "Dammam Airport Taxi to Qatif",           dist: "55 km",    time: "45 min",     from: "150 SAR", note: "Qatif city · Tarout Island" },
+                { route: "Dammam Airport Taxi to Ras Tanura",      dist: "65 km",    time: "50 min",     from: "180 SAR", note: "Saudi Aramco oil terminal area" },
+                { route: "Dammam Airport Taxi to Hofuf (Al-Ahsa)", dist: "160 km",   time: "1.5–2 hrs",  from: "400 SAR", note: "Al-Ahsa Oasis — UNESCO World Heritage" },
+                { route: "Dammam Airport to Half Moon Bay",        dist: "88 km",    time: "60–70 min",  from: "220 SAR", note: "Eastern Province premier beach resort" },
               ].map(r => (
                 <div key={r.route} style={art.routeRow}>
                   <div style={art.routeLeft}>
                     <strong style={art.routeName}>{r.route}</strong>
-                    <span style={art.routeMeta}>{r.dist} &nbsp;·&nbsp; {r.note}</span>
+                    <span style={art.routeMeta}>{r.dist} &nbsp;·&nbsp; {r.time} &nbsp;·&nbsp; {r.note}</span>
                   </div>
                   <span style={art.routePrice}>from {r.from}</span>
                 </div>
               ))}
             </div>
+
+            {/* GCC cross-border */}
+            <p style={{ ...art.p, fontWeight: 700, color: "#5ba3e8", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+              GCC Cross-Border Taxi Routes from Dammam
+            </p>
+            <div style={art.routeGrid}>
+              {[
+                { route: "Dammam to Bahrain Taxi (King Fahd Causeway)", dist: "85 km",    time: "1.5–2 hrs",  from: "350 SAR",   note: "Causeway tolls included · door-to-door Manama" },
+                { route: "Dammam to Qatar Border Taxi (Salwa)",          dist: "310 km",   time: "3 hrs",      from: "1,000 SAR", note: "Salwa–Abu Samra crossing · onward to Doha" },
+                { route: "Dammam to Doha Qatar Taxi",                    dist: "400 km",   time: "5–6 hrs",    from: "1,400 SAR", note: "Full Doha city delivery available" },
+                { route: "Dammam to Kuwait City Taxi (Khafji Border)",   dist: "420 km",   time: "4–4.5 hrs",  from: "1,500 SAR", note: "Khafji–Nuwaiseeb crossing · valid permits held" },
+                { route: "Dammam to Dubai Taxi (UAE)",                   dist: "950 km",   time: "9–10 hrs",   from: "3,500 SAR", note: "Al Batha–Ghuwaifat border · Burj Khalifa area" },
+                { route: "Dammam to Abu Dhabi Taxi",                     dist: "870 km",   time: "8.5–9.5 hrs",from: "3,200 SAR", note: "Sheikh Zayed Mosque · Yas Island" },
+                { route: "Dammam to Sharjah Taxi",                       dist: "980 km",   time: "9.5–10.5 hrs",from: "3,300 SAR",note: "UAE Cultural Capital · Heritage Area" },
+                { route: "Dammam to Muscat Oman Taxi",                   dist: "1,400 km", time: "14–16 hrs",  from: "On Request", note: "3-country trip · Saudi→UAE→Oman" },
+              ].map(r => (
+                <div key={r.route} style={art.routeRow}>
+                  <div style={art.routeLeft}>
+                    <strong style={art.routeName}>{r.route}</strong>
+                    <span style={art.routeMeta}>{r.dist} &nbsp;·&nbsp; {r.time} &nbsp;·&nbsp; {r.note}</span>
+                  </div>
+                  <span style={art.routePrice}>from {r.from}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Saudi intercity */}
+            <p style={{ ...art.p, fontWeight: 700, color: "#2a9d2a", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+              Saudi Intercity Taxi Routes from Dammam
+            </p>
+            <div style={art.routeGrid}>
+              {[
+                { route: "Dammam to Riyadh Taxi",         dist: "400 km",   time: "3.5–4 hrs",  from: "900 SAR",   note: "Saudi capital · King Khalid Airport (RUH)" },
+                { route: "Dammam to Jeddah Taxi",         dist: "1,260 km", time: "12–13 hrs",  from: "4,500 SAR", note: "Al-Balad UNESCO · King Fahd Fountain · Red Sea" },
+                { route: "Dammam to Madinah Taxi",        dist: "1,100 km", time: "10–11 hrs",  from: "4,000 SAR", note: "Prophet's Mosque · Quba · Masjid al-Qiblatayn" },
+                { route: "Dammam to Mecca Taxi",          dist: "1,280 km", time: "12–13 hrs",  from: "4,800 SAR", note: "Masjid al-Haram · Umrah & Hajj transfers" },
+                { route: "Dammam to Qassim Taxi",         dist: "500 km",   time: "4.5 hrs",    from: "1,800 SAR", note: "Buraydah dates capital · central Saudi" },
+                { route: "Dammam to Taif Taxi",           dist: "850 km",   time: "8 hrs",      from: "3,200 SAR", note: "City of Roses · Hada Al-Sham mountain resort" },
+                { route: "Dammam to Abha Taxi",           dist: "1,100 km", time: "10–11 hrs",  from: "4,000 SAR", note: "Asir mountains · Habala village" },
+                { route: "Dammam to Tabuk Taxi",          dist: "1,200 km", time: "11–12 hrs",  from: "4,500 SAR", note: "NEOM region · AlUla · Red Sea coast" },
+                { route: "Dammam to Yanbu Taxi",          dist: "1,400 km", time: "13–14 hrs",  from: "5,000 SAR", note: "Aramco & Royal Commission Yanbu (RCJY)" },
+                { route: "Dammam to Hail Taxi",           dist: "800 km",   time: "7–8 hrs",    from: "3,000 SAR", note: "Nafud Desert · north Saudi Arabia" },
+              ].map(r => (
+                <div key={r.route} style={art.routeRow}>
+                  <div style={art.routeLeft}>
+                    <strong style={art.routeName}>{r.route}</strong>
+                    <span style={art.routeMeta}>{r.dist} &nbsp;·&nbsp; {r.time} &nbsp;·&nbsp; {r.note}</span>
+                  </div>
+                  <span style={art.routePrice}>from {r.from}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Keyword-rich destination summaries ── */}
+          <div style={art.block}>
+            <h3 style={art.h3}>Most Searched Dammam Taxi Routes — Distance &amp; Travel Guide</h3>
+            <p style={art.p}>
+              <strong>Dammam to Bahrain taxi distance</strong> is 85 km via the King Fahd Causeway — the world-famous 25 km bridge connecting Al Khobar to Manama. Travel time is 1.5 to 2 hours under normal conditions. Our fare starts from 350 SAR for a Camry sedan and includes all causeway tolls. Bahrain is the most popular day-trip and weekend destination from the Eastern Province.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam to Riyadh taxi distance</strong> is 400 km on the E40 highway — approximately 3.5 to 4 hours non-stop. Starting from 900 SAR, this is the preferred choice for business travellers avoiding the time cost of domestic flights between DMM and RUH airports.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam to Kuwait taxi distance</strong> is 420 km via the Khafji border terminal — approximately 4 to 4.5 hours driving time, not including border clearance (20–40 minutes on normal days). Our drivers hold valid Saudi–Kuwait commercial cross-border permits.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam to Dubai taxi distance</strong> is 950 km via the Al Batha–Ghuwaifat Saudi-UAE border — a 9 to 10 hour road trip. For this journey we recommend our GMC Yukon or VIP class with reclining leather seats, Wi-Fi, and scheduled meal stops at clean highway service stations.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam to Doha taxi distance</strong> is 400 km via the Salwa–Abu Samra crossing — approximately 5 to 6 hours door-to-door. Saudi–Qatar diplomatic relations were fully restored in January 2021 and the Salwa border is now fully operational for tourist and business travel.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam to Jeddah taxi distance</strong> is 1,260 km — one of the longest Saudi intercity transfers we operate. Travel time is 12 to 13 hours with scheduled rest stops. Jeddah is famous for Al-Balad (UNESCO Historic District), the King Fahd Fountain (312 m — the world's tallest), and the Red Sea Corniche.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam to Madinah taxi</strong> covers 1,100 km in 10 to 11 hours. This is a popular route for Umrah and Ziyarah travellers visiting the Prophet's Mosque (Al-Masjid an-Nabawi), Quba Mosque, and Masjid al-Qiblatayn. We provide respectful, professional service for all religious journeys.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam Airport to Al Khobar taxi distance</strong> is 60 km — about 45 minutes from the terminal. Al Khobar is the Eastern Province's most cosmopolitan city, home to the King Fahd Causeway gateway and a large expat community. All Al Khobar hotels, residential compounds, and business districts covered.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam Airport to Jubail taxi distance</strong> is 85 km — approximately 55 minutes. Jubail Industrial City is Saudi Arabia's largest planned industrial city, home to SABIC, the Royal Commission for Jubail and Yanbu (RCJY), dozens of petrochemical plants, and thousands of international engineers and professionals.
+            </p>
+            <p style={art.p}>
+              <strong>Dammam Airport to Dhahran taxi distance</strong> is 55 km — around 40 minutes. Dhahran is the global headquarters of Saudi Aramco, the world's most valuable company. We deliver to all Aramco visitor gates, the Saudi Aramco Exhibit, and King Fahd University of Petroleum and Minerals (KFUPM).
+            </p>
           </div>
 
           {/* ── Two-col: Corporate + GCC ── */}
