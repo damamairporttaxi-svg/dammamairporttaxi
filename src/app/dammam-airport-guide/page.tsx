@@ -97,7 +97,7 @@ export default function DammamAirportGuidePage() {
             </nav>
             <span className="badge-gold">Airport Guide</span>
             <h1 style={styles.h1}>
-              Dammam Airport (DMM) — Complete Taxi & Transfer Guide
+              Dammam Airport Taxi Guide — Arrivals, Fares & Private Transfers at King Fahd International Airport (DMM)
             </h1>
             <p style={styles.heroSub}>
               Everything you need to know about getting a private taxi at <strong>King Fahd International Airport (DMM)</strong> — meet & greet process, free flight tracking, waiting times, available destinations, and practical tips for international arrivals.

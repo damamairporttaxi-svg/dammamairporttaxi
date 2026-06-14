@@ -89,8 +89,8 @@ export const translations = {
     luxuryDesc: "Ultimate luxury and prestige travel. Driven by elite chauffeurs for VIPs and official delegates.",
 
     // Why Choose Us
-    whyTitle: "Why Choose Dammam Airport Taxi?",
-    whySub: "Providing reliable, luxury cross-border and regional airport transportation services for over a decade.",
+    whyTitle: "Why Choose Dammam Airport Taxi for Your Transfer?",
+    whySub: "The Eastern Province's most trusted private taxi — fixed rates, live flight tracking, GCC cross-border licensed, 24/7.",
     whyCard1Title: "24/7 Availability",
     whyCard1Desc: "Round-the-clock dispatch team and drivers monitoring your flight arrival for punctual pickups.",
     whyCard2Title: "GCC Border Specialists",
@@ -101,8 +101,8 @@ export const translations = {
     whyCard4Desc: "Book your transfer in minutes via WhatsApp — no waiting, no phone queues. Get instant confirmation from our 24/7 dispatch team.",
 
     // Popular Routes Homepage
-    routesTitle: "Our Popular GCC & Regional Routes",
-    routesSub: "Direct private taxi services from Dammam and Dammam Airport to major destinations across Saudi Arabia and neighboring countries.",
+    routesTitle: "Popular Taxi Routes from Dammam Airport to GCC & Saudi Cities",
+    routesSub: "Fixed-rate private taxi from King Fahd International Airport (DMM) to Bahrain, Kuwait, UAE, Qatar, Riyadh, Jubail, Khobar & more.",
     travelTime: "Est. Travel Time",
     distanceLabel: "Distance",
     startingFrom: "Starting from",
@@ -119,8 +119,8 @@ export const translations = {
     review3Author: "Mohammad Al-Subaie, Khobar",
 
     // FAQ Page
-    faqTitle: "Frequently Asked Questions",
-    faqSub: "Find quick answers regarding our booking policy, GCC border crossings, and fleet details.",
+    faqTitle: "Dammam Airport Taxi — Frequently Asked Questions",
+    faqSub: "Quick answers on fares, GCC border crossings, flight tracking, booking policy & vehicle classes.",
     faq1Q: "How do border crossing taxis work for Bahrain, Kuwait, and Qatar?",
     faq1A: "Our drivers are fully permitted to cross GCC borders. For Bahrain via King Fahd Causeway, we handle tolls. Passengers only need their passport / GCC national ID. For Kuwait and Qatar, we coordinate direct transfers with custom clearances.",
     faq2Q: "Do you monitor flight delays at Dammam Airport (DMM)?",
@@ -267,8 +267,8 @@ export const translations = {
     luxuryDesc: "قمة الفخامة والتميز. يقودها سائقون محترفون للVIP والوفود الرسمية ورجال الأعمال.",
 
     // Why Choose Us
-    whyTitle: "لماذا تختار تاكسي مطار الدمام؟",
-    whySub: "نقدم خدمات نقل فاخرة وموثوقة عبر الحدود وإقليمياً منذ أكثر من عقد من الزمان.",
+    whyTitle: "لماذا تختار تاكسي مطار الدمام لتوصيلك؟",
+    whySub: "أكثر خدمات التاكسي الخاص ثقةً في المنطقة الشرقية — أسعار ثابتة، تتبع مباشر للرحلات، مرخص لعبور حدود الخليج، 24/7.",
     whyCard1Title: "متاحون 24/7",
     whyCard1Desc: "فريق عمليات وسائقون يعملون على مدار الساعة مع تتبع ذكي لمواعيد وصول الرحلات لضمان دقة المواعيد.",
     whyCard2Title: "متخصصون في حدود الخليج",
@@ -279,8 +279,8 @@ export const translations = {
     whyCard4Desc: "احجز رحلتك في دقائق عبر الواتساب — بدون انتظار وبدون طوابير هاتفية. تأكيد فوري من فريق عملياتنا على مدار الساعة.",
 
     // Popular Routes Homepage
-    routesTitle: "رحلاتنا الشائعة في الخليج والمملكة",
-    routesSub: "خدمات تاكسي وتوصيل مباشرة وفاخرة من مطار الدمام والمنطقة الشرقية إلى أهم الوجهات في المملكة ودول الجوار.",
+    routesTitle: "وجهات تاكسي مطار الدمام إلى دول الخليج والمدن السعودية",
+    routesSub: "تاكسي خاص بسعر ثابت من مطار الملك فهد الدولي إلى البحرين والكويت والإمارات وقطر والرياض والجبيل والخبر وغيرها.",
     travelTime: "وقت السفر المتوقع",
     distanceLabel: "المسافة",
     startingFrom: "يبدأ من",
@@ -297,8 +297,8 @@ export const translations = {
     review3Author: "محمد السبيعي، الخبر",
 
     // FAQ Page
-    faqTitle: "الأسئلة الشائعة",
-    faqSub: "إليك الأجوبة السريعة حول سياسات الحجز، التنقل بين الحدود، وتفاصيل أسطول السيارات.",
+    faqTitle: "تاكسي مطار الدمام — الأسئلة الشائعة",
+    faqSub: "إجابات سريعة عن الأسعار وعبور حدود الخليج وتتبع الرحلات وسياسة الحجز وفئات السيارات.",
     faq1Q: "كيف تعمل خدمة التاكسي عبر الحدود للبحرين، الكويت، وقطر؟",
     faq1A: "سائقونا لديهم التراخيص الكاملة لعبور حدود دول مجلس التعاون الخليجي. بالنسبة للبحرين عبر جسر الملك فهد، نحن نتكفل برسوم العبور. يحتاج المسافرون فقط لجواز سفر ساري المفعول أو الهوية الوطنية لمواطني الخليج. بالنسبة للكويت وقطر، ننسق الرحلة مباشرة مع تيسير إجراءات المنافذ.",
     faq2Q: "هل تقومون بمراقبة تأخر الرحلات الجوية في مطار الدمام (DMM)؟",

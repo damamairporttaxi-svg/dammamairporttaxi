@@ -38,9 +38,9 @@ export function HomePageClient() {
             </span>
             <h1 style={styles.heroTitle}>
               {locale === "en" ? (
-                <>Dammam Airport <span style={{ color: "var(--accent-gold)" }}>Transfers</span> & GCC Services</>
+                <>Dammam Airport <span style={{ color: "var(--accent-gold)" }}>Taxi</span> — Private Transfers & GCC Routes from King Fahd Airport</>
               ) : (
-                <>خدمات <span style={{ color: "var(--accent-gold)" }}>تاكسي مطار الدمام</span> الفاخرة والنقل البري للخليج</>
+                <><span style={{ color: "var(--accent-gold)" }}>تاكسي مطار الدمام</span> — توصيل خاص فاخر ورحلات دول الخليج من مطار الملك فهد</>
               )}
             </h1>
             <p style={styles.heroSub}>{t("heroSub")}</p>
@@ -130,7 +130,7 @@ export function HomePageClient() {
             {locale === "en" ? "Simple Process" : "خطوات بسيطة"}
           </span>
           <h2 className="title-accent" style={{ display: "block" }}>
-            {locale === "en" ? "Book in 3 Easy Steps" : "احجز بـ 3 خطوات سهلة"}
+            {locale === "en" ? "How to Book a Dammam Airport Taxi — 3 Easy Steps" : "كيف تحجز تاكسي مطار الدمام — 3 خطوات سهلة"}
           </h2>
           <p style={{ maxWidth: "550px", margin: "0 auto 4rem auto" }}>
             {locale === "en"
@@ -228,7 +228,7 @@ export function HomePageClient() {
         <div className="container" style={styles.waInner}>
           <div>
             <h2 style={styles.waTitle}>
-              {locale === "en" ? "Ready to Book? Chat with Us Now" : "جاهز للحجز؟ تواصل معنا الآن"}
+              {locale === "en" ? "Book Your Dammam Airport Taxi Now — WhatsApp Us" : "احجز تاكسي مطار الدمام الآن — راسلنا على واتساب"}
             </h2>
             <p style={styles.waSub}>
               {locale === "en"

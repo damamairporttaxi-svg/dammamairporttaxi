@@ -48,7 +48,11 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
       <section style={styles.hero}>
         <div className="container" style={styles.heroContainer}>
           <span className="badge-gold">{t("navRoutes")}</span>
-          <h1 style={styles.heroTitle}>{routeName}</h1>
+          <h1 style={styles.heroTitle}>
+            {locale === "en"
+              ? `Private Taxi: ${routeName} — Fixed Rate, Licensed Driver`
+              : `تاكسي خاص: ${routeName} — سعر ثابت، سائق مرخص`}
+          </h1>
           <p style={styles.heroSub}>{routeIntro}</p>
         </div>
       </section>
@@ -73,7 +77,7 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
             {/* SEO Content Sections */}
             {route.contentSections.map((sec, idx) => (
               <div key={idx} style={styles.seoSection}>
-                <h3 style={styles.seoSecTitle}>{locale === "en" ? sec.title.en : sec.title.ar}</h3>
+                <h2 style={styles.seoSecTitle}>{locale === "en" ? sec.title.en : sec.title.ar}</h2>
                 { (locale === "en" ? sec.body.en : sec.body.ar).map((pText, pIdx) => (
                   <p key={pIdx} style={styles.seoText}>
                     {pText}
@@ -84,9 +88,9 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
 
             {/* Route Map Embed */}
             <div className="glass-card" style={styles.mapCard}>
-              <h3 style={{ ...styles.seoSecTitle, marginBottom: "1rem" }}>
-                {locale === "en" ? "Interactive Route Map" : "خريطة مسار الرحلة التفاعلية"}
-              </h3>
+              <h2 style={{ ...styles.seoSecTitle, marginBottom: "1rem" }}>
+                {locale === "en" ? `${routeName} — Interactive Route Map` : `خريطة مسار ${routeName} التفاعلية`}
+              </h2>
               <div style={styles.mapContainer}>
                 <iframe
                   src={route.mapUrl}

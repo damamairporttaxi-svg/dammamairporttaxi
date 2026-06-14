@@ -81,7 +81,7 @@ export default function GCCBorderCrossingPage() {
             </nav>
             <span className="badge-gold">Border Crossing Guide</span>
             <h1 style={styles.h1}>
-              GCC Border Crossing by Taxi — Complete Guide from Dammam
+              GCC Border Crossing by Private Taxi from Dammam — Bahrain, Kuwait, UAE & Qatar Guide
             </h1>
             <p style={styles.heroSub}>
               Everything you need to know about crossing from Saudi Arabia into Bahrain, Kuwait, UAE, and Qatar by private chartered taxi — required documents, border fees, crossing times, and step-by-step procedures.
