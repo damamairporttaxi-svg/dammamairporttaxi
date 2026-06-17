@@ -27,53 +27,32 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const pathname = usePathname();
   const router = useRouter();
   const [authed, setAuthed] = useState(false);
-  const [pw, setPw] = useState("");
-  const [err, setErr] = useState(false);
+  const [checked, setChecked] = useState(false);
   const [sideOpen, setSideOpen] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && localStorage.getItem("admin_auth") === "1") {
-      setAuthed(true);
+    const ok = typeof window !== "undefined" && localStorage.getItem("admin_auth") === "1";
+    setAuthed(ok);
+    setChecked(true);
+    if (!ok && pathname !== "/admin/login") {
+      router.replace("/admin/login");
     }
-  }, []);
-
-  function login() {
-    if (pw === ADMIN_PASS) {
-      localStorage.setItem("admin_auth", "1");
-      setAuthed(true);
-    } else {
-      setErr(true);
-    }
-  }
+  }, [pathname, router]);
 
   function logout() {
     localStorage.removeItem("admin_auth");
     setAuthed(false);
-    router.push("/admin/dashboard");
+    router.replace("/admin/login");
   }
 
-  if (!authed) {
-    return (
-      <div style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", background: "#0c0c0c" }}>
-        <div style={{ background: "#141414", border: "1px solid #222", borderRadius: 12, padding: "2.5rem", width: "100%", maxWidth: 380, textAlign: "center" }}>
-          <h1 style={{ color: "#f5c518", fontSize: "1.3rem", fontWeight: 800, marginBottom: "0.5rem" }}>Admin Panel</h1>
-          <p style={{ color: "#888", fontSize: "0.85rem", marginBottom: "1.5rem" }}>Dammam Airport Taxi</p>
-          <input
-            type="password"
-            value={pw}
-            onChange={e => { setPw(e.target.value); setErr(false); }}
-            onKeyDown={e => e.key === "Enter" && login()}
-            placeholder="Enter admin password"
-            style={{ width: "100%", background: "#0c0c0c", border: `1px solid ${err ? "#e53e3e" : "#333"}`, borderRadius: 6, padding: "0.8rem 1rem", color: "#fff", fontSize: "0.95rem", boxSizing: "border-box", marginBottom: "1rem" }}
-          />
-          {err && <p style={{ color: "#e53e3e", fontSize: "0.82rem", marginBottom: "0.75rem" }}>Incorrect password</p>}
-          <button onClick={login} style={{ width: "100%", background: "#f5c518", color: "#000", border: "none", borderRadius: 6, padding: "0.85rem", fontWeight: 700, cursor: "pointer", fontSize: "1rem" }}>
-            Login
-          </button>
-        </div>
-      </div>
-    );
-  }
+  // Show nothing until auth check completes
+  if (!checked) return null;
+
+  // On login page, just render children (no sidebar)
+  if (pathname === "/admin/login") return <>{children}</>;
+
+  // Not authed — redirect handled in useEffect
+  if (!authed) return null;
 
   return (
     <div style={{ display: "flex", minHeight: "100vh", background: "#0c0c0c", fontFamily: "Arial, sans-serif" }}>
