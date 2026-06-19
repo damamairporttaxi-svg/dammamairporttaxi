@@ -20,11 +20,11 @@ export default function AdminSettings() {
     setMsg(`${key} saved!`); setTimeout(()=>setMsg(""),2000);
   }
 
-  const inp = { background:"#0c0c0c", border:"1px solid #333", borderRadius:6, padding:"0.65rem 0.85rem", color:"#fff", fontSize:"0.85rem", flex:1 };
+  const inp = { background:"#0c0c0c", border:"1px solid #333", borderRadius:6, padding:"0.65rem 0.85rem", color: "var(--text-primary)", fontSize:"0.85rem", flex:1 };
 
   return (
     <div>
-      <h1 style={{color:"#fff",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Site Settings {msg&&<span style={{color:gold,fontSize:"0.85rem",marginLeft:10}}>{msg}</span>}</h1>
+      <h1 style={{color: "var(--text-primary)",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Site Settings {msg&&<span style={{color:gold,fontSize:"0.85rem",marginLeft:10}}>{msg}</span>}</h1>
       <div style={{background:"#141414",border:"1px solid #222",borderRadius:10,padding:"1.5rem"}}>
         <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
           {settings.map(s=>(

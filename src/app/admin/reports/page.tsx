@@ -13,8 +13,8 @@ export default function AdminReports() {
   return (
     <div>
       <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"1.5rem",flexWrap:"wrap",gap:"0.75rem"}}>
-        <h1 style={{color:"#fff",fontSize:"1.2rem",fontWeight:800,margin:0}}>Reports</h1>
-        <select value={range} onChange={e=>setRange(e.target.value)} style={{background:"#141414",border:"1px solid #333",borderRadius:6,padding:"0.6rem 0.9rem",color:"#fff",fontSize:"0.85rem"}}>
+        <h1 style={{color: "var(--text-primary)",fontSize:"1.2rem",fontWeight:800,margin:0}}>Reports</h1>
+        <select value={range} onChange={e=>setRange(e.target.value)} style={{background:"#141414",border:"1px solid #333",borderRadius:6,padding:"0.6rem 0.9rem",color: "var(--text-primary)",fontSize:"0.85rem"}}>
           <option value="7">Last 7 days</option>
           <option value="30">Last 30 days</option>
           <option value="90">Last 90 days</option>
@@ -50,7 +50,7 @@ export default function AdminReports() {
                 {Object.entries(data.by_vehicle).map(([vt,count]) => (
                   <div key={vt} style={{display:"flex",justifyContent:"space-between",padding:"0.5rem 0",borderBottom:"1px solid #1a1a1a",fontSize:"0.85rem"}}>
                     <span style={{color:"#aaa",textTransform:"uppercase"}}>{vt}</span>
-                    <span style={{color:"#fff",fontWeight:600}}>{String(count)} bookings</span>
+                    <span style={{color: "var(--text-primary)",fontWeight:600}}>{String(count)} bookings</span>
                   </div>
                 ))}
               </div>
@@ -65,7 +65,7 @@ export default function AdminReports() {
                 {Object.entries(data.by_status).map(([st,count]) => (
                   <div key={st} style={{display:"flex",justifyContent:"space-between",padding:"0.5rem 0",borderBottom:"1px solid #1a1a1a",fontSize:"0.85rem"}}>
                     <span style={{color:"#aaa",textTransform:"capitalize"}}>{st.replace("_"," ")}</span>
-                    <span style={{color:"#fff",fontWeight:600}}>{String(count)}</span>
+                    <span style={{color: "var(--text-primary)",fontWeight:600}}>{String(count)}</span>
                   </div>
                 ))}
               </div>

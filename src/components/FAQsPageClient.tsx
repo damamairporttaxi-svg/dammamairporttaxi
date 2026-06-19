@@ -180,7 +180,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroSub: {
     fontSize: "1.05rem",
-    color: "var(--text-secondary)",
+    color: "#ffffff",
     maxWidth: "600px",
   },
   container: {
@@ -197,7 +197,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   faqQ: {
     fontSize: "1.1rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     marginBottom: "0.8rem",
     lineHeight: "1.4",
   },

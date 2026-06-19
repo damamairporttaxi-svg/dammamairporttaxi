@@ -12,7 +12,7 @@ export default function AdminAuditLog() {
 
   return (
     <div>
-      <h1 style={{color:"#fff",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Audit Log <span style={{color:"#555",fontSize:"0.85rem",fontWeight:400}}>({total} total entries)</span></h1>
+      <h1 style={{color: "var(--text-primary)",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Audit Log <span style={{color:"#555",fontSize:"0.85rem",fontWeight:400}}>({total} total entries)</span></h1>
       <div style={{background:"#141414",border:"1px solid #222",borderRadius:10,overflow:"hidden"}}>
         <div style={{overflowX:"auto"}}>
           <table style={{width:"100%",borderCollapse:"collapse",fontSize:"0.82rem"}}>

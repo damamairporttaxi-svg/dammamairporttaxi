@@ -155,7 +155,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroSub: {
     fontSize: "1.1rem",
-    color: "var(--text-secondary)",
+    color: "#ffffff",
     maxWidth: "700px",
     lineHeight: "1.6",
   },
@@ -192,14 +192,14 @@ const styles: Record<string, React.CSSProperties> = {
   statValue: {
     fontSize: "1.2rem",
     fontWeight: "800",
-    color: "#ffffff",
+    color: "var(--text-primary)",
   },
   tableCard: {
     padding: "2rem",
   },
   sectionTitle: {
     fontSize: "1.4rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     marginBottom: "1.5rem",
   },
   pricingTable: {
@@ -231,7 +231,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   seoSecTitle: {
     fontSize: "1.3rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
   },
   seoText: {
     fontSize: "1rem",
@@ -264,7 +264,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   faqQ: {
     fontSize: "1.05rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     marginBottom: "0.5rem",
   },
   faqA: {

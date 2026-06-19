@@ -222,7 +222,7 @@ export default function GCCBorderCrossingPage() {
                     ["Tourist (in transit)", "Valid ≥6 months", "Single/multiple entry", "Required before travel"],
                   ].map(([type, passport, exit, dest], i) => (
                     <div key={i} style={styles.tableRow}>
-                      <span style={{ fontWeight: 700, color: "#fff" }}>{type}</span>
+                      <span style={{ fontWeight: 700, color: "var(--text-primary)" }}>{type}</span>
                       <span>{passport}</span><span>{exit}</span><span>{dest}</span>
                     </div>
                   ))}
@@ -311,22 +311,22 @@ const styles: Record<string, React.CSSProperties> = {
   breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
-  h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "#fff", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
-  heroSub: { fontSize: "1.05rem", color: "var(--text-secondary)", maxWidth: "700px", lineHeight: "1.7" },
+  h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
+  heroSub: { fontSize: "1.05rem", color: "#ffffff", maxWidth: "700px", lineHeight: "1.7" },
   heroStats: { display: "flex", gap: "3rem", marginTop: "1rem", flexWrap: "wrap" },
   stat: { display: "flex", flexDirection: "column", gap: "0.2rem" },
   statVal: { fontSize: "1.6rem", color: "var(--accent-gold)", fontWeight: "800" },
-  statLbl: { fontSize: "0.8rem", color: "#fff", textTransform: "uppercase", letterSpacing: "0.5px" },
+  statLbl: { fontSize: "0.8rem", color: "var(--text-primary)", textTransform: "uppercase", letterSpacing: "0.5px" },
   quickNav: { backgroundColor: "var(--bg-secondary)", padding: "2rem 0", borderBottom: "1px solid var(--border-color)" },
   quickGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem" },
   qCard: { backgroundColor: "rgba(20,20,20,0.8)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1.2rem", display: "flex", flexDirection: "column", alignItems: "center", gap: "0.4rem", textDecoration: "none", textAlign: "center" },
   qFlag: { fontSize: "2rem" },
-  qLabel: { color: "#fff", fontWeight: "700", fontSize: "1rem" },
+  qLabel: { color: "var(--text-primary)", fontWeight: "700", fontSize: "1rem" },
   qSub: { color: "var(--text-muted)", fontSize: "0.78rem" },
   mainGrid: { display: "grid", gridTemplateColumns: "1fr 320px", gap: "3rem", padding: "4rem 0", alignItems: "start" },
   contentCol: { display: "flex", flexDirection: "column", gap: "3rem" },
   section: { display: "flex", flexDirection: "column", gap: "1rem" },
-  h2: { fontSize: "1.6rem", color: "#fff", fontWeight: "700", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
+  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
   h3: { fontSize: "1.1rem", color: "var(--accent-gold)", fontWeight: "700", marginTop: "0.5rem" },
   p: { fontSize: "0.97rem", color: "var(--text-secondary)", lineHeight: "1.75" },
   ol: { paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.6rem", color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.6" },
@@ -338,11 +338,11 @@ const styles: Record<string, React.CSSProperties> = {
   tableRow: { display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: "0.5rem", padding: "0.8rem 1rem", borderTop: "1px solid var(--border-color)", fontSize: "0.85rem", color: "var(--text-secondary)" },
   faqList: { display: "flex", flexDirection: "column", gap: "1.2rem" },
   faqItem: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.4rem", borderRadius: "6px" },
-  faqQ: { fontSize: "1rem", color: "#fff", marginBottom: "0.5rem", fontWeight: "700" },
+  faqQ: { fontSize: "1rem", color: "var(--text-primary)", marginBottom: "0.5rem", fontWeight: "700" },
   faqA: { fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.6" },
   sidebar: { position: "sticky", top: "100px" },
   sideCard: { padding: "1.8rem" },
-  sideTitle: { fontSize: "1.1rem", color: "#fff", fontWeight: "700", marginBottom: "0.5rem" },
+  sideTitle: { fontSize: "1.1rem", color: "var(--text-primary)", fontWeight: "700", marginBottom: "0.5rem" },
   sideSub: { fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "1.2rem" },
   sideRoutes: { display: "flex", flexDirection: "column", gap: "0.6rem" },
   sideRoute: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.6rem 0.8rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "4px", textDecoration: "none", fontSize: "0.88rem", color: "var(--text-secondary)", border: "1px solid var(--border-color)" },

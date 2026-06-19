@@ -16,11 +16,11 @@ export default function AdminPricing() {
     setEditing(null); load(); setMsg("Saved!"); setTimeout(()=>setMsg(""),2000);
   }
 
-  const inp = { background:"#0c0c0c", border:"1px solid #444", borderRadius:4, padding:"0.35rem 0.5rem", color:"#fff", fontSize:"0.82rem", width:"80px" };
+  const inp = { background:"#0c0c0c", border:"1px solid #444", borderRadius:4, padding:"0.35rem 0.5rem", color: "var(--text-primary)", fontSize:"0.82rem", width:"80px" };
 
   return (
     <div>
-      <h1 style={{color:"#fff",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Route Pricing {msg&&<span style={{color:gold,fontSize:"0.85rem",marginLeft:10}}>{msg}</span>}</h1>
+      <h1 style={{color: "var(--text-primary)",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Route Pricing {msg&&<span style={{color:gold,fontSize:"0.85rem",marginLeft:10}}>{msg}</span>}</h1>
       <div style={{background:"#141414",border:"1px solid #222",borderRadius:10,overflow:"hidden"}}>
         <div style={{overflowX:"auto"}}>
           <table style={{width:"100%",borderCollapse:"collapse",fontSize:"0.82rem"}}>
@@ -33,7 +33,7 @@ export default function AdminPricing() {
                 const v = vals[p.id] ?? { sedan_price:p.sedan_price, suv_price:p.suv_price, van_price:p.van_price, luxury_price:p.luxury_price, distance_km:p.distance_km, duration_min:p.duration_min };
                 return (
                   <tr key={p.id} style={{borderBottom:"1px solid #1a1a1a"}}>
-                    <td style={{padding:"0.6rem 1rem",color:"#fff",fontWeight:600,whiteSpace:"nowrap"}}>{p.route_name}</td>
+                    <td style={{padding:"0.6rem 1rem",color: "var(--text-primary)",fontWeight:600,whiteSpace:"nowrap"}}>{p.route_name}</td>
                     <td style={{padding:"0.6rem 1rem"}}>
                       {isEdit ? <input style={inp} value={v.distance_km} onChange={e=>setVals(prev=>({...prev,[p.id]:{...v,distance_km:e.target.value}}))} /> : <span style={{color:"#aaa"}}>{p.distance_km} km</span>}
                     </td>

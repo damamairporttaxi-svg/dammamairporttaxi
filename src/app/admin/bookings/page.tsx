@@ -29,12 +29,12 @@ export default function AdminBookings() {
     .filter(b => !search || b.name?.toLowerCase().includes(search.toLowerCase()) || b.ref?.includes(search.toUpperCase()) || b.phone?.includes(search));
 
   const gold = "#f5c518";
-  const input = { background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.6rem 0.9rem", color: "#fff", fontSize: "0.85rem" };
+  const input = { background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.6rem 0.9rem", color: "var(--text-primary)", fontSize: "0.85rem" };
 
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem", gap: "1rem", flexWrap: "wrap" }}>
-        <h1 style={{ color: "#fff", fontSize: "1.2rem", fontWeight: 800, margin: 0 }}>All Bookings</h1>
+        <h1 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: 800, margin: 0 }}>All Bookings</h1>
         <Link href="/booking" target="_blank" style={{ background: gold, color: "#000", padding: "0.6rem 1.2rem", borderRadius: 6, textDecoration: "none", fontWeight: 700, fontSize: "0.85rem" }}>
           + New Booking
         </Link>
@@ -65,7 +65,7 @@ export default function AdminBookings() {
               {filtered.map(b => (
                 <tr key={b.id} style={{ borderBottom: "1px solid #1a1a1a" }}>
                   <td style={{ padding: "0.6rem 0.9rem", color: gold, fontFamily: "monospace", whiteSpace: "nowrap" }}>{b.ref}</td>
-                  <td style={{ padding: "0.6rem 0.9rem", color: "#fff", whiteSpace: "nowrap" }}>{b.name}</td>
+                  <td style={{ padding: "0.6rem 0.9rem", color: "var(--text-primary)", whiteSpace: "nowrap" }}>{b.name}</td>
                   <td style={{ padding: "0.6rem 0.9rem", color: "#aaa" }}>{b.phone}</td>
                   <td style={{ padding: "0.6rem 0.9rem", color: "#aaa", maxWidth: 140, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{b.pickup_location}</td>
                   <td style={{ padding: "0.6rem 0.9rem", color: "#aaa", maxWidth: 140, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{b.dropoff_location}</td>
@@ -74,7 +74,7 @@ export default function AdminBookings() {
                   <td style={{ padding: "0.6rem 0.9rem", color: "#aaa", textTransform: "uppercase" }}>{b.vehicle_type}</td>
                   <td style={{ padding: "0.6rem 0.9rem", color: gold, fontWeight: 700, whiteSpace: "nowrap" }}>{b.final_price} SAR</td>
                   <td style={{ padding: "0.6rem 0.9rem" }}>
-                    <span style={{ background: statusColor[b.status] ?? "#333", color: "#fff", padding: "2px 7px", borderRadius: 4, fontSize: "0.7rem", fontWeight: 700, whiteSpace: "nowrap" }}>
+                    <span style={{ background: statusColor[b.status] ?? "#333", color: "var(--text-primary)", padding: "2px 7px", borderRadius: 4, fontSize: "0.7rem", fontWeight: 700, whiteSpace: "nowrap" }}>
                       {b.status?.replace("_"," ").toUpperCase()}
                     </span>
                   </td>

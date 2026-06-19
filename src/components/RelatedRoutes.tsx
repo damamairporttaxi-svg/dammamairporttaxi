@@ -90,7 +90,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   cardDesc: {
     fontSize: "0.78rem",
-    color: "var(--text-secondary)",
+    color: "rgba(255,255,255,0.85)",
     lineHeight: "1.4",
   },
   arrow: {

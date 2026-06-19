@@ -24,17 +24,17 @@ export default function AdminReviews() {
 
   return (
     <div>
-      <h1 style={{color:"#fff",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Customer Reviews {msg&&<span style={{color:gold,fontSize:"0.85rem",marginLeft:10}}>{msg}</span>}</h1>
+      <h1 style={{color: "var(--text-primary)",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Customer Reviews {msg&&<span style={{color:gold,fontSize:"0.85rem",marginLeft:10}}>{msg}</span>}</h1>
       <div style={{display:"flex",flexDirection:"column",gap:"0.85rem"}}>
         {reviews.length===0&&<div style={{background:"#141414",border:"1px solid #222",borderRadius:10,padding:"2rem",textAlign:"center",color:"#555"}}>No reviews yet</div>}
         {reviews.map(r=>(
           <div key={r.id} style={{background:"#141414",border:"1px solid #222",borderRadius:10,padding:"1.25rem",display:"flex",justifyContent:"space-between",alignItems:"flex-start",gap:"1rem"}}>
             <div style={{flex:1}}>
               <div style={{display:"flex",alignItems:"center",gap:"0.75rem",marginBottom:"0.5rem"}}>
-                <span style={{color:"#fff",fontWeight:700,fontSize:"0.9rem"}}>{r.customer_name}</span>
+                <span style={{color: "var(--text-primary)",fontWeight:700,fontSize:"0.9rem"}}>{r.customer_name}</span>
                 <span style={{color:gold,fontSize:"0.85rem"}}>{stars(r.rating)}</span>
                 <span style={{color:"#555",fontSize:"0.75rem"}}>{r.created_at?.split("T")[0]}</span>
-                <span style={{background:r.published?"#2e7d32":"#555",color:"#fff",padding:"1px 7px",borderRadius:4,fontSize:"0.7rem",fontWeight:700}}>{r.published?"LIVE":"HIDDEN"}</span>
+                <span style={{background:r.published?"#2e7d32":"#555",color: "var(--text-primary)",padding:"1px 7px",borderRadius:4,fontSize:"0.7rem",fontWeight:700}}>{r.published?"LIVE":"HIDDEN"}</span>
               </div>
               <p style={{color:"#aaa",fontSize:"0.85rem",lineHeight:1.6,margin:0}}>{r.comment}</p>
             </div>

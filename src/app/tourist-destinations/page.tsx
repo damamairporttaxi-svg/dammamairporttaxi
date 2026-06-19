@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/Navbar";
@@ -293,7 +293,7 @@ export default function TouristDestinationsPage() {
                   { name: "Muscat, Oman", dist: "1,400 km", time: "14–16 hrs", type: "Extended", href: "/routes/dammam-to-muscat" },
                 ].map((r, i) => (
                   <div key={i} style={styles.tableRow}>
-                    <span style={{ color: "#fff", fontWeight: 600 }}>{r.name}</span>
+                    <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{r.name}</span>
                     <span>{r.dist}</span>
                     <span>{r.time}</span>
                     <span style={{ color: "var(--accent-gold)" }}>{r.type}</span>
@@ -340,29 +340,29 @@ const styles: Record<string, React.CSSProperties> = {
   breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
-  h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "#fff", fontWeight: "800", lineHeight: "1.25", maxWidth: "900px" },
-  heroSub: { fontSize: "1.05rem", color: "var(--text-secondary)", maxWidth: "750px", lineHeight: "1.7" },
+  h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.25", maxWidth: "900px" },
+  heroSub: { fontSize: "1.05rem", color: "#ffffff", maxWidth: "750px", lineHeight: "1.7" },
   statsRow: { display: "flex", gap: "3rem", marginTop: "1rem", flexWrap: "wrap" },
   stat: { display: "flex", flexDirection: "column", gap: "0.2rem" },
   statV: { fontSize: "1.8rem", color: "var(--accent-gold)", fontWeight: "800" },
-  statL: { fontSize: "0.78rem", color: "#fff", textTransform: "uppercase", letterSpacing: "0.5px" },
+  statL: { fontSize: "0.78rem", color: "var(--text-primary)", textTransform: "uppercase", letterSpacing: "0.5px" },
   filterBar: { backgroundColor: "var(--bg-secondary)", borderBottom: "1px solid var(--border-color)", padding: "1rem 0" },
   filterRow: { display: "flex", gap: "0.6rem", flexWrap: "wrap" },
   filterChip: { backgroundColor: "rgba(245,197,24,0.08)", border: "1px solid rgba(245,197,24,0.2)", color: "var(--accent-gold)", padding: "0.35rem 1rem", borderRadius: "20px", fontSize: "0.82rem", fontWeight: "600", textDecoration: "none" },
   introSection: { marginBottom: "4rem" },
-  h2: { fontSize: "1.7rem", color: "#fff", fontWeight: "700", marginBottom: "1.2rem", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
+  h2: { fontSize: "1.7rem", color: "var(--text-primary)", fontWeight: "700", marginBottom: "1.2rem", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
   p: { fontSize: "0.97rem", color: "var(--text-secondary)", lineHeight: "1.75", marginBottom: "2rem" },
   benefitGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.2rem" },
   benefitCard: { padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.5rem" },
   benefitIcon: { fontSize: "1.8rem" },
-  benefitTitle: { fontSize: "1rem", color: "#fff", fontWeight: "700" },
+  benefitTitle: { fontSize: "1rem", color: "var(--text-primary)", fontWeight: "700" },
   benefitDesc: { fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: "1.5" },
   destSection: { marginBottom: "4rem" },
   destGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "1.5rem" },
   destCard: { padding: "1.8rem", display: "flex", flexDirection: "column", gap: "1.2rem" },
   destTop: { display: "flex", alignItems: "flex-start", gap: "1rem" },
   destFlag: { fontSize: "2.2rem", flexShrink: 0 },
-  destCountry: { fontSize: "1.1rem", color: "#fff", fontWeight: "700", margin: 0 },
+  destCountry: { fontSize: "1.1rem", color: "var(--text-primary)", fontWeight: "700", margin: 0 },
   destCity: { fontSize: "0.82rem", color: "var(--text-muted)", margin: "0.2rem 0 0" },
   tripBadge: { marginLeft: "auto", backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.25)", color: "var(--accent-gold)", padding: "0.25rem 0.7rem", borderRadius: "4px", fontSize: "0.75rem", fontWeight: "700", whiteSpace: "nowrap" },
   destMeta: { display: "flex", flexDirection: "column", gap: "0.3rem", fontSize: "0.82rem", color: "var(--text-secondary)" },
@@ -371,7 +371,7 @@ const styles: Record<string, React.CSSProperties> = {
   highlightSection: { flex: 1 },
   highlightLabel: { fontSize: "0.72rem", color: "var(--accent-gold)", fontWeight: "700", textTransform: "uppercase", marginBottom: "0.6rem" },
   highlightTags: { display: "flex", flexWrap: "wrap", gap: "0.4rem" },
-  tag: { backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid var(--border-color)", color: "var(--text-secondary)", padding: "0.2rem 0.6rem", borderRadius: "4px", fontSize: "0.75rem" },
+  tag: { backgroundColor: "rgba(255,255,255,0.1)", border: "1px solid var(--border-color)", color: "var(--text-secondary)", padding: "0.2rem 0.6rem", borderRadius: "4px", fontSize: "0.75rem" },
   destBtn: { textDecoration: "none", textAlign: "center" },
   tableSection: { marginBottom: "4rem" },
   table: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "6px", overflow: "hidden" },
@@ -381,7 +381,7 @@ const styles: Record<string, React.CSSProperties> = {
   faqSection: {},
   faqList: { display: "flex", flexDirection: "column", gap: "1.2rem" },
   faqItem: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.4rem", borderRadius: "6px" },
-  faqQ: { fontSize: "1rem", color: "#fff", marginBottom: "0.5rem", fontWeight: "700" },
+  faqQ: { fontSize: "1rem", color: "var(--text-primary)", marginBottom: "0.5rem", fontWeight: "700" },
   faqA: { fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.6" },
 };
 

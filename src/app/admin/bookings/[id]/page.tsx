@@ -60,7 +60,7 @@ export default function AdminBookingDetail() {
   }
 
   const gold = "#f5c518";
-  const input = { width: "100%", background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.7rem 0.9rem", color: "#fff", fontSize: "0.88rem", boxSizing: "border-box" as const };
+  const input = { width: "100%", background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.7rem 0.9rem", color: "var(--text-primary)", fontSize: "0.88rem", boxSizing: "border-box" as const };
   const label = { display: "block" as const, color: "#888", fontSize: "0.75rem", fontWeight: 600, marginBottom: 4, textTransform: "uppercase" as const };
   const card = { background: "#141414", border: "1px solid #222", borderRadius: 10, padding: "1.5rem", marginBottom: "1.25rem" };
 
@@ -70,8 +70,8 @@ export default function AdminBookingDetail() {
     <div style={{ maxWidth: 900, margin: "0 auto" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
         <button onClick={() => router.back()} style={{ background: "#222", color: "#888", border: "1px solid #333", borderRadius: 6, padding: "0.5rem 0.9rem", cursor: "pointer", fontSize: "0.82rem" }}>← Back</button>
-        <h1 style={{ color: "#fff", fontSize: "1.2rem", fontWeight: 800, margin: 0 }}>{b.ref}</h1>
-        <span style={{ background: statusColor[b.status] ?? "#333", color: "#fff", padding: "3px 10px", borderRadius: 4, fontSize: "0.78rem", fontWeight: 700 }}>
+        <h1 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: 800, margin: 0 }}>{b.ref}</h1>
+        <span style={{ background: statusColor[b.status] ?? "#333", color: "var(--text-primary)", padding: "3px 10px", borderRadius: 4, fontSize: "0.78rem", fontWeight: 700 }}>
           {b.status?.replace("_"," ").toUpperCase()}
         </span>
         {msg && <span style={{ color: gold, fontWeight: 600, fontSize: "0.85rem" }}>{msg}</span>}
@@ -92,7 +92,7 @@ export default function AdminBookingDetail() {
               ].map(([l,v]) => (
                 <div key={String(l)}>
                   <div style={{ color: "#555", fontSize: "0.7rem", textTransform: "uppercase", marginBottom: 2 }}>{l}</div>
-                  <div style={{ color: "#fff", fontWeight: 500 }}>{String(v ?? "-")}</div>
+                  <div style={{ color: "var(--text-primary)", fontWeight: 500 }}>{String(v ?? "-")}</div>
                 </div>
               ))}
             </div>
@@ -156,16 +156,16 @@ export default function AdminBookingDetail() {
           <div style={card}>
             <h3 style={{ color: gold, fontSize: "0.9rem", marginBottom: "1rem" }}>Quick Actions</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              <button onClick={() => sendEmail("send-status-email")} style={{ background: "#1565c0", color: "#fff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
+              <button onClick={() => sendEmail("send-status-email")} style={{ background: "#1565c0", color: "var(--text-primary)", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Send Status Email
               </button>
-              <button onClick={sendDriverAssignment} style={{ background: "#25d366", color: "#fff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
+              <button onClick={sendDriverAssignment} style={{ background: "#25d366", color: "var(--text-primary)", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Notify Driver (WA + Email)
               </button>
-              <button onClick={() => sendEmail("send-invoice-email")} style={{ background: "#7b1fa2", color: "#fff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
+              <button onClick={() => sendEmail("send-invoice-email")} style={{ background: "#7b1fa2", color: "var(--text-primary)", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Send Invoice Email
               </button>
-              <button onClick={() => sendEmail("send-receipt-email")} style={{ background: "#2e7d32", color: "#fff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
+              <button onClick={() => sendEmail("send-receipt-email")} style={{ background: "#2e7d32", color: "var(--text-primary)", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Send Receipt Email
               </button>
               <Link href={`/admin/bookings/${id}/invoice`} style={{ display: "block", textAlign: "center", background: "#222", color: gold, border: "1px solid #333", borderRadius: 6, padding: "0.65rem", textDecoration: "none", fontSize: "0.82rem", fontWeight: 600 }}>

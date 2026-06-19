@@ -8,14 +8,14 @@ export default function AdminInvoiceGenerator() {
     passengers:"1", price:"", discount:"0", ref:`DAT-MAN-${Date.now().toString(36).toUpperCase()}`
   });
   const gold = "#f5c518";
-  const inp = { background:"#0c0c0c", border:"1px solid #333", borderRadius:6, padding:"0.65rem 0.85rem", color:"#fff", fontSize:"0.85rem", width:"100%", boxSizing:"border-box" as const };
+  const inp = { background:"#0c0c0c", border:"1px solid #333", borderRadius:6, padding:"0.65rem 0.85rem", color: "var(--text-primary)", fontSize:"0.85rem", width:"100%", boxSizing:"border-box" as const };
   const lbl = { display:"block" as const, color:"#888", fontSize:"0.72rem", fontWeight:600 as const, marginBottom:3, textTransform:"uppercase" as const };
 
   const finalPrice = Math.max(0, parseFloat(form.price||"0") - parseFloat(form.discount||"0"));
 
   return (
     <div style={{maxWidth:900,margin:"0 auto"}}>
-      <h1 style={{color:"#fff",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Manual Invoice Generator</h1>
+      <h1 style={{color: "var(--text-primary)",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Manual Invoice Generator</h1>
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"1.5rem",alignItems:"start"}}>
         {/* Form */}
         <div style={{background:"#141414",border:"1px solid #222",borderRadius:10,padding:"1.5rem"}}>

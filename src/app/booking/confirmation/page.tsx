@@ -49,7 +49,7 @@ function ConfirmationContent() {
 
           {booking && (
             <div style={s.card}>
-              <h2 style={{ color: "#fff", marginBottom: "1.5rem", fontSize: "1.1rem" }}>Booking Summary</h2>
+              <h2 style={{ color: "var(--text-primary)", marginBottom: "1.5rem", fontSize: "1.1rem" }}>Booking Summary</h2>
               {[
                 ["Reference", booking.ref],
                 ["Passenger", booking.name],
@@ -83,7 +83,7 @@ function ConfirmationContent() {
             </Link>
             <Link
               href={`/track-booking?ref=${ref}`}
-              style={{ textAlign: "center", border: "1px solid #333", borderRadius: 6, padding: "0.9rem", color: "#fff", textDecoration: "none", fontWeight: 600 }}
+              style={{ textAlign: "center", border: "1px solid #333", borderRadius: 6, padding: "0.9rem", color: "var(--text-primary)", textDecoration: "none", fontWeight: 600 }}
             >
               Track Booking Status
             </Link>

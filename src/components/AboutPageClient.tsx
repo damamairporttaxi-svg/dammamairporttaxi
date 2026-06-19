@@ -142,7 +142,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroSub: {
     fontSize: "1.05rem",
-    color: "var(--text-secondary)",
+    color: "#ffffff",
     maxWidth: "600px",
   },
   contentGrid: {
@@ -157,7 +157,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heading: {
     fontSize: "1.8rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
   },
   paragraph: {
     fontSize: "1rem",

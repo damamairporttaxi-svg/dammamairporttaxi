@@ -31,52 +31,66 @@ export function HomePageClient() {
       {/* Hero Section */}
       <section style={styles.hero}>
         <div className="container hero-grid" style={styles.heroGrid}>
+
+          {/* LEFT — white text side */}
           <div style={styles.heroTextCol}>
-            <span className="badge-gold" style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              {locale === "en" ? "Top Rated KSA Transfer" : "خدمة التوصيل الأولى بالمملكة"}
-            </span>
+            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", border:"1px solid #071952", borderRadius:"50px", padding:"0.35rem 1rem" }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#071952"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <span style={{ fontSize:"0.75rem", fontWeight:700, color:"#071952", letterSpacing:"0.05em", textTransform:"uppercase" }}>
+                {locale === "en" ? "Top Rated KSA Transfer" : "خدمة التوصيل الأولى بالمملكة"}
+              </span>
+            </div>
+
             <h1 style={styles.heroTitle}>
               {locale === "en" ? (
-                <>Dammam Airport <span style={{ color: "var(--accent-gold)" }}>Taxi</span> — Private Transfers & GCC Routes from King Fahd Airport</>
+                <><span style={{ color:"#071952" }}>Dammam Airport</span><br /><span style={{ color:"#000000" }}>Taxi &amp; Private</span><br /><span style={{ color:"#000000" }}>Transfers</span></>
               ) : (
-                <><span style={{ color: "var(--accent-gold)" }}>تاكسي مطار الدمام</span> — توصيل خاص فاخر ورحلات دول الخليج من مطار الملك فهد</>
+                <><span style={{ color:"#071952" }}>تاكسي مطار الدمام</span><br /><span style={{ color:"#000000" }}>توصيل خاص ورحلات دول الخليج</span></>
               )}
             </h1>
+
             <p style={styles.heroSub}>{t("heroSub")}</p>
 
             <div style={styles.valueProps}>
-              <span style={styles.valueItem}>✓ {locale === "en" ? "Instant WhatsApp Booking" : "حجز فوري بالواتساب"}</span>
-              <span style={styles.valueItem}>✓ {locale === "en" ? "Free Flight Tracking" : "تتبع مجاني للرحلات"}</span>
-              <span style={styles.valueItem}>✓ {locale === "en" ? "24/7 Support" : "دعم على مدار الساعة"}</span>
+              {[
+                { en: "Instant WhatsApp Booking", ar: "حجز فوري بالواتساب" },
+                { en: "Free Flight Tracking", ar: "تتبع مجاني للرحلات" },
+                { en: "24/7 Support — No Hidden Fees", ar: "دعم ٢٤/٧ — بدون رسوم خفية" },
+              ].map((v, i) => (
+                <span key={i} style={styles.valueItem}>
+                  <span style={{ width:"18px", height:"18px", borderRadius:"50%", background:"#071952", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                  </span>
+                  {locale === "en" ? v.en : v.ar}
+                </span>
+              ))}
             </div>
 
             <div style={styles.heroBtnGroup}>
-              <button onClick={handleBookNowScroll} className="btn btn-primary" style={{ padding: "0.9rem 1.8rem", fontSize: "1.05rem", display: "flex", alignItems: "center" }}>
+              <button onClick={handleBookNowScroll} className="btn btn-primary" style={{ padding:"0.95rem 2rem", fontSize:"1rem", fontWeight:700, display:"flex", alignItems:"center", gap:"8px" }}>
                 {t("heroActionBook")}
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: isRtl ? "0" : "8px", marginRight: isRtl ? "8px" : "0" }}><line x1={isRtl ? "19" : "5"} y1="12" x2={isRtl ? "5" : "19"} y2="12"></line><polyline points={isRtl ? "12 5 5 12 12 19" : "12 5 19 12 12 19"}></polyline></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
-              <button onClick={handleFleetScroll} className="btn btn-secondary" style={{ padding: "0.9rem 1.8rem", fontSize: "1.05rem" }}>
+              <button onClick={handleFleetScroll} className="btn btn-secondary" style={{ padding:"0.95rem 2rem", fontSize:"1rem", fontWeight:600 }}>
                 {t("heroActionFleet")}
               </button>
             </div>
 
-            <div className="glass-card" style={styles.heroStatsCard}>
-              <div style={styles.heroStatItem}>
-                <strong style={styles.heroStatVal}>{t("statCompletedVal")}</strong>
-                <span style={styles.heroStatLbl}>{t("statCompleted")}</span>
-              </div>
-              <div style={styles.heroStatItem}>
-                <strong style={styles.heroStatVal}>{t("statDriversVal")}</strong>
-                <span style={styles.heroStatLbl}>{t("statDrivers")}</span>
-              </div>
-              <div style={styles.heroStatItem}>
-                <strong style={styles.heroStatVal}>{t("statRatingVal")}</strong>
-                <span style={styles.heroStatLbl}>{t("statRating")}</span>
-              </div>
+            <div style={styles.heroStatsCard}>
+              {[
+                { val: t("statCompletedVal"), lbl: t("statCompleted") },
+                { val: t("statDriversVal"),   lbl: t("statDrivers") },
+                { val: t("statRatingVal"),     lbl: t("statRating") },
+              ].map((s, i, arr) => (
+                <div key={i} style={{ ...styles.heroStatItem, ...(i === arr.length - 1 ? { borderRight:"none", marginRight:0, paddingRight:0 } : {}) }}>
+                  <strong style={styles.heroStatVal}>{s.val}</strong>
+                  <span style={styles.heroStatLbl}>{s.lbl}</span>
+                </div>
+              ))}
             </div>
           </div>
 
+          {/* RIGHT — booking form */}
           <div style={styles.heroFormCol}>
             <BookingForm />
           </div>
@@ -87,13 +101,14 @@ export function HomePageClient() {
       <div style={styles.trustStrip}>
         <div className="container" style={styles.trustInner}>
           {[
-            { en: "Government Licensed",   ar: "مرخص رسمياً" },
-            { en: "Live GPS Tracking",      ar: "تتبع GPS مباشر" },
-            { en: "Free Meet & Greet",      ar: "استقبال مجاني بالمطار" },
-            { en: "60-Min Free Wait",       ar: "60 دقيقة انتظار مجاناً" },
-            { en: "Fixed Rates — No Surge", ar: "أسعار ثابتة بلا زيادة" },
+            { icon: "✈", en: "Government Licensed",   ar: "مرخص رسمياً" },
+            { icon: "📍", en: "Live GPS Tracking",     ar: "تتبع GPS مباشر" },
+            { icon: "🤝", en: "Free Meet & Greet",     ar: "استقبال مجاني بالمطار" },
+            { icon: "⏱", en: "60-Min Free Wait",       ar: "60 دقيقة انتظار مجاناً" },
+            { icon: "💰", en: "Fixed Rates — No Surge", ar: "أسعار ثابتة بلا زيادة" },
           ].map((item, i) => (
             <div key={i} style={styles.trustItem}>
+              <span style={{ fontSize:"1.1rem" }}>{item.icon}</span>
               <span style={styles.trustText}>{locale === "en" ? item.en : item.ar}</span>
             </div>
           ))}
@@ -101,22 +116,26 @@ export function HomePageClient() {
       </div>
 
       {/* Why Choose Us */}
-      <section style={styles.whySection} className="section-padding">
-        <div className="container text-center">
-          <span className="badge-gold" style={{ marginBottom: "1rem" }}>{locale === "en" ? "Our Benefits" : "مميزاتنا"}</span>
-          <h2 className="title-accent" style={{ display: "block" }}>{t("whyTitle")}</h2>
-          <p style={{ maxWidth: "600px", margin: "0 auto 4rem auto" }}>{t("whySub")}</p>
-
-          <div style={styles.whyGrid}>
+      <section className="section-padding" style={{ background: "#ffffff" }}>
+        <div className="container">
+          <div style={{ display:"flex", alignItems:"flex-end", justifyContent:"space-between", flexWrap:"wrap", gap:"2rem", marginBottom:"3.5rem" }}>
+            <div>
+              <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"#071952", marginBottom:"0.6rem" }}>{locale === "en" ? "Why Choose Us" : "لماذا تختارنا"}</p>
+              <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#000000", lineHeight:1.2, margin:0 }}>{t("whyTitle")}</h2>
+            </div>
+            <p style={{ maxWidth:"380px", color:"#333333", lineHeight:1.7, margin:0 }}>{t("whySub")}</p>
+          </div>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))", gap:"1.5rem" }}>
             {[
-              { title: t("whyCard1Title"), desc: t("whyCard1Desc") },
-              { title: t("whyCard2Title"), desc: t("whyCard2Desc") },
-              { title: t("whyCard3Title"), desc: t("whyCard3Desc") },
-              { title: t("whyCard4Title"), desc: t("whyCard4Desc") },
+              { num:"01", title: t("whyCard1Title"), desc: t("whyCard1Desc") },
+              { num:"02", title: t("whyCard2Title"), desc: t("whyCard2Desc") },
+              { num:"03", title: t("whyCard3Title"), desc: t("whyCard3Desc") },
+              { num:"04", title: t("whyCard4Title"), desc: t("whyCard4Desc") },
             ].map((card, idx) => (
-              <div key={idx} className="glass-card" style={styles.whyCard}>
-                <h3 style={styles.whyCardTitle}>{card.title}</h3>
-                <p style={styles.whyCardDesc}>{card.desc}</p>
+              <div key={idx} style={{ padding:"2rem", background:"#ffffff", border:"1px solid #e5e7eb", borderTop:"4px solid #071952", borderRadius:"4px" }}>
+                <p style={{ fontSize:"2.5rem", fontWeight:800, color:"#f0f0f0", lineHeight:1, marginBottom:"1rem" }}>{card.num}</p>
+                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#000000", marginBottom:"0.6rem" }}>{card.title}</h3>
+                <p style={{ fontSize:"0.88rem", color:"#333333", lineHeight:1.65, margin:0 }}>{card.desc}</p>
               </div>
             ))}
           </div>
@@ -124,48 +143,27 @@ export function HomePageClient() {
       </section>
 
       {/* How It Works */}
-      <section className="section-padding" style={styles.howSection}>
-        <div className="container text-center">
-          <span className="badge-gold" style={{ marginBottom: "1rem" }}>
-            {locale === "en" ? "Simple Process" : "خطوات بسيطة"}
-          </span>
-          <h2 className="title-accent" style={{ display: "block" }}>
-            {locale === "en" ? "How to Book a Dammam Airport Taxi — 3 Easy Steps" : "كيف تحجز تاكسي مطار الدمام — 3 خطوات سهلة"}
-          </h2>
-          <p style={{ maxWidth: "550px", margin: "0 auto 4rem auto" }}>
-            {locale === "en"
-              ? "No apps, no registration — just send a WhatsApp message and you're all set."
-              : "لا تطبيقات، لا تسجيل — أرسل رسالة واتساب فقط وستكون جاهزاً للرحلة."}
-          </p>
-
-          <div style={styles.stepsGrid}>
+      <section className="section-padding" style={{ background:"#071952" }}>
+        <div className="container">
+          <div style={{ textAlign:"center", marginBottom:"4rem" }}>
+            <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"rgba(255,255,255,0.5)", marginBottom:"0.6rem" }}>
+              {locale === "en" ? "Simple Process" : "خطوات بسيطة"}
+            </p>
+            <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#ffffff", lineHeight:1.2, margin:"0 auto", maxWidth:"600px" }}>
+              {locale === "en" ? "Book in Under 2 Minutes" : "احجز في أقل من دقيقتين"}
+            </h2>
+          </div>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:"2px", background:"rgba(255,255,255,0.08)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"12px", overflow:"hidden" }}>
             {[
-              {
-                num: "01",
-                en_title: "Send WhatsApp",
-                ar_title: "أرسل واتساب",
-                en_desc: "Share your pickup point, destination, date, time & preferred vehicle class.",
-                ar_desc: "أرسل موقع الاستلام، الوجهة، التاريخ، الوقت وفئة السيارة المطلوبة.",
-              },
-              {
-                num: "02",
-                en_title: "Instant Confirmation",
-                ar_title: "تأكيد فوري",
-                en_desc: "Receive confirmed booking with driver name, car plate & fixed fare — in minutes.",
-                ar_desc: "تلقَّ تأكيداً فورياً مع اسم السائق ورقم اللوحة والأجرة الثابتة — في دقائق.",
-              },
-              {
-                num: "03",
-                en_title: "Enjoy Your Ride",
-                ar_title: "استمتع برحلتك",
-                en_desc: "Your driver arrives on time, greets you by name, and handles all the logistics.",
-                ar_desc: "سائقك يصل في الوقت المحدد، يستقبلك باسمك، ويتولى كل الترتيبات اللوجستية.",
-              },
+              { num:"1", en_title:"Send WhatsApp",       ar_title:"أرسل واتساب",         en_desc:"Share pickup, destination, date & vehicle class.", ar_desc:"أرسل موقع الاستلام، الوجهة، التاريخ وفئة السيارة." },
+              { num:"2", en_title:"Instant Confirmation", ar_title:"تأكيد فوري",           en_desc:"Get driver name, plate & fixed fare in minutes.", ar_desc:"احصل على اسم السائق واللوحة والأجرة في دقائق." },
+              { num:"3", en_title:"We Track Your Flight", ar_title:"نتابع رحلتك",          en_desc:"Delayed? Driver adjusts. 60 min free wait guaranteed.", ar_desc:"تأخر؟ السائق يتكيف. 60 دقيقة انتظار مجاناً." },
+              { num:"4", en_title:"Name-Board Pickup",   ar_title:"استقبال باللافتة",     en_desc:"Exit arrivals — driver waiting with your name board.", ar_desc:"اخرج من الوصول — السائق ينتظرك بلافتة باسمك." },
             ].map((step, i) => (
-              <div key={i} className="glass-card" style={styles.stepCard}>
-                <span style={styles.stepNum}>{step.num}</span>
-                <h3 style={styles.stepTitle}>{locale === "en" ? step.en_title : step.ar_title}</h3>
-                <p style={styles.stepDesc}>{locale === "en" ? step.en_desc : step.ar_desc}</p>
+              <div key={i} style={{ padding:"2.5rem 2rem", background:"#071952" }}>
+                <div style={{ fontSize:"3rem", fontWeight:800, color:"rgba(255,255,255,0.10)", lineHeight:1, marginBottom:"1.2rem" }}>{step.num}</div>
+                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#ffffff", marginBottom:"0.6rem" }}>{locale === "en" ? step.en_title : step.ar_title}</h3>
+                <p style={{ fontSize:"0.85rem", color:"rgba(255,255,255,0.65)", lineHeight:1.65, margin:0 }}>{locale === "en" ? step.en_desc : step.ar_desc}</p>
               </div>
             ))}
           </div>
@@ -344,7 +342,7 @@ export function HomePageClient() {
             </p>
 
             {/* Local / Airport transfers */}
-            <p style={{ ...art.p, fontWeight: 700, color: "var(--accent-gold)", marginTop: "1.5rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+            <p style={{ ...art.p, fontWeight: 700, color: "#071952", marginTop: "1.5rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
               Local Airport Transfers — Eastern Province
             </p>
             <div style={art.routeGrid}>
@@ -369,7 +367,7 @@ export function HomePageClient() {
             </div>
 
             {/* GCC cross-border */}
-            <p style={{ ...art.p, fontWeight: 700, color: "#5ba3e8", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+            <p style={{ ...art.p, fontWeight: 700, color: "#071952", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
               GCC Cross-Border Taxi Routes from Dammam
             </p>
             <div style={art.routeGrid}>
@@ -394,7 +392,7 @@ export function HomePageClient() {
             </div>
 
             {/* Saudi intercity */}
-            <p style={{ ...art.p, fontWeight: 700, color: "#2a9d2a", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+            <p style={{ ...art.p, fontWeight: 700, color: "#071952", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
               Saudi Intercity Taxi Routes from Dammam
             </p>
             <div style={art.routeGrid}>
@@ -473,8 +471,8 @@ export function HomePageClient() {
               </ul>
               <Link href="/corporate-transfers" style={art.infoLink}>Set up a corporate account →</Link>
             </div>
-            <div style={{ ...art.infoBox, borderColor: "rgba(58,127,212,0.4)", background: "rgba(58,127,212,0.04)" }}>
-              <h3 style={{ ...art.infoBoxTitle, color: "#5ba3e8" }}>GCC Cross-Border Taxi</h3>
+            <div style={art.infoBox}>
+              <h3 style={{ ...art.infoBoxTitle, color: "#071952" }}>GCC Cross-Border Taxi</h3>
               <p style={art.p}>
                 Most local Eastern Province taxis cannot legally cross Saudi land borders. Our drivers hold valid commercial transport permits for every active crossing:
               </p>
@@ -487,7 +485,7 @@ export function HomePageClient() {
               <p style={{ ...art.p, fontSize: "0.82rem", marginTop: "0.5rem" }}>
                 Saudi residents need a valid Exit &amp; Re-Entry visa. GCC nationals travel on national ID. Our team advises on visa requirements when you book.
               </p>
-              <Link href="/gcc-border-crossing" style={{ ...art.infoLink, color: "#5ba3e8" }}>GCC border crossing guide →</Link>
+              <Link href="/gcc-border-crossing" style={{ ...art.infoLink, color: "#071952" }}>GCC border crossing guide →</Link>
             </div>
           </div>
 
@@ -519,14 +517,14 @@ export function HomePageClient() {
             <div style={art.compareSide}>
               <p style={art.compareLabel}>Pre-Booked Dammam Airport Taxi</p>
               {["Fixed fare — agreed before travel", "Driver waiting at arrivals exit", "Live flight tracking & free delay buffer", "GCC cross-border licensed", "Corporate monthly invoicing", "Wi-Fi · water · USB charging onboard"].map(i => (
-                <p key={i} style={art.compareItem}><span style={{ color: "var(--accent-gold)", marginRight: "0.5rem" }}>✓</span>{i}</p>
+                <p key={i} style={art.compareItem}><span style={{ color: "#071952", marginRight: "0.5rem" }}>✓</span>{i}</p>
               ))}
             </div>
             <div className="art-compare-divider" style={art.compareDivider} />
             <div style={art.compareSide}>
               <p style={art.compareLabel}>Uber / Careem / Street Taxi</p>
               {["Surge pricing at peak & Eid", "45+ min queue at busy arrivals", "No flight tracking, driver may leave", "Cannot cross GCC borders", "No corporate invoicing", "No amenities guaranteed"].map(i => (
-                <p key={i} style={{ ...art.compareItem, color: "var(--text-muted)" }}><span style={{ color: "#555", marginRight: "0.5rem" }}>✗</span>{i}</p>
+                <p key={i} style={{ ...art.compareItem, color: "#64748B" }}><span style={{ color: "#64748B", marginRight: "0.5rem" }}>✗</span>{i}</p>
               ))}
             </div>
           </div>
@@ -580,90 +578,91 @@ export function HomePageClient() {
 
 const styles: Record<string, React.CSSProperties> = {
   hero: {
-    background: "radial-gradient(circle at 30% 50%, rgba(35, 28, 5, 1) 0%, rgba(10, 10, 10, 1) 60%)",
-    backgroundColor: "#0c0c0c",
-    padding: "6rem 0",
-    borderBottom: "1px solid var(--border-color)",
+    background: "#ffffff",
+    borderBottom: "1px solid #e5e7eb",
+    padding: "5rem 0 5rem",
   },
   heroGrid: {
     display: "grid",
     gridTemplateColumns: "1.1fr 1fr",
-    gap: "2.5rem",
-    alignItems: "flex-start",
+    gap: "4rem",
+    alignItems: "center",
   },
   heroTextCol: {
     display: "flex",
     flexDirection: "column",
-    gap: "1.5rem",
+    gap: "1.6rem",
     alignItems: "flex-start",
-    paddingTop: "2rem",
   },
   heroTitle: {
-    fontSize: "clamp(1.3rem, 2.8vw, 2.2rem)",
-    color: "#ffffff",
-    lineHeight: "1.2",
+    fontSize: "clamp(2rem, 4vw, 3.2rem)",
+    color: "#000000",
+    lineHeight: "1.1",
     fontWeight: "800",
-    textShadow: "0 4px 20px rgba(0,0,0,0.5)",
+    letterSpacing: "-0.03em",
   },
   heroSub: {
-    fontSize: "1.15rem",
-    color: "var(--text-secondary)",
-    lineHeight: "1.7",
+    fontSize: "1.05rem",
+    color: "#333333",
+    lineHeight: "1.75",
+    maxWidth: "460px",
   },
   valueProps: {
     display: "flex",
-    gap: "1.5rem",
-    flexWrap: "wrap",
-    marginBottom: "0.5rem",
+    flexDirection: "column" as const,
+    gap: "0.65rem",
   },
   valueItem: {
-    color: "#ffffff",
-    fontSize: "0.95rem",
-    fontWeight: "600",
+    color: "#000000",
+    fontSize: "0.93rem",
+    fontWeight: "500",
     display: "flex",
     alignItems: "center",
+    gap: "0.65rem",
   },
   heroBtnGroup: {
     display: "flex",
-    gap: "1.2rem",
-    marginTop: "0.5rem",
+    gap: "1rem",
     flexWrap: "wrap",
   },
   heroStatsCard: {
     display: "flex",
-    gap: "2.5rem",
-    marginTop: "2rem",
-    padding: "1.5rem 2rem",
+    gap: "0",
+    marginTop: "0.5rem",
     width: "100%",
-    justifyContent: "space-between",
-    borderTop: "1px solid rgba(245, 197, 24, 0.3)",
-    background: "rgba(0, 0, 0, 0.4)",
+    justifyContent: "flex-start",
+    borderTop: "2px solid #071952",
+    paddingTop: "1.6rem",
   },
   heroStatItem: {
     display: "flex",
     flexDirection: "column",
-    gap: "0.25rem",
+    gap: "0.2rem",
+    paddingRight: "2.5rem",
+    borderRight: "1px solid #e5e7eb",
+    marginRight: "2.5rem",
   },
   heroStatVal: {
-    fontSize: "1.8rem",
-    color: "var(--accent-gold)",
+    fontSize: "1.9rem",
+    color: "#071952",
     fontWeight: "800",
+    letterSpacing: "-0.02em",
   },
   heroStatLbl: {
-    fontSize: "0.85rem",
-    color: "#ffffff",
+    fontSize: "0.75rem",
+    color: "#64748B",
     textTransform: "uppercase",
     fontWeight: "600",
-    letterSpacing: "0.5px",
+    letterSpacing: "0.07em",
   },
   heroFormCol: {
     width: "100%",
   },
   /* Trust strip */
   trustStrip: {
-    backgroundColor: "var(--bg-secondary)",
-    borderBottom: "1px solid var(--border-color)",
-    padding: "1rem 0",
+    backgroundColor: "#ffffff",
+    borderBottom: "3px solid #071952",
+    padding: "0",
     overflowX: "auto" as const,
   },
   trustInner: {
@@ -675,13 +674,14 @@ const styles: Record<string, React.CSSProperties> = {
   trustItem: {
     display: "flex",
     alignItems: "center",
-    gap: "0.5rem",
-    padding: "0.6rem 1.5rem",
-    borderRight: "1px solid var(--border-color)",
+    gap: "0.6rem",
+    padding: "1rem 2rem",
+    borderRight: "1px solid #e5e7eb",
     whiteSpace: "nowrap" as const,
+    transition: "background 0.2s",
   },
   trustIcon: { fontSize: "1.1rem" },
-  trustText: { fontSize: "0.82rem", fontWeight: 600, color: "var(--text-secondary)" },
+  trustText: { fontSize: "0.85rem", fontWeight: 700, color: "#071952" },
   /* How It Works */
   howSection: { backgroundColor: "var(--bg-primary)" },
   stepsGrid: {
@@ -702,9 +702,9 @@ const styles: Record<string, React.CSSProperties> = {
   stepNum: {
     fontSize: "0.75rem",
     fontWeight: 800,
-    color: "var(--accent-gold)",
+    color: "#071952",
     letterSpacing: "0.1em",
-    border: "1px solid rgba(245,197,24,0.3)",
+    border: "1px solid #071952",
     padding: "0.2rem 0.6rem",
     borderRadius: "20px",
   },
@@ -712,14 +712,14 @@ const styles: Record<string, React.CSSProperties> = {
     width: "72px",
     height: "72px",
     borderRadius: "50%",
-    background: "rgba(245,197,24,0.08)",
-    border: "1px solid rgba(245,197,24,0.2)",
+    background: "#ffffff",
+    border: "1px solid rgba(37,99,235,0.20)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     fontSize: "1.8rem",
   },
-  stepTitle: { fontSize: "1.1rem", fontWeight: 700, color: "#fff" },
+  stepTitle: { fontSize: "1.1rem", fontWeight: 700, color: "#111111" },
   stepDesc:  { fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 },
   stepsConnector: { display: "none" },
   /* WhatsApp CTA Banner */
@@ -734,8 +734,8 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "2rem",
     flexWrap: "wrap" as const,
   },
-  waTitle: { fontSize: "1.6rem", fontWeight: 800, color: "#fff", marginBottom: "0.4rem" },
-  waSub:   { color: "rgba(255,255,255,0.8)", fontSize: "0.95rem" },
+  waTitle: { fontSize: "1.6rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "0.4rem" },
+  waSub:   { color: "var(--text-secondary)", fontSize: "0.95rem" },
   waBtn: {
     padding: "0.9rem 2rem",
     fontSize: "1rem",
@@ -744,7 +744,7 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     gap: "0.6rem",
     flexShrink: 0,
-    backgroundColor: "#fff",
+    backgroundColor: "#ffffff",
     color: "#075e54",
     borderRadius: "8px",
     border: "none",
@@ -765,7 +765,7 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
   },
   whyCardIcon: { fontSize: "3rem", marginBottom: "1.5rem" },
-  whyCardTitle: { fontSize: "1.15rem", color: "#ffffff", marginBottom: "1rem" },
+  whyCardTitle: { fontSize: "1.15rem", color: "#000000", marginBottom: "1rem" },
   whyCardDesc: { fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: "1.5" },
   routesSection: { backgroundColor: "var(--bg-primary)" },
   routesGrid: {
@@ -780,7 +780,7 @@ const styles: Record<string, React.CSSProperties> = {
     flexDirection: "column" as const,
     gap: "1.5rem",
   },
-  routeCardTitle: { fontSize: "1.2rem", color: "#ffffff", fontWeight: "700" },
+  routeCardTitle: { fontSize: "1.2rem", color: "#000000", fontWeight: "700" },
   routeDetails: {
     display: "flex",
     flexDirection: "column" as const,
@@ -791,7 +791,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   routeDetailItem: { display: "flex", justifyContent: "space-between", fontSize: "0.85rem" },
   routeDetailLabel: { color: "var(--text-muted)" },
-  routeDetailValue: { color: "#ffffff", fontWeight: "600" },
+  routeDetailValue: { color: "var(--text-primary)", fontWeight: "600" },
   routeBtn: { width: "100%" },
   testimonialsSection: {
     backgroundColor: "var(--bg-secondary)",
@@ -804,9 +804,9 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "2rem",
   },
   testCard: { padding: "2.5rem 2rem", textAlign: "center" as const },
-  stars: { color: "var(--accent-gold)", fontSize: "1.2rem", marginBottom: "1rem", letterSpacing: "2px" },
+  stars: { color: "#071952", fontSize: "1.2rem", marginBottom: "1rem", letterSpacing: "2px" },
   testText: { fontSize: "0.95rem", lineHeight: "1.6", color: "var(--text-secondary)", fontStyle: "italic", marginBottom: "1.5rem" },
-  testAuthor: { fontSize: "0.85rem", color: "#ffffff" },
+  testAuthor: { fontSize: "0.85rem", color: "#000000", fontWeight: 700 },
   faqList: {
     display: "flex",
     flexDirection: "column" as const,
@@ -815,49 +815,49 @@ const styles: Record<string, React.CSSProperties> = {
     margin: "0 auto",
   },
   faqItem: {
-    backgroundColor: "var(--bg-secondary)",
+    backgroundColor: "#ffffff",
     border: "1px solid var(--border-color)",
     padding: "1.5rem",
     borderRadius: "6px",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
   },
-  faqQ: { fontSize: "1.05rem", color: "#ffffff", marginBottom: "0.5rem" },
-  faqA: { fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: "1.5" },
+  faqQ: { fontSize: "1.05rem", color: "#000000", marginBottom: "0.5rem", fontWeight: 700 },
+  faqA: { fontSize: "0.95rem", color: "#333333", lineHeight: "1.5" },
 };
 
 const art: Record<string, React.CSSProperties> = {
   wrap: {
-    backgroundColor: "var(--bg-primary)",
+    backgroundColor: "#ffffff",
     borderTop: "1px solid var(--border-color)",
     padding: "5rem 0 4rem",
   },
 
-  /* ── 3D Hero Banner ── */
+  /* ── Hero Banner ── */
   heroBanner: {
     position: "relative",
-    background: "linear-gradient(135deg, rgba(20,15,0,0.95) 0%, rgba(8,8,8,1) 60%, rgba(15,10,0,0.95) 100%)",
-    border: "1px solid rgba(245,197,24,0.25)",
+    background: "#ffffff",
+    border: "1px solid rgba(37,99,235,0.15)",
     borderRadius: "20px",
     padding: "3.5rem",
     marginBottom: "4rem",
     overflow: "hidden",
-    boxShadow: "0 30px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(245,197,24,0.1), inset 0 1px 0 rgba(245,197,24,0.15)",
+    boxShadow: "0 8px 40px rgba(37,99,235,0.08), 0 2px 12px rgba(0,0,0,0.06)",
   },
   heroBannerGlow: {
     position: "absolute",
     top: "-80px", left: "-80px",
     width: "400px", height: "400px",
     borderRadius: "50%",
-    background: "radial-gradient(circle, rgba(245,197,24,0.12) 0%, transparent 70%)",
+    background: "radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%)",
     pointerEvents: "none",
   },
   heroBannerContent: { position: "relative", zIndex: 1 },
   mainTitle: {
     fontSize: "clamp(1.25rem, 2.5vw, 2rem)", fontWeight: 800,
-    color: "#ffffff", lineHeight: 1.25, margin: "0.75rem 0 1.25rem",
-    textShadow: "0 2px 20px rgba(0,0,0,0.5)",
+    color: "#000000", lineHeight: 1.25, margin: "0.75rem 0 1.25rem",
   },
   lead: {
-    fontSize: "0.97rem", color: "var(--text-secondary)", lineHeight: 1.85,
+    fontSize: "0.97rem", color: "#333333", lineHeight: 1.85,
     maxWidth: "820px", marginBottom: "1.25rem",
   },
 
@@ -868,114 +868,113 @@ const art: Record<string, React.CSSProperties> = {
   statCard3d: {
     display: "flex", flexDirection: "column", alignItems: "center",
     padding: "1rem 1.4rem", gap: "0.2rem",
-    background: "linear-gradient(145deg, rgba(40,32,0,0.9), rgba(20,15,0,0.95))",
-    border: "1px solid rgba(245,197,24,0.3)",
+    background: "#071952",
+    border: "1px solid rgba(37,99,235,0.25)",
     borderRadius: "12px",
-    boxShadow: "0 8px 24px rgba(0,0,0,0.5), 0 2px 0 rgba(245,197,24,0.2), inset 0 1px 0 rgba(255,255,255,0.05)",
+    boxShadow: "0 8px 24px rgba(0,0,0,0.25)",
     transform: "translateY(0)",
   },
-  statVal: { fontSize: "1.3rem", fontWeight: 800, color: "var(--accent-gold)" },
-  statLbl: { fontSize: "0.65rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.06em", whiteSpace: "nowrap", textAlign: "center" },
+  statVal: { fontSize: "1.3rem", fontWeight: 800, color: "#ffffff" },
+  statLbl: { fontSize: "0.65rem", color: "rgba(255,255,255,0.65)", textTransform: "uppercase", letterSpacing: "0.06em", whiteSpace: "nowrap", textAlign: "center" },
 
   /* content blocks */
   block: { marginBottom: "3.5rem" },
   h3: {
-    fontSize: "1.2rem", fontWeight: 700, color: "#fff",
-    borderLeft: "3px solid var(--accent-gold)", paddingLeft: "0.8rem",
+    fontSize: "1.2rem", fontWeight: 700, color: "#000000",
+    borderLeft: "4px solid #071952", paddingLeft: "0.8rem",
     marginBottom: "1.2rem",
   },
-  p: { fontSize: "0.95rem", color: "var(--text-secondary)", lineHeight: 1.85, marginBottom: "0.75rem" },
+  p: { fontSize: "0.95rem", color: "#333333", lineHeight: 1.85, marginBottom: "0.75rem" },
 
-  /* 3D feature grid */
+  /* feature grid — white cards with navy top border */
   featureGrid: {
     display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
     gap: "1.2rem", marginTop: "1.5rem",
   },
   featureCard: {
-    background: "linear-gradient(145deg, rgba(25,20,5,0.9), rgba(12,10,2,0.95))",
-    border: "1px solid rgba(245,197,24,0.2)",
-    borderRadius: "12px", padding: "1.5rem",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.45), 0 2px 0 rgba(245,197,24,0.15), inset 0 1px 0 rgba(255,255,255,0.04)",
+    background: "#ffffff",
+    borderTop: "3px solid #071952",
+    border: "1px solid #e5e7eb",
+    borderRadius: "4px", padding: "1.5rem",
+    boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
   },
   featureLine: {
     width: "36px", height: "3px",
-    background: "linear-gradient(90deg, var(--accent-gold), rgba(245,197,24,0.3))",
+    background: "#071952",
     borderRadius: "2px", marginBottom: "1rem",
   },
-  featureTitle: { fontSize: "0.9rem", color: "#fff", display: "block", fontWeight: 700, marginBottom: "0.45rem" },
-  featureDesc: { fontSize: "0.81rem", color: "var(--text-secondary)", lineHeight: 1.65 },
+  featureTitle: { fontSize: "0.9rem", color: "#000000", display: "block", fontWeight: 700, marginBottom: "0.45rem" },
+  featureDesc: { fontSize: "0.82rem", color: "#333333", lineHeight: 1.7 },
 
-  /* route table */
-  routeGrid: { display: "flex", flexDirection: "column", gap: "0.55rem", marginTop: "1.2rem" },
+  /* route table — clean white rows */
+  routeGrid: { display: "flex", flexDirection: "column", gap: "0.4rem", marginTop: "1.2rem" },
   routeRow: {
     display: "flex", justifyContent: "space-between", alignItems: "center",
-    background: "linear-gradient(135deg, rgba(20,16,3,0.8), rgba(10,8,1,0.9))",
-    border: "1px solid rgba(245,197,24,0.15)", borderRadius: "10px",
-    padding: "0.9rem 1.3rem", gap: "1rem",
-    boxShadow: "0 4px 16px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.03)",
+    background: "#ffffff",
+    border: "1px solid #e5e7eb",
+    borderLeft: "3px solid #071952",
+    borderRadius: "4px",
+    padding: "0.85rem 1.2rem", gap: "1rem",
   },
-  routeLeft: { display: "flex", flexDirection: "column", gap: "0.2rem" },
-  routeName: { fontSize: "0.9rem", color: "#fff", fontWeight: 600 },
-  routeMeta: { fontSize: "0.73rem", color: "var(--text-muted)" },
+  routeLeft: { display: "flex", flexDirection: "column", gap: "0.15rem" },
+  routeName: { fontSize: "0.88rem", color: "#000000", fontWeight: 600 },
+  routeMeta: { fontSize: "0.72rem", color: "#64748B" },
   routePrice: {
-    fontSize: "0.88rem", fontWeight: 800, color: "var(--accent-gold)",
+    fontSize: "0.88rem", fontWeight: 800, color: "#071952",
     whiteSpace: "nowrap", flexShrink: 0,
-    textShadow: "0 0 12px rgba(245,197,24,0.4)",
   },
 
-  /* two col */
+  /* two col — white cards */
   twoCol: {
     display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
     gap: "1.5rem", marginBottom: "3.5rem",
   },
   infoBox: {
-    border: "1px solid rgba(245,197,24,0.3)", borderRadius: "14px",
-    padding: "2rem",
-    background: "linear-gradient(145deg, rgba(25,20,5,0.85), rgba(10,8,1,0.95))",
-    boxShadow: "0 12px 40px rgba(0,0,0,0.5), 0 2px 0 rgba(245,197,24,0.2), inset 0 1px 0 rgba(255,255,255,0.04)",
+    borderTop: "4px solid #071952",
+    border: "1px solid #e5e7eb",
+    borderRadius: "4px", padding: "2rem",
+    background: "#ffffff",
+    boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
   },
-  infoBoxTitle: { fontSize: "1.05rem", fontWeight: 700, color: "var(--accent-gold)", marginBottom: "0.9rem" },
+  infoBoxTitle: { fontSize: "1.05rem", fontWeight: 700, color: "#000000", marginBottom: "0.9rem" },
   ul: {
-    paddingLeft: "1.2rem", color: "var(--text-secondary)",
+    paddingLeft: "1.2rem", color: "#333333",
     fontSize: "0.87rem", lineHeight: 2.1, margin: "0.5rem 0 1rem",
   },
-  infoLink: { fontSize: "0.85rem", fontWeight: 700, color: "var(--accent-gold)", textDecoration: "none" },
+  infoLink: { fontSize: "0.85rem", fontWeight: 700, color: "#071952", textDecoration: "underline" },
 
-  /* booking steps */
+  /* booking steps — white */
   stepsRow: {
     display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(200px,1fr))",
     gap: "1.2rem", marginTop: "1.5rem",
   },
   step: {
-    background: "linear-gradient(145deg, rgba(22,18,4,0.9), rgba(10,8,1,0.95))",
-    border: "1px solid rgba(245,197,24,0.18)", borderRadius: "12px",
+    background: "#ffffff",
+    borderTop: "3px solid #071952",
+    border: "1px solid #e5e7eb",
+    borderRadius: "4px",
     padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.6rem",
-    boxShadow: "0 8px 24px rgba(0,0,0,0.4), 0 2px 0 rgba(245,197,24,0.12), inset 0 1px 0 rgba(255,255,255,0.04)",
   },
   stepNum: {
-    width: "40px", height: "40px", borderRadius: "50%",
-    background: "linear-gradient(145deg, #f5c518, #c8920a)",
-    boxShadow: "0 4px 14px rgba(245,197,24,0.45), 0 2px 0 rgba(255,255,255,0.2) inset",
-    color: "#000", display: "flex", alignItems: "center", justifyContent: "center",
-    fontWeight: 800, fontSize: "0.9rem",
+    fontSize: "2rem", fontWeight: 800, color: "#071952", lineHeight: 1,
   },
-  stepTitle: { fontSize: "0.9rem", color: "#fff", fontWeight: 700 },
-  stepDesc: { fontSize: "0.79rem", color: "var(--text-secondary)", lineHeight: 1.65 },
+  stepTitle: { fontSize: "0.9rem", color: "#000000", fontWeight: 700 },
+  stepDesc: { fontSize: "0.79rem", color: "#333333", lineHeight: 1.65 },
 
-  /* compare box */
+  /* compare box — split white/navy */
   compareBox: {
     display: "grid", gridTemplateColumns: "1fr auto 1fr",
     gap: 0,
-    border: "1px solid rgba(245,197,24,0.2)", borderRadius: "14px", overflow: "hidden",
-    background: "linear-gradient(145deg, rgba(18,14,3,0.95), rgba(8,8,8,0.98))",
+    border: "1px solid #e5e7eb", borderRadius: "8px", overflow: "hidden",
+    background: "#ffffff",
     marginBottom: "3.5rem",
-    boxShadow: "0 16px 50px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.04)",
+    boxShadow: "0 4px 16px rgba(0,0,0,0.08)",
   },
   compareSide: { padding: "2rem 2.2rem" },
-  compareDivider: { width: "1px", backgroundColor: "rgba(245,197,24,0.15)" },
+  compareDivider: { width: "1px", backgroundColor: "#e5e7eb" },
   compareLabel: {
     fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.06em",
-    textTransform: "uppercase", color: "var(--accent-gold)", marginBottom: "1.1rem",
+    textTransform: "uppercase", color: "#071952", marginBottom: "1.1rem",
   },
-  compareItem: { fontSize: "0.84rem", color: "var(--text-secondary)", marginBottom: "0.55rem", display: "flex", alignItems: "flex-start" },
+  compareItem: { fontSize: "0.84rem", color: "#000000", marginBottom: "0.55rem", display: "flex", alignItems: "flex-start" },
 };

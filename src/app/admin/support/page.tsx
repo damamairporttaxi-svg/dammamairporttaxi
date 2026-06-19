@@ -19,14 +19,14 @@ export default function AdminSupport() {
   return (
     <div style={{display:"grid",gridTemplateColumns:selected?"1fr 360px":"1fr",gap:"1.25rem",alignItems:"start"}}>
       <div>
-        <h1 style={{color:"#fff",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Support Tickets ({tickets.length})</h1>
+        <h1 style={{color: "var(--text-primary)",fontSize:"1.2rem",fontWeight:800,marginBottom:"1.5rem"}}>Support Tickets ({tickets.length})</h1>
         <div style={{display:"flex",flexDirection:"column",gap:"0.65rem"}}>
           {tickets.length===0&&<div style={{background:"#141414",border:"1px solid #222",borderRadius:10,padding:"2rem",textAlign:"center",color:"#555"}}>No support tickets</div>}
           {tickets.map(t=>(
             <div key={t.id} onClick={()=>setSelected(t)} style={{background:"#141414",border:`1px solid ${selected?.id===t.id?"#f5c518":"#222"}`,borderRadius:10,padding:"1.1rem 1.25rem",cursor:"pointer",transition:"border-color 0.2s"}}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"0.4rem"}}>
-                <span style={{color:"#fff",fontWeight:700,fontSize:"0.9rem"}}>{t.subject}</span>
-                <span style={{background:statusColor[t.status]??"#333",color:"#fff",padding:"2px 8px",borderRadius:4,fontSize:"0.7rem",fontWeight:700}}>{t.status?.replace("_"," ").toUpperCase()}</span>
+                <span style={{color: "var(--text-primary)",fontWeight:700,fontSize:"0.9rem"}}>{t.subject}</span>
+                <span style={{background:statusColor[t.status]??"#333",color: "var(--text-primary)",padding:"2px 8px",borderRadius:4,fontSize:"0.7rem",fontWeight:700}}>{t.status?.replace("_"," ").toUpperCase()}</span>
               </div>
               <div style={{color:"#888",fontSize:"0.78rem"}}>{t.customer_name} · {t.customer_email}</div>
               <div style={{color:"#555",fontSize:"0.75rem",marginTop:2}}>{t.created_at?.split("T")[0]}</div>
@@ -38,13 +38,13 @@ export default function AdminSupport() {
       {selected && (
         <div style={{background:"#141414",border:"1px solid #222",borderRadius:10,padding:"1.5rem",position:"sticky",top:80}}>
           <div style={{display:"flex",justifyContent:"space-between",marginBottom:"1rem"}}>
-            <span style={{color:"#fff",fontWeight:700,fontSize:"0.9rem"}}>Ticket Detail</span>
+            <span style={{color: "var(--text-primary)",fontWeight:700,fontSize:"0.9rem"}}>Ticket Detail</span>
             <button onClick={()=>setSelected(null)} style={{background:"none",border:"none",color:"#555",cursor:"pointer",fontSize:"1.1rem"}}>×</button>
           </div>
           <div style={{marginBottom:"1rem"}}>
             {[["From",selected.customer_name],["Email",selected.customer_email],["Subject",selected.subject],["Date",selected.created_at?.split("T")[0]]].map(([l,v])=>(
               <div key={String(l)} style={{display:"flex",justifyContent:"space-between",padding:"0.4rem 0",borderBottom:"1px solid #1a1a1a",fontSize:"0.82rem"}}>
-                <span style={{color:"#777"}}>{l}</span><span style={{color:"#fff"}}>{String(v)}</span>
+                <span style={{color:"#777"}}>{l}</span><span style={{color: "var(--text-primary)"}}>{String(v)}</span>
               </div>
             ))}
           </div>

@@ -32,7 +32,7 @@ export default function TrackBookingPage() {
 
   const gold = "var(--accent-gold)";
   const s = {
-    input: { background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.85rem 1rem", color: "#fff", fontSize: "1rem", flex: 1, minWidth: 0 },
+    input: { background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.85rem 1rem", color: "var(--text-primary)", fontSize: "1rem", flex: 1, minWidth: 0 },
     card: { background: "#141414", border: "1px solid #222", borderRadius: 12, padding: "2rem", marginTop: "1.5rem" },
     row: { display: "flex" as const, justifyContent: "space-between" as const, padding: "0.6rem 0", borderBottom: "1px solid #1a1a1a" },
   };
@@ -45,7 +45,7 @@ export default function TrackBookingPage() {
       <section style={{ background: "linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.98))", padding: "4rem 0 3rem", borderBottom: "1px solid #222", textAlign: "center" }}>
         <div className="container">
           <span className="badge-gold">Track Your Booking</span>
-          <h1 style={{ color: "#fff", fontSize: "clamp(1.3rem,3vw,2rem)", fontWeight: 800, margin: "0.75rem 0 1rem" }}>
+          <h1 style={{ color: "var(--text-primary)", fontSize: "clamp(1.3rem,3vw,2rem)", fontWeight: 800, margin: "0.75rem 0 1rem" }}>
             Dammam Airport Taxi — Booking Tracker
           </h1>
           <p style={{ color: "#aaa" }}>Enter your booking reference number to track your transfer status in real time.</p>
@@ -68,7 +68,7 @@ export default function TrackBookingPage() {
             <>
               {/* Status progress */}
               <div style={s.card}>
-                <h3 style={{ color: "#fff", marginBottom: "1.25rem", fontSize: "1rem" }}>Booking Status</h3>
+                <h3 style={{ color: "var(--text-primary)", marginBottom: "1.25rem", fontSize: "1rem" }}>Booking Status</h3>
                 {booking.status === "cancelled" ? (
                   <div style={{ textAlign: "center", padding: "1rem", background: "rgba(229,62,62,0.1)", borderRadius: 8 }}>
                     <span style={{ color: "#e53e3e", fontWeight: 700 }}>CANCELLED</span>
@@ -103,7 +103,7 @@ export default function TrackBookingPage() {
 
               {/* Trip details */}
               <div style={s.card}>
-                <h3 style={{ color: "#fff", marginBottom: "1.25rem", fontSize: "1rem" }}>Trip Details</h3>
+                <h3 style={{ color: "var(--text-primary)", marginBottom: "1.25rem", fontSize: "1rem" }}>Trip Details</h3>
                 {[
                   ["Reference", booking.ref],
                   ["Name", booking.name],
@@ -132,12 +132,12 @@ export default function TrackBookingPage() {
                   ].map(([l, v]) => (
                     <div key={l} style={s.row}>
                       <span style={{ color: "#777", fontSize: "0.85rem" }}>{l}</span>
-                      <span style={{ color: "#fff", fontWeight: 600, fontSize: "0.85rem" }}>{v}</span>
+                      <span style={{ color: "var(--text-primary)", fontWeight: 600, fontSize: "0.85rem" }}>{v}</span>
                     </div>
                   ))}
                   {booking.driver_phone && (
                     <a href={`https://wa.me/${booking.driver_phone.replace(/\D/g,"")}`} target="_blank" rel="noreferrer"
-                      style={{ display: "block", textAlign: "center", background: "#25d366", color: "#fff", padding: "0.75rem", borderRadius: 6, textDecoration: "none", fontWeight: 700, marginTop: "1rem", fontSize: "0.9rem" }}>
+                      style={{ display: "block", textAlign: "center", background: "#25d366", color: "var(--text-primary)", padding: "0.75rem", borderRadius: 6, textDecoration: "none", fontWeight: 700, marginTop: "1rem", fontSize: "0.9rem" }}>
                       WhatsApp Your Driver
                     </a>
                   )}

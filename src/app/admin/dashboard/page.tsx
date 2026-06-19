@@ -36,7 +36,7 @@ export default function AdminDashboard() {
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem" }}>
-        <h1 style={{ color: "#fff", fontSize: "1.3rem", fontWeight: 800, margin: 0 }}>Dashboard</h1>
+        <h1 style={{ color: "var(--text-primary)", fontSize: "1.3rem", fontWeight: 800, margin: 0 }}>Dashboard</h1>
         <Link href="/admin/bookings" style={{ background: gold, color: "#000", padding: "0.6rem 1.2rem", borderRadius: 6, textDecoration: "none", fontWeight: 700, fontSize: "0.85rem" }}>
           + New Booking
         </Link>
@@ -56,7 +56,7 @@ export default function AdminDashboard() {
       {/* Recent bookings */}
       <div style={{ background: "#141414", border: "1px solid #222", borderRadius: 10, overflow: "hidden" }}>
         <div style={{ padding: "1rem 1.25rem", borderBottom: "1px solid #1e1e1e", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span style={{ color: "#fff", fontWeight: 700, fontSize: "0.9rem" }}>Recent Bookings</span>
+          <span style={{ color: "var(--text-primary)", fontWeight: 700, fontSize: "0.9rem" }}>Recent Bookings</span>
           <Link href="/admin/bookings" style={{ color: gold, fontSize: "0.8rem", textDecoration: "none" }}>View all →</Link>
         </div>
         <div style={{ overflowX: "auto" }}>
@@ -72,13 +72,13 @@ export default function AdminDashboard() {
               {recent.map((b: any) => (
                 <tr key={b.id} style={{ borderBottom: "1px solid #1a1a1a" }}>
                   <td style={{ padding: "0.6rem 1rem", color: gold, fontFamily: "monospace" }}>{b.ref}</td>
-                  <td style={{ padding: "0.6rem 1rem", color: "#fff" }}>{b.name}</td>
+                  <td style={{ padding: "0.6rem 1rem", color: "var(--text-primary)" }}>{b.name}</td>
                   <td style={{ padding: "0.6rem 1rem", color: "#aaa", maxWidth: 160, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{b.pickup_location}</td>
                   <td style={{ padding: "0.6rem 1rem", color: "#aaa" }}>{b.pickup_date}</td>
                   <td style={{ padding: "0.6rem 1rem", color: "#aaa", textTransform: "uppercase" }}>{b.vehicle_type}</td>
                   <td style={{ padding: "0.6rem 1rem", color: gold, fontWeight: 700 }}>{b.final_price} SAR</td>
                   <td style={{ padding: "0.6rem 1rem" }}>
-                    <span style={{ background: statusColor[b.status] ?? "#333", color: "#fff", padding: "2px 8px", borderRadius: 4, fontSize: "0.72rem", fontWeight: 700 }}>
+                    <span style={{ background: statusColor[b.status] ?? "#333", color: "var(--text-primary)", padding: "2px 8px", borderRadius: 4, fontSize: "0.72rem", fontWeight: 700 }}>
                       {b.status?.toUpperCase()}
                     </span>
                   </td>

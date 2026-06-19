@@ -16,11 +16,11 @@ export default function AdminWhatsappTemplates() {
     setEditing(null); load(); setMsg("Saved!"); setTimeout(()=>setMsg(""),2000);
   }
 
-  const inp = { background:"#0c0c0c", border:"1px solid #333", borderRadius:6, padding:"0.65rem 0.85rem", color:"#fff", fontSize:"0.85rem", width:"100%", boxSizing:"border-box" as const };
+  const inp = { background:"#0c0c0c", border:"1px solid #333", borderRadius:6, padding:"0.65rem 0.85rem", color: "var(--text-primary)", fontSize:"0.85rem", width:"100%", boxSizing:"border-box" as const };
 
   return (
     <div>
-      <h1 style={{color:"#fff",fontSize:"1.2rem",fontWeight:800,marginBottom:"0.5rem"}}>WhatsApp Templates {msg&&<span style={{color:gold,fontSize:"0.85rem",marginLeft:10}}>{msg}</span>}</h1>
+      <h1 style={{color: "var(--text-primary)",fontSize:"1.2rem",fontWeight:800,marginBottom:"0.5rem"}}>WhatsApp Templates {msg&&<span style={{color:gold,fontSize:"0.85rem",marginLeft:10}}>{msg}</span>}</h1>
       <p style={{color:"#888",fontSize:"0.82rem",marginBottom:"1.5rem"}}>Use variables: {"{{name}}"}, {"{{ref}}"}, {"{{date}}"}, {"{{time}}"}, {"{{driver_name}}"}, {"{{driver_phone}}"}, {"{{driver_plate}}"}</p>
 
       <div style={{display:"grid",gridTemplateColumns:editing?"1fr 420px":"1fr",gap:"1.25rem",alignItems:"start"}}>
@@ -29,11 +29,11 @@ export default function AdminWhatsappTemplates() {
             <div key={t.id} style={{background:"#141414",border:`1px solid ${editing?.id===t.id?"#f5c518":"#222"}`,borderRadius:10,padding:"1.25rem"}}>
               <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:"0.75rem"}}>
                 <div>
-                  <span style={{color:"#fff",fontWeight:700,fontSize:"0.9rem"}}>{t.name}</span>
+                  <span style={{color: "var(--text-primary)",fontWeight:700,fontSize:"0.9rem"}}>{t.name}</span>
                   <span style={{color:"#555",fontSize:"0.75rem",marginLeft:8,fontFamily:"monospace"}}>{t.trigger}</span>
                 </div>
                 <div style={{display:"flex",gap:"0.5rem",alignItems:"center"}}>
-                  <span style={{background:t.active?"#2e7d32":"#555",color:"#fff",padding:"2px 7px",borderRadius:4,fontSize:"0.7rem",fontWeight:700}}>{t.active?"ON":"OFF"}</span>
+                  <span style={{background:t.active?"#2e7d32":"#555",color: "var(--text-primary)",padding:"2px 7px",borderRadius:4,fontSize:"0.7rem",fontWeight:700}}>{t.active?"ON":"OFF"}</span>
                   <button onClick={()=>setEditing({...t})} style={{background:"#222",color:"#aaa",border:"1px solid #333",borderRadius:5,padding:"4px 10px",cursor:"pointer",fontSize:"0.78rem"}}>Edit</button>
                 </div>
               </div>
@@ -46,7 +46,7 @@ export default function AdminWhatsappTemplates() {
         {editing&&(
           <div style={{background:"#141414",border:"1px solid #f5c518",borderRadius:10,padding:"1.5rem",position:"sticky",top:80}}>
             <div style={{display:"flex",justifyContent:"space-between",marginBottom:"1rem"}}>
-              <span style={{color:"#fff",fontWeight:700}}>Edit Template</span>
+              <span style={{color: "var(--text-primary)",fontWeight:700}}>Edit Template</span>
               <button onClick={()=>setEditing(null)} style={{background:"none",border:"none",color:"#555",cursor:"pointer",fontSize:"1.1rem"}}>×</button>
             </div>
             <div style={{display:"flex",flexDirection:"column",gap:"0.85rem"}}>

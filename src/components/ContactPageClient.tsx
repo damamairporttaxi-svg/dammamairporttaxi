@@ -203,7 +203,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroSub: {
     fontSize: "1.05rem",
-    color: "var(--text-secondary)",
+    color: "#ffffff",
     maxWidth: "600px",
   },
   contactGrid: {
@@ -219,7 +219,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   cardTitle: {
     fontSize: "1.5rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     borderBottom: "2px solid var(--border-color-light)",
     paddingBottom: "0.5rem",
   },
@@ -248,7 +248,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   detailVal: {
     fontSize: "1rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
   },
   whatsappCallout: {
     backgroundColor: "rgba(37, 211, 102, 0.05)",
@@ -273,7 +273,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   label: {
     fontSize: "0.85rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     fontWeight: "600",
   },
   input: {
@@ -321,7 +321,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   successText: {
     fontSize: "1.1rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     maxWidth: "350px",
   },
 };

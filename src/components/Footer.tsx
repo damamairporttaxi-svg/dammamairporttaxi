@@ -44,15 +44,15 @@ export const Footer: React.FC = () => {
           </p>
           <div style={styles.contactDetails}>
             <p style={styles.contactItem}>
-              <strong style={{ color: "var(--accent-gold)" }}>{t("addressLabel")}:</strong><br />
+              <strong style={{ color: "#60A5FA" }}>{t("addressLabel")}:</strong><br />
               {t("addressVal")}
             </p>
             <p style={styles.contactItem}>
-              <strong style={{ color: "var(--accent-gold)" }}>{t("phoneLabel")}:</strong><br />
+              <strong style={{ color: "#60A5FA" }}>{t("phoneLabel")}:</strong><br />
               <Link href="tel:+966501234567" style={styles.link}>{t("phoneVal")}</Link>
             </p>
             <p style={styles.contactItem}>
-              <strong style={{ color: "var(--accent-gold)" }}>{t("emailLabel")}:</strong><br />
+              <strong style={{ color: "#60A5FA" }}>{t("emailLabel")}:</strong><br />
               <Link href="mailto:info@dammamairporttaxi.com" style={styles.link}>{t("emailVal")}</Link>
             </p>
           </div>
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
           </span>
           <div style={styles.bottomLinks}>
             <Link href="/privacy-policy" style={styles.bottomLink}>{t("privacyTitle")}</Link>
-            <span style={{ color: "var(--text-muted)" }}>|</span>
+            <span style={{ color: "rgba(255,255,255,0.6)" }}>|</span>
             <Link href="/terms" style={styles.bottomLink}>{t("termsTitle")}</Link>
           </div>
         </div>
@@ -111,8 +111,8 @@ export const Footer: React.FC = () => {
 
 const styles: Record<string, React.CSSProperties> = {
   footer: {
-    backgroundColor: "#080808",
-    borderTop: "1px solid var(--border-color)",
+    backgroundColor: "#071952",
+    borderTop: "1px solid rgba(255,255,255,0.08)",
     padding: "5rem 0 2rem 0",
     marginTop: "auto",
   },
@@ -133,10 +133,10 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "0.8rem",
   },
   logoBadge: {
-    backgroundColor: "var(--accent-gold)",
-    color: "#000000",
+    backgroundColor: "#ffffff",
+    color: "#071952",
     padding: "0.3rem 0.6rem",
-    borderRadius: "4px",
+    borderRadius: "6px",
     fontWeight: 800,
     fontSize: "0.75rem",
   },
@@ -147,7 +147,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   aboutText: {
     fontSize: "0.95rem",
-    color: "var(--text-secondary)",
+    color: "rgba(255,255,255,0.85)",
     maxWidth: "400px",
   },
   contactDetails: {
@@ -157,13 +157,13 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "0.9rem",
   },
   contactItem: {
-    color: "var(--text-secondary)",
+    color: "rgba(255,255,255,0.85)",
   },
   colTitle: {
     fontSize: "1.1rem",
     fontWeight: 600,
     color: "#ffffff",
-    borderBottom: "2px solid var(--border-color-light)",
+    borderBottom: "2px solid rgba(37,99,235,0.40)",
     paddingBottom: "0.5rem",
     marginBottom: "0.5rem",
   },
@@ -177,11 +177,11 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "0.9rem",
   },
   link: {
-    color: "var(--text-secondary)",
+    color: "rgba(255,255,255,0.85)",
     transition: "color var(--transition-fast)",
   },
   bottomBar: {
-    borderTop: "1px solid var(--border-color)",
+    borderTop: "1px solid rgba(255,255,255,0.08)",
     paddingTop: "2rem",
   },
   bottomContainer: {
@@ -192,7 +192,7 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "1rem",
   },
   copyright: {
-    color: "var(--text-muted)",
+    color: "rgba(255,255,255,0.6)",
     fontSize: "0.85rem",
   },
   bottomLinks: {
@@ -201,11 +201,11 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "0.85rem",
   },
   bottomLink: {
-    color: "var(--text-secondary)",
+    color: "rgba(255,255,255,0.85)",
   },
   disclaimerText: {
     fontSize: "0.75rem",
-    color: "var(--text-muted)",
+    color: "rgba(255,255,255,0.6)",
     textAlign: "center",
   },
 };

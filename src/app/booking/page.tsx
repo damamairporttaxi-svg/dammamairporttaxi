@@ -70,10 +70,10 @@ export default function BookingPage() {
   const gold = "var(--accent-gold)";
   const s = {
     hero: { background: "linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.98))", padding: "4rem 0 3rem", borderBottom: "1px solid #222" },
-    h1: { fontSize: "clamp(1.3rem,3vw,2rem)", color: "#fff", fontWeight: 800, margin: "0.5rem 0 1rem" },
+    h1: { fontSize: "clamp(1.3rem,3vw,2rem)", color: "var(--text-primary)", fontWeight: 800, margin: "0.5rem 0 1rem" },
     card: { background: "#141414", border: "1px solid #222", borderRadius: 12, padding: "2rem" },
     label: { display: "block" as const, color: "#aaa", fontSize: "0.82rem", fontWeight: 600, marginBottom: 6, textTransform: "uppercase" as const },
-    input: { width: "100%", background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.75rem 1rem", color: "#fff", fontSize: "0.95rem", boxSizing: "border-box" as const },
+    input: { width: "100%", background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.75rem 1rem", color: "var(--text-primary)", fontSize: "0.95rem", boxSizing: "border-box" as const },
     btn: { background: gold, color: "#000", border: "none", borderRadius: 6, padding: "0.9rem 2rem", fontWeight: 700, cursor: "pointer", fontSize: "1rem", width: "100%" },
     grid2: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" },
     step: (active: boolean) => ({
@@ -111,7 +111,7 @@ export default function BookingPage() {
           {/* Step 1 — Trip Details */}
           {step === 1 && (
             <div style={s.card}>
-              <h2 style={{ color: "#fff", marginBottom: "1.5rem", fontSize: "1.15rem" }}>Trip Details</h2>
+              <h2 style={{ color: "var(--text-primary)", marginBottom: "1.5rem", fontSize: "1.15rem" }}>Trip Details</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
                 {/* Service type */}
                 <div>
@@ -152,7 +152,7 @@ export default function BookingPage() {
                         background: form.vehicle_type === v.id ? "rgba(245,197,24,0.06)" : "transparent",
                       }}>
                         {v.badge && <span style={{ position: "absolute", top: 8, right: 8, background: gold, color: "#000", fontSize: "0.65rem", fontWeight: 700, padding: "2px 6px", borderRadius: 4 }}>{v.badge}</span>}
-                        <div style={{ fontWeight: 700, color: "#fff", fontSize: "0.9rem" }}>{v.label}</div>
+                        <div style={{ fontWeight: 700, color: "var(--text-primary)", fontSize: "0.9rem" }}>{v.label}</div>
                         <div style={{ color: "#888", fontSize: "0.78rem", marginTop: 4 }}>{v.pax} passengers</div>
                       </div>
                     ))}
@@ -167,7 +167,7 @@ export default function BookingPage() {
           {/* Step 2 — Contact Info */}
           {step === 2 && (
             <div style={s.card}>
-              <h2 style={{ color: "#fff", marginBottom: "1.5rem", fontSize: "1.15rem" }}>Your Information</h2>
+              <h2 style={{ color: "var(--text-primary)", marginBottom: "1.5rem", fontSize: "1.15rem" }}>Your Information</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.2rem" }}>
                 <div><label style={s.label}>Full Name *</label><input style={s.input} value={form.name} onChange={e => set("name", e.target.value)} placeholder="Enter your full name" /></div>
                 <div style={s.grid2}>
@@ -191,7 +191,7 @@ export default function BookingPage() {
                 <div style={{ background: "#0c0c0c", border: "1px solid #333", borderRadius: 8, padding: "1.25rem" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
                     <span style={{ color: "#aaa" }}>Base fare ({form.vehicle_type})</span>
-                    <span style={{ color: "#fff", fontWeight: 600 }}>{form.price} SAR</span>
+                    <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>{form.price} SAR</span>
                   </div>
                   {promoResult?.discount_amount ? (
                     <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
@@ -200,12 +200,12 @@ export default function BookingPage() {
                     </div>
                   ) : null}
                   <div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid #333", paddingTop: 8 }}>
-                    <span style={{ color: "#fff", fontWeight: 700 }}>Total</span>
+                    <span style={{ color: "var(--text-primary)", fontWeight: 700 }}>Total</span>
                     <span style={{ color: gold, fontWeight: 800, fontSize: "1.1rem" }}>{promoResult?.final_price ?? form.price} SAR</span>
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem" }}>
-                  <button onClick={() => setStep(1)} style={{ ...s.btn, background: "#222", color: "#fff", flex: 1 }}>← Back</button>
+                  <button onClick={() => setStep(1)} style={{ ...s.btn, background: "#222", color: "var(--text-primary)", flex: 1 }}>← Back</button>
                   <button onClick={() => { if (form.name && form.email && form.phone) setStep(3); else alert("Please fill your name, email, and phone"); }} style={{ ...s.btn, flex: 2 }}>Review Booking →</button>
                 </div>
               </div>
@@ -215,7 +215,7 @@ export default function BookingPage() {
           {/* Step 3 — Confirm */}
           {step === 3 && (
             <div style={s.card}>
-              <h2 style={{ color: "#fff", marginBottom: "1.5rem", fontSize: "1.15rem" }}>Confirm Your Booking</h2>
+              <h2 style={{ color: "var(--text-primary)", marginBottom: "1.5rem", fontSize: "1.15rem" }}>Confirm Your Booking</h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", marginBottom: "1.5rem" }}>
                 {[
                   ["Name", form.name], ["Email", form.email], ["Phone", form.phone],
@@ -227,11 +227,11 @@ export default function BookingPage() {
                 ].map(([l, v]) => (
                   <div key={l} style={{ display: "flex", justifyContent: "space-between", padding: "0.5rem 0", borderBottom: "1px solid #1a1a1a" }}>
                     <span style={{ color: "#777", fontSize: "0.85rem" }}>{l}</span>
-                    <span style={{ color: "#fff", fontSize: "0.85rem", fontWeight: 600, textAlign: "right", maxWidth: "55%" }}>{v}</span>
+                    <span style={{ color: "var(--text-primary)", fontSize: "0.85rem", fontWeight: 600, textAlign: "right", maxWidth: "55%" }}>{v}</span>
                   </div>
                 ))}
                 <div style={{ display: "flex", justifyContent: "space-between", padding: "0.75rem 0", borderTop: "2px solid #333", marginTop: 4 }}>
-                  <span style={{ color: "#fff", fontWeight: 700 }}>Total Payable</span>
+                  <span style={{ color: "var(--text-primary)", fontWeight: 700 }}>Total Payable</span>
                   <span style={{ color: gold, fontWeight: 800, fontSize: "1.2rem" }}>{promoResult?.final_price ?? form.price} SAR</span>
                 </div>
               </div>
@@ -239,7 +239,7 @@ export default function BookingPage() {
                 Payment on arrival. By confirming you agree to our Terms of Service.
               </p>
               <div style={{ display: "flex", gap: "0.75rem" }}>
-                <button onClick={() => setStep(2)} style={{ ...s.btn, background: "#222", color: "#fff", flex: 1 }}>← Back</button>
+                <button onClick={() => setStep(2)} style={{ ...s.btn, background: "#222", color: "var(--text-primary)", flex: 1 }}>← Back</button>
                 <button onClick={submitBooking} disabled={loading} style={{ ...s.btn, flex: 2, opacity: loading ? 0.7 : 1 }}>
                   {loading ? "Confirming..." : "Confirm Booking"}
                 </button>

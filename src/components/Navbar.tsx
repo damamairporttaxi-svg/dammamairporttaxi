@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useLanguage } from "../context/LanguageContext";
 
 export const Navbar: React.FC = () => {
-  const { locale, setLocale, t, isRtl } = useLanguage();
+  const { locale, setLocale, t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleLanguage = () => {
@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
       <div style={styles.topBanner}>
         <div className="container" style={styles.topBannerContainer}>
           <span style={styles.bannerText}>
-            {t("urgentCall")} <strong style={{ color: "var(--accent-gold)" }}>+966 50 123 4567</strong>
+            {t("urgentCall")} <strong style={{ color: "#60A5FA" }}>+966 50 123 4567</strong>
           </span>
           <button onClick={toggleLanguage} style={styles.langToggleBtn}>
             {locale === "en" ? "العربية (AR)" : "English (EN)"}
@@ -60,10 +60,10 @@ export const Navbar: React.FC = () => {
           </nav>
 
           <div className="nav-desktop-actions" style={styles.desktopActions}>
-            <button onClick={toggleLanguage} className="btn" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem", border: "1px solid var(--accent-gold)", color: "var(--accent-gold)", backgroundColor: "transparent" }}>
+            <button onClick={toggleLanguage} className="btn" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem", border: "1px solid rgba(255,255,255,0.25)", color: "#ffffff", backgroundColor: "transparent" }}>
               {locale === "en" ? "العربية" : "English"}
             </button>
-            <Link href="/#booking" className="btn btn-primary" style={{ padding: "0.5rem 1.2rem", fontSize: "0.85rem" }}>
+            <Link href="/#booking" className="btn" style={{ padding: "0.5rem 1.2rem", fontSize: "0.85rem", backgroundColor: "#ffffff", color: "#071952", border: "2px solid #ffffff", borderRadius: "8px", fontWeight: 700 }}>
               {t("bookNow")}
             </Link>
           </div>
@@ -104,10 +104,10 @@ export const Navbar: React.FC = () => {
               </Link>
             ))}
             <div style={{ padding: "1.5rem 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
-              <Link 
-                href="/#booking" 
-                className="btn btn-primary" 
-                style={{ width: "100%" }}
+              <Link
+                href="/#booking"
+                className="btn"
+                style={{ width: "100%", backgroundColor: "#ffffff", color: "#071952", border: "2px solid #ffffff", borderRadius: "8px", fontWeight: 700 }}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {t("bookNow")}
@@ -131,8 +131,8 @@ export const Navbar: React.FC = () => {
 
 const styles: Record<string, React.CSSProperties> = {
   topBanner: {
-    backgroundColor: "#000000",
-    borderBottom: "1px solid var(--border-color)",
+    backgroundColor: "#071952",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
     padding: "0.5rem 0",
     fontSize: "0.85rem",
   },
@@ -144,12 +144,12 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "0.5rem",
   },
   bannerText: {
-    color: "var(--text-secondary)",
+    color: "rgba(255,255,255,0.80)",
   },
   langToggleBtn: {
     background: "transparent",
-    border: "1px solid var(--border-color-light)",
-    color: "var(--text-primary)",
+    border: "1px solid rgba(255,255,255,0.20)",
+    color: "#ffffff",
     padding: "0.2rem 0.6rem",
     borderRadius: "4px",
     cursor: "pointer",
@@ -161,11 +161,11 @@ const styles: Record<string, React.CSSProperties> = {
     position: "sticky",
     top: 0,
     zIndex: 100,
-    backgroundColor: "rgba(12, 12, 12, 0.9)",
+    backgroundColor: "#071952",
     backdropFilter: "blur(12px)",
     WebkitBackdropFilter: "blur(12px)",
-    borderBottom: "1px solid var(--border-color)",
-    padding: "0.8rem 0",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    padding: "0.9rem 0",
   },
   navContainer: {
     display: "flex",
@@ -178,10 +178,10 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "0.8rem",
   },
   logoBadge: {
-    backgroundColor: "var(--accent-gold)",
-    color: "#000000",
+    backgroundColor: "#ffffff",
+    color: "#071952",
     padding: "0.4rem 0.6rem",
-    borderRadius: "4px",
+    borderRadius: "6px",
     fontWeight: 800,
     fontSize: "0.75rem",
     letterSpacing: "0.05em",
@@ -195,15 +195,15 @@ const styles: Record<string, React.CSSProperties> = {
   },
   logoTitle: {
     fontSize: "1.25rem",
-    fontWeight: 800,
+    fontWeight: 700,
     color: "#ffffff",
     letterSpacing: "-0.01em",
   },
   logoSub: {
     fontSize: "0.7rem",
-    color: "var(--text-secondary)",
+    color: "#60A5FA",
     textTransform: "uppercase",
-    letterSpacing: "0.05em",
+    letterSpacing: "0.06em",
     marginTop: "-2px",
   },
   desktopNav: {
@@ -214,7 +214,7 @@ const styles: Record<string, React.CSSProperties> = {
   navLink: {
     fontSize: "0.9rem",
     fontWeight: 500,
-    color: "var(--text-secondary)",
+    color: "rgba(255,255,255,0.80)",
     transition: "color var(--transition-fast)",
   },
   desktopActions: {
@@ -236,7 +236,7 @@ const styles: Record<string, React.CSSProperties> = {
   hamburgerBar: {
     width: "100%",
     height: "2px",
-    backgroundColor: "var(--text-primary)",
+    backgroundColor: "#ffffff",
     transition: "all var(--transition-fast)",
   },
   mobileNavDrawer: {
@@ -244,27 +244,27 @@ const styles: Record<string, React.CSSProperties> = {
     top: "100%",
     left: 0,
     right: 0,
-    backgroundColor: "var(--bg-secondary)",
-    borderBottom: "1px solid var(--border-color)",
+    backgroundColor: "#071952",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
     padding: "1.5rem",
     display: "flex",
     flexDirection: "column",
     gap: "1rem",
-    boxShadow: "var(--shadow-lg)",
+    boxShadow: "0 16px 40px rgba(0,0,0,0.3)",
   },
   mobileNavLink: {
     fontSize: "1rem",
     fontWeight: 500,
-    padding: "0.5rem 0",
-    borderBottom: "1px solid rgba(255, 255, 255, 0.05)",
-    color: "var(--text-primary)",
+    padding: "0.6rem 0",
+    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    color: "rgba(255,255,255,0.85)",
   },
   mobileLangBtn: {
     background: "transparent",
-    border: "1px solid var(--accent-gold)",
-    color: "var(--accent-gold)",
+    border: "1px solid #2563EB",
+    color: "#60A5FA",
     padding: "0.6rem",
-    borderRadius: "6px",
+    borderRadius: "8px",
     cursor: "pointer",
     fontWeight: 600,
     textAlign: "center",

@@ -28,11 +28,11 @@ export default function AdminPromoCodes() {
   }
 
   const gold = "#f5c518";
-  const inp = { background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.65rem 0.85rem", color: "#fff", fontSize: "0.85rem" };
+  const inp = { background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.65rem 0.85rem", color: "var(--text-primary)", fontSize: "0.85rem" };
 
   return (
     <div>
-      <h1 style={{ color: "#fff", fontSize: "1.2rem", fontWeight: 800, marginBottom: "1.5rem" }}>Promo Codes {msg && <span style={{ color: gold, fontSize: "0.85rem", marginLeft: 10 }}>{msg}</span>}</h1>
+      <h1 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: 800, marginBottom: "1.5rem" }}>Promo Codes {msg && <span style={{ color: gold, fontSize: "0.85rem", marginLeft: 10 }}>{msg}</span>}</h1>
 
       {/* Create form */}
       <div style={{ background: "#141414", border: "1px solid #222", borderRadius: 10, padding: "1.5rem", marginBottom: "1.5rem" }}>
@@ -63,12 +63,12 @@ export default function AdminPromoCodes() {
                 <tr key={c.id} style={{ borderBottom: "1px solid #1a1a1a" }}>
                   <td style={{ padding: "0.6rem 1rem", color: gold, fontFamily: "monospace", fontWeight: 700 }}>{c.code}</td>
                   <td style={{ padding: "0.6rem 1rem", color: "#aaa" }}>{c.discount_type}</td>
-                  <td style={{ padding: "0.6rem 1rem", color: "#fff", fontWeight: 600 }}>{c.discount_value}{c.discount_type === "percentage" ? "%" : " SAR"}</td>
+                  <td style={{ padding: "0.6rem 1rem", color: "var(--text-primary)", fontWeight: 600 }}>{c.discount_value}{c.discount_type === "percentage" ? "%" : " SAR"}</td>
                   <td style={{ padding: "0.6rem 1rem", color: "#aaa" }}>{c.min_order ?? "-"}</td>
                   <td style={{ padding: "0.6rem 1rem", color: "#aaa" }}>{c.used_count}/{c.max_uses ?? "∞"}</td>
                   <td style={{ padding: "0.6rem 1rem", color: "#aaa" }}>{c.expires_at?.split("T")[0] ?? "Never"}</td>
                   <td style={{ padding: "0.6rem 1rem" }}>
-                    <span style={{ background: c.active ? "#2e7d32" : "#555", color: "#fff", padding: "2px 8px", borderRadius: 4, fontSize: "0.72rem", fontWeight: 700 }}>
+                    <span style={{ background: c.active ? "#2e7d32" : "#555", color: "var(--text-primary)", padding: "2px 8px", borderRadius: 4, fontSize: "0.72rem", fontWeight: 700 }}>
                       {c.active ? "ACTIVE" : "OFF"}
                     </span>
                   </td>

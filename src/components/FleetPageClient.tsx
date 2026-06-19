@@ -102,7 +102,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroSub: {
     fontSize: "1.05rem",
-    color: "var(--text-secondary)",
+    color: "#ffffff",
     maxWidth: "600px",
   },
   comfortGrid: {

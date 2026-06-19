@@ -338,7 +338,7 @@ const S: Record<string,React.CSSProperties> = {
   crumbCurrent: { color:"var(--accent-gold)", fontWeight:600 },
   heroH1: {
     fontSize:"clamp(1.2rem,2.5vw,1.9rem)", fontWeight:800,
-    color:"#fff", lineHeight:1.15, maxWidth:"700px",
+    color: "var(--text-primary)", lineHeight:1.15, maxWidth:"700px",
   },
   heroP: {
     fontSize:"1.05rem", color:"var(--text-secondary)",
@@ -365,7 +365,7 @@ const S: Record<string,React.CSSProperties> = {
     padding:"2.5rem 0",
   },
   featTitle: {
-    fontSize:"1.15rem", fontWeight:700, color:"#fff",
+    fontSize:"1.15rem", fontWeight:700, color: "var(--text-primary)",
     marginBottom:"1.5rem", display:"flex", alignItems:"center", gap:"0.5rem",
   },
   featGrid: {
@@ -387,11 +387,11 @@ const S: Record<string,React.CSSProperties> = {
   featFlag: { fontSize:"2rem" },
   featCat:  { fontSize:"0.72rem", fontWeight:700, letterSpacing:"0.04em" },
   featBody: { padding:"1rem 1.2rem", display:"flex", flexDirection:"column", gap:"0.6rem" },
-  featName: { fontSize:"0.95rem", fontWeight:700, color:"#fff", lineHeight:1.4 },
+  featName: { fontSize:"0.95rem", fontWeight:700, color: "var(--text-primary)", lineHeight:1.4 },
   featMeta: { display:"flex", gap:"0.4rem", flexWrap:"wrap" },
   featPill: {
     fontSize:"0.72rem", color:"var(--text-secondary)",
-    backgroundColor:"rgba(255,255,255,0.05)", border:"1px solid var(--border-color)",
+    backgroundColor: "rgba(255, 255, 255, 0.1)", border:"1px solid var(--border-color)",
     padding:"0.2rem 0.5rem", borderRadius:"4px",
   },
   featArrow: { fontSize:"0.8rem", fontWeight:700, marginTop:"0.25rem" },
@@ -419,7 +419,7 @@ const S: Record<string,React.CSSProperties> = {
     color:"#000", fontWeight:700,
   },
   tabBadge: {
-    backgroundColor:"rgba(255,255,255,0.1)", color:"var(--text-muted)",
+    backgroundColor: "rgba(255, 255, 255, 0.1)", color:"var(--text-muted)",
     fontSize:"0.7rem", fontWeight:700, padding:"0.1rem 0.45rem",
     borderRadius:"20px",
   },
@@ -437,7 +437,7 @@ const S: Record<string,React.CSSProperties> = {
   },
   catHeaderLeft: { display:"flex", alignItems:"flex-start", gap:"0.75rem" },
   catIcon: { fontSize:"1.6rem", lineHeight:1, marginTop:"2px" },
-  catTitle: { fontSize:"1.2rem", fontWeight:700, color:"#fff", marginBottom:"0.3rem" },
+  catTitle: { fontSize:"1.2rem", fontWeight:700, color: "var(--text-primary)", marginBottom:"0.3rem" },
   catDesc:  { fontSize:"0.83rem", color:"var(--text-secondary)", lineHeight:1.5, maxWidth:"500px" },
   catCount: {
     fontSize:"0.75rem", fontWeight:700, padding:"0.25rem 0.75rem",
@@ -479,7 +479,7 @@ const S: Record<string,React.CSSProperties> = {
     borderRadius:"20px", letterSpacing:"0.04em",
   },
   cardTitle: {
-    fontSize:"0.97rem", fontWeight:700, color:"#fff",
+    fontSize:"0.97rem", fontWeight:700, color: "var(--text-primary)",
     lineHeight:1.35, whiteSpace:"nowrap", overflow:"hidden", textOverflow:"ellipsis",
   },
   cardIntro: {
@@ -489,7 +489,7 @@ const S: Record<string,React.CSSProperties> = {
   cardMeta: { display:"flex", gap:"0.4rem", flexWrap:"wrap" },
   cardMetaBadge: {
     fontSize:"0.72rem", color:"var(--text-secondary)",
-    backgroundColor:"rgba(255,255,255,0.04)",
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
     border:"1px solid var(--border-color)",
     padding:"0.18rem 0.5rem", borderRadius:"4px",
   },
@@ -507,7 +507,7 @@ const S: Record<string,React.CSSProperties> = {
   },
   btnBook: {
     padding:"0.45rem 1rem", borderRadius:"6px",
-    backgroundColor:"#25d366", color:"#fff",
+    backgroundColor:"#25d366", color: "var(--text-primary)",
     fontSize:"0.78rem", fontWeight:700,
     textDecoration:"none", textAlign:"center",
     whiteSpace:"nowrap",
@@ -523,12 +523,12 @@ const S: Record<string,React.CSSProperties> = {
     alignItems:"center", gap:"2rem", flexWrap:"wrap",
   },
   ctaText: {},
-  ctaH2: { fontSize:"1.6rem", fontWeight:800, color:"#fff", marginBottom:"0.4rem" },
-  ctaP:  { color:"rgba(255,255,255,0.85)", fontSize:"0.95rem" },
+  ctaH2: { fontSize:"1.6rem", fontWeight:800, color: "#ffffff", marginBottom:"0.4rem" },
+  ctaP:  { color: "#ffffff", fontSize:"0.95rem" },
   ctaBtn: {
     display:"inline-flex", alignItems:"center", gap:"0.6rem",
     padding:"0.9rem 2rem", borderRadius:"8px",
-    backgroundColor:"#fff", color:"#075e54",
+    backgroundColor: "#ffffff", color:"#075e54",
     fontSize:"1rem", fontWeight:700, textDecoration:"none",
     flexShrink:0, whiteSpace:"nowrap",
   },

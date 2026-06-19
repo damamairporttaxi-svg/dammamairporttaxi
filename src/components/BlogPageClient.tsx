@@ -475,7 +475,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroSub: {
     fontSize: "1.05rem",
-    color: "var(--text-secondary)",
+    color: "#ffffff",
     maxWidth: "600px",
   },
   blogGrid: {
@@ -507,7 +507,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   cardTitle: {
     fontSize: "1.2rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     marginBottom: "1rem",
     lineHeight: "1.4",
   },
@@ -559,7 +559,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   modalTitle: {
     fontSize: "1.6rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     lineHeight: "1.3",
     marginBottom: "0.5rem",
   },

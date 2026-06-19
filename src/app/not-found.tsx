@@ -81,7 +81,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   title: {
     fontSize: "2rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     fontWeight: "700",
   },
   subtitle: {
@@ -113,7 +113,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   cardLabel: {
     fontSize: "0.85rem",
-    color: "#ffffff",
+    color: "var(--text-primary)",
     fontWeight: "600",
   },
   homeBtn: {
