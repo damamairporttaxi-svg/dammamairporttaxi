@@ -138,9 +138,9 @@ export const BookingForm: React.FC = () => {
             >
               <div style={{
                 ...F.stepDot,
-                background: step > s.n ? "#ffffff" : step === s.n ? "#ffffff" : "#0a47b0",
-                color: step >= s.n ? "#0C58D1" : "#64748B",
-                boxShadow: step === s.n ? "0 0 0 3px rgba(255,255,255,0.25)" : "none",
+                background: step > s.n ? "#0C58D1" : step === s.n ? "#0C58D1" : "#f0f0f0",
+                color: step >= s.n ? "#ffffff" : "#64748B",
+                boxShadow: step === s.n ? "0 0 0 3px rgba(12,88,209,0.20)" : "none",
               }}>
                 {step > s.n ? <span style={{display:"flex"}}>{Icon.check(13)}</span> : s.n}
               </div>
@@ -149,7 +149,7 @@ export const BookingForm: React.FC = () => {
               </span>
             </button>
             {i < 2 && (
-              <div style={{ ...F.stepBar, background: step > s.n ? "#ffffff" : "#0a47b0" }} />
+              <div style={{ ...F.stepBar, background: step > s.n ? "#0C58D1" : "#e5e7eb" }} />
             )}
           </React.Fragment>
         ))}
@@ -166,9 +166,9 @@ export const BookingForm: React.FC = () => {
                 <button key={s.id} type="button" onClick={() => setServiceType(s.id)}
                   style={{
                     ...F.pill,
-                    background:   serviceType === s.id ? "#ffffff" : "transparent",
-                    color:        serviceType === s.id ? "#0C58D1" : "#94A3B8",
-                    borderColor:  serviceType === s.id ? "#ffffff" : "rgba(255,255,255,0.12)",
+                    background:   serviceType === s.id ? "#0C58D1" : "transparent",
+                    color:        serviceType === s.id ? "#ffffff" : "#64748B",
+                    borderColor:  serviceType === s.id ? "#0C58D1" : "#e5e7eb",
                   }}>
                   <span style={{ display:"flex", opacity: serviceType === s.id ? 1 : 0.6 }}>
                     {s.IconC(15)}
@@ -204,7 +204,7 @@ export const BookingForm: React.FC = () => {
             <div style={F.grid2}>
               <div style={F.field}>
                 <label style={F.label}>
-                  <span style={{ display:"flex", color:"#60A5FA" }}>{Icon.pin(13)}</span>
+                  <span style={{ display:"flex", color:"#0C58D1" }}>{Icon.pin(13)}</span>
                   {t("pickupLoc")} <span style={{color:"#e63946"}}>*</span>
                 </label>
                 <input value={pickupLoc} onChange={e=>setPickupLoc(e.target.value)}
@@ -273,11 +273,11 @@ export const BookingForm: React.FC = () => {
                       style={{
                         ...F.vCard,
                         borderColor:   active ? "#2563EB" : "rgba(255,255,255,0.10)",
-                        background:    active ? "rgba(255,255,255,0.10)" : "rgba(255,255,255,0.02)",
+                        background:    active ? "rgba(12,88,209,0.06)" : "#ffffff",
                         transform:     active ? "translateY(-3px)" : "none",
                         boxShadow:     active ? "0 6px 24px rgba(0,0,0,0.5)" : "none",
                       }}>
-                      <span style={{ display:"flex", color: active ? "#60A5FA" : "#64748B", transition:"color 0.2s" }}>
+                      <span style={{ display:"flex", color: active ? "#0C58D1" : "#64748B", transition:"color 0.2s" }}>
                         {v.IconC(22)}
                       </span>
                       <span style={{ ...F.vName, color: active ? "#fff" : "#777" }}>{ar ? v.ar : v.en}</span>
@@ -292,7 +292,7 @@ export const BookingForm: React.FC = () => {
 
             {price && (
               <div style={F.priceRow}>
-                <span style={{display:"flex", color:"#60A5FA"}}>{Icon.tag(14)}</span>
+                <span style={{display:"flex", color:"#0C58D1"}}>{Icon.tag(14)}</span>
                 <span style={F.priceText}>{ar ? "السعر التقديري:" : "Estimated fare:"}</span>
                 <span style={F.priceBig}>{price.toLocaleString()} <span style={{fontSize:"0.9rem",fontWeight:600}}>SAR</span></span>
               </div>
@@ -384,27 +384,27 @@ export const BookingForm: React.FC = () => {
 const F: Record<string,React.CSSProperties> = {
   root: {
     position: "relative",
-    background: "#0C58D1",
+    background: "#ffffff",
     borderRadius: "16px",
-    border: "1px solid rgba(255,255,255,0.10)",
+    border: "1px solid #e5e7eb",
     overflow: "hidden",
-    boxShadow: "0 24px 64px rgba(0,0,0,0.40)",
+    boxShadow: "0 8px 32px rgba(0,0,0,0.10)",
   },
   accentLine: {
     height: "3px",
-    background: "linear-gradient(90deg,#ffffff 0%,rgba(255,255,255,0.4) 50%,transparent 100%)",
+    background: "linear-gradient(90deg,#0C58D1 0%,rgba(12,88,209,0.3) 50%,transparent 100%)",
   },
   head: {
     display: "flex", justifyContent: "space-between", alignItems: "flex-start",
     padding: "1.4rem 1.5rem 0",
   },
   headLeft:    { display:"flex", flexDirection:"column", gap:"0.3rem" },
-  headBadge:   { fontSize:"0.62rem", fontWeight:800, letterSpacing:"0.12em", color:"#60A5FA", textTransform:"uppercase" },
-  headTitle:   { fontSize:"1.35rem", fontWeight:800, color: "#ffffff" },
-  headPrice:   { display:"flex", alignItems:"baseline", gap:"0.2rem", background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.15)", borderRadius:"8px", padding:"0.5rem 0.9rem" },
-  headPriceLabel: { fontSize:"0.62rem", color:"#94A3B8", marginRight:"4px" },
-  headPriceVal: { fontSize:"1.4rem", fontWeight:900, color:"#60A5FA" },
-  headPriceCur: { fontSize:"0.72rem", color:"#94A3B8" },
+  headBadge:   { fontSize:"0.62rem", fontWeight:800, letterSpacing:"0.12em", color:"#64748B", textTransform:"uppercase" },
+  headTitle:   { fontSize:"1.35rem", fontWeight:800, color: "#000000" },
+  headPrice:   { display:"flex", alignItems:"baseline", gap:"0.2rem", background:"#f8f9fa", border:"1px solid #e5e7eb", borderRadius:"8px", padding:"0.5rem 0.9rem" },
+  headPriceLabel: { fontSize:"0.62rem", color:"#64748B", marginRight:"4px" },
+  headPriceVal: { fontSize:"1.4rem", fontWeight:900, color:"#0C58D1" },
+  headPriceCur: { fontSize:"0.72rem", color:"#64748B" },
 
   /* steps */
   steps: {
@@ -431,22 +431,22 @@ const F: Record<string,React.CSSProperties> = {
   /* fields */
   grid2: { display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(160px,1fr))", gap:"0.9rem" },
   field: { display:"flex", flexDirection:"column", gap:"0.4rem" },
-  label: { fontSize:"0.75rem", fontWeight:700, color:"rgba(255,255,255,0.65)", display:"flex", alignItems:"center", gap:"0.35rem", textTransform:"uppercase", letterSpacing:"0.04em" },
+  label: { fontSize:"0.75rem", fontWeight:700, color:"#64748B", display:"flex", alignItems:"center", gap:"0.35rem", textTransform:"uppercase", letterSpacing:"0.04em" },
   selWrap: { position:"relative" },
   chevron: { position:"absolute", right:"10px", top:"50%", transform:"translateY(-50%)", pointerEvents:"none", display:"flex" },
   inp: {
-    background:"#0a47b0", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
-    padding:"0.65rem 0.9rem", color: "#ffffff", fontSize:"0.85rem",
+    background:"#ffffff", border:"1px solid #e5e7eb", borderRadius:"8px",
+    padding:"0.65rem 0.9rem", color: "#000000", fontSize:"0.85rem",
     outline:"none", width:"100%", transition:"border-color 0.2s",
   },
   sel: {
-    background:"#0a47b0", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
-    padding:"0.65rem 2rem 0.65rem 0.9rem", color: "#ffffff", fontSize:"0.85rem",
+    background:"#ffffff", border:"1px solid #e5e7eb", borderRadius:"8px",
+    padding:"0.65rem 2rem 0.65rem 0.9rem", color: "#000000", fontSize:"0.85rem",
     outline:"none", width:"100%", cursor:"pointer", WebkitAppearance:"none",
   },
   textarea: {
-    background:"#0a47b0", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
-    padding:"0.65rem 0.9rem", color: "#ffffff", fontSize:"0.85rem",
+    background:"#ffffff", border:"1px solid #e5e7eb", borderRadius:"8px",
+    padding:"0.65rem 0.9rem", color: "#000000", fontSize:"0.85rem",
     outline:"none", width:"100%", minHeight:"68px", resize:"vertical", fontFamily:"inherit",
   },
 
@@ -460,39 +460,39 @@ const F: Record<string,React.CSSProperties> = {
   vName: { fontSize:"0.65rem", fontWeight:800, textAlign:"center", lineHeight:1.2, transition:"color 0.2s" },
   vSub:  { fontSize:"0.58rem", color:"#64748B" },
   vPax:  { fontSize:"0.58rem", color:"#64748B" },
-  vCheck: { position:"absolute", top:"5px", right:"5px", background:"#ffffff", borderRadius:"50%", width:"15px", height:"15px", display:"flex", alignItems:"center", justifyContent:"center", color:"#0C58D1" },
+  vCheck: { position:"absolute", top:"5px", right:"5px", background:"#0C58D1", borderRadius:"50%", width:"15px", height:"15px", display:"flex", alignItems:"center", justifyContent:"center", color:"#ffffff" },
 
   /* price */
   priceRow: {
     display:"flex", alignItems:"center", gap:"0.5rem",
-    background:"rgba(255,255,255,0.05)", border:"1px solid rgba(255,255,255,0.12)",
+    background:"#f8f9fa", border:"1px solid #e5e7eb",
     borderRadius:"8px", padding:"0.7rem 1rem",
   },
-  priceText: { fontSize:"0.78rem", color:"#94A3B8", flex:1 },
-  priceBig:  { fontSize:"1.3rem", fontWeight:900, color:"#60A5FA" },
+  priceText: { fontSize:"0.78rem", color:"#64748B", flex:1 },
+  priceBig:  { fontSize:"1.3rem", fontWeight:900, color:"#0C58D1" },
 
   /* summary */
   summary: {
-    background:"#0a47b0", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"8px",
+    background:"#f8f9fa", border:"1px solid #e5e7eb", borderRadius:"8px",
     padding:"0.75rem 1rem", display:"flex", flexDirection:"column", gap:"0.5rem",
   },
   sumRow:   { display:"flex", alignItems:"center", gap:"0.5rem" },
   sumLabel: { fontSize:"0.7rem", color:"#64748B", width:"50px", flexShrink:0 },
-  sumVal:   { fontSize:"0.78rem", fontWeight:600, flex:1 },
+  sumVal:   { fontSize:"0.78rem", fontWeight:600, color:"#000000", flex:1 },
 
   /* buttons */
   btnRow: { display:"flex", gap:"0.6rem" },
   nextBtn: {
     display:"flex", alignItems:"center", justifyContent:"center", gap:"0.5rem",
-    padding:"0.8rem 1.4rem", borderRadius:"8px", border:"2px solid #ffffff",
-    background:"#ffffff", color:"#0C58D1", fontWeight:800, fontSize:"0.88rem",
+    padding:"0.8rem 1.4rem", borderRadius:"8px", border:"2px solid #0C58D1",
+    background:"#0C58D1", color:"#ffffff", fontWeight:800, fontSize:"0.88rem",
     cursor:"pointer", transition:"all 0.2s",
   },
   backBtn: {
     display:"flex", alignItems:"center", gap:"0.4rem",
     padding:"0.8rem 1rem", borderRadius:"8px",
-    border:"1px solid rgba(255,255,255,0.12)", background:"transparent",
-    color:"#94A3B8", cursor:"pointer", fontSize:"0.82rem", fontWeight:600,
+    border:"1px solid #e5e7eb", background:"transparent",
+    color:"#64748B", cursor:"pointer", fontSize:"0.82rem", fontWeight:600,
     transition:"all 0.2s",
   },
   submitBtn: {
@@ -510,20 +510,20 @@ const F: Record<string,React.CSSProperties> = {
     zIndex:9999, padding:"1.5rem",
   },
   modalBox: {
-    background:"#0C58D1", border:"1px solid rgba(255,255,255,0.10)",
+    background:"#ffffff", border:"1px solid #e5e7eb",
     borderRadius:"16px", padding:"2rem 1.75rem",
     maxWidth:"440px", width:"100%", textAlign:"center",
     display:"flex", flexDirection:"column", gap:"0.9rem",
-    boxShadow:"0 32px 80px rgba(0,0,0,0.6)",
+    boxShadow:"0 8px 32px rgba(0,0,0,0.12)",
   },
   modalCheck: {
     width:"56px", height:"56px", borderRadius:"50%",
-    background:"rgba(37,211,102,0.12)", border:"1px solid rgba(37,211,102,0.3)",
+    background:"rgba(37,211,102,0.10)", border:"1px solid rgba(37,211,102,0.3)",
     display:"flex", alignItems:"center", justifyContent:"center",
     margin:"0 auto", color:"#25d366",
   },
-  modalTitle: { fontSize:"1.25rem", fontWeight:800, color: "#ffffff" },
-  modalTxt:   { fontSize:"0.84rem", color:"#94A3B8", lineHeight:1.6 },
+  modalTitle: { fontSize:"1.25rem", fontWeight:800, color: "#000000" },
+  modalTxt:   { fontSize:"0.84rem", color:"#64748B", lineHeight:1.6 },
   modalWa: {
     display:"flex", alignItems:"center", justifyContent:"center", gap:"0.5rem",
     padding:"0.85rem", borderRadius:"8px",
@@ -532,7 +532,7 @@ const F: Record<string,React.CSSProperties> = {
   },
   modalClose: {
     padding:"0.65rem", borderRadius:"8px",
-    border:"1px solid rgba(255,255,255,0.12)", background:"transparent",
-    color:"#94A3B8", cursor:"pointer", fontSize:"0.84rem",
+    border:"1px solid #e5e7eb", background:"transparent",
+    color:"#64748B", cursor:"pointer", fontSize:"0.84rem",
   },
 };
