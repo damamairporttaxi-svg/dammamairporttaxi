@@ -5,9 +5,9 @@
   --bg-primary: #ffffff;
   --bg-secondary: #ffffff;
   --bg-tertiary: #ffffff;
-  --accent-gold: #071952;
+  --accent-gold: #0C58D1;
   --accent-gold-rgb: 7, 25, 82;
-  --accent-gold-hover: #0a2270;
+  --accent-gold-hover: #0947c2;
   --text-primary: #000000;
   --text-secondary: #333333;
   --text-muted: #64748B;
@@ -168,23 +168,23 @@ a {
 }
 
 .btn-primary {
-  background: #071952;
+  background: #0C58D1;
   color: #ffffff;
-  border-color: #071952;
+  border-color: #0C58D1;
   border-radius: 8px;
 }
 
 .btn-primary:hover {
-  background: #0a2270;
-  border-color: #0a2270;
+  background: #0947c2;
+  border-color: #0947c2;
   box-shadow: 0 4px 16px rgba(7, 25, 82, 0.35);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
   background-color: transparent;
-  border-color: #071952;
-  color: #071952;
+  border-color: #0C58D1;
+  color: #0C58D1;
   border-radius: 8px;
 }
 
@@ -232,7 +232,7 @@ a {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #071952;
+  background: #0C58D1;
   border-radius: 2px;
 }
 
@@ -387,8 +387,8 @@ body.rtl .btn {
 /* Badge styles */
 .badge-gold {
   background-color: #ffffff;
-  color: #071952;
-  border: 1px solid #071952;
+  color: #0C58D1;
+  border: 1px solid #0C58D1;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;

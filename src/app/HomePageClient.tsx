@@ -34,18 +34,18 @@ export function HomePageClient() {
 
           {/* LEFT — white text side */}
           <div style={styles.heroTextCol}>
-            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", border:"1px solid #071952", borderRadius:"50px", padding:"0.35rem 1rem" }}>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#071952"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              <span style={{ fontSize:"0.75rem", fontWeight:700, color:"#071952", letterSpacing:"0.05em", textTransform:"uppercase" }}>
+            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", border:"1px solid #0C58D1", borderRadius:"50px", padding:"0.35rem 1rem" }}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="#0C58D1"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <span style={{ fontSize:"0.75rem", fontWeight:700, color:"#0C58D1", letterSpacing:"0.05em", textTransform:"uppercase" }}>
                 {locale === "en" ? "Top Rated KSA Transfer" : "خدمة التوصيل الأولى بالمملكة"}
               </span>
             </div>
 
             <h1 style={styles.heroTitle}>
               {locale === "en" ? (
-                <><span style={{ color:"#071952" }}>Dammam Airport</span><br /><span style={{ color:"#000000" }}>Taxi &amp; Private</span><br /><span style={{ color:"#000000" }}>Transfers</span></>
+                <><span style={{ color:"#0C58D1" }}>Dammam Airport</span><br /><span style={{ color:"#000000" }}>Taxi &amp; Private</span><br /><span style={{ color:"#000000" }}>Transfers</span></>
               ) : (
-                <><span style={{ color:"#071952" }}>تاكسي مطار الدمام</span><br /><span style={{ color:"#000000" }}>توصيل خاص ورحلات دول الخليج</span></>
+                <><span style={{ color:"#0C58D1" }}>تاكسي مطار الدمام</span><br /><span style={{ color:"#000000" }}>توصيل خاص ورحلات دول الخليج</span></>
               )}
             </h1>
 
@@ -58,7 +58,7 @@ export function HomePageClient() {
                 { en: "24/7 Support — No Hidden Fees", ar: "دعم ٢٤/٧ — بدون رسوم خفية" },
               ].map((v, i) => (
                 <span key={i} style={styles.valueItem}>
-                  <span style={{ width:"18px", height:"18px", borderRadius:"50%", background:"#071952", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+                  <span style={{ width:"18px", height:"18px", borderRadius:"50%", background:"#0C58D1", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
                     <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
                   {locale === "en" ? v.en : v.ar}
@@ -120,7 +120,7 @@ export function HomePageClient() {
         <div className="container">
           <div style={{ display:"flex", alignItems:"flex-end", justifyContent:"space-between", flexWrap:"wrap", gap:"2rem", marginBottom:"3.5rem" }}>
             <div>
-              <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"#071952", marginBottom:"0.6rem" }}>{locale === "en" ? "Why Choose Us" : "لماذا تختارنا"}</p>
+              <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"#0C58D1", marginBottom:"0.6rem" }}>{locale === "en" ? "Why Choose Us" : "لماذا تختارنا"}</p>
               <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#000000", lineHeight:1.2, margin:0 }}>{t("whyTitle")}</h2>
             </div>
             <p style={{ maxWidth:"380px", color:"#333333", lineHeight:1.7, margin:0 }}>{t("whySub")}</p>
@@ -132,7 +132,7 @@ export function HomePageClient() {
               { num:"03", title: t("whyCard3Title"), desc: t("whyCard3Desc") },
               { num:"04", title: t("whyCard4Title"), desc: t("whyCard4Desc") },
             ].map((card, idx) => (
-              <div key={idx} style={{ padding:"2rem", background:"#ffffff", border:"1px solid #e5e7eb", borderTop:"4px solid #071952", borderRadius:"4px" }}>
+              <div key={idx} style={{ padding:"2rem", background:"#ffffff", border:"1px solid #e5e7eb", borderTop:"4px solid #0C58D1", borderRadius:"4px" }}>
                 <p style={{ fontSize:"2.5rem", fontWeight:800, color:"#f0f0f0", lineHeight:1, marginBottom:"1rem" }}>{card.num}</p>
                 <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#000000", marginBottom:"0.6rem" }}>{card.title}</h3>
                 <p style={{ fontSize:"0.88rem", color:"#333333", lineHeight:1.65, margin:0 }}>{card.desc}</p>
@@ -143,7 +143,7 @@ export function HomePageClient() {
       </section>
 
       {/* How It Works */}
-      <section className="section-padding" style={{ background:"#071952" }}>
+      <section className="section-padding" style={{ background:"#0C58D1" }}>
         <div className="container">
           <div style={{ textAlign:"center", marginBottom:"4rem" }}>
             <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"rgba(255,255,255,0.5)", marginBottom:"0.6rem" }}>
@@ -160,7 +160,7 @@ export function HomePageClient() {
               { num:"3", en_title:"We Track Your Flight", ar_title:"نتابع رحلتك",          en_desc:"Delayed? Driver adjusts. 60 min free wait guaranteed.", ar_desc:"تأخر؟ السائق يتكيف. 60 دقيقة انتظار مجاناً." },
               { num:"4", en_title:"Name-Board Pickup",   ar_title:"استقبال باللافتة",     en_desc:"Exit arrivals — driver waiting with your name board.", ar_desc:"اخرج من الوصول — السائق ينتظرك بلافتة باسمك." },
             ].map((step, i) => (
-              <div key={i} style={{ padding:"2.5rem 2rem", background:"#071952" }}>
+              <div key={i} style={{ padding:"2.5rem 2rem", background:"#0C58D1" }}>
                 <div style={{ fontSize:"3rem", fontWeight:800, color:"rgba(255,255,255,0.10)", lineHeight:1, marginBottom:"1.2rem" }}>{step.num}</div>
                 <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#ffffff", marginBottom:"0.6rem" }}>{locale === "en" ? step.en_title : step.ar_title}</h3>
                 <p style={{ fontSize:"0.85rem", color:"rgba(255,255,255,0.65)", lineHeight:1.65, margin:0 }}>{locale === "en" ? step.en_desc : step.ar_desc}</p>
@@ -342,7 +342,7 @@ export function HomePageClient() {
             </p>
 
             {/* Local / Airport transfers */}
-            <p style={{ ...art.p, fontWeight: 700, color: "#071952", marginTop: "1.5rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+            <p style={{ ...art.p, fontWeight: 700, color: "#0C58D1", marginTop: "1.5rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
               Local Airport Transfers — Eastern Province
             </p>
             <div style={art.routeGrid}>
@@ -367,7 +367,7 @@ export function HomePageClient() {
             </div>
 
             {/* GCC cross-border */}
-            <p style={{ ...art.p, fontWeight: 700, color: "#071952", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+            <p style={{ ...art.p, fontWeight: 700, color: "#0C58D1", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
               GCC Cross-Border Taxi Routes from Dammam
             </p>
             <div style={art.routeGrid}>
@@ -392,7 +392,7 @@ export function HomePageClient() {
             </div>
 
             {/* Saudi intercity */}
-            <p style={{ ...art.p, fontWeight: 700, color: "#071952", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+            <p style={{ ...art.p, fontWeight: 700, color: "#0C58D1", marginTop: "1.8rem", marginBottom: "0.5rem", fontSize: "0.82rem", textTransform: "uppercase", letterSpacing: "0.06em" }}>
               Saudi Intercity Taxi Routes from Dammam
             </p>
             <div style={art.routeGrid}>
@@ -472,7 +472,7 @@ export function HomePageClient() {
               <Link href="/corporate-transfers" style={art.infoLink}>Set up a corporate account →</Link>
             </div>
             <div style={art.infoBox}>
-              <h3 style={{ ...art.infoBoxTitle, color: "#071952" }}>GCC Cross-Border Taxi</h3>
+              <h3 style={{ ...art.infoBoxTitle, color: "#0C58D1" }}>GCC Cross-Border Taxi</h3>
               <p style={art.p}>
                 Most local Eastern Province taxis cannot legally cross Saudi land borders. Our drivers hold valid commercial transport permits for every active crossing:
               </p>
@@ -485,7 +485,7 @@ export function HomePageClient() {
               <p style={{ ...art.p, fontSize: "0.82rem", marginTop: "0.5rem" }}>
                 Saudi residents need a valid Exit &amp; Re-Entry visa. GCC nationals travel on national ID. Our team advises on visa requirements when you book.
               </p>
-              <Link href="/gcc-border-crossing" style={{ ...art.infoLink, color: "#071952" }}>GCC border crossing guide →</Link>
+              <Link href="/gcc-border-crossing" style={{ ...art.infoLink, color: "#0C58D1" }}>GCC border crossing guide →</Link>
             </div>
           </div>
 
@@ -517,7 +517,7 @@ export function HomePageClient() {
             <div style={art.compareSide}>
               <p style={art.compareLabel}>Pre-Booked Dammam Airport Taxi</p>
               {["Fixed fare — agreed before travel", "Driver waiting at arrivals exit", "Live flight tracking & free delay buffer", "GCC cross-border licensed", "Corporate monthly invoicing", "Wi-Fi · water · USB charging onboard"].map(i => (
-                <p key={i} style={art.compareItem}><span style={{ color: "#071952", marginRight: "0.5rem" }}>✓</span>{i}</p>
+                <p key={i} style={art.compareItem}><span style={{ color: "#0C58D1", marginRight: "0.5rem" }}>✓</span>{i}</p>
               ))}
             </div>
             <div className="art-compare-divider" style={art.compareDivider} />
@@ -631,7 +631,7 @@ const styles: Record<string, React.CSSProperties> = {
     marginTop: "0.5rem",
     width: "100%",
     justifyContent: "flex-start",
-    borderTop: "2px solid #071952",
+    borderTop: "2px solid #0C58D1",
     paddingTop: "1.6rem",
   },
   heroStatItem: {
@@ -644,7 +644,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroStatVal: {
     fontSize: "1.9rem",
-    color: "#071952",
+    color: "#0C58D1",
     fontWeight: "800",
     letterSpacing: "-0.02em",
   },
@@ -661,7 +661,7 @@ const styles: Record<string, React.CSSProperties> = {
   /* Trust strip */
   trustStrip: {
     backgroundColor: "#ffffff",
-    borderBottom: "3px solid #071952",
+    borderBottom: "3px solid #0C58D1",
     padding: "0",
     overflowX: "auto" as const,
   },
@@ -681,7 +681,7 @@ const styles: Record<string, React.CSSProperties> = {
     transition: "background 0.2s",
   },
   trustIcon: { fontSize: "1.1rem" },
-  trustText: { fontSize: "0.85rem", fontWeight: 700, color: "#071952" },
+  trustText: { fontSize: "0.85rem", fontWeight: 700, color: "#0C58D1" },
   /* How It Works */
   howSection: { backgroundColor: "var(--bg-primary)" },
   stepsGrid: {
@@ -702,9 +702,9 @@ const styles: Record<string, React.CSSProperties> = {
   stepNum: {
     fontSize: "0.75rem",
     fontWeight: 800,
-    color: "#071952",
+    color: "#0C58D1",
     letterSpacing: "0.1em",
-    border: "1px solid #071952",
+    border: "1px solid #0C58D1",
     padding: "0.2rem 0.6rem",
     borderRadius: "20px",
   },
@@ -804,7 +804,7 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "2rem",
   },
   testCard: { padding: "2.5rem 2rem", textAlign: "center" as const },
-  stars: { color: "#071952", fontSize: "1.2rem", marginBottom: "1rem", letterSpacing: "2px" },
+  stars: { color: "#0C58D1", fontSize: "1.2rem", marginBottom: "1rem", letterSpacing: "2px" },
   testText: { fontSize: "0.95rem", lineHeight: "1.6", color: "var(--text-secondary)", fontStyle: "italic", marginBottom: "1.5rem" },
   testAuthor: { fontSize: "0.85rem", color: "#000000", fontWeight: 700 },
   faqList: {
@@ -868,7 +868,7 @@ const art: Record<string, React.CSSProperties> = {
   statCard3d: {
     display: "flex", flexDirection: "column", alignItems: "center",
     padding: "1rem 1.4rem", gap: "0.2rem",
-    background: "#071952",
+    background: "#0C58D1",
     border: "1px solid rgba(37,99,235,0.25)",
     borderRadius: "12px",
     boxShadow: "0 8px 24px rgba(0,0,0,0.25)",
@@ -881,7 +881,7 @@ const art: Record<string, React.CSSProperties> = {
   block: { marginBottom: "3.5rem" },
   h3: {
     fontSize: "1.2rem", fontWeight: 700, color: "#000000",
-    borderLeft: "4px solid #071952", paddingLeft: "0.8rem",
+    borderLeft: "4px solid #0C58D1", paddingLeft: "0.8rem",
     marginBottom: "1.2rem",
   },
   p: { fontSize: "0.95rem", color: "#333333", lineHeight: 1.85, marginBottom: "0.75rem" },
@@ -893,14 +893,14 @@ const art: Record<string, React.CSSProperties> = {
   },
   featureCard: {
     background: "#ffffff",
-    borderTop: "3px solid #071952",
+    borderTop: "3px solid #0C58D1",
     border: "1px solid #e5e7eb",
     borderRadius: "4px", padding: "1.5rem",
     boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
   },
   featureLine: {
     width: "36px", height: "3px",
-    background: "#071952",
+    background: "#0C58D1",
     borderRadius: "2px", marginBottom: "1rem",
   },
   featureTitle: { fontSize: "0.9rem", color: "#000000", display: "block", fontWeight: 700, marginBottom: "0.45rem" },
@@ -912,7 +912,7 @@ const art: Record<string, React.CSSProperties> = {
     display: "flex", justifyContent: "space-between", alignItems: "center",
     background: "#ffffff",
     border: "1px solid #e5e7eb",
-    borderLeft: "3px solid #071952",
+    borderLeft: "3px solid #0C58D1",
     borderRadius: "4px",
     padding: "0.85rem 1.2rem", gap: "1rem",
   },
@@ -920,7 +920,7 @@ const art: Record<string, React.CSSProperties> = {
   routeName: { fontSize: "0.88rem", color: "#000000", fontWeight: 600 },
   routeMeta: { fontSize: "0.72rem", color: "#64748B" },
   routePrice: {
-    fontSize: "0.88rem", fontWeight: 800, color: "#071952",
+    fontSize: "0.88rem", fontWeight: 800, color: "#0C58D1",
     whiteSpace: "nowrap", flexShrink: 0,
   },
 
@@ -930,7 +930,7 @@ const art: Record<string, React.CSSProperties> = {
     gap: "1.5rem", marginBottom: "3.5rem",
   },
   infoBox: {
-    borderTop: "4px solid #071952",
+    borderTop: "4px solid #0C58D1",
     border: "1px solid #e5e7eb",
     borderRadius: "4px", padding: "2rem",
     background: "#ffffff",
@@ -941,7 +941,7 @@ const art: Record<string, React.CSSProperties> = {
     paddingLeft: "1.2rem", color: "#333333",
     fontSize: "0.87rem", lineHeight: 2.1, margin: "0.5rem 0 1rem",
   },
-  infoLink: { fontSize: "0.85rem", fontWeight: 700, color: "#071952", textDecoration: "underline" },
+  infoLink: { fontSize: "0.85rem", fontWeight: 700, color: "#0C58D1", textDecoration: "underline" },
 
   /* booking steps — white */
   stepsRow: {
@@ -950,13 +950,13 @@ const art: Record<string, React.CSSProperties> = {
   },
   step: {
     background: "#ffffff",
-    borderTop: "3px solid #071952",
+    borderTop: "3px solid #0C58D1",
     border: "1px solid #e5e7eb",
     borderRadius: "4px",
     padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.6rem",
   },
   stepNum: {
-    fontSize: "2rem", fontWeight: 800, color: "#071952", lineHeight: 1,
+    fontSize: "2rem", fontWeight: 800, color: "#0C58D1", lineHeight: 1,
   },
   stepTitle: { fontSize: "0.9rem", color: "#000000", fontWeight: 700 },
   stepDesc: { fontSize: "0.79rem", color: "#333333", lineHeight: 1.65 },
@@ -974,7 +974,7 @@ const art: Record<string, React.CSSProperties> = {
   compareDivider: { width: "1px", backgroundColor: "#e5e7eb" },
   compareLabel: {
     fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.06em",
-    textTransform: "uppercase", color: "#071952", marginBottom: "1.1rem",
+    textTransform: "uppercase", color: "#0C58D1", marginBottom: "1.1rem",
   },
   compareItem: { fontSize: "0.84rem", color: "#000000", marginBottom: "0.55rem", display: "flex", alignItems: "flex-start" },
 };

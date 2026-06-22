@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
 
 const styles: Record<string, React.CSSProperties> = {
   footer: {
-    backgroundColor: "#071952",
+    backgroundColor: "#0C58D1",
     borderTop: "1px solid rgba(255,255,255,0.08)",
     padding: "5rem 0 2rem 0",
     marginTop: "auto",
@@ -134,7 +134,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   logoBadge: {
     backgroundColor: "#ffffff",
-    color: "#071952",
+    color: "#0C58D1",
     padding: "0.3rem 0.6rem",
     borderRadius: "6px",
     fontWeight: 800,

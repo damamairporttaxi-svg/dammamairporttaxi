@@ -138,8 +138,8 @@ export const BookingForm: React.FC = () => {
             >
               <div style={{
                 ...F.stepDot,
-                background: step > s.n ? "#ffffff" : step === s.n ? "#ffffff" : "#0D2466",
-                color: step >= s.n ? "#071952" : "#64748B",
+                background: step > s.n ? "#ffffff" : step === s.n ? "#ffffff" : "#0a47b0",
+                color: step >= s.n ? "#0C58D1" : "#64748B",
                 boxShadow: step === s.n ? "0 0 0 3px rgba(255,255,255,0.25)" : "none",
               }}>
                 {step > s.n ? <span style={{display:"flex"}}>{Icon.check(13)}</span> : s.n}
@@ -149,7 +149,7 @@ export const BookingForm: React.FC = () => {
               </span>
             </button>
             {i < 2 && (
-              <div style={{ ...F.stepBar, background: step > s.n ? "#ffffff" : "#0D2466" }} />
+              <div style={{ ...F.stepBar, background: step > s.n ? "#ffffff" : "#0a47b0" }} />
             )}
           </React.Fragment>
         ))}
@@ -167,7 +167,7 @@ export const BookingForm: React.FC = () => {
                   style={{
                     ...F.pill,
                     background:   serviceType === s.id ? "#ffffff" : "transparent",
-                    color:        serviceType === s.id ? "#071952" : "#94A3B8",
+                    color:        serviceType === s.id ? "#0C58D1" : "#94A3B8",
                     borderColor:  serviceType === s.id ? "#ffffff" : "rgba(255,255,255,0.12)",
                   }}>
                   <span style={{ display:"flex", opacity: serviceType === s.id ? 1 : 0.6 }}>
@@ -384,7 +384,7 @@ export const BookingForm: React.FC = () => {
 const F: Record<string,React.CSSProperties> = {
   root: {
     position: "relative",
-    background: "#071952",
+    background: "#0C58D1",
     borderRadius: "16px",
     border: "1px solid rgba(255,255,255,0.10)",
     overflow: "hidden",
@@ -435,17 +435,17 @@ const F: Record<string,React.CSSProperties> = {
   selWrap: { position:"relative" },
   chevron: { position:"absolute", right:"10px", top:"50%", transform:"translateY(-50%)", pointerEvents:"none", display:"flex" },
   inp: {
-    background:"#0D2466", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
+    background:"#0a47b0", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
     padding:"0.65rem 0.9rem", color: "#ffffff", fontSize:"0.85rem",
     outline:"none", width:"100%", transition:"border-color 0.2s",
   },
   sel: {
-    background:"#0D2466", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
+    background:"#0a47b0", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
     padding:"0.65rem 2rem 0.65rem 0.9rem", color: "#ffffff", fontSize:"0.85rem",
     outline:"none", width:"100%", cursor:"pointer", WebkitAppearance:"none",
   },
   textarea: {
-    background:"#0D2466", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
+    background:"#0a47b0", border:"1px solid rgba(255,255,255,0.12)", borderRadius:"8px",
     padding:"0.65rem 0.9rem", color: "#ffffff", fontSize:"0.85rem",
     outline:"none", width:"100%", minHeight:"68px", resize:"vertical", fontFamily:"inherit",
   },
@@ -460,7 +460,7 @@ const F: Record<string,React.CSSProperties> = {
   vName: { fontSize:"0.65rem", fontWeight:800, textAlign:"center", lineHeight:1.2, transition:"color 0.2s" },
   vSub:  { fontSize:"0.58rem", color:"#64748B" },
   vPax:  { fontSize:"0.58rem", color:"#64748B" },
-  vCheck: { position:"absolute", top:"5px", right:"5px", background:"#ffffff", borderRadius:"50%", width:"15px", height:"15px", display:"flex", alignItems:"center", justifyContent:"center", color:"#071952" },
+  vCheck: { position:"absolute", top:"5px", right:"5px", background:"#ffffff", borderRadius:"50%", width:"15px", height:"15px", display:"flex", alignItems:"center", justifyContent:"center", color:"#0C58D1" },
 
   /* price */
   priceRow: {
@@ -473,7 +473,7 @@ const F: Record<string,React.CSSProperties> = {
 
   /* summary */
   summary: {
-    background:"#0D2466", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"8px",
+    background:"#0a47b0", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"8px",
     padding:"0.75rem 1rem", display:"flex", flexDirection:"column", gap:"0.5rem",
   },
   sumRow:   { display:"flex", alignItems:"center", gap:"0.5rem" },
@@ -485,7 +485,7 @@ const F: Record<string,React.CSSProperties> = {
   nextBtn: {
     display:"flex", alignItems:"center", justifyContent:"center", gap:"0.5rem",
     padding:"0.8rem 1.4rem", borderRadius:"8px", border:"2px solid #ffffff",
-    background:"#ffffff", color:"#071952", fontWeight:800, fontSize:"0.88rem",
+    background:"#ffffff", color:"#0C58D1", fontWeight:800, fontSize:"0.88rem",
     cursor:"pointer", transition:"all 0.2s",
   },
   backBtn: {
@@ -510,7 +510,7 @@ const F: Record<string,React.CSSProperties> = {
     zIndex:9999, padding:"1.5rem",
   },
   modalBox: {
-    background:"#071952", border:"1px solid rgba(255,255,255,0.10)",
+    background:"#0C58D1", border:"1px solid rgba(255,255,255,0.10)",
     borderRadius:"16px", padding:"2rem 1.75rem",
     maxWidth:"440px", width:"100%", textAlign:"center",
     display:"flex", flexDirection:"column", gap:"0.9rem",

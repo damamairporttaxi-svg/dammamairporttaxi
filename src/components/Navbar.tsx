@@ -63,7 +63,7 @@ export const Navbar: React.FC = () => {
             <button onClick={toggleLanguage} className="btn" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem", border: "1px solid rgba(255,255,255,0.25)", color: "#ffffff", backgroundColor: "transparent" }}>
               {locale === "en" ? "العربية" : "English"}
             </button>
-            <Link href="/#booking" className="btn" style={{ padding: "0.5rem 1.2rem", fontSize: "0.85rem", backgroundColor: "#ffffff", color: "#071952", border: "2px solid #ffffff", borderRadius: "8px", fontWeight: 700 }}>
+            <Link href="/#booking" className="btn" style={{ padding: "0.5rem 1.2rem", fontSize: "0.85rem", backgroundColor: "#ffffff", color: "#0C58D1", border: "2px solid #ffffff", borderRadius: "8px", fontWeight: 700 }}>
               {t("bookNow")}
             </Link>
           </div>
@@ -107,7 +107,7 @@ export const Navbar: React.FC = () => {
               <Link
                 href="/#booking"
                 className="btn"
-                style={{ width: "100%", backgroundColor: "#ffffff", color: "#071952", border: "2px solid #ffffff", borderRadius: "8px", fontWeight: 700 }}
+                style={{ width: "100%", backgroundColor: "#ffffff", color: "#0C58D1", border: "2px solid #ffffff", borderRadius: "8px", fontWeight: 700 }}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {t("bookNow")}
@@ -131,7 +131,7 @@ export const Navbar: React.FC = () => {
 
 const styles: Record<string, React.CSSProperties> = {
   topBanner: {
-    backgroundColor: "#071952",
+    backgroundColor: "#0C58D1",
     borderBottom: "1px solid rgba(255,255,255,0.08)",
     padding: "0.5rem 0",
     fontSize: "0.85rem",
@@ -161,7 +161,7 @@ const styles: Record<string, React.CSSProperties> = {
     position: "sticky",
     top: 0,
     zIndex: 100,
-    backgroundColor: "#071952",
+    backgroundColor: "#0C58D1",
     backdropFilter: "blur(12px)",
     WebkitBackdropFilter: "blur(12px)",
     borderBottom: "1px solid rgba(255,255,255,0.08)",
@@ -179,7 +179,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   logoBadge: {
     backgroundColor: "#ffffff",
-    color: "#071952",
+    color: "#0C58D1",
     padding: "0.4rem 0.6rem",
     borderRadius: "6px",
     fontWeight: 800,
@@ -244,7 +244,7 @@ const styles: Record<string, React.CSSProperties> = {
     top: "100%",
     left: 0,
     right: 0,
-    backgroundColor: "#071952",
+    backgroundColor: "#0C58D1",
     borderBottom: "1px solid rgba(255,255,255,0.08)",
     padding: "1.5rem",
     display: "flex",
