@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
           </span>
           <div style={styles.bottomLinks}>
             <Link href="/privacy-policy" style={styles.bottomLink}>{t("privacyTitle")}</Link>
-            <span style={{ color: "rgba(255,255,255,0.6)" }}>|</span>
+            <span style={{ color: "#64748B" }}>|</span>
             <Link href="/terms" style={styles.bottomLink}>{t("termsTitle")}</Link>
           </div>
         </div>
@@ -111,8 +111,8 @@ export const Footer: React.FC = () => {
 
 const styles: Record<string, React.CSSProperties> = {
   footer: {
-    backgroundColor: "#0C58D1",
-    borderTop: "1px solid rgba(255,255,255,0.08)",
+    backgroundColor: "#ffffff",
+    borderTop: "1px solid #e5e7eb",
     padding: "5rem 0 2rem 0",
     marginTop: "auto",
   },
@@ -133,8 +133,8 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "0.8rem",
   },
   logoBadge: {
-    backgroundColor: "#ffffff",
-    color: "#0C58D1",
+    backgroundColor: "#0C58D1",
+    color: "#ffffff",
     padding: "0.3rem 0.6rem",
     borderRadius: "6px",
     fontWeight: 800,
@@ -143,11 +143,11 @@ const styles: Record<string, React.CSSProperties> = {
   logoTitle: {
     fontSize: "1.4rem",
     fontWeight: 800,
-    color: "#ffffff",
+    color: "#000000",
   },
   aboutText: {
     fontSize: "0.95rem",
-    color: "rgba(255,255,255,0.85)",
+    color: "#333333",
     maxWidth: "400px",
   },
   contactDetails: {
@@ -157,13 +157,13 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "0.9rem",
   },
   contactItem: {
-    color: "rgba(255,255,255,0.85)",
+    color: "#333333",
   },
   colTitle: {
     fontSize: "1.1rem",
     fontWeight: 600,
-    color: "#ffffff",
-    borderBottom: "2px solid rgba(37,99,235,0.40)",
+    color: "#000000",
+    borderBottom: "2px solid #000000",
     paddingBottom: "0.5rem",
     marginBottom: "0.5rem",
   },
@@ -177,11 +177,11 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "0.9rem",
   },
   link: {
-    color: "rgba(255,255,255,0.85)",
+    color: "#333333",
     transition: "color var(--transition-fast)",
   },
   bottomBar: {
-    borderTop: "1px solid rgba(255,255,255,0.08)",
+    borderTop: "1px solid #e5e7eb",
     paddingTop: "2rem",
   },
   bottomContainer: {
@@ -192,7 +192,7 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "1rem",
   },
   copyright: {
-    color: "rgba(255,255,255,0.6)",
+    color: "#64748B",
     fontSize: "0.85rem",
   },
   bottomLinks: {
@@ -201,11 +201,11 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "0.85rem",
   },
   bottomLink: {
-    color: "rgba(255,255,255,0.85)",
+    color: "#333333",
   },
   disclaimerText: {
     fontSize: "0.75rem",
-    color: "rgba(255,255,255,0.6)",
+    color: "#64748B",
     textAlign: "center",
   },
 };

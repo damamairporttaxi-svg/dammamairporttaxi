@@ -232,7 +232,7 @@ a {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #0C58D1;
+  background: #000000;
   border-radius: 2px;
 }
 
@@ -387,8 +387,8 @@ body.rtl .btn {
 /* Badge styles */
 .badge-gold {
   background-color: #ffffff;
-  color: #0C58D1;
-  border: 1px solid #0C58D1;
+  color: #000000;
+  border: 1px solid #000000;
   padding: 0.3rem 0.8rem;
   border-radius: 20px;
   font-size: 0.8rem;

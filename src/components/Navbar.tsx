@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
       <div style={styles.topBanner}>
         <div className="container" style={styles.topBannerContainer}>
           <span style={styles.bannerText}>
-            {t("urgentCall")} <strong style={{ color: "#60A5FA" }}>+966 50 123 4567</strong>
+            {t("urgentCall")} <strong style={{ color: "#64748B" }}>+966 50 123 4567</strong>
           </span>
           <button onClick={toggleLanguage} style={styles.langToggleBtn}>
             {locale === "en" ? "العربية (AR)" : "English (EN)"}
@@ -60,10 +60,10 @@ export const Navbar: React.FC = () => {
           </nav>
 
           <div className="nav-desktop-actions" style={styles.desktopActions}>
-            <button onClick={toggleLanguage} className="btn" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem", border: "1px solid rgba(255,255,255,0.25)", color: "#ffffff", backgroundColor: "transparent" }}>
+            <button onClick={toggleLanguage} className="btn" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem", border: "1px solid #e5e7eb", color: "#000000", backgroundColor: "transparent" }}>
               {locale === "en" ? "العربية" : "English"}
             </button>
-            <Link href="/#booking" className="btn" style={{ padding: "0.5rem 1.2rem", fontSize: "0.85rem", backgroundColor: "#ffffff", color: "#0C58D1", border: "2px solid #ffffff", borderRadius: "8px", fontWeight: 700 }}>
+            <Link href="/#booking" className="btn" style={{ padding: "0.5rem 1.2rem", fontSize: "0.85rem", backgroundColor: "#ffffff", color: "#0C58D1", border: "2px solid #0C58D1", borderRadius: "8px", fontWeight: 700 }}>
               {t("bookNow")}
             </Link>
           </div>
@@ -131,8 +131,8 @@ export const Navbar: React.FC = () => {
 
 const styles: Record<string, React.CSSProperties> = {
   topBanner: {
-    backgroundColor: "#0C58D1",
-    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    backgroundColor: "#ffffff",
+    borderBottom: "1px solid #e5e7eb",
     padding: "0.5rem 0",
     fontSize: "0.85rem",
   },
@@ -144,12 +144,12 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "0.5rem",
   },
   bannerText: {
-    color: "rgba(255,255,255,0.80)",
+    color: "#000000",
   },
   langToggleBtn: {
     background: "transparent",
-    border: "1px solid rgba(255,255,255,0.20)",
-    color: "#ffffff",
+    border: "1px solid #e5e7eb",
+    color: "#000000",
     padding: "0.2rem 0.6rem",
     borderRadius: "4px",
     cursor: "pointer",
@@ -161,10 +161,10 @@ const styles: Record<string, React.CSSProperties> = {
     position: "sticky",
     top: 0,
     zIndex: 100,
-    backgroundColor: "#0C58D1",
+    backgroundColor: "#ffffff",
     backdropFilter: "blur(12px)",
     WebkitBackdropFilter: "blur(12px)",
-    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    borderBottom: "1px solid #e5e7eb",
     padding: "0.9rem 0",
   },
   navContainer: {
@@ -179,7 +179,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   logoBadge: {
     backgroundColor: "#ffffff",
-    color: "#0C58D1",
+    color: "#000000",
     padding: "0.4rem 0.6rem",
     borderRadius: "6px",
     fontWeight: 800,
@@ -201,7 +201,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   logoSub: {
     fontSize: "0.7rem",
-    color: "#60A5FA",
+    color: "#0C58D1",
     textTransform: "uppercase",
     letterSpacing: "0.06em",
     marginTop: "-2px",
@@ -214,7 +214,7 @@ const styles: Record<string, React.CSSProperties> = {
   navLink: {
     fontSize: "0.9rem",
     fontWeight: 500,
-    color: "rgba(255,255,255,0.80)",
+    color: "#333333",
     transition: "color var(--transition-fast)",
   },
   desktopActions: {
@@ -236,7 +236,7 @@ const styles: Record<string, React.CSSProperties> = {
   hamburgerBar: {
     width: "100%",
     height: "2px",
-    backgroundColor: "#ffffff",
+    backgroundColor: "#000000",
     transition: "all var(--transition-fast)",
   },
   mobileNavDrawer: {
@@ -244,8 +244,8 @@ const styles: Record<string, React.CSSProperties> = {
     top: "100%",
     left: 0,
     right: 0,
-    backgroundColor: "#0C58D1",
-    borderBottom: "1px solid rgba(255,255,255,0.08)",
+    backgroundColor: "#ffffff",
+    borderBottom: "1px solid #e5e7eb",
     padding: "1.5rem",
     display: "flex",
     flexDirection: "column",
@@ -257,7 +257,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontWeight: 500,
     padding: "0.6rem 0",
     borderBottom: "1px solid rgba(255,255,255,0.08)",
-    color: "rgba(255,255,255,0.85)",
+    color: "#000000",
   },
   mobileLangBtn: {
     background: "transparent",
