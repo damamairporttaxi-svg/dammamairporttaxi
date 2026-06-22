@@ -58,7 +58,7 @@ export function HomePageClient() {
                 { en: "24/7 Support — No Hidden Fees", ar: "دعم ٢٤/٧ — بدون رسوم خفية" },
               ].map((v, i) => (
                 <span key={i} style={styles.valueItem}>
-                  <span style={{ width:"18px", height:"18px", borderRadius:"50%", background:"#000000", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+                  <span style={{ width:"18px", height:"18px", borderRadius:"50%", background:"#ffffff", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
                     <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
                   {locale === "en" ? v.en : v.ar}
@@ -143,27 +143,27 @@ export function HomePageClient() {
       </section>
 
       {/* How It Works */}
-      <section className="section-padding" style={{ background:"#000000" }}>
+      <section className="section-padding" style={{ background:"#ffffff", borderTop:"1px solid #e5e7eb", borderBottom:"1px solid #e5e7eb" }}>
         <div className="container">
           <div style={{ textAlign:"center", marginBottom:"4rem" }}>
-            <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"rgba(255,255,255,0.5)", marginBottom:"0.6rem" }}>
+            <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"#64748B", marginBottom:"0.6rem" }}>
               {locale === "en" ? "Simple Process" : "خطوات بسيطة"}
             </p>
-            <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#ffffff", lineHeight:1.2, margin:"0 auto", maxWidth:"600px" }}>
+            <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#000000", lineHeight:1.2, margin:"0 auto", maxWidth:"600px" }}>
               {locale === "en" ? "Book in Under 2 Minutes" : "احجز في أقل من دقيقتين"}
             </h2>
           </div>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:"2px", background:"rgba(255,255,255,0.08)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"12px", overflow:"hidden" }}>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:"2px", background:"rgba(255,255,255,0.08)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"12px", overflow:"hidden", border:"1px solid #e5e7eb" }}>
             {[
               { num:"1", en_title:"Send WhatsApp",       ar_title:"أرسل واتساب",         en_desc:"Share pickup, destination, date & vehicle class.", ar_desc:"أرسل موقع الاستلام، الوجهة، التاريخ وفئة السيارة." },
               { num:"2", en_title:"Instant Confirmation", ar_title:"تأكيد فوري",           en_desc:"Get driver name, plate & fixed fare in minutes.", ar_desc:"احصل على اسم السائق واللوحة والأجرة في دقائق." },
               { num:"3", en_title:"We Track Your Flight", ar_title:"نتابع رحلتك",          en_desc:"Delayed? Driver adjusts. 60 min free wait guaranteed.", ar_desc:"تأخر؟ السائق يتكيف. 60 دقيقة انتظار مجاناً." },
               { num:"4", en_title:"Name-Board Pickup",   ar_title:"استقبال باللافتة",     en_desc:"Exit arrivals — driver waiting with your name board.", ar_desc:"اخرج من الوصول — السائق ينتظرك بلافتة باسمك." },
             ].map((step, i) => (
-              <div key={i} style={{ padding:"2.5rem 2rem", background:"#000000" }}>
+              <div key={i} style={{ padding:"2.5rem 2rem", background:"#ffffff" }}>
                 <div style={{ fontSize:"3rem", fontWeight:800, color:"rgba(255,255,255,0.10)", lineHeight:1, marginBottom:"1.2rem" }}>{step.num}</div>
-                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#ffffff", marginBottom:"0.6rem" }}>{locale === "en" ? step.en_title : step.ar_title}</h3>
-                <p style={{ fontSize:"0.85rem", color:"rgba(255,255,255,0.65)", lineHeight:1.65, margin:0 }}>{locale === "en" ? step.en_desc : step.ar_desc}</p>
+                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#000000", marginBottom:"0.6rem" }}>{locale === "en" ? step.en_title : step.ar_title}</h3>
+                <p style={{ fontSize:"0.85rem", color:"#333333", lineHeight:1.65, margin:0 }}>{locale === "en" ? step.en_desc : step.ar_desc}</p>
               </div>
             ))}
           </div>
@@ -868,13 +868,13 @@ const art: Record<string, React.CSSProperties> = {
   statCard3d: {
     display: "flex", flexDirection: "column", alignItems: "center",
     padding: "1rem 1.4rem", gap: "0.2rem",
-    background: "#000000",
+    background: "#ffffff",
     border: "1px solid rgba(37,99,235,0.25)",
     borderRadius: "12px",
     boxShadow: "0 8px 24px rgba(0,0,0,0.25)",
     transform: "translateY(0)",
   },
-  statVal: { fontSize: "1.3rem", fontWeight: 800, color: "#ffffff" },
+  statVal: { fontSize: "1.3rem", fontWeight: 800, color: "#000000" },
   statLbl: { fontSize: "0.65rem", color: "rgba(255,255,255,0.65)", textTransform: "uppercase", letterSpacing: "0.06em", whiteSpace: "nowrap", textAlign: "center" },
 
   /* content blocks */
@@ -900,7 +900,7 @@ const art: Record<string, React.CSSProperties> = {
   },
   featureLine: {
     width: "36px", height: "3px",
-    background: "#000000",
+    background: "#ffffff",
     borderRadius: "2px", marginBottom: "1rem",
   },
   featureTitle: { fontSize: "0.9rem", color: "#000000", display: "block", fontWeight: 700, marginBottom: "0.45rem" },
