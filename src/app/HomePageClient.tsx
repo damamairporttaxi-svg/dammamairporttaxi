@@ -153,7 +153,7 @@ export function HomePageClient() {
               {locale === "en" ? "Book in Under 2 Minutes" : "احجز في أقل من دقيقتين"}
             </h2>
           </div>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:"2px", background:"rgba(255,255,255,0.08)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:"12px", overflow:"hidden", border:"1px solid #e5e7eb" }}>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:"1px", background:"#e5e7eb", border:"1px solid #e5e7eb", borderRadius:"12px", overflow:"hidden" }}>
             {[
               { num:"1", en_title:"Send WhatsApp",       ar_title:"أرسل واتساب",         en_desc:"Share pickup, destination, date & vehicle class.", ar_desc:"أرسل موقع الاستلام، الوجهة، التاريخ وفئة السيارة." },
               { num:"2", en_title:"Instant Confirmation", ar_title:"تأكيد فوري",           en_desc:"Get driver name, plate & fixed fare in minutes.", ar_desc:"احصل على اسم السائق واللوحة والأجرة في دقائق." },
