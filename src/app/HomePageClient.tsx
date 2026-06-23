@@ -724,7 +724,9 @@ const styles: Record<string, React.CSSProperties> = {
   stepsConnector: { display: "none" },
   /* WhatsApp CTA Banner */
   waBanner: {
-    background: "linear-gradient(135deg, #075e54 0%, #128c7e 50%, #075e54 100%)",
+    background: "#ffffff",
+    borderTop: "1px solid #e5e7eb",
+    borderBottom: "1px solid #e5e7eb",
     padding: "3.5rem 0",
   },
   waInner: {
@@ -734,8 +736,8 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "2rem",
     flexWrap: "wrap" as const,
   },
-  waTitle: { fontSize: "1.6rem", fontWeight: 800, color: "var(--text-primary)", marginBottom: "0.4rem" },
-  waSub:   { color: "var(--text-secondary)", fontSize: "0.95rem" },
+  waTitle: { fontSize: "1.6rem", fontWeight: 800, color: "#000000", marginBottom: "0.4rem" },
+  waSub:   { color: "#333333", fontSize: "0.95rem" },
   waBtn: {
     padding: "0.9rem 2rem",
     fontSize: "1rem",
@@ -744,8 +746,8 @@ const styles: Record<string, React.CSSProperties> = {
     alignItems: "center",
     gap: "0.6rem",
     flexShrink: 0,
-    backgroundColor: "#ffffff",
-    color: "#075e54",
+    backgroundColor: "#25d366",
+    color: "#ffffff",
     borderRadius: "8px",
     border: "none",
     whiteSpace: "nowrap" as const,
