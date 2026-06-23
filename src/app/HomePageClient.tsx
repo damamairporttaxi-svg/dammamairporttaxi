@@ -58,7 +58,7 @@ export function HomePageClient() {
                 { en: "24/7 Support — No Hidden Fees", ar: "دعم ٢٤/٧ — بدون رسوم خفية" },
               ].map((v, i) => (
                 <span key={i} style={styles.valueItem}>
-                  <span style={{ width:"18px", height:"18px", borderRadius:"50%", background:"#ffffff", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+                  <span style={{ width:"18px", height:"18px", borderRadius:"50%", background:"#0C58D1", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
                     <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
                   </span>
                   {locale === "en" ? v.en : v.ar}
@@ -161,7 +161,7 @@ export function HomePageClient() {
               { num:"4", en_title:"Name-Board Pickup",   ar_title:"استقبال باللافتة",     en_desc:"Exit arrivals — driver waiting with your name board.", ar_desc:"اخرج من الوصول — السائق ينتظرك بلافتة باسمك." },
             ].map((step, i) => (
               <div key={i} style={{ padding:"2.5rem 2rem", background:"#ffffff" }}>
-                <div style={{ fontSize:"3rem", fontWeight:800, color:"rgba(255,255,255,0.10)", lineHeight:1, marginBottom:"1.2rem" }}>{step.num}</div>
+                <div style={{ fontSize:"3rem", fontWeight:800, color:"rgba(0,0,0,0.06)", lineHeight:1, marginBottom:"1.2rem" }}>{step.num}</div>
                 <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#000000", marginBottom:"0.6rem" }}>{locale === "en" ? step.en_title : step.ar_title}</h3>
                 <p style={{ fontSize:"0.85rem", color:"#333333", lineHeight:1.65, margin:0 }}>{locale === "en" ? step.en_desc : step.ar_desc}</p>
               </div>
@@ -877,7 +877,7 @@ const art: Record<string, React.CSSProperties> = {
     transform: "translateY(0)",
   },
   statVal: { fontSize: "1.3rem", fontWeight: 800, color: "#000000" },
-  statLbl: { fontSize: "0.65rem", color: "rgba(255,255,255,0.65)", textTransform: "uppercase", letterSpacing: "0.06em", whiteSpace: "nowrap", textAlign: "center" },
+  statLbl: { fontSize: "0.65rem", color: "#64748B", textTransform: "uppercase", letterSpacing: "0.06em", whiteSpace: "nowrap", textAlign: "center" },
 
   /* content blocks */
   block: { marginBottom: "3.5rem" },

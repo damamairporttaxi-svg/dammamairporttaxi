@@ -471,11 +471,11 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroTitle: {
     fontSize: "clamp(1.2rem, 2.5vw, 1.9rem)",
-    color: "#ffffff",
+    color: "#000000",
   },
   heroSub: {
     fontSize: "1.05rem",
-    color: "#ffffff",
+    color: "#000000",
     maxWidth: "600px",
   },
   blogGrid: {

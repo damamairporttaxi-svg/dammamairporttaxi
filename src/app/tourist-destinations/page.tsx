@@ -341,7 +341,7 @@ const styles: Record<string, React.CSSProperties> = {
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
   h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.25", maxWidth: "900px" },
-  heroSub: { fontSize: "1.05rem", color: "#ffffff", maxWidth: "750px", lineHeight: "1.7" },
+  heroSub: { fontSize: "1.05rem", color: "#333333", maxWidth: "750px", lineHeight: "1.7" },
   statsRow: { display: "flex", gap: "3rem", marginTop: "1rem", flexWrap: "wrap" },
   stat: { display: "flex", flexDirection: "column", gap: "0.2rem" },
   statV: { fontSize: "1.8rem", color: "var(--accent-gold)", fontWeight: "800" },

@@ -23,7 +23,7 @@ function ConfirmationContent() {
   const gold = "var(--accent-gold)";
   const s = {
     page: { minHeight: "100vh", display: "flex", flexDirection: "column" as const },
-    hero: { background: "linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.98))", padding: "4rem 0 3rem", borderBottom: "1px solid #222", textAlign: "center" as const },
+    hero: { background: "#ffffff", padding: "4rem 0 3rem", borderBottom: "1px solid #e5e7eb", textAlign: "center" as const },
     card: { background: "#141414", border: "1px solid #222", borderRadius: 12, padding: "2rem", marginBottom: "1.5rem" },
     row: { display: "flex", justifyContent: "space-between", padding: "0.6rem 0", borderBottom: "1px solid #1a1a1a" as const },
   };

@@ -202,7 +202,7 @@ export default function JubailPage() {
 
 const s: Record<string, React.CSSProperties> = {
   page: { minHeight: "100vh", display: "flex", flexDirection: "column" },
-  hero: { background: "linear-gradient(rgba(0,0,0,0.88),rgba(0,0,0,0.98)),url('/hero-bg.jpg') center/cover no-repeat", padding: "5rem 0 3rem", borderBottom: "1px solid var(--border-color)" },
+  hero: { background: "#ffffff", padding: "5rem 0 3rem", borderBottom: "1px solid var(--border-color)" },
   hc: { display: "flex", flexDirection: "column", gap: "1rem" },
   bc: { display: "flex", gap: "0.5rem", alignItems: "center", fontSize: "0.82rem" },
   bLink: { color: "var(--accent-gold)", textDecoration: "none" },

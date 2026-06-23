@@ -136,7 +136,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroTitle: {
     fontSize: "2.2rem",
-    color: "#ffffff",
+    color: "#000000",
   },
   heroSub: {
     fontSize: "0.95rem",

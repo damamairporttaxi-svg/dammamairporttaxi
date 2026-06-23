@@ -85,7 +85,7 @@ export function FleetPageClient() {
 
 const styles: Record<string, React.CSSProperties> = {
   hero: {
-    background: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95)), url('/hero-bg.jpg') center/cover no-repeat",
+    background: "#ffffff",
     padding: "5rem 0",
     borderBottom: "1px solid var(--border-color)",
     textAlign: "center",
@@ -98,11 +98,11 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroTitle: {
     fontSize: "2.5rem",
-    color: "#ffffff",
+    color: "#000000",
   },
   heroSub: {
     fontSize: "1.05rem",
-    color: "#ffffff",
+    color: "#333333",
     maxWidth: "600px",
   },
   comfortGrid: {

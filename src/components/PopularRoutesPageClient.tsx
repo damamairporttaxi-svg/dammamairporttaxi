@@ -515,7 +515,7 @@ const S: Record<string,React.CSSProperties> = {
 
   /* Bottom CTA */
   cta: {
-    background:"linear-gradient(135deg,#075e54 0%,#128c7e 100%)",
+    background:"#ffffff", borderTop:"1px solid #e5e7eb", borderBottom:"1px solid #e5e7eb",
     padding:"3.5rem 0",
   },
   ctaInner: {
@@ -523,12 +523,12 @@ const S: Record<string,React.CSSProperties> = {
     alignItems:"center", gap:"2rem", flexWrap:"wrap",
   },
   ctaText: {},
-  ctaH2: { fontSize:"1.6rem", fontWeight:800, color: "#ffffff", marginBottom:"0.4rem" },
-  ctaP:  { color: "#ffffff", fontSize:"0.95rem" },
+  ctaH2: { fontSize:"1.6rem", fontWeight:800, color: "#000000", marginBottom:"0.4rem" },
+  ctaP:  { color: "#333333", fontSize:"0.95rem" },
   ctaBtn: {
     display:"inline-flex", alignItems:"center", gap:"0.6rem",
     padding:"0.9rem 2rem", borderRadius:"8px",
-    backgroundColor: "#ffffff", color:"#075e54",
+    backgroundColor: "#25d366", color:"#ffffff",
     fontSize:"1rem", fontWeight:700, textDecoration:"none",
     flexShrink:0, whiteSpace:"nowrap",
   },

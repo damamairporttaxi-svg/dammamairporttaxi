@@ -136,7 +136,7 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
 
 const styles: Record<string, React.CSSProperties> = {
   hero: {
-    background: "linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95)), url('/hero-bg.jpg') center/cover no-repeat",
+    background: "#ffffff",
     padding: "6rem 0",
     borderBottom: "1px solid var(--border-color)",
     textAlign: "center",
@@ -149,13 +149,13 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heroTitle: {
     fontSize: "clamp(1.2rem, 2.5vw, 1.8rem)",
-    color: "#ffffff",
+    color: "#000000",
     maxWidth: "800px",
     lineHeight: 1.25,
   },
   heroSub: {
     fontSize: "1.1rem",
-    color: "#ffffff",
+    color: "#333333",
     maxWidth: "700px",
     lineHeight: "1.6",
   },
@@ -242,7 +242,7 @@ const styles: Record<string, React.CSSProperties> = {
     padding: "2rem",
   },
   mapContainer: {
-    backgroundColor: "#000000",
+    backgroundColor: "#ffffff",
     borderRadius: "6px",
     overflow: "hidden",
   },

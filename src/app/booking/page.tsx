@@ -69,7 +69,7 @@ export default function BookingPage() {
 
   const gold = "var(--accent-gold)";
   const s = {
-    hero: { background: "linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.98))", padding: "4rem 0 3rem", borderBottom: "1px solid #222" },
+    hero: { background: "#ffffff", padding: "4rem 0 3rem", borderBottom: "1px solid #e5e7eb" },
     h1: { fontSize: "clamp(1.3rem,3vw,2rem)", color: "var(--text-primary)", fontWeight: 800, margin: "0.5rem 0 1rem" },
     card: { background: "#141414", border: "1px solid #222", borderRadius: 12, padding: "2rem" },
     label: { display: "block" as const, color: "#aaa", fontSize: "0.82rem", fontWeight: 600, marginBottom: 6, textTransform: "uppercase" as const },
@@ -79,7 +79,7 @@ export default function BookingPage() {
     step: (active: boolean) => ({
       width: 32, height: 32, borderRadius: "50%", display: "inline-flex", alignItems: "center", justifyContent: "center",
       fontWeight: 700, fontSize: "0.85rem",
-      background: active ? gold : "#222", color: active ? "#000" : "#555", border: active ? "none" : "1px solid #333",
+      background: active ? gold : "#ffffff", color: active ? "#ffffff" : "#000000", border: active ? "none" : "1px solid #e5e7eb",
     }),
   };
 

@@ -307,7 +307,7 @@ const styles: Record<string, React.CSSProperties> = {
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
   h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
-  heroSub: { fontSize: "1.05rem", color: "#ffffff", maxWidth: "700px", lineHeight: "1.7" },
+  heroSub: { fontSize: "1.05rem", color: "#333333", maxWidth: "700px", lineHeight: "1.7" },
   infoChips: { display: "flex", gap: "0.6rem", flexWrap: "wrap", marginTop: "0.5rem" },
   chip: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.3)", color: "var(--accent-gold)", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.8rem", fontWeight: "600" },
   mainGrid: { display: "grid", gridTemplateColumns: "1fr 300px", gap: "3rem", padding: "4rem 0", alignItems: "start" },
