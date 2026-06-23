@@ -67,8 +67,8 @@ const styles: Record<string, React.CSSProperties> = {
     gap: "1rem",
   },
   card: {
-    backgroundColor: "#000000",
-    border: "1px solid #000000",
+    backgroundColor: "#ffffff",
+    border: "1px solid #e5e7eb",
     borderRadius: "8px",
     padding: "1.2rem 1.4rem",
     display: "flex",
@@ -85,12 +85,12 @@ const styles: Record<string, React.CSSProperties> = {
   },
   cardTitle: {
     fontSize: "0.95rem",
-    color: "#ffffff",
+    color: "#000000",
     fontWeight: "700",
   },
   cardDesc: {
     fontSize: "0.78rem",
-    color: "rgba(255,255,255,0.75)",
+    color: "#333333",
     lineHeight: "1.4",
   },
   arrow: {
