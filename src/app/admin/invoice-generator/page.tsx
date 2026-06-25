@@ -43,7 +43,7 @@ export default function AdminInvoiceGenerator() {
         </div>
 
         {/* Preview */}
-        <div id="invoice-preview" style={{background:"#fff",color:"#111",padding:"2rem",borderRadius:10,fontFamily:"Arial,sans-serif"}}>
+        <div id="invoice-preview" style={{background:"#fff",color:"#111",padding:"2rem",borderRadius:10,fontFamily:"inherit"}}>
           <div style={{display:"flex",justifyContent:"space-between",marginBottom:"1.5rem",borderBottom:"2px solid #f5c518",paddingBottom:"1rem"}}>
             <div>
               <h2 style={{margin:0,fontSize:"1.4rem",fontWeight:800}}>INVOICE</h2>

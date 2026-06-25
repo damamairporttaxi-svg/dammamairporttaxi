@@ -56,7 +56,7 @@ export default function AdminLoginPage() {
       alignItems: "center",
       justifyContent: "center",
       background:"#ffffff",
-      fontFamily: "Arial, sans-serif",
+      fontFamily:"inherit",
       padding: "1rem",
     }}>
       <div style={{

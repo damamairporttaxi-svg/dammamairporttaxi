@@ -56,14 +56,14 @@ export default function AdminBlogs() {
           <div><label style={lbl}>Content</label><textarea style={{...inp,minHeight:200,resize:"vertical"}} value={form.content} onChange={e=>setForm(p=>({...p,content:e.target.value}))} placeholder="Write your blog content here..." /></div>
           <div style={{display:"flex",gap:"0.75rem"}}>
             <button onClick={save} style={{background:"#0C58D1",color:"#000",border:"none",borderRadius:6,padding:"0.65rem 1.5rem",fontWeight:700,cursor:"pointer"}}>{editing?"Update":"Publish"}</button>
-            {editing&&<button onClick={()=>{setEditing(null);setForm({title:"",excerpt:"",content:"",category:"GCC Travel Guides",published:false});}} style={{background:"#f8f9fa",color:"#64748B",border:"1px solid #e5e7eb",borderRadius:6,padding:"0.65rem 1rem",cursor:"pointer"}}>Cancel</button>}
+            {editing&&<button onClick={()=>{setEditing(null);setForm({title:"",excerpt:"",content:"",category:"GCC Travel Guides",published:false});}} style={{background:"#f8f9fa", color:"#000000",border:"1px solid #e5e7eb",borderRadius:6,padding:"0.65rem 1rem",cursor:"pointer"}}>Cancel</button>}
           </div>
         </div>
       </div>
 
       <div style={{background:"#ffffff",border:"1px solid #e5e7eb",borderRadius:10,overflow:"hidden"}}>
         <table style={{width:"100%",borderCollapse:"collapse",fontSize:"0.82rem"}}>
-          <thead><tr style={{borderBottom:"1px solid #1e1e1e"}}>
+          <thead><tr style={{borderBottom:"1px solid #e5e7eb"}}>
             {["Title","Category","Status","Date",""].map(h=><th key={h} style={{padding:"0.65rem 1rem",color:"#64748B",textAlign:"left",fontWeight:600}}>{h}</th>)}
           </tr></thead>
           <tbody>
@@ -71,12 +71,12 @@ export default function AdminBlogs() {
               <tr key={b.id} style={{borderBottom:"1px solid #1a1a1a"}}>
                 <td style={{padding:"0.6rem 1rem",color: "var(--text-primary)",fontWeight:600,maxWidth:280,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{b.title}</td>
                 <td style={{padding:"0.6rem 1rem",color:"#64748B"}}>{b.category}</td>
-                <td style={{padding:"0.6rem 1rem"}}><span style={{background:b.published?"#2e7d32":"#555",color: "var(--text-primary)",padding:"2px 8px",borderRadius:4,fontSize:"0.72rem",fontWeight:700}}>{b.published?"LIVE":"DRAFT"}</span></td>
+                <td style={{padding:"0.6rem 1rem"}}><span style={{background:b.published?"#0C58D1":"#94A3B8",color: "var(--text-primary)",padding:"2px 8px",borderRadius:4,fontSize:"0.72rem",fontWeight:700}}>{b.published?"LIVE":"DRAFT"}</span></td>
                 <td style={{padding:"0.6rem 1rem",color:"#64748B"}}>{b.created_at?.split("T")[0]}</td>
                 <td style={{padding:"0.6rem 1rem"}}>
-                  <button onClick={()=>{setEditing(b);setForm({title:b.title,excerpt:b.excerpt??'',content:b.content,category:b.category,published:b.published});}} style={{background:"#f8f9fa",color:"#64748B",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem",marginRight:6}}>Edit</button>
-                  <button onClick={()=>toggle(b.id,b.published)} style={{background:"#dcfce7", color:"#16a34a",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem",marginRight:6}}>{b.published?"Unpublish":"Publish"}</button>
-                  <button onClick={()=>del(b.id)} style={{background:"#fee2e2", color:"#dc2626",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem"}}>Del</button>
+                  <button onClick={()=>{setEditing(b);setForm({title:b.title,excerpt:b.excerpt??'',content:b.content,category:b.category,published:b.published});}} style={{background:"#f8f9fa", color:"#000000",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem",marginRight:6}}>Edit</button>
+                  <button onClick={()=>toggle(b.id,b.published)} style={{background:"#f0f0f0", color:"#333333",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem",marginRight:6}}>{b.published?"Unpublish":"Publish"}</button>
+                  <button onClick={()=>del(b.id)} style={{background:"#fff0f0", color:"#dc2626",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem"}}>Del</button>
                 </td>
               </tr>
             ))}

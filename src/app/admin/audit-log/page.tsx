@@ -16,7 +16,7 @@ export default function AdminAuditLog() {
       <div style={{background:"#ffffff",border:"1px solid #e5e7eb",borderRadius:10,overflow:"hidden"}}>
         <div style={{overflowX:"auto"}}>
           <table style={{width:"100%",borderCollapse:"collapse",fontSize:"0.82rem"}}>
-            <thead><tr style={{borderBottom:"1px solid #1e1e1e"}}>
+            <thead><tr style={{borderBottom:"1px solid #e5e7eb"}}>
               {["Time","Admin","Action","Entity","Entity ID","Details"].map(h=><th key={h} style={{padding:"0.65rem 1rem",color:"#64748B",textAlign:"left",fontWeight:600}}>{h}</th>)}
             </tr></thead>
             <tbody>

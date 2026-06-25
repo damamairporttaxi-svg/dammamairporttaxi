@@ -38,11 +38,11 @@ export default function AdminCalendar() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", flexWrap: "wrap", gap: "0.75rem" }}>
         <h1 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: 800, margin: 0 }}>Booking Calendar</h1>
         <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-          <button onClick={() => setMonth(new Date(year, mon - 1, 1))} style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.45rem 0.85rem", cursor: "pointer" }}>‹</button>
+          <button onClick={() => setMonth(new Date(year, mon - 1, 1))} style={{ background:"#f8f9fa", color:"#000000", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.45rem 0.85rem", cursor: "pointer" }}>‹</button>
           <span style={{ color: "var(--text-primary)", fontWeight: 700, minWidth: 130, textAlign: "center" }}>
             {month.toLocaleString("default", { month: "long", year: "numeric" })}
           </span>
-          <button onClick={() => setMonth(new Date(year, mon + 1, 1))} style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.45rem 0.85rem", cursor: "pointer" }}>›</button>
+          <button onClick={() => setMonth(new Date(year, mon + 1, 1))} style={{ background:"#f8f9fa", color:"#000000", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.45rem 0.85rem", cursor: "pointer" }}>›</button>
         </div>
       </div>
 

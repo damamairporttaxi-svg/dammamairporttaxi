@@ -28,7 +28,7 @@ export default function AdminSettings() {
       <div style={{background:"#ffffff",border:"1px solid #e5e7eb",borderRadius:10,padding:"1.5rem"}}>
         <div style={{display:"flex",flexDirection:"column",gap:"1rem"}}>
           {settings.map(s=>(
-            <div key={s.key} style={{display:"flex",alignItems:"center",gap:"0.75rem",paddingBottom:"1rem",borderBottom:"1px solid #1e1e1e"}}>
+            <div key={s.key} style={{display:"flex",alignItems:"center",gap:"0.75rem",paddingBottom:"1rem",borderBottom:"1px solid #e5e7eb"}}>
               <label style={{color:"#64748B",fontSize:"0.8rem",fontWeight:600,textTransform:"uppercase",minWidth:200,flexShrink:0}}>{s.key.replace(/_/g," ")}</label>
               <input style={inp} value={edits[s.key]??""} onChange={e=>setEdits(p=>({...p,[s.key]:e.target.value}))} />
               <button onClick={()=>save(s.key)} style={{background:"#0C58D1",color:"#000",border:"none",borderRadius:6,padding:"0.6rem 1rem",fontWeight:700,cursor:"pointer",fontSize:"0.82rem",whiteSpace:"nowrap"}}>Save</button>

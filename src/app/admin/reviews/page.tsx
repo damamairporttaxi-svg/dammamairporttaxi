@@ -42,7 +42,7 @@ export default function AdminReviews() {
               <button onClick={()=>toggle(r.id,r.published)} style={{background:r.published?"#555":"#1a3a1a",color:r.published?"#aaa":"#4caf50",border:"none",borderRadius:5,padding:"5px 10px",cursor:"pointer",fontSize:"0.75rem",fontWeight:600}}>
                 {r.published?"Hide":"Publish"}
               </button>
-              <button onClick={()=>del(r.id)} style={{background:"#fee2e2", color:"#dc2626",border:"none",borderRadius:5,padding:"5px 10px",cursor:"pointer",fontSize:"0.75rem"}}>Delete</button>
+              <button onClick={()=>del(r.id)} style={{background:"#fff0f0", color:"#dc2626",border:"none",borderRadius:5,padding:"5px 10px",cursor:"pointer",fontSize:"0.75rem"}}>Delete</button>
             </div>
           </div>
         ))}

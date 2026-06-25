@@ -55,7 +55,7 @@ export default function AdminPromoCodes() {
       <div style={{ background:"#ffffff", border:"1px solid #e5e7eb", borderRadius: 10, overflow: "hidden" }}>
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.83rem" }}>
-            <thead><tr style={{ borderBottom: "1px solid #1e1e1e" }}>
+            <thead><tr style={{ borderBottom:"1px solid #e5e7eb" }}>
               {["Code","Type","Value","Min Order","Used/Max","Expires","Status",""].map(h => <th key={h} style={{ padding: "0.65rem 1rem", color:"#64748B", textAlign: "left", fontWeight: 600 }}>{h}</th>)}
             </tr></thead>
             <tbody>
@@ -73,10 +73,10 @@ export default function AdminPromoCodes() {
                     </span>
                   </td>
                   <td style={{ padding: "0.6rem 1rem" }}>
-                    <button onClick={() => toggle(c.id, c.active)} style={{ background:"#f8f9fa", color:"#64748B", border: "none", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontSize: "0.75rem", marginRight: 6 }}>
+                    <button onClick={() => toggle(c.id, c.active)} style={{ background:"#f8f9fa", color:"#000000", border: "none", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontSize: "0.75rem", marginRight: 6 }}>
                       {c.active ? "Disable" : "Enable"}
                     </button>
-                    <button onClick={() => del(c.id)} style={{ background:"#fee2e2", color:"#dc2626", border: "none", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontSize: "0.75rem" }}>Del</button>
+                    <button onClick={() => del(c.id)} style={{ background:"#fff0f0", color:"#dc2626", border: "none", borderRadius: 4, padding: "3px 8px", cursor: "pointer", fontSize: "0.75rem" }}>Del</button>
                   </td>
                 </tr>
               ))}

@@ -24,7 +24,7 @@ export default function AdminPricing() {
       <div style={{background:"#ffffff",border:"1px solid #e5e7eb",borderRadius:10,overflow:"hidden"}}>
         <div style={{overflowX:"auto"}}>
           <table style={{width:"100%",borderCollapse:"collapse",fontSize:"0.82rem"}}>
-            <thead><tr style={{borderBottom:"1px solid #1e1e1e"}}>
+            <thead><tr style={{borderBottom:"1px solid #e5e7eb"}}>
               {["Route","Distance","Duration","Sedan SAR","SUV SAR","Van SAR","Luxury SAR",""].map(h=><th key={h} style={{padding:"0.65rem 1rem",color:"#64748B",textAlign:"left",fontWeight:600,whiteSpace:"nowrap"}}>{h}</th>)}
             </tr></thead>
             <tbody>
@@ -48,8 +48,8 @@ export default function AdminPricing() {
                     <td style={{padding:"0.6rem 1rem"}}>
                       {isEdit
                         ? <><button onClick={()=>save(p.id)} style={{background:"#0C58D1",color:"#000",border:"none",borderRadius:4,padding:"4px 10px",cursor:"pointer",fontSize:"0.78rem",fontWeight:700,marginRight:4}}>Save</button>
-                           <button onClick={()=>setEditing(null)} style={{background:"#f8f9fa",color:"#64748B",border:"none",borderRadius:4,padding:"4px 8px",cursor:"pointer",fontSize:"0.78rem"}}>✕</button></>
-                        : <button onClick={()=>{setEditing(p.id);setVals(prev=>({...prev,[p.id]:v}));}} style={{background:"#f8f9fa",color:"#64748B",border:"1px solid #e5e7eb",borderRadius:4,padding:"4px 10px",cursor:"pointer",fontSize:"0.78rem"}}>Edit</button>}
+                           <button onClick={()=>setEditing(null)} style={{background:"#f8f9fa", color:"#000000",border:"none",borderRadius:4,padding:"4px 8px",cursor:"pointer",fontSize:"0.78rem"}}>✕</button></>
+                        : <button onClick={()=>{setEditing(p.id);setVals(prev=>({...prev,[p.id]:v}));}} style={{background:"#f8f9fa", color:"#000000",border:"1px solid #e5e7eb",borderRadius:4,padding:"4px 10px",cursor:"pointer",fontSize:"0.78rem"}}>Edit</button>}
                     </td>
                   </tr>
                 );

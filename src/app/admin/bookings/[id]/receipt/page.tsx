@@ -13,9 +13,9 @@ export default function ReceiptPage() {
       <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1.5rem" }}>
         <button onClick={() => window.print()} style={{ background: "#f5c518", color: "#000", border: "none", borderRadius: 6, padding: "0.65rem 1.25rem", fontWeight: 700, cursor: "pointer", fontSize: "0.85rem" }}>Print Receipt</button>
         <button onClick={() => fetch("/api/send-receipt-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id }) }).then(() => alert("Receipt emailed!"))}
-          style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem 1.25rem", cursor: "pointer", fontSize: "0.85rem" }}>Email Receipt</button>
+          style={{ background:"#f8f9fa", color:"#000000", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem 1.25rem", cursor: "pointer", fontSize: "0.85rem" }}>Email Receipt</button>
       </div>
-      <div style={{ background: "#fff", color: "#111", padding: "2rem", borderRadius: 10, textAlign: "center", fontFamily: "Arial, sans-serif" }}>
+      <div style={{ background: "#fff", color: "#111", padding: "2rem", borderRadius: 10, textAlign: "center", fontFamily:"inherit" }}>
         <div style={{ fontSize: "2rem", marginBottom: "0.5rem" }}>✓</div>
         <h2 style={{ color: "#2e7d32", margin: "0 0 0.25rem" }}>PAYMENT RECEIPT</h2>
         <p style={{ color:"#64748B", fontSize: "0.82rem", margin: "0 0 1.5rem" }}>Dammam Airport Taxi</p>

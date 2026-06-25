@@ -46,14 +46,14 @@ export default function AdminBookings() {
         <select value={filter} onChange={e => setFilter(e.target.value)} style={input}>
           {STATUS_OPTIONS.map(s => <option key={s} value={s}>{s === "all" ? "All Statuses" : s.replace("_"," ").toUpperCase()}</option>)}
         </select>
-        <button onClick={load} style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.6rem 0.9rem", cursor: "pointer", fontSize: "0.85rem" }}>Refresh</button>
+        <button onClick={load} style={{ background:"#f8f9fa", color:"#000000", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.6rem 0.9rem", cursor: "pointer", fontSize: "0.85rem" }}>Refresh</button>
       </div>
 
       <div style={{ background:"#ffffff", border:"1px solid #e5e7eb", borderRadius: 10, overflow: "hidden" }}>
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
             <thead>
-              <tr style={{ borderBottom: "1px solid #1e1e1e" }}>
+              <tr style={{ borderBottom:"1px solid #e5e7eb" }}>
                 {["Ref","Name","Phone","Pickup","Dropoff","Date","Time","Vehicle","Total","Status",""].map(h => (
                   <th key={h} style={{ padding: "0.65rem 0.9rem", color:"#64748B", textAlign: "left", fontWeight: 600, whiteSpace: "nowrap" }}>{h}</th>
                 ))}

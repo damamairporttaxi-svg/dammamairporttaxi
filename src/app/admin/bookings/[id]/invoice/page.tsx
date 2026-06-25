@@ -35,12 +35,12 @@ export default function InvoicePage() {
           Print / Save PDF
         </button>
         <button onClick={() => fetch("/api/send-invoice-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id }) }).then(() => alert("Invoice emailed!"))}
-          style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem 1.25rem", cursor: "pointer", fontSize: "0.85rem" }}>
+          style={{ background:"#f8f9fa", color:"#000000", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem 1.25rem", cursor: "pointer", fontSize: "0.85rem" }}>
           Email Invoice
         </button>
       </div>
 
-      <div id="invoice" style={{ background: "#fff", color: "#111", padding: "2.5rem", borderRadius: 10, fontFamily: "Arial, sans-serif" }}>
+      <div id="invoice" style={{ background: "#fff", color: "#111", padding: "2.5rem", borderRadius: 10, fontFamily:"inherit" }}>
         {/* Header */}
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "2rem", borderBottom: "2px solid #f5c518", paddingBottom: "1.5rem" }}>
           <div>

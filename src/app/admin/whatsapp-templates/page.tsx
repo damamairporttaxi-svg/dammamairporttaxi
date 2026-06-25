@@ -34,7 +34,7 @@ export default function AdminWhatsappTemplates() {
                 </div>
                 <div style={{display:"flex",gap:"0.5rem",alignItems:"center"}}>
                   <span style={{background:t.active?"#2e7d32":"#555",color: "var(--text-primary)",padding:"2px 7px",borderRadius:4,fontSize:"0.7rem",fontWeight:700}}>{t.active?"ON":"OFF"}</span>
-                  <button onClick={()=>setEditing({...t})} style={{background:"#f8f9fa",color:"#64748B",border:"1px solid #e5e7eb",borderRadius:5,padding:"4px 10px",cursor:"pointer",fontSize:"0.78rem"}}>Edit</button>
+                  <button onClick={()=>setEditing({...t})} style={{background:"#f8f9fa", color:"#000000",border:"1px solid #e5e7eb",borderRadius:5,padding:"4px 10px",cursor:"pointer",fontSize:"0.78rem"}}>Edit</button>
                 </div>
               </div>
               <div style={{background:"#ffffff",borderRadius:6,padding:"0.85rem",color:"#64748B",fontSize:"0.82rem",lineHeight:1.7,whiteSpace:"pre-wrap"}}>{t.message}</div>
@@ -58,7 +58,7 @@ export default function AdminWhatsappTemplates() {
               </div>
               <div style={{display:"flex",gap:"0.75rem"}}>
                 <button onClick={save} style={{flex:1,background:"#0C58D1",color:"#000",border:"none",borderRadius:6,padding:"0.7rem",fontWeight:700,cursor:"pointer"}}>Save</button>
-                <button onClick={()=>setEditing(null)} style={{background:"#f8f9fa",color:"#64748B",border:"1px solid #e5e7eb",borderRadius:6,padding:"0.7rem 1rem",cursor:"pointer"}}>Cancel</button>
+                <button onClick={()=>setEditing(null)} style={{background:"#f8f9fa", color:"#000000",border:"1px solid #e5e7eb",borderRadius:6,padding:"0.7rem 1rem",cursor:"pointer"}}>Cancel</button>
               </div>
               {/* Preview with dummy data */}
               <div style={{background:"#ffffff",borderRadius:6,padding:"0.85rem"}}>

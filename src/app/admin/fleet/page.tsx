@@ -49,13 +49,13 @@ export default function AdminFleet() {
         </div>
         <div style={{display:"flex",gap:"0.75rem"}}>
           <button onClick={save} style={{background:"#0C58D1",color:"#000",border:"none",borderRadius:6,padding:"0.65rem 1.5rem",fontWeight:700,cursor:"pointer"}}>{editing?"Update":"Add Vehicle"}</button>
-          {editing&&<button onClick={()=>{setEditing(null);setForm({name:"",vehicle_type:"sedan",plate:"",driver_name:"",driver_phone:"",capacity:4,status:"available"});}} style={{background:"#f8f9fa",color:"#64748B",border:"1px solid #e5e7eb",borderRadius:6,padding:"0.65rem 1rem",cursor:"pointer"}}>Cancel</button>}
+          {editing&&<button onClick={()=>{setEditing(null);setForm({name:"",vehicle_type:"sedan",plate:"",driver_name:"",driver_phone:"",capacity:4,status:"available"});}} style={{background:"#f8f9fa", color:"#000000",border:"1px solid #e5e7eb",borderRadius:6,padding:"0.65rem 1rem",cursor:"pointer"}}>Cancel</button>}
         </div>
       </div>
 
       <div style={{background:"#ffffff",border:"1px solid #e5e7eb",borderRadius:10,overflow:"hidden"}}>
         <table style={{width:"100%",borderCollapse:"collapse",fontSize:"0.83rem"}}>
-          <thead><tr style={{borderBottom:"1px solid #1e1e1e"}}>
+          <thead><tr style={{borderBottom:"1px solid #e5e7eb"}}>
             {["Name","Type","Plate","Driver","Phone","Cap.","Status",""].map(h=><th key={h} style={{padding:"0.65rem 1rem",color:"#64748B",textAlign:"left",fontWeight:600}}>{h}</th>)}
           </tr></thead>
           <tbody>
@@ -69,8 +69,8 @@ export default function AdminFleet() {
                 <td style={{padding:"0.6rem 1rem",color:"#64748B",textAlign:"center"}}>{v.capacity}</td>
                 <td style={{padding:"0.6rem 1rem"}}><span style={{background:statusColor[v.status]??"#333",color: "var(--text-primary)",padding:"2px 8px",borderRadius:4,fontSize:"0.72rem",fontWeight:700}}>{v.status?.toUpperCase()}</span></td>
                 <td style={{padding:"0.6rem 1rem"}}>
-                  <button onClick={()=>{setEditing(v);setForm({name:v.name,vehicle_type:v.vehicle_type,plate:v.plate,driver_name:v.driver_name,driver_phone:v.driver_phone,capacity:v.capacity,status:v.status});}} style={{background:"#f8f9fa",color:"#64748B",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem",marginRight:6}}>Edit</button>
-                  <button onClick={()=>del(v.id)} style={{background:"#fee2e2", color:"#dc2626",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem"}}>Del</button>
+                  <button onClick={()=>{setEditing(v);setForm({name:v.name,vehicle_type:v.vehicle_type,plate:v.plate,driver_name:v.driver_name,driver_phone:v.driver_phone,capacity:v.capacity,status:v.status});}} style={{background:"#f8f9fa", color:"#000000",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem",marginRight:6}}>Edit</button>
+                  <button onClick={()=>del(v.id)} style={{background:"#fff0f0", color:"#dc2626",border:"none",borderRadius:4,padding:"3px 8px",cursor:"pointer",fontSize:"0.75rem"}}>Del</button>
                 </td>
               </tr>
             ))}

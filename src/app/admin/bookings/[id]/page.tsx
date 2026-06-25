@@ -69,7 +69,7 @@ export default function AdminBookingDetail() {
   return (
     <div style={{ maxWidth: 900, margin: "0 auto" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
-        <button onClick={() => router.back()} style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.5rem 0.9rem", cursor: "pointer", fontSize: "0.82rem" }}>← Back</button>
+        <button onClick={() => router.back()} style={{ background:"#f8f9fa", color:"#000000", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.5rem 0.9rem", cursor: "pointer", fontSize: "0.82rem" }}>← Back</button>
         <h1 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: 800, margin: 0 }}>{b.ref}</h1>
         <span style={{ background: statusColor[b.status] ?? "#333", color: "var(--text-primary)", padding: "3px 10px", borderRadius: 4, fontSize: "0.78rem", fontWeight: 700 }}>
           {b.status?.replace("_"," ").toUpperCase()}
@@ -165,7 +165,7 @@ export default function AdminBookingDetail() {
               <button onClick={() => sendEmail("send-invoice-email")} style={{ background:"#64748B", color:"#ffffff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Send Invoice Email
               </button>
-              <button onClick={() => sendEmail("send-receipt-email")} style={{ background:"#16a34a", color:"#ffffff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
+              <button onClick={() => sendEmail("send-receipt-email")} style={{ background:"#0C58D1", color:"#ffffff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Send Receipt Email
               </button>
               <Link href={`/admin/bookings/${id}/invoice`} style={{ display: "block", textAlign: "center", background:"#f8f9fa", color:"#0C58D1", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem", textDecoration: "none", fontSize: "0.82rem", fontWeight: 600 }}>

@@ -55,14 +55,14 @@ export default function AdminDashboard() {
 
       {/* Recent bookings */}
       <div style={{ background:"#ffffff", border:"1px solid #e5e7eb", borderRadius: 10, overflow: "hidden" }}>
-        <div style={{ padding: "1rem 1.25rem", borderBottom: "1px solid #1e1e1e", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div style={{ padding: "1rem 1.25rem", borderBottom:"1px solid #e5e7eb", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <span style={{ color: "var(--text-primary)", fontWeight: 700, fontSize: "0.9rem" }}>Recent Bookings</span>
           <Link href="/admin/bookings" style={{ color:"#0C58D1", fontSize: "0.8rem", textDecoration: "none" }}>View all →</Link>
         </div>
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.82rem" }}>
             <thead>
-              <tr style={{ borderBottom: "1px solid #1e1e1e" }}>
+              <tr style={{ borderBottom:"1px solid #e5e7eb" }}>
                 {["Ref","Name","Pickup","Date","Vehicle","Total","Status",""].map(h => (
                   <th key={h} style={{ padding: "0.6rem 1rem", color:"#64748B", textAlign: "left", fontWeight: 600 }}>{h}</th>
                 ))}
