@@ -108,12 +108,38 @@ export default function RootLayout({
         "postalCode": "31141",
         "addressCountry": "SA"
       }
-    }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2000",
+      "bestRating": "5"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "26.4721",
+      "longitude": "49.7980"
+    },
+    "hasMap": "https://maps.google.com/?q=King+Fahd+International+Airport",
+    "currenciesAccepted": "SAR",
+    "paymentAccepted": "Cash, Bank Transfer"
   };
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="alternate" hreflang="en" href="https://dammamairporttaxi.com" />
+        <link rel="alternate" hreflang="ar" href="https://dammamairporttaxi.com" />
+        <link rel="alternate" hreflang="x-default" href="https://dammamairporttaxi.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}

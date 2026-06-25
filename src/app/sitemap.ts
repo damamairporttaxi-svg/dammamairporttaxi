@@ -23,12 +23,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     /* ── Tier 2: Route pages ──────────────── */
     ...routeUrls,
 
+    /* ── Tier 2.5: City landing pages ───────── */
+    { url: `${baseUrl}/al-khobar`,                      lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/dhahran`,                        lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/jubail`,                         lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/qatif`,                          lastModified: new Date(), changeFrequency: "monthly", priority: 0.80 },
+    { url: `${baseUrl}/booking`,                        lastModified: new Date(), changeFrequency: "monthly", priority: 0.75 },
+
     /* ── Tier 3: Supporting pages ────────── */
     { url: `${baseUrl}/fleet`,                          lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/faqs`,                           lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/blog`,                           lastModified: new Date(), changeFrequency: "weekly",  priority: 0.7 },
     { url: `${baseUrl}/contact`,                        lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${baseUrl}/about`,                          lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/voice-search-faqs`,              lastModified: new Date(), changeFrequency: "monthly", priority: 0.65 },
     { url: `${baseUrl}/privacy-policy`,                 lastModified: new Date(), changeFrequency: "yearly",  priority: 0.3 },
     { url: `${baseUrl}/terms`,                          lastModified: new Date(), changeFrequency: "yearly",  priority: 0.3 },
   ];
