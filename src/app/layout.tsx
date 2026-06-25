@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { LiveChat } from "@/components/LiveChat";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dammamairporttaxi.com"),
@@ -121,6 +122,7 @@ export default function RootLayout({
       <body>
         <LanguageProvider>
           {children}
+          <LiveChat />
         </LanguageProvider>
 
         {/* Google Analytics */}
