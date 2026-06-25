@@ -43,7 +43,7 @@ export default function AdminLoginPage() {
 
   if (checking) {
     return (
-      <div style={{ minHeight: "100vh", background: "#0c0c0c", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ minHeight: "100vh", background:"#ffffff", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ color: "#444", fontSize: "0.85rem" }}>Checking session...</div>
       </div>
     );
@@ -55,13 +55,13 @@ export default function AdminLoginPage() {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      background: "#0c0c0c",
+      background:"#ffffff",
       fontFamily: "Arial, sans-serif",
       padding: "1rem",
     }}>
       <div style={{
-        background: "#141414",
-        border: "1px solid #222",
+        background:"#ffffff",
+        border:"1px solid #e5e7eb",
         borderRadius: 16,
         padding: "2.5rem 2rem",
         width: "100%",
@@ -70,10 +70,10 @@ export default function AdminLoginPage() {
       }}>
         {/* Header */}
         <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-          <div style={{ color: "#f5c518", fontWeight: 800, fontSize: "1.5rem", letterSpacing: "-0.02em" }}>
+          <div style={{ color:"#0C58D1", fontWeight: 800, fontSize: "1.5rem", letterSpacing: "-0.02em" }}>
             DAT Admin
           </div>
-          <div style={{ color: "#555", fontSize: "0.82rem", marginTop: 6 }}>
+          <div style={{ color:"#64748B", fontSize: "0.82rem", marginTop: 6 }}>
             Dammam Airport Taxi — Control Panel
           </div>
         </div>
@@ -82,7 +82,7 @@ export default function AdminLoginPage() {
           {/* Email */}
           <div>
             <label style={{
-              display: "block", color: "#888", fontSize: "0.75rem",
+              display: "block", color:"#64748B", fontSize: "0.75rem",
               fontWeight: 600, textTransform: "uppercase", marginBottom: 6,
             }}>Email</label>
             <input
@@ -93,7 +93,7 @@ export default function AdminLoginPage() {
               autoFocus
               autoComplete="email"
               style={{
-                width: "100%", background: "#0c0c0c",
+                width: "100%", background:"#ffffff",
                 border: `1px solid ${error ? "#e53e3e" : "#333"}`,
                 borderRadius: 8, padding: "0.85rem 1rem",
                 color: "var(--text-primary)", fontSize: "0.95rem",
@@ -105,7 +105,7 @@ export default function AdminLoginPage() {
           {/* Password */}
           <div>
             <label style={{
-              display: "block", color: "#888", fontSize: "0.75rem",
+              display: "block", color:"#64748B", fontSize: "0.75rem",
               fontWeight: 600, textTransform: "uppercase", marginBottom: 6,
             }}>Password</label>
             <input
@@ -115,7 +115,7 @@ export default function AdminLoginPage() {
               placeholder="••••••••"
               autoComplete="current-password"
               style={{
-                width: "100%", background: "#0c0c0c",
+                width: "100%", background:"#ffffff",
                 border: `1px solid ${error ? "#e53e3e" : "#333"}`,
                 borderRadius: 8, padding: "0.85rem 1rem",
                 color: "var(--text-primary)", fontSize: "0.95rem",

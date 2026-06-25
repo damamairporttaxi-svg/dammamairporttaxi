@@ -61,7 +61,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   // Still checking auth
   if (!checked) {
     return (
-      <div style={{ minHeight: "100vh", background: "#0c0c0c", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div style={{ minHeight: "100vh", background:"#ffffff", display: "flex", alignItems: "center", justifyContent: "center" }}>
         <div style={{ color: "#444", fontSize: "0.85rem" }}>Loading...</div>
       </div>
     );
@@ -74,11 +74,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   if (!user) return null;
 
   return (
-    <div style={{ display: "flex", minHeight: "100vh", background: "#0c0c0c", fontFamily: "Arial, sans-serif" }}>
+    <div style={{ display: "flex", minHeight: "100vh", background:"#ffffff", fontFamily: "Arial, sans-serif" }}>
       {/* Sidebar */}
       <aside style={{
         width: 220,
-        background: "#141414",
+        background:"#ffffff",
         borderRight: "1px solid #1e1e1e",
         display: "flex",
         flexDirection: "column",
@@ -89,8 +89,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         transition: "transform 0.25s ease",
       }}>
         <div style={{ padding: "1.25rem 1.5rem", borderBottom: "1px solid #1e1e1e" }}>
-          <div style={{ color: "#f5c518", fontWeight: 800, fontSize: "0.95rem" }}>DAT Admin</div>
-          <div style={{ color: "#555", fontSize: "0.72rem", marginTop: 2, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+          <div style={{ color:"#0C58D1", fontWeight: 800, fontSize: "0.95rem" }}>DAT Admin</div>
+          <div style={{ color:"#64748B", fontSize: "0.72rem", marginTop: 2, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
             {user.email}
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div style={{ padding: "1rem 1.5rem", borderTop: "1px solid #1e1e1e" }}>
           <button
             onClick={logout}
-            style={{ width: "100%", background: "#1a1a1a", color: "#666", border: "1px solid #222", borderRadius: 6, padding: "0.6rem", cursor: "pointer", fontSize: "0.82rem" }}
+            style={{ width: "100%", background:"#ffffff", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.6rem", cursor: "pointer", fontSize: "0.82rem" }}
           >
             Logout
           </button>
@@ -131,7 +131,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <div style={{ flex: 1, marginLeft: sideOpen ? 220 : 0, transition: "margin 0.25s ease", display: "flex", flexDirection: "column" }}>
         {/* Topbar */}
         <header style={{
-          background: "#141414",
+          background:"#ffffff",
           borderBottom: "1px solid #1e1e1e",
           padding: "0.75rem 1.5rem",
           display: "flex",
@@ -143,7 +143,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         }}>
           <button
             onClick={() => setSideOpen(p => !p)}
-            style={{ background: "none", border: "none", color: "#888", cursor: "pointer", fontSize: "1.3rem", padding: 4 }}
+            style={{ background: "none", border: "none", color:"#64748B", cursor: "pointer", fontSize: "1.3rem", padding: 4 }}
           >
             ☰
           </button>

@@ -59,22 +59,22 @@ export default function AdminBookingDetail() {
     setTimeout(() => setMsg(""), 4000);
   }
 
-  const gold = "#f5c518";
-  const input = { width: "100%", background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.7rem 0.9rem", color: "var(--text-primary)", fontSize: "0.88rem", boxSizing: "border-box" as const };
-  const label = { display: "block" as const, color: "#888", fontSize: "0.75rem", fontWeight: 600, marginBottom: 4, textTransform: "uppercase" as const };
-  const card = { background: "#141414", border: "1px solid #222", borderRadius: 10, padding: "1.5rem", marginBottom: "1.25rem" };
+  const gold = "#0C58D1";
+  const input = { width: "100%", background:"#ffffff", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.7rem 0.9rem", color: "var(--text-primary)", fontSize: "0.88rem", boxSizing: "border-box" as const };
+  const label = { display: "block" as const, color:"#64748B", fontSize: "0.75rem", fontWeight: 600, marginBottom: 4, textTransform: "uppercase" as const };
+  const card = { background:"#ffffff", border:"1px solid #e5e7eb", borderRadius: 10, padding: "1.5rem", marginBottom: "1.25rem" };
 
-  if (!b) return <p style={{ color: "#555", padding: "2rem" }}>Loading...</p>;
+  if (!b) return <p style={{ color:"#64748B", padding: "2rem" }}>Loading...</p>;
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto" }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "1.5rem", flexWrap: "wrap" }}>
-        <button onClick={() => router.back()} style={{ background: "#222", color: "#888", border: "1px solid #333", borderRadius: 6, padding: "0.5rem 0.9rem", cursor: "pointer", fontSize: "0.82rem" }}>← Back</button>
+        <button onClick={() => router.back()} style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.5rem 0.9rem", cursor: "pointer", fontSize: "0.82rem" }}>← Back</button>
         <h1 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: 800, margin: 0 }}>{b.ref}</h1>
         <span style={{ background: statusColor[b.status] ?? "#333", color: "var(--text-primary)", padding: "3px 10px", borderRadius: 4, fontSize: "0.78rem", fontWeight: 700 }}>
           {b.status?.replace("_"," ").toUpperCase()}
         </span>
-        {msg && <span style={{ color: gold, fontWeight: 600, fontSize: "0.85rem" }}>{msg}</span>}
+        {msg && <span style={{ color:"#0C58D1", fontWeight: 600, fontSize: "0.85rem" }}>{msg}</span>}
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: "1.25rem" }}>
@@ -82,7 +82,7 @@ export default function AdminBookingDetail() {
         <div>
           {/* Booking info */}
           <div style={card}>
-            <h3 style={{ color: gold, fontSize: "0.9rem", marginBottom: "1rem" }}>Trip Details</h3>
+            <h3 style={{ color:"#0C58D1", fontSize: "0.9rem", marginBottom: "1rem" }}>Trip Details</h3>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem", fontSize: "0.82rem" }}>
               {[["Name",b.name],["Phone",b.phone],["Email",b.email],["Pickup",b.pickup_location],
                 ["Dropoff",b.dropoff_location],["Date",b.pickup_date],["Time",b.pickup_time],
@@ -91,14 +91,14 @@ export default function AdminBookingDetail() {
                 ...(b.promo_code?[["Promo",b.promo_code]]:[]),
               ].map(([l,v]) => (
                 <div key={String(l)}>
-                  <div style={{ color: "#555", fontSize: "0.7rem", textTransform: "uppercase", marginBottom: 2 }}>{l}</div>
+                  <div style={{ color:"#64748B", fontSize: "0.7rem", textTransform: "uppercase", marginBottom: 2 }}>{l}</div>
                   <div style={{ color: "var(--text-primary)", fontWeight: 500 }}>{String(v ?? "-")}</div>
                 </div>
               ))}
             </div>
             {b.special_notes && (
-              <div style={{ marginTop: "1rem", padding: "0.75rem", background: "#0c0c0c", borderRadius: 6, color: "#aaa", fontSize: "0.82rem" }}>
-                <span style={{ color: "#555", display: "block", marginBottom: 4, fontSize: "0.72rem", textTransform: "uppercase" }}>Notes</span>
+              <div style={{ marginTop: "1rem", padding: "0.75rem", background:"#ffffff", borderRadius: 6, color:"#64748B", fontSize: "0.82rem" }}>
+                <span style={{ color:"#64748B", display: "block", marginBottom: 4, fontSize: "0.72rem", textTransform: "uppercase" }}>Notes</span>
                 {b.special_notes}
               </div>
             )}
@@ -106,7 +106,7 @@ export default function AdminBookingDetail() {
 
           {/* Admin controls */}
           <div style={card}>
-            <h3 style={{ color: gold, fontSize: "0.9rem", marginBottom: "1rem" }}>Update Booking</h3>
+            <h3 style={{ color:"#0C58D1", fontSize: "0.9rem", marginBottom: "1rem" }}>Update Booking</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem" }}>
               <div>
                 <label style={label}>Status</label>
@@ -132,7 +132,7 @@ export default function AdminBookingDetail() {
                 <label style={label}>Admin Notes</label>
                 <textarea value={form.admin_notes} onChange={e => setForm(p => ({ ...p, admin_notes: e.target.value }))} style={{ ...input, minHeight: 80, resize: "vertical" }} placeholder="Internal notes..." />
               </div>
-              <button onClick={save} disabled={saving} style={{ background: gold, color: "#000", border: "none", borderRadius: 6, padding: "0.75rem", fontWeight: 700, cursor: "pointer" }}>
+              <button onClick={save} disabled={saving} style={{ background:"#0C58D1", color: "#000", border: "none", borderRadius: 6, padding: "0.75rem", fontWeight: 700, cursor: "pointer" }}>
                 {saving ? "Saving..." : "Save Changes"}
               </button>
             </div>
@@ -143,10 +143,10 @@ export default function AdminBookingDetail() {
         <div>
           {/* Pricing */}
           <div style={card}>
-            <h3 style={{ color: gold, fontSize: "0.9rem", marginBottom: "1rem" }}>Pricing</h3>
+            <h3 style={{ color:"#0C58D1", fontSize: "0.9rem", marginBottom: "1rem" }}>Pricing</h3>
             {[["Base Price",`${b.price} SAR`],["Discount",`-${b.discount_amount ?? 0} SAR`],["Final",`${b.final_price} SAR`]].map(([l,v]) => (
               <div key={String(l)} style={{ display: "flex", justifyContent: "space-between", padding: "0.5rem 0", borderBottom: "1px solid #1a1a1a", fontSize: "0.85rem" }}>
-                <span style={{ color: "#888" }}>{l}</span>
+                <span style={{ color:"#64748B" }}>{l}</span>
                 <span style={{ color: l === "Final" ? gold : "#fff", fontWeight: l === "Final" ? 700 : 500 }}>{String(v)}</span>
               </div>
             ))}
@@ -154,24 +154,24 @@ export default function AdminBookingDetail() {
 
           {/* Actions */}
           <div style={card}>
-            <h3 style={{ color: gold, fontSize: "0.9rem", marginBottom: "1rem" }}>Quick Actions</h3>
+            <h3 style={{ color:"#0C58D1", fontSize: "0.9rem", marginBottom: "1rem" }}>Quick Actions</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              <button onClick={() => sendEmail("send-status-email")} style={{ background: "#1565c0", color: "var(--text-primary)", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
+              <button onClick={() => sendEmail("send-status-email")} style={{ background:"#0C58D1", color:"#ffffff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Send Status Email
               </button>
               <button onClick={sendDriverAssignment} style={{ background: "#25d366", color: "var(--text-primary)", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Notify Driver (WA + Email)
               </button>
-              <button onClick={() => sendEmail("send-invoice-email")} style={{ background: "#7b1fa2", color: "var(--text-primary)", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
+              <button onClick={() => sendEmail("send-invoice-email")} style={{ background:"#64748B", color:"#ffffff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Send Invoice Email
               </button>
-              <button onClick={() => sendEmail("send-receipt-email")} style={{ background: "#2e7d32", color: "var(--text-primary)", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
+              <button onClick={() => sendEmail("send-receipt-email")} style={{ background:"#16a34a", color:"#ffffff", border: "none", borderRadius: 6, padding: "0.65rem", cursor: "pointer", fontSize: "0.82rem", fontWeight: 600 }}>
                 Send Receipt Email
               </button>
-              <Link href={`/admin/bookings/${id}/invoice`} style={{ display: "block", textAlign: "center", background: "#222", color: gold, border: "1px solid #333", borderRadius: 6, padding: "0.65rem", textDecoration: "none", fontSize: "0.82rem", fontWeight: 600 }}>
+              <Link href={`/admin/bookings/${id}/invoice`} style={{ display: "block", textAlign: "center", background:"#f8f9fa", color:"#0C58D1", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem", textDecoration: "none", fontSize: "0.82rem", fontWeight: 600 }}>
                 View Invoice
               </Link>
-              <a href={`https://wa.me/${b.phone?.replace(/\D/g,"")}`} target="_blank" rel="noreferrer" style={{ display: "block", textAlign: "center", background: "#222", color: "#25d366", border: "1px solid #333", borderRadius: 6, padding: "0.65rem", textDecoration: "none", fontSize: "0.82rem", fontWeight: 600 }}>
+              <a href={`https://wa.me/${b.phone?.replace(/\D/g,"")}`} target="_blank" rel="noreferrer" style={{ display: "block", textAlign: "center", background:"#f8f9fa", color: "#25d366", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem", textDecoration: "none", fontSize: "0.82rem", fontWeight: 600 }}>
                 WhatsApp Customer
               </a>
             </div>
@@ -179,10 +179,10 @@ export default function AdminBookingDetail() {
 
           {/* Meta */}
           <div style={{ ...card, fontSize: "0.78rem" }}>
-            <div style={{ color: "#555", marginBottom: 4 }}>Booking ID</div>
+            <div style={{ color:"#64748B", marginBottom: 4 }}>Booking ID</div>
             <div style={{ color: "#444", fontFamily: "monospace", wordBreak: "break-all", marginBottom: "0.75rem" }}>{b.id}</div>
-            <div style={{ color: "#555", marginBottom: 4 }}>Created</div>
-            <div style={{ color: "#666" }}>{new Date(b.created_at).toLocaleString()}</div>
+            <div style={{ color:"#64748B", marginBottom: 4 }}>Created</div>
+            <div style={{ color:"#64748B" }}>{new Date(b.created_at).toLocaleString()}</div>
           </div>
         </div>
       </div>

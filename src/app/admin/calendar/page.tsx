@@ -29,7 +29,7 @@ export default function AdminCalendar() {
   });
 
   const pad = (n: number) => String(n).padStart(2, "0");
-  const gold = "#f5c518";
+  const gold = "#0C58D1";
 
   const selectedBookings = selected ? (bookingsByDate[selected] ?? []) : [];
 
@@ -38,20 +38,20 @@ export default function AdminCalendar() {
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", flexWrap: "wrap", gap: "0.75rem" }}>
         <h1 style={{ color: "var(--text-primary)", fontSize: "1.2rem", fontWeight: 800, margin: 0 }}>Booking Calendar</h1>
         <div style={{ display: "flex", gap: "0.5rem", alignItems: "center" }}>
-          <button onClick={() => setMonth(new Date(year, mon - 1, 1))} style={{ background: "#222", color: "#aaa", border: "1px solid #333", borderRadius: 6, padding: "0.45rem 0.85rem", cursor: "pointer" }}>‹</button>
+          <button onClick={() => setMonth(new Date(year, mon - 1, 1))} style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.45rem 0.85rem", cursor: "pointer" }}>‹</button>
           <span style={{ color: "var(--text-primary)", fontWeight: 700, minWidth: 130, textAlign: "center" }}>
             {month.toLocaleString("default", { month: "long", year: "numeric" })}
           </span>
-          <button onClick={() => setMonth(new Date(year, mon + 1, 1))} style={{ background: "#222", color: "#aaa", border: "1px solid #333", borderRadius: 6, padding: "0.45rem 0.85rem", cursor: "pointer" }}>›</button>
+          <button onClick={() => setMonth(new Date(year, mon + 1, 1))} style={{ background:"#f8f9fa", color:"#64748B", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.45rem 0.85rem", cursor: "pointer" }}>›</button>
         </div>
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: selected ? "1fr 320px" : "1fr", gap: "1.25rem", alignItems: "start" }}>
         {/* Calendar grid */}
-        <div style={{ background: "#141414", border: "1px solid #222", borderRadius: 10, overflow: "hidden" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(7,1fr)", background: "#1a1a1a" }}>
+        <div style={{ background:"#ffffff", border:"1px solid #e5e7eb", borderRadius: 10, overflow: "hidden" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(7,1fr)", background:"#ffffff" }}>
             {["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].map(d => (
-              <div key={d} style={{ padding: "0.6rem", textAlign: "center", color: "#555", fontSize: "0.75rem", fontWeight: 700 }}>{d}</div>
+              <div key={d} style={{ padding: "0.6rem", textAlign: "center", color:"#64748B", fontSize: "0.75rem", fontWeight: 700 }}>{d}</div>
             ))}
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(7,1fr)" }}>
@@ -72,7 +72,7 @@ export default function AdminCalendar() {
                       {b.name?.split(" ")[0]} — {b.vehicle_type}
                     </div>
                   ))}
-                  {dayBookings.length > 3 && <div style={{ color: "#555", fontSize: "0.65rem" }}>+{dayBookings.length - 3} more</div>}
+                  {dayBookings.length > 3 && <div style={{ color:"#64748B", fontSize: "0.65rem" }}>+{dayBookings.length - 3} more</div>}
                 </div>
               );
             })}
@@ -81,24 +81,24 @@ export default function AdminCalendar() {
 
         {/* Day detail */}
         {selected && (
-          <div style={{ background: "#141414", border: "1px solid #222", borderRadius: 10, padding: "1.25rem" }}>
+          <div style={{ background:"#ffffff", border:"1px solid #e5e7eb", borderRadius: 10, padding: "1.25rem" }}>
             <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem" }}>
               <span style={{ color: "var(--text-primary)", fontWeight: 700, fontSize: "0.9rem" }}>{selected}</span>
-              <button onClick={() => setSelected(null)} style={{ background: "none", border: "none", color: "#555", cursor: "pointer", fontSize: "1.1rem" }}>×</button>
+              <button onClick={() => setSelected(null)} style={{ background: "none", border: "none", color:"#64748B", cursor: "pointer", fontSize: "1.1rem" }}>×</button>
             </div>
-            {selectedBookings.length === 0 && <p style={{ color: "#555", fontSize: "0.85rem" }}>No bookings on this day</p>}
+            {selectedBookings.length === 0 && <p style={{ color:"#64748B", fontSize: "0.85rem" }}>No bookings on this day</p>}
             {selectedBookings.map((b: any) => (
               <Link key={b.id} href={`/admin/bookings/${b.id}`}
-                style={{ display: "block", background: "#0c0c0c", border: "1px solid #222", borderRadius: 8, padding: "0.85rem", marginBottom: "0.65rem", textDecoration: "none" }}>
+                style={{ display: "block", background:"#ffffff", border:"1px solid #e5e7eb", borderRadius: 8, padding: "0.85rem", marginBottom: "0.65rem", textDecoration: "none" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-                  <span style={{ color: gold, fontFamily: "monospace", fontSize: "0.78rem" }}>{b.ref}</span>
+                  <span style={{ color:"#0C58D1", fontFamily: "monospace", fontSize: "0.78rem" }}>{b.ref}</span>
                   <span style={{ background: statusColor[b.status] ?? "#333", color: "var(--text-primary)", padding: "1px 6px", borderRadius: 3, fontSize: "0.68rem", fontWeight: 700 }}>
                     {b.status?.replace("_"," ").toUpperCase()}
                   </span>
                 </div>
                 <div style={{ color: "var(--text-primary)", fontWeight: 600, fontSize: "0.85rem" }}>{b.name}</div>
-                <div style={{ color: "#888", fontSize: "0.78rem", marginTop: 2 }}>{b.pickup_time} · {b.vehicle_type} · {b.final_price} SAR</div>
-                <div style={{ color: "#666", fontSize: "0.75rem", marginTop: 2, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{b.pickup_location} → {b.dropoff_location}</div>
+                <div style={{ color:"#64748B", fontSize: "0.78rem", marginTop: 2 }}>{b.pickup_time} · {b.vehicle_type} · {b.final_price} SAR</div>
+                <div style={{ color:"#64748B", fontSize: "0.75rem", marginTop: 2, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{b.pickup_location} → {b.dropoff_location}</div>
               </Link>
             ))}
           </div>
