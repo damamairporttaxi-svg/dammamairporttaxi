@@ -28,142 +28,165 @@ export function HomePageClient() {
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>
       <Navbar />
 
-      {/* Hero Section */}
+      {/* ── HERO ── */}
       <section style={styles.hero}>
-        <div className="container hero-grid" style={styles.heroGrid}>
+        {/* Decorative blue accent */}
+        <div style={{ position:"absolute", top:0, right:0, width:"420px", height:"420px", background:"#0C58D1", borderRadius:"0 0 0 100%", opacity:0.05, pointerEvents:"none" }} />
+        <div style={{ position:"absolute", bottom:0, left:"-60px", width:"300px", height:"300px", background:"#0C58D1", borderRadius:"50%", opacity:0.04, pointerEvents:"none" }} />
 
-          {/* LEFT — white text side */}
+        <div className="container hero-grid" style={styles.heroGrid}>
           <div style={styles.heroTextCol}>
-            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", border:"1px solid #e5e7eb", borderRadius:"50px", padding:"0.35rem 1rem" }}>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#000000"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-              <span style={{ fontSize:"0.75rem", fontWeight:700, color:"#000000", letterSpacing:"0.05em", textTransform:"uppercase" }}>
+            {/* Label */}
+            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", background:"#EFF6FF", border:"1px solid rgba(12,88,209,0.20)", borderRadius:"50px", padding:"0.4rem 1rem" }}>
+              <span style={{ width:"6px", height:"6px", borderRadius:"50%", background:"#0C58D1", display:"inline-block" }} />
+              <span style={{ fontSize:"0.73rem", fontWeight:700, color:"#0C58D1", letterSpacing:"0.06em", textTransform:"uppercase" }}>
                 {locale === "en" ? "Top Rated KSA Transfer" : "خدمة التوصيل الأولى بالمملكة"}
               </span>
             </div>
 
+            {/* H1 */}
             <h1 style={styles.heroTitle}>
               {locale === "en" ? (
-                <><span style={{ color:"#000000" }}>Dammam Airport</span><br /><span style={{ color:"#000000" }}>Taxi &amp; Private</span><br /><span style={{ color:"#000000" }}>Transfers</span></>
+                <>
+                  <span style={{ display:"block" }}>Dammam Airport</span>
+                  <span style={{ display:"block", color:"#0C58D1", position:"relative" }}>
+                    Taxi & Transfers
+                    <span style={{ position:"absolute", bottom:"-6px", left:0, width:"60%", height:"4px", background:"#0C58D1", borderRadius:"2px", opacity:0.3 }} />
+                  </span>
+                  <span style={{ display:"block", fontSize:"55%", fontWeight:400, color:"#64748B", marginTop:"0.5rem", letterSpacing:"-0.01em" }}>Private GCC Routes from King Fahd Airport</span>
+                </>
               ) : (
-                <><span style={{ color:"#000000" }}>تاكسي مطار الدمام</span><br /><span style={{ color:"#000000" }}>توصيل خاص ورحلات دول الخليج</span></>
+                <>
+                  <span style={{ display:"block", color:"#0C58D1" }}>تاكسي مطار الدمام</span>
+                  <span style={{ display:"block", fontSize:"65%", fontWeight:400, color:"#64748B", marginTop:"0.4rem" }}>توصيل خاص ورحلات دول الخليج</span>
+                </>
               )}
             </h1>
 
             <p style={styles.heroSub}>{t("heroSub")}</p>
 
-            <div style={styles.valueProps}>
+            {/* Value props */}
+            <div style={{ display:"flex", flexDirection:"column" as const, gap:"0.55rem" }}>
               {[
-                { en: "Instant WhatsApp Booking", ar: "حجز فوري بالواتساب" },
-                { en: "Free Flight Tracking", ar: "تتبع مجاني للرحلات" },
-                { en: "24/7 Support — No Hidden Fees", ar: "دعم ٢٤/٧ — بدون رسوم خفية" },
+                { en: "✈ Instant WhatsApp Booking", ar: "✈ حجز فوري بالواتساب" },
+                { en: "🛰 Free Flight Tracking & 60-Min Wait", ar: "🛰 تتبع مجاني للرحلات وانتظار 60 دقيقة" },
+                { en: "🔒 Fixed Price — No Hidden Fees", ar: "🔒 سعر ثابت — بدون رسوم خفية" },
               ].map((v, i) => (
-                <span key={i} style={styles.valueItem}>
-                  <span style={{ width:"18px", height:"18px", borderRadius:"50%", background:"#0C58D1", display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
-                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                  </span>
+                <div key={i} style={{ display:"flex", alignItems:"center", gap:"0.7rem", background:"#f8fafc", border:"1px solid #e5e7eb", borderLeft:"3px solid #0C58D1", borderRadius:"6px", padding:"0.55rem 0.9rem", fontSize:"0.88rem", color:"#000000", fontWeight:500 }}>
                   {locale === "en" ? v.en : v.ar}
-                </span>
+                </div>
               ))}
             </div>
 
-            <div style={styles.heroBtnGroup}>
-              <button onClick={handleBookNowScroll} className="btn btn-primary" style={{ padding:"0.95rem 2rem", fontSize:"1rem", fontWeight:700, display:"flex", alignItems:"center", gap:"8px" }}>
+            {/* Buttons */}
+            <div style={{ display:"flex", gap:"1rem", flexWrap:"wrap" as const }}>
+              <button onClick={handleBookNowScroll} style={{ padding:"0.95rem 2rem", fontSize:"1rem", fontWeight:700, background:"#0C58D1", color:"#ffffff", border:"none", borderRadius:"8px", cursor:"pointer", display:"flex", alignItems:"center", gap:"8px", boxShadow:"0 4px 14px rgba(12,88,209,0.30)" }}>
                 {t("heroActionBook")}
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
-              <button onClick={handleFleetScroll} className="btn btn-secondary" style={{ padding:"0.95rem 2rem", fontSize:"1rem", fontWeight:600 }}>
+              <button onClick={handleFleetScroll} style={{ padding:"0.95rem 2rem", fontSize:"1rem", fontWeight:600, background:"transparent", color:"#0C58D1", border:"2px solid #0C58D1", borderRadius:"8px", cursor:"pointer" }}>
                 {t("heroActionFleet")}
               </button>
             </div>
 
-            <div style={styles.heroStatsCard}>
+            {/* Stats bar */}
+            <div style={{ display:"flex", gap:"0", background:"#0C58D1", borderRadius:"12px", overflow:"hidden", marginTop:"0.5rem" }}>
               {[
                 { val: t("statCompletedVal"), lbl: t("statCompleted") },
                 { val: t("statDriversVal"),   lbl: t("statDrivers") },
                 { val: t("statRatingVal"),     lbl: t("statRating") },
               ].map((s, i, arr) => (
-                <div key={i} style={{ ...styles.heroStatItem, ...(i === arr.length - 1 ? { borderRight:"none", marginRight:0, paddingRight:0 } : {}) }}>
-                  <strong style={styles.heroStatVal}>{s.val}</strong>
-                  <span style={styles.heroStatLbl}>{s.lbl}</span>
+                <div key={i} style={{ flex:1, padding:"1rem 1.2rem", borderRight: i < arr.length-1 ? "1px solid rgba(255,255,255,0.15)" : "none", textAlign:"center" as const }}>
+                  <strong style={{ display:"block", fontSize:"1.6rem", color:"#ffffff", fontWeight:800, letterSpacing:"-0.02em", lineHeight:1 }}>{s.val}</strong>
+                  <span style={{ fontSize:"0.68rem", color:"rgba(255,255,255,0.70)", textTransform:"uppercase" as const, letterSpacing:"0.07em", marginTop:"3px", display:"block" }}>{s.lbl}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* RIGHT — booking form */}
+          {/* Booking form */}
           <div style={styles.heroFormCol}>
             <BookingForm />
           </div>
         </div>
       </section>
 
-      {/* Trust Strip */}
-      <div style={styles.trustStrip}>
-        <div className="container" style={styles.trustInner}>
+      {/* ── TRUST STRIP ── */}
+      <div style={{ background:"#0C58D1", padding:"0" }}>
+        <div className="container" style={{ display:"flex", overflowX:"auto" as const, minWidth:"max-content" }}>
           {[
-            { icon: "✈", en: "Government Licensed",   ar: "مرخص رسمياً" },
-            { icon: "📍", en: "Live GPS Tracking",     ar: "تتبع GPS مباشر" },
-            { icon: "🤝", en: "Free Meet & Greet",     ar: "استقبال مجاني بالمطار" },
-            { icon: "⏱", en: "60-Min Free Wait",       ar: "60 دقيقة انتظار مجاناً" },
-            { icon: "💰", en: "Fixed Rates — No Surge", ar: "أسعار ثابتة بلا زيادة" },
-          ].map((item, i) => (
-            <div key={i} style={styles.trustItem}>
-              <span style={{ fontSize:"1.1rem" }}>{item.icon}</span>
-              <span style={styles.trustText}>{locale === "en" ? item.en : item.ar}</span>
+            { icon:"✈️", en:"Government Licensed", ar:"مرخص رسمياً" },
+            { icon:"📡", en:"Live GPS Tracking", ar:"تتبع GPS مباشر" },
+            { icon:"🤝", en:"Free Meet & Greet", ar:"استقبال مجاني" },
+            { icon:"⏱️", en:"60-Min Free Wait", ar:"60 دقيقة انتظار مجاناً" },
+            { icon:"💰", en:"Fixed Rates — No Surge", ar:"أسعار ثابتة بلا زيادة" },
+          ].map((item, i, arr) => (
+            <div key={i} style={{ display:"flex", alignItems:"center", gap:"0.5rem", padding:"0.9rem 1.8rem", borderRight: i < arr.length-1 ? "1px solid rgba(255,255,255,0.15)" : "none", whiteSpace:"nowrap" as const }}>
+              <span style={{ fontSize:"1rem" }}>{item.icon}</span>
+              <span style={{ fontSize:"0.82rem", fontWeight:600, color:"#ffffff" }}>{locale === "en" ? item.en : item.ar}</span>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Why Choose Us */}
-      <section className="section-padding" style={{ background: "#ffffff" }}>
+      {/* ── WHY CHOOSE US ── */}
+      <section className="section-padding" style={{ background:"#ffffff" }}>
         <div className="container">
-          <div style={{ display:"flex", alignItems:"flex-end", justifyContent:"space-between", flexWrap:"wrap", gap:"2rem", marginBottom:"3.5rem" }}>
-            <div>
-              <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"#000000", marginBottom:"0.6rem" }}>{locale === "en" ? "Why Choose Us" : "لماذا تختارنا"}</p>
-              <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#000000", lineHeight:1.2, margin:0 }}>{t("whyTitle")}</h2>
-            </div>
-            <p style={{ maxWidth:"380px", color:"#333333", lineHeight:1.7, margin:0 }}>{t("whySub")}</p>
+          <div style={{ textAlign:"center" as const, marginBottom:"3.5rem" }}>
+            <p style={{ fontSize:"0.78rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase" as const, color:"#0C58D1", marginBottom:"0.5rem" }}>{locale === "en" ? "Why Choose Us" : "لماذا تختارنا"}</p>
+            <h2 style={{ fontSize:"clamp(1.8rem,3.5vw,2.8rem)", fontWeight:800, color:"#000000", lineHeight:1.15, margin:"0 auto 0.8rem", maxWidth:"600px" }}>{t("whyTitle")}</h2>
+            <p style={{ color:"#64748B", maxWidth:"480px", margin:"0 auto", lineHeight:1.7 }}>{t("whySub")}</p>
           </div>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(240px,1fr))", gap:"1.5rem" }}>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))", gap:"1.5rem" }}>
             {[
-              { num:"01", title: t("whyCard1Title"), desc: t("whyCard1Desc") },
-              { num:"02", title: t("whyCard2Title"), desc: t("whyCard2Desc") },
-              { num:"03", title: t("whyCard3Title"), desc: t("whyCard3Desc") },
-              { num:"04", title: t("whyCard4Title"), desc: t("whyCard4Desc") },
+              { icon:"🛡️", num:"01", title: t("whyCard1Title"), desc: t("whyCard1Desc") },
+              { icon:"📍", num:"02", title: t("whyCard2Title"), desc: t("whyCard2Desc") },
+              { icon:"⚡", num:"03", title: t("whyCard3Title"), desc: t("whyCard3Desc") },
+              { icon:"💎", num:"04", title: t("whyCard4Title"), desc: t("whyCard4Desc") },
             ].map((card, idx) => (
-              <div key={idx} style={{ padding:"2rem", background:"#ffffff", border:"1px solid #e5e7eb", borderTop:"4px solid #000000", borderRadius:"4px" }}>
-                <p style={{ fontSize:"2.5rem", fontWeight:800, color:"#f0f0f0", lineHeight:1, marginBottom:"1rem" }}>{card.num}</p>
-                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#000000", marginBottom:"0.6rem" }}>{card.title}</h3>
-                <p style={{ fontSize:"0.88rem", color:"#333333", lineHeight:1.65, margin:0 }}>{card.desc}</p>
+              <div key={idx} style={{ padding:"2rem", background:"#ffffff", border:"1px solid #e5e7eb", borderRadius:"12px", position:"relative" as const, overflow:"hidden", transition:"all 0.2s ease" }}
+                onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "#0C58D1"; (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(12,88,209,0.12)"; }}
+                onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "#e5e7eb"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}
+              >
+                <div style={{ position:"absolute" as const, top:0, right:0, width:"80px", height:"80px", background:"#EFF6FF", borderRadius:"0 12px 0 100%", display:"flex", alignItems:"flex-start", justifyContent:"flex-end", padding:"0.8rem" }}>
+                  <span style={{ fontSize:"1.4rem" }}>{card.icon}</span>
+                </div>
+                <p style={{ fontSize:"0.68rem", fontWeight:700, color:"#0C58D1", letterSpacing:"0.08em", textTransform:"uppercase" as const, marginBottom:"0.8rem" }}>{card.num}</p>
+                <h3 style={{ fontSize:"1.05rem", fontWeight:700, color:"#000000", marginBottom:"0.6rem", lineHeight:1.3 }}>{card.title}</h3>
+                <p style={{ fontSize:"0.87rem", color:"#64748B", lineHeight:1.65, margin:0 }}>{card.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="section-padding" style={{ background:"#ffffff", borderTop:"1px solid #e5e7eb", borderBottom:"1px solid #e5e7eb" }}>
+      {/* ── HOW IT WORKS ── */}
+      <section className="section-padding" style={{ background:"#f8fafc", borderTop:"1px solid #e5e7eb" }}>
         <div className="container">
-          <div style={{ textAlign:"center", marginBottom:"4rem" }}>
-            <p style={{ fontSize:"0.8rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase", color:"#64748B", marginBottom:"0.6rem" }}>
+          <div style={{ textAlign:"center" as const, marginBottom:"4rem" }}>
+            <p style={{ fontSize:"0.78rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase" as const, color:"#0C58D1", marginBottom:"0.5rem" }}>
               {locale === "en" ? "Simple Process" : "خطوات بسيطة"}
             </p>
-            <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#000000", lineHeight:1.2, margin:"0 auto", maxWidth:"600px" }}>
+            <h2 style={{ fontSize:"clamp(1.8rem,3.5vw,2.8rem)", fontWeight:800, color:"#000000", lineHeight:1.15, margin:"0 auto", maxWidth:"500px" }}>
               {locale === "en" ? "Book in Under 2 Minutes" : "احجز في أقل من دقيقتين"}
             </h2>
           </div>
-          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:"1px", background:"#e5e7eb", border:"1px solid #e5e7eb", borderRadius:"12px", overflow:"hidden" }}>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(220px,1fr))", gap:"0", position:"relative" as const }}>
+            {/* Connecting line */}
+            <div style={{ position:"absolute" as const, top:"44px", left:"12%", right:"12%", height:"2px", background:"linear-gradient(90deg, #0C58D1, rgba(12,88,209,0.2))", zIndex:0, display:"none" }} />
             {[
-              { num:"1", en_title:"Send WhatsApp",       ar_title:"أرسل واتساب",         en_desc:"Share pickup, destination, date & vehicle class.", ar_desc:"أرسل موقع الاستلام، الوجهة، التاريخ وفئة السيارة." },
-              { num:"2", en_title:"Instant Confirmation", ar_title:"تأكيد فوري",           en_desc:"Get driver name, plate & fixed fare in minutes.", ar_desc:"احصل على اسم السائق واللوحة والأجرة في دقائق." },
-              { num:"3", en_title:"We Track Your Flight", ar_title:"نتابع رحلتك",          en_desc:"Delayed? Driver adjusts. 60 min free wait guaranteed.", ar_desc:"تأخر؟ السائق يتكيف. 60 دقيقة انتظار مجاناً." },
-              { num:"4", en_title:"Name-Board Pickup",   ar_title:"استقبال باللافتة",     en_desc:"Exit arrivals — driver waiting with your name board.", ar_desc:"اخرج من الوصول — السائق ينتظرك بلافتة باسمك." },
+              { num:"1", icon:"💬", en_title:"Send WhatsApp", ar_title:"أرسل واتساب", en_desc:"Share pickup, destination, date & vehicle class.", ar_desc:"أرسل موقع الاستلام، الوجهة، التاريخ وفئة السيارة." },
+              { num:"2", icon:"✅", en_title:"Instant Confirmation", ar_title:"تأكيد فوري", en_desc:"Get driver name, plate & fixed fare in minutes.", ar_desc:"احصل على اسم السائق واللوحة والأجرة في دقائق." },
+              { num:"3", icon:"🛰", en_title:"We Track Your Flight", ar_title:"نتابع رحلتك", en_desc:"Delayed? Driver adjusts. 60-min free wait.", ar_desc:"تأخر؟ السائق يتكيف. 60 دقيقة انتظار مجاناً." },
+              { num:"4", icon:"🚗", en_title:"Name-Board Pickup", ar_title:"استقبال باللافتة", en_desc:"Driver waiting at arrivals with your name board.", ar_desc:"السائق ينتظرك بلافتة باسمك عند الوصول." },
             ].map((step, i) => (
-              <div key={i} style={{ padding:"2.5rem 2rem", background:"#ffffff" }}>
-                <div style={{ fontSize:"3rem", fontWeight:800, color:"rgba(0,0,0,0.06)", lineHeight:1, marginBottom:"1.2rem" }}>{step.num}</div>
-                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#000000", marginBottom:"0.6rem" }}>{locale === "en" ? step.en_title : step.ar_title}</h3>
-                <p style={{ fontSize:"0.85rem", color:"#333333", lineHeight:1.65, margin:0 }}>{locale === "en" ? step.en_desc : step.ar_desc}</p>
+              <div key={i} style={{ padding:"2rem 1.5rem", background:"#ffffff", borderRight: i < 3 ? "1px solid #e5e7eb" : "none", borderBottom:"none", position:"relative" as const }}>
+                <div style={{ width:"48px", height:"48px", borderRadius:"50%", background:"#0C58D1", color:"#ffffff", display:"flex", alignItems:"center", justifyContent:"center", fontWeight:800, fontSize:"1rem", marginBottom:"1.2rem", boxShadow:"0 4px 12px rgba(12,88,209,0.30)" }}>
+                  {step.num}
+                </div>
+                <div style={{ fontSize:"1.5rem", marginBottom:"0.7rem" }}>{step.icon}</div>
+                <h3 style={{ fontSize:"0.95rem", fontWeight:700, color:"#000000", marginBottom:"0.5rem" }}>{locale === "en" ? step.en_title : step.ar_title}</h3>
+                <p style={{ fontSize:"0.83rem", color:"#64748B", lineHeight:1.6, margin:0 }}>{locale === "en" ? step.en_desc : step.ar_desc}</p>
               </div>
             ))}
           </div>
@@ -217,6 +240,35 @@ export function HomePageClient() {
             <Link href="/routes" className="btn btn-primary" style={{ padding: "0.8rem 2.5rem", fontSize: "1rem" }}>
               {locale === "en" ? "View All Routes →" : "← عرض جميع الوجهات"}
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── GCC COVERAGE ── */}
+      <section style={{ background:"#0C58D1", padding:"4rem 0" }}>
+        <div className="container">
+          <div style={{ textAlign:"center" as const, marginBottom:"2.5rem" }}>
+            <p style={{ fontSize:"0.78rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase" as const, color:"rgba(255,255,255,0.60)", marginBottom:"0.5rem" }}>
+              {locale === "en" ? "GCC Cross-Border Coverage" : "التغطية عبر دول الخليج"}
+            </p>
+            <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#ffffff", lineHeight:1.2, margin:0 }}>
+              {locale === "en" ? "We Cross Every GCC Border" : "نعبر كل حدود دول الخليج"}
+            </h2>
+          </div>
+          <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))", gap:"1rem" }}>
+            {[
+              { flag:"🇧🇭", country: locale==="en"?"Bahrain":"البحرين", route: locale==="en"?"Via King Fahd Causeway":"عبر جسر الملك فهد", price:"From 350 SAR", dist:"85 km" },
+              { flag:"🇰🇼", country: locale==="en"?"Kuwait":"الكويت", route: locale==="en"?"Via Khafji Border":"عبر حدود خفجي", price:"From 1,500 SAR", dist:"420 km" },
+              { flag:"🇦🇪", country: locale==="en"?"UAE (Dubai)":"الإمارات (دبي)", route: locale==="en"?"Via Ghuwaifat Border":"عبر حدود الغويفات", price:"From 3,500 SAR", dist:"950 km" },
+              { flag:"🇶🇦", country: locale==="en"?"Qatar (Doha)":"قطر (الدوحة)", route: locale==="en"?"Via Salwa Border":"عبر حدود سلوى", price:"From 1,400 SAR", dist:"400 km" },
+            ].map((c, i) => (
+              <div key={i} style={{ background:"rgba(255,255,255,0.10)", border:"1px solid rgba(255,255,255,0.15)", borderRadius:"12px", padding:"1.5rem", textAlign:"center" as const, backdropFilter:"blur(4px)" }}>
+                <div style={{ fontSize:"2.5rem", marginBottom:"0.7rem" }}>{c.flag}</div>
+                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#ffffff", marginBottom:"0.3rem" }}>{c.country}</h3>
+                <p style={{ fontSize:"0.75rem", color:"rgba(255,255,255,0.65)", marginBottom:"0.7rem", lineHeight:1.4 }}>{c.route} · {c.dist}</p>
+                <div style={{ background:"rgba(255,255,255,0.15)", borderRadius:"6px", padding:"0.4rem 0.8rem", fontSize:"0.82rem", fontWeight:700, color:"#ffffff" }}>{c.price}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -580,7 +632,9 @@ const styles: Record<string, React.CSSProperties> = {
   hero: {
     background: "#ffffff",
     borderBottom: "1px solid #e5e7eb",
-    padding: "5rem 0 5rem",
+    padding: "5rem 0 5.5rem",
+    position: "relative",
+    overflow: "hidden",
   },
   heroGrid: {
     display: "grid",

@@ -365,6 +365,238 @@ export function BlogPageClient() {
           "نصائح عملية للوصول الليلي: (1) احفظ رقم واتساب الخاص بنا قبل المغادرة. (2) أرسل رقم رحلتك عند الحجز. (3) إذا لم تتمكن من العثور على سائقك، اتصل به مباشرة. (4) إذا ألغيت رحلتك، تواصل معنا لإعادة الجدولة مجاناً."
         ]
       }
+    },
+    {
+      id: 13,
+      title: {
+        en: "Dammam to Bahrain Taxi: Complete 2026 Guide (King Fahd Causeway)",
+        ar: "تاكسي من الدمام إلى البحرين: دليل شامل 2026 (جسر الملك فهد)",
+      },
+      date: "2026-07-01",
+      category: { en: "GCC Travel Guides", ar: "أدلة سفر الخليج" },
+      excerpt: {
+        en: "Everything you need to know about taking a taxi from Dammam to Bahrain via the King Fahd Causeway — fares, border tips, and travel time.",
+        ar: "كل ما تحتاج معرفته عن التنقل بالتاكسي من الدمام إلى البحرين عبر جسر الملك فهد — الأسعار ونصائح الحدود ووقت الرحلة.",
+      },
+      content: {
+        en: [
+          "The Dammam to Bahrain taxi route via the King Fahd Causeway is one of the most popular cross-border journeys in the Gulf region. Covering approximately 85 kilometers door-to-door, this trip connects Saudi Arabia's Eastern Province to the Kingdom of Bahrain in 1.5 to 2 hours under normal traffic conditions.",
+          "Fare & What's Included: Our fixed taxi fare from Dammam (or King Fahd International Airport) to Bahrain starts from 350 SAR for a Camry sedan. This includes all King Fahd Causeway bridge tolls — no surprises at the border. GCC nationals travelling on their national ID pay no additional visa fees. Non-GCC residents should verify Bahrain e-visa requirements before departure.",
+          "The Border Crossing Process: The King Fahd Causeway has Saudi departure controls on the Saudi side and Bahraini entry controls on the Bahrain side. Your driver handles all vehicle documentation. Passport stamping takes 10–40 minutes depending on the day and time — Friday afternoons and public holidays are the busiest. GCC national lanes are significantly faster.",
+          "Best Times to Cross: Avoid Friday evenings and Saturday mornings when weekend leisure traffic is heaviest. Tuesday, Wednesday, and Thursday mornings offer the fastest crossings. Night crossings (11pm–5am) are also quick but check your Bahrain entry permissions in advance.",
+          "Why Book a Private Taxi Instead of Driving: Many Eastern Province residents and tourists choose a private taxi over driving their own car because: (1) No need for temporary vehicle export permit or Bahrain car insurance. (2) Your driver waits while you complete your business in Manama. (3) Return journey is arranged at your convenience. Contact us to book your Dammam to Bahrain taxi with 24/7 WhatsApp support."
+        ],
+        ar: [
+          "يُعدّ مسار تاكسي من الدمام إلى البحرين عبر جسر الملك فهد أحد أكثر رحلات عبور الحدود شيوعاً في منطقة الخليج. تبلغ المسافة حوالي 85 كيلومتراً من باب إلى باب، وتستغرق الرحلة من 1.5 إلى ساعتين في الظروف العادية.",
+          "الأسعار وما يشمله: يبدأ سعر التاكسي الثابت من الدمام (أو مطار الملك فهد الدولي) إلى البحرين من 350 ريال سعودي لسيارة كامري. يشمل هذا السعر جميع رسوم جسر الملك فهد دون أي مفاجآت عند الحدود.",
+          "إجراءات عبور الحدود: يحتوي جسر الملك فهد على نقطة مراقبة مغادرة سعودية من الجانب السعودي ونقطة دخول بحرينية من الجانب البحريني. يتولى سائقك جميع وثائق السيارة. يستغرق ختم جوازات السفر من 10 إلى 40 دقيقة اعتماداً على اليوم والوقت.",
+          "أفضل أوقات العبور: تجنب مساء يوم الجمعة وصباح السبت عندما يكون حركة مرور العطلة في أوجها. تُعدّ صباحات الثلاثاء والأربعاء والخميس من أسرع أوقات العبور.",
+          "لماذا تحجز تاكسياً خاصاً بدلاً من قيادة سيارتك: يختار كثيرون في المنطقة الشرقية تاكسياً خاصاً بدلاً من قيادة سياراتهم لأسباب عدة: (1) لا حاجة لتصريح تصدير مؤقت للسيارة أو تأمين سيارة بحريني. (2) سائقك ينتظرك أثناء إنجاز أعمالك في المنامة. (3) ترتيب رحلة العودة بحسب ما يناسبك."
+        ]
+      }
+    },
+    {
+      id: 14,
+      title: {
+        en: "Dammam Airport to Al Khobar Taxi: Routes, Fares & Travel Tips",
+        ar: "تاكسي من مطار الدمام إلى الخبر: المسارات والأسعار ونصائح السفر",
+      },
+      date: "2026-07-03",
+      category: { en: "Airport Guides", ar: "أدلة المطارات" },
+      excerpt: {
+        en: "The complete guide to getting from King Fahd International Airport (DMM) to Al Khobar — including fares, travel times, and what to expect.",
+        ar: "الدليل الشامل للانتقال من مطار الملك فهد الدولي إلى الخبر — بما في ذلك الأسعار وأوقات السفر وما يمكن توقعه.",
+      },
+      content: {
+        en: [
+          "Al Khobar is one of the Eastern Province's most cosmopolitan cities and a major business hub — home to a large expat community, petrochemical companies, and the gateway to the King Fahd Causeway. Getting from King Fahd International Airport (DMM) to Al Khobar is a common transfer request we handle daily.",
+          "Distance & Travel Time: The airport is located approximately 60 kilometers from Al Khobar city centre. Under normal traffic conditions, the journey takes 40–55 minutes via the Dammam–Khobar highway. During peak hours (7–9am and 4–7pm), allow 60–75 minutes.",
+          "Fixed Fare from DMM to Al Khobar: Our fixed rate starts from 150 SAR for a standard Camry sedan. SUV options (GMC Yukon, Toyota Land Cruiser) are available from 220 SAR for families or passengers with extra luggage. All prices include airport parking fees — no hidden extras.",
+          "What's Included in Your Booking: Free 60-minute waiting time from your actual landing time (we track your flight automatically). Name-board meet & greet in the arrivals hall. Luggage assistance. 24/7 WhatsApp support. Complimentary bottled water.",
+          "Popular Destinations in Al Khobar We Cover: Khobar Corniche hotels (Le Méridien, Movenpick, Crown Plaza), Aramco compounds (Dhahran Hills, Palm), Prince Mohammed bin Fahd Road business district, Half Moon Bay resort area, and all residential districts. Book your DMM to Al Khobar taxi on WhatsApp for instant confirmation."
+        ],
+        ar: [
+          "الخبر إحدى أكثر مدن المنطقة الشرقية تنوعاً وتطوراً، وهي مركز تجاري رئيسي — تضم مجتمعاً كبيراً من المغتربين وشركات بتروكيماوية وبوابة جسر الملك فهد. الانتقال من مطار الملك فهد الدولي إلى الخبر أحد أكثر طلبات التوصيل التي نتعامل معها يومياً.",
+          "المسافة ووقت السفر: يقع المطار على بُعد حوالي 60 كيلومتراً من وسط مدينة الخبر. في الظروف الاعتيادية تستغرق الرحلة 40-55 دقيقة عبر طريق الدمام-الخبر السريع.",
+          "السعر الثابت من المطار إلى الخبر: يبدأ سعرنا الثابت من 150 ريال سعودي لسيارة كامري العادية. تتوفر سيارات SUV (يوكن، لاند كروزر) من 220 ريالاً للعائلات أو الركاب ذوي الأمتعة الزائدة.",
+          "ما يشمله حجزك: انتظار مجاني لمدة 60 دقيقة من وقت هبوطك الفعلي (نتابع رحلتك تلقائياً). استقبال ببطاقة اسمك في صالة الوصول. مساعدة في الأمتعة. دعم واتساب على مدار الساعة.",
+          "أبرز الوجهات في الخبر التي نغطيها: فنادق كورنيش الخبر، المجمعات السكنية لأرامكو، منطقة الأعمال، منتجع خليج نصف القمر، وجميع الأحياء السكنية. احجز تاكسيك من مطار الدمام إلى الخبر عبر واتساب للحصول على تأكيد فوري."
+        ]
+      }
+    },
+    {
+      id: 15,
+      title: {
+        en: "Hiring a Private Driver for a Day in Dammam: What to Expect",
+        ar: "استئجار سائق خاص ليوم كامل في الدمام: ما الذي يمكن توقعه",
+      },
+      date: "2026-07-05",
+      category: { en: "Services", ar: "الخدمات" },
+      excerpt: {
+        en: "Need a driver for meetings, errands, or city exploration in Dammam? Discover how hourly chauffeur hire works and what it costs.",
+        ar: "هل تحتاج إلى سائق للاجتماعات أو المهام أو استكشاف المدينة في الدمام؟ تعرف على كيفية عمل استئجار سائق بالساعة وتكلفته.",
+      },
+      content: {
+        en: [
+          "Not every journey is a simple A-to-B airport transfer. Business executives, corporate delegations, government officials, and touring families often need a professional driver available for an entire day — waiting between meetings, making multiple stops, or exploring the Eastern Province at their own pace. This is exactly what our hourly chauffeur service provides.",
+          "How It Works: You book a vehicle and driver for a minimum of 4 hours. The driver remains at your disposal throughout — waiting at offices, hotels, restaurants, or shopping centres. You control the schedule entirely. At the end of the day, you pay a flat hourly rate with no per-kilometre charges within the Dammam/Khobar/Dhahran metro area.",
+          "Pricing: Our hourly rates start from 120 SAR/hour (4-hour minimum) for a standard sedan. SUV options start from 180 SAR/hour. Full-day packages (8–10 hours) offer better value at 900–1,400 SAR depending on vehicle class. Long-distance day trips (e.g., Dammam to Al Hofuf and back) are priced separately — contact us for a quote.",
+          "What Business Travellers Use It For: Multi-site facility visits in Jubail Industrial City or Ras Tanura. Back-to-back client meetings across Dammam and Khobar. Airport pickup followed by a full day of meetings. Government ministry visits in Dammam. Hospital or medical appointments with waiting.",
+          "What Tourists Use It For: Exploring the Al-Ahsa Oasis (UNESCO World Heritage Site). Al Uqair beach and Half Moon Bay. Tarout Island cultural tour. Aramco Exhibit and KFUPM campus visit. Eastern Province souk and heritage district exploration. Book your private day driver on WhatsApp — we'll confirm within 15 minutes."
+        ],
+        ar: [
+          "ليست كل رحلة مجرد انتقال بسيط من المطار إلى الوجهة. كثيراً ما يحتاج المديرون التنفيذيون والوفود التجارية والمسؤولون الحكوميون والعائلات إلى سائق محترف متاح طوال اليوم — ينتظر بين الاجتماعات ويقوم بتوصيلات متعددة. هذا بالضبط ما توفره خدمة استئجار السائق بالساعة.",
+          "كيف تعمل الخدمة: تحجز سيارة وسائقاً لمدة لا تقل عن 4 ساعات. يبقى السائق تحت تصرفك طوال الوقت — ينتظر في المكاتب والفنادق والمطاعم ومراكز التسوق. أنت من يتحكم في الجدول الزمني بالكامل.",
+          "الأسعار: تبدأ أسعارنا بالساعة من 120 ريالاً/ساعة (بحد أدنى 4 ساعات) لسيارة سيدان عادية. تبدأ خيارات SUV من 180 ريالاً/ساعة. توفر باقات اليوم الكامل (8-10 ساعات) قيمة أفضل بأسعار من 900 إلى 1400 ريال.",
+          "ما يستخدمه رجال الأعمال: زيارات مواقع متعددة في مدينة جبيل الصناعية. اجتماعات عملاء متتالية في الدمام والخبر. استقبال من المطار يعقبه يوم عمل كامل. زيارات وزارات حكومية في الدمام.",
+          "ما يستخدمه السياح: استكشاف واحة الأحساء (موقع تراث عالمي لليونسكو). شاطئ العقير وخليج نصف القمر. جولة ثقافية في جزيرة تاروت. زيارة معرض أرامكو وحرم جامعة الملك فهد للبترول والمعادن."
+        ]
+      }
+    },
+    {
+      id: 16,
+      title: {
+        en: "Dammam to Riyadh by Taxi: The 400km Road Trip Guide",
+        ar: "تاكسي من الدمام إلى الرياض: دليل رحلة 400 كيلومتر",
+      },
+      date: "2026-07-07",
+      category: { en: "Intercity Routes", ar: "المسارات بين المدن" },
+      excerpt: {
+        en: "Planning a Dammam to Riyadh taxi trip? Everything you need to know — distance, travel time, fares, and why private transfer beats the bus.",
+        ar: "تخطط لرحلة تاكسي من الدمام إلى الرياض؟ كل ما تحتاج معرفته — المسافة ووقت السفر والأسعار ولماذا التوصيل الخاص أفضل من الباص.",
+      },
+      content: {
+        en: [
+          "The Dammam to Riyadh taxi route is one of Saudi Arabia's most travelled intercity corridors, connecting the Eastern Province's energy capital to the Kingdom's political and commercial capital. The journey covers approximately 400 kilometers via the E40 highway and takes 3.5 to 4.5 hours under normal conditions.",
+          "Fares: Our fixed rate for a Dammam to Riyadh private taxi starts from 900 SAR for a standard Camry sedan (1–4 passengers). VIP SUV (Yukon, Suburban) starts from 1,400 SAR (1–6 passengers). Family Van (Toyota Staria) for larger groups or heavy luggage starts from 1,600 SAR. All fares are fixed — no fuel surcharges, no toll-gate additions, no night fees.",
+          "The Route: The E40 highway between Dammam and Riyadh is a modern, well-maintained dual carriageway. The road passes through Abqaiq and Haradh before entering the Riyadh region. Our drivers make one scheduled rest stop at a clean service station midway (around the 200km mark) for prayer and refreshments.",
+          "Why Choose Private Taxi Over SAPTCO Bus or Flying: Private taxi offers door-to-door service — no bus terminal taxi, no airport queues, no extra luggage fees. Travel time is comparable to flying when you factor in check-in, security, and airport transfer at both ends. For 1–4 passengers, the per-person cost is competitive with economy airline tickets especially for flexible travel dates.",
+          "Business Travellers' Favourite Route: Saudi Aramco executives, SABIC engineers, and Eastern Province government officials frequently use our Dammam–Riyadh taxi for overnight and day-trip corporate travel. Wi-Fi, charging ports, and bottled water are standard on all vehicles. Book 24 hours ahead for guaranteed availability; same-day bookings accepted subject to availability."
+        ],
+        ar: [
+          "مسار تاكسي من الدمام إلى الرياض أحد أكثر ممرات السفر بين المدن ارتياداً في المملكة العربية السعودية، إذ يربط عاصمة الطاقة في المنطقة الشرقية بالعاصمة السياسية والتجارية. تبلغ المسافة حوالي 400 كيلومتر عبر طريق E40 السريع وتستغرق من 3.5 إلى 4.5 ساعة في الظروف الاعتيادية.",
+          "الأسعار: يبدأ سعرنا الثابت من الدمام إلى الرياض من 900 ريال سعودي لسيارة كامري العادية (1-4 ركاب). تبدأ سيارة SUV الفارهة من 1400 ريال. وتبدأ الفان العائلية للمجموعات الكبيرة من 1600 ريال. جميع الأسعار ثابتة — بدون رسوم إضافية.",
+          "المسار: طريق E40 السريع بين الدمام والرياض طريق ثنائي حديث مُصان جيداً. يمر بمنطقتي أبقيق وحرض قبل الوصول إلى منطقة الرياض. يقوم سائقونا بتوقف استراحة واحد مجدول في محطة خدمة نظيفة في منتصف الطريق.",
+          "لماذا تختار التاكسي الخاص بدلاً من الباص أو الطيران: التاكسي الخاص يوفر خدمة من الباب إلى الباب — بدون سيارة أجرة من محطة الباص، بدون طوابير المطار، بدون رسوم أمتعة إضافية.",
+          "المسار المفضل لرجال الأعمال: كثيراً ما يستخدم مديرو أرامكو السعودية ومهندسو سابك ومسؤولو المنطقة الشرقية تاكسي الدمام-الرياض للسفر المؤسسي. تتوفر خدمة Wi-Fi ومنافذ الشحن والمياه المعبأة على جميع السيارات. احجز قبل 24 ساعة لضمان التوفر."
+        ]
+      }
+    },
+    {
+      id: 17,
+      title: {
+        en: "King Fahd International Airport (DMM): Complete Passenger Guide 2026",
+        ar: "مطار الملك فهد الدولي (DMM): دليل المسافر الشامل 2026",
+      },
+      date: "2026-07-09",
+      category: { en: "Airport Guides", ar: "أدلة المطارات" },
+      excerpt: {
+        en: "Everything passengers need to know about King Fahd International Airport — terminals, ground transportation, lounges, and tips for a smooth trip.",
+        ar: "كل ما يحتاجه المسافرون لمعرفته عن مطار الملك فهد الدولي — الصالات والمواصلات الأرضية والصالات المميزة ونصائح للرحلة السلسة.",
+      },
+      content: {
+        en: [
+          "King Fahd International Airport (IATA: DMM, ICAO: OEDF) is the primary airport for Dammam, Al Khobar, Dhahran, and the entire Eastern Province of Saudi Arabia. At 780 square kilometres, it holds the record as the world's largest airport by land area — larger than Bahrain island itself. Understanding its layout and services is key to a stress-free journey.",
+          "Terminal Overview: The airport has two main terminals — the International Terminal and the Domestic Terminal — connected by a free internal shuttle bus. International arrivals are processed in Hall B (right side as you exit customs). The arrivals hall has money exchange counters, a pharmacy, and convenience stores. Our drivers wait just beyond the customs exit with name boards.",
+          "Airlines & Destinations: DMM is served by over 25 airlines including Saudia, flynas, flyadeal, Qatar Airways, Emirates, Etihad, Turkish Airlines, Lufthansa, British Airways, and Gulf Air. International destinations include Dubai, Doha, Cairo, London, Frankfurt, Istanbul, Kuala Lumpur, Manila, and Colombo.",
+          "Ground Transportation Options: (1) Dammam Airport Taxi (us) — private, fixed-rate, pre-booked. (2) Ride-hailing apps (Uber, Careem) — variable pricing, no meet & greet. (3) Airport buses — cheap but slow, limited destinations. (4) Rental cars — available from Hertz, Budget, Enterprise. For corporate travellers and families, private transfer offers the best combination of comfort, reliability, and fixed cost.",
+          "Practical Tips: The airport is 35 km from Dammam city centre and 25 km from Al Khobar. Journey times vary significantly — allow 45 minutes to Khobar and 30 minutes to Dammam in normal traffic. Prayer rooms are located on each floor. Free Wi-Fi is available throughout the terminal. Smoking is prohibited inside all buildings. Currency exchange rates at the airport are generally 2–5% below mid-market — change money in the city if possible."
+        ],
+        ar: [
+          "مطار الملك فهد الدولي (IATA: DMM, ICAO: OEDF) هو المطار الرئيسي للدمام والخبر والظهران وكامل المنطقة الشرقية. بمساحة 780 كيلومتراً مربعاً، يحتل المركز الأول عالمياً كأكبر مطار من حيث المساحة البرية.",
+          "نظرة عامة على الصالات: يضم المطار صالتين رئيسيتين — صالة الرحلات الدولية وصالة الرحلات الداخلية — تربطهما حافلة مكوك داخلية مجانية. تُعالَج وصولات القادمين دولياً في القاعة B. تضم قاعة الوصول منافذ لصرف العملات وصيدلية ومتاجر متنوعة.",
+          "شركات الطيران والوجهات: يخدم المطار أكثر من 25 شركة طيران تشمل السعودية وفلاي ناس وفلاي أديل وطيران قطر والإمارات والاتحاد والتركية ولوفتهانزا والخليج.",
+          "خيارات المواصلات الأرضية: (1) تاكسي مطار الدمام (نحن) — خاص، بسعر ثابت، محجوز مسبقاً. (2) تطبيقات طلب السيارات (أوبر، كريم) — أسعار متغيرة، بدون استقبال. (3) حافلات المطار — اقتصادية لكن بطيئة. (4) سيارات الإيجار. للمسافرين التجاريين والعائلات، التوصيل الخاص يقدم أفضل مزيج من الراحة والموثوقية والسعر الثابت.",
+          "نصائح عملية: المطار يبعد 35 كم عن مركز مدينة الدمام و25 كم عن الخبر. خصص 45 دقيقة للخبر و30 دقيقة للدمام في ظروف المرور الاعتيادية. توجد غرف صلاة في كل طابق. Wi-Fi مجاني في جميع أنحاء المبنى."
+        ]
+      }
+    },
+    {
+      id: 18,
+      title: {
+        en: "Corporate Taxi Service Dammam: Why Saudi Companies Choose Private Transfers",
+        ar: "خدمة التاكسي للشركات في الدمام: لماذا تختار الشركات السعودية التوصيل الخاص",
+      },
+      date: "2026-07-10",
+      category: { en: "Corporate Travel", ar: "سفر الأعمال" },
+      excerpt: {
+        en: "From Aramco contractors to SABIC delegations — discover why Dammam's biggest companies rely on private chauffeur services for executive transport.",
+        ar: "من مقاولي أرامكو إلى وفود سابك — اكتشف لماذا تعتمد كبرى شركات الدمام على خدمات السائق الخاص لنقل مديريها التنفيذيين.",
+      },
+      content: {
+        en: [
+          "The Eastern Province is the energy capital of Saudi Arabia and one of the most corporate-intensive business environments in the Middle East. With Saudi Aramco's global headquarters in Dhahran, SABIC operations throughout Jubail Industrial City, RCJY infrastructure projects, and dozens of multinational contractors, the demand for reliable executive ground transportation is enormous.",
+          "Duty of Care: Companies operating in Saudi Arabia have a legal and ethical duty of care obligation for employee travel. A verified, licensed private taxi service with GPS tracking, documented drivers, and commercial insurance satisfies these requirements in a way that ride-hailing apps cannot. Our vehicles are registered commercial transport, and all drivers hold valid SAPTA (Saudi Authority for Public Transport) licences.",
+          "VAT-Compliant Monthly Invoicing: For corporate accounts, we issue consolidated monthly VAT invoices that comply with ZATCA (Zakat, Tax and Customs Authority) requirements. This simplifies expense reporting for finance departments and eliminates the need for employees to submit individual receipts for ride-hailing trips.",
+          "Services We Provide for Corporate Clients: Executive airport transfers (DMM) for visiting delegations. Daily driver service for senior staff without company cars. Jubail Industrial City facility visits. Multi-city roadshows (Dammam + Khobar + Dhahran in a single day). Group transfers from airports to compound accommodation. Event shuttle services for corporate conferences and exhibitions.",
+          "How to Set Up a Corporate Account: Setting up a corporate account takes less than 48 hours. We require a company CR number, billing contact, and estimated monthly volume. Rates are negotiated based on volume. Payment is net-30 monthly invoice. Contact us on WhatsApp or email to start the process — most accounts are active within two business days."
+        ],
+        ar: [
+          "المنطقة الشرقية هي عاصمة الطاقة في المملكة العربية السعودية وواحدة من أكثر بيئات الأعمال المؤسسية كثافة في الشرق الأوسط. مع وجود المقر العالمي لأرامكو السعودية في الظهران وعمليات سابك في جبيل ومشاريع البنية التحتية لـRCJY، يكون الطلب على النقل الأرضي التنفيذي الموثوق هائلاً.",
+          "واجب الرعاية: تمتلك الشركات العاملة في المملكة التزاماً قانونياً وأخلاقياً بواجب الرعاية تجاه سفر موظفيها. خدمة التاكسي الخاص المرخصة مع تتبع GPS وسائقين موثقين وتأمين تجاري تلبي هذه المتطلبات.",
+          "الفواتير الشهرية المتوافقة مع ضريبة القيمة المضافة: نُصدر للحسابات المؤسسية فواتير ضريبية شهرية مجمعة متوافقة مع متطلبات هيئة الزكاة والضريبة والجمارك. هذا يبسط إعداد تقارير المصروفات للأقسام المالية.",
+          "الخدمات التي نقدمها للعملاء المؤسسيين: توصيلات مطار تنفيذية للوفود الزائرة. خدمة سائق يومية للموظفين من الصف التنفيذي. زيارات مرافق مدينة جبيل الصناعية. جولات متعددة المدن في يوم واحد. تنقلات جماعية من المطارات إلى مجمعات الإقامة.",
+          "كيفية إنشاء حساب مؤسسي: استحداث حساب مؤسسي لا يستغرق سوى 48 ساعة. نحتاج إلى رقم السجل التجاري للشركة وجهة الاتصال للفوترة وحجم المعاملات الشهرية المقدر. تواصل معنا عبر واتساب أو البريد الإلكتروني لبدء الإجراءات."
+        ]
+      }
+    },
+    {
+      id: 19,
+      title: {
+        en: "GCC Border Crossing by Taxi: Saudi Arabia to Bahrain, Kuwait & UAE",
+        ar: "عبور حدود دول الخليج بالتاكسي: من السعودية إلى البحرين والكويت والإمارات",
+      },
+      date: "2026-07-11",
+      category: { en: "GCC Travel Guides", ar: "أدلة سفر الخليج" },
+      excerpt: {
+        en: "Everything you need to know about crossing GCC land borders by private taxi from Dammam — documents, fees, crossings, and travel times.",
+        ar: "كل ما تحتاج معرفته عن عبور الحدود البرية لدول الخليج بالتاكسي الخاص من الدمام — الوثائق والرسوم ونقاط العبور وأوقات السفر.",
+      },
+      content: {
+        en: [
+          "One of Dammam Airport Taxi's key competitive advantages is our cross-border licensing. Most local taxis in the Eastern Province cannot legally cross into Bahrain, Kuwait, or the UAE — our drivers hold the necessary Saudi Authority for Public Transport commercial cross-border permits for all active GCC land border crossings.",
+          "Saudi Arabia to Bahrain (King Fahd Causeway): Distance: 85 km. Travel time: 1.5–2 hours. Crossing: King Fahd Causeway (Khobar side). Required documents: GCC nationals — national ID. Non-GCC — Saudi exit/re-entry visa + Bahrain visa (available online). Fare: from 350 SAR. Toll included.",
+          "Saudi Arabia to Kuwait (Khafji–Nuwaiseeb Border): Distance: 420 km from Dammam. Travel time: 4–4.5 hours driving + border time (30–90 min). Crossing: Khafji on the Saudi side, Nuwaiseeb on the Kuwaiti side. Required documents: Same as Bahrain plus Kuwait entry requirements. Fare: from 1,500 SAR. This is a licensed commercial route — most private taxis cannot legally make this crossing.",
+          "Saudi Arabia to UAE (Al Batha or Ghuwaifat Border): Distance: 950 km to Dubai. Travel time: 9–10 hours. Crossing: Al Batha border (via Qatar if crossing through) or Ghuwaifat (direct). Fare: from 3,500 SAR to Dubai. Multi-country crossings (Saudi → Qatar → UAE) require advance documentation — we advise on requirements when you book.",
+          "General Advice for All GCC Cross-Border Trips: Book at least 48 hours in advance for border crossings. Carry original passport — no photocopies. Saudi residents should verify exit/re-entry visa validity. We advise on current border wait times when you book. Our 24/7 WhatsApp team is available throughout your journey."
+        ],
+        ar: [
+          "إحدى أبرز مزايا تاكسي مطار الدمام التنافسية هي ترخيص عبور الحدود. معظم سيارات الأجرة المحلية في المنطقة الشرقية لا تستطيع قانونياً الدخول إلى البحرين أو الكويت أو الإمارات — بينما يمتلك سائقونا التصاريح التجارية اللازمة لعبور جميع المعابر البرية الخليجية.",
+          "من السعودية إلى البحرين (جسر الملك فهد): المسافة: 85 كم. وقت السفر: 1.5-2 ساعة. المعبر: جسر الملك فهد (الجانب الخبري). الوثائق المطلوبة: مواطنو الخليج — بطاقة الهوية الوطنية. غير مواطني الخليج — تأشيرة خروج وعودة سعودية + تأشيرة البحرين. السعر: من 350 ريالاً. يشمل رسوم العبور.",
+          "من السعودية إلى الكويت (حدود خفجي–نويصيب): المسافة: 420 كم من الدمام. وقت السفر: 4-4.5 ساعات قيادة + وقت الحدود. السعر: من 1500 ريال. هذا مسار تجاري مرخص — معظم سيارات الأجرة الخاصة لا تستطيع قانونياً قطع هذا المعبر.",
+          "من السعودية إلى الإمارات (حدود البطحاء أو الغويفات): المسافة: 950 كم إلى دبي. وقت السفر: 9-10 ساعات. السعر: من 3500 ريال إلى دبي.",
+          "نصائح عامة لجميع رحلات عبور الحدود الخليجية: احجز قبل 48 ساعة على الأقل. احمل جواز سفرك الأصلي. يُرجى التحقق من صلاحية تأشيرة الخروج والعودة للمقيمين في السعودية. فريق واتساب المتاح على مدار الساعة جاهز طوال رحلتك."
+        ]
+      }
+    },
+    {
+      id: 20,
+      title: {
+        en: "Taxi from Dammam Airport at 4AM: Your Guide to Night Transfers",
+        ar: "تاكسي من مطار الدمام في الساعة 4 صباحاً: دليلك لرحلات الليل",
+      },
+      date: "2026-07-12",
+      category: { en: "Airport Guides", ar: "أدلة المطارات" },
+      excerpt: {
+        en: "Early morning flights and late-night arrivals at DMM are common. Here's how to arrange a reliable 4AM taxi from Dammam Airport.",
+        ar: "الرحلات الصباحية الباكرة والوصول في وقت متأخر من الليل في مطار الدمام شائعة. إليك كيفية ترتيب تاكسي موثوق في الساعة 4 صباحاً.",
+      },
+      content: {
+        en: [
+          "A significant proportion of flights connecting Dammam to international hubs depart between 2am and 6am, and international arrivals from Europe, Asia, and the Americas frequently land between midnight and 5am. If you have an early morning departure or a late-night arrival, here's exactly what to do.",
+          "Pre-Booking Is Essential at Night: At 3am or 4am, ride-hailing apps have limited availability in the Eastern Province and surge pricing can be extreme. Unregulated street taxis at the airport terminal have no accountability, no tracking, and negotiated fares. Pre-booking a private taxi guarantees: a confirmed driver waiting at your door or in the arrivals hall, a fixed fare agreed before travel, and our dispatch team monitoring the journey.",
+          "Early Morning Departures (4am–7am): We recommend booking at least 12 hours in advance for early morning pickups. Share your flight number when booking — we calculate the pickup time to arrive 3 hours before your departure. Night pickups carry no additional surcharge. We send a WhatsApp reminder the night before with your driver's name, vehicle, and plate number.",
+          "Late Night Arrivals (Midnight–5am): Our flight tracking system means your driver's wait time begins from your actual landing, not your scheduled arrival. You never pay extra if your flight is delayed. For solo travellers and women travelling alone, we send your driver's name, photo, and direct mobile number 2 hours before landing. Driver waits in the arrivals hall with your name board.",
+          "Practical Checklist for Night Transfers: (1) Book in advance — same-day night bookings are subject to availability. (2) Save our WhatsApp number: +966 56 948 7569. (3) Send your flight number at time of booking. (4) Confirm your booking 2 hours before — we'll send driver details. (5) If you can't locate your driver, call them directly — you have their number. Our 24/7 operations team is always reachable."
+        ],
+        ar: [
+          "تنطلق نسبة كبيرة من الرحلات التي تربط الدمام بالمحاور الدولية بين الساعة 2 و6 صباحاً، وكثيراً ما تهبط الرحلات الدولية القادمة من أوروبا وآسيا والأمريكتين بين منتصف الليل والساعة 5 صباحاً.",
+          "الحجز المسبق ضروري في الليل: في الساعة 3 أو 4 صباحاً، تقل توافرية تطبيقات طلب السيارات في المنطقة الشرقية وقد ترتفع أسعارها بشكل حاد. الحجز المسبق يضمن سائقاً مؤكداً في انتظارك، وسعراً ثابتاً متفقاً عليه قبل السفر، وفريق عمليات يراقب الرحلة.",
+          "المغادرات الصباحية المبكرة (4-7 صباحاً): ننصح بالحجز قبل 12 ساعة على الأقل. شارك رقم رحلتك عند الحجز — نحسب وقت الاستلام لكي تصل قبل 3 ساعات من مغادرتك. التوصيلات الليلية لا تحمل أي رسوم إضافية.",
+          "الوصول المتأخر ليلاً (منتصف الليل-5 صباحاً): نظام تتبع الرحلات لدينا يعني أن وقت انتظار سائقك يبدأ من هبوطك الفعلي، وليس من موعد وصولك المجدول. للمسافرين المنفردين والسيدات، نرسل اسم سائقك وصورته ورقم هاتفه المباشر قبل ساعتين من الهبوط.",
+          "قائمة التحقق العملية للتوصيلات الليلية: (1) احجز مسبقاً. (2) احفظ رقم واتساب الخاص بنا. (3) أرسل رقم رحلتك عند الحجز. (4) أكد حجزك قبل ساعتين. (5) إذا لم تجد سائقك، اتصل به مباشرة. فريق العمليات المتاح 24 ساعة في خدمتك دائماً."
+        ]
+      }
     }
   ];
 
