@@ -120,7 +120,7 @@ export function LocationPageClient({ page }: Props) {
               <div style={s.qStatDiv} />
               <div style={s.qStat}>
                 <div>
-                  <div style={{ ...s.qStatVal, color: "var(--accent-gold)" }}>
+                  <div style={{ ...s.qStatVal, color: "#0C58D1" }}>
                     {ar ? `من ${page.startingPrice} ر.س` : `From ${page.startingPrice} SAR`}
                   </div>
                   <div style={s.qStatLbl}>{ar ? "يبدأ من" : "Starting price"}</div>
@@ -250,7 +250,7 @@ export function LocationPageClient({ page }: Props) {
                   </div>
                   <div style={s.sidebarStat}>
                     <span style={s.sidebarStatLabel}>{ar ? "يبدأ من" : "From"}</span>
-                    <span style={{ ...s.sidebarStatVal, color: "var(--accent-gold)", fontSize: "1.3rem" }}>
+                    <span style={{ ...s.sidebarStatVal, color: "#0C58D1", fontSize: "1.3rem" }}>
                       {page.startingPrice} SAR
                     </span>
                   </div>
@@ -355,7 +355,7 @@ const s: Record<string, React.CSSProperties> = {
   },
   btnSecondary: {
     display: "inline-flex", alignItems: "center",
-    border: "1.5px solid var(--accent-gold)", color: "var(--accent-gold)",
+    border: "1.5px solid #0C58D1", color: "#0C58D1",
     padding: "0.8rem 1.8rem", borderRadius: "8px",
     fontWeight: 700, textDecoration: "none", fontSize: "0.95rem",
     backgroundColor: "transparent",
@@ -437,7 +437,7 @@ const s: Record<string, React.CSSProperties> = {
   },
   sidebarBtnSecondary: {
     display: "flex", alignItems: "center", justifyContent: "center",
-    border: "1.5px solid var(--accent-gold)", color: "var(--accent-gold)",
+    border: "1.5px solid #0C58D1", color: "#0C58D1",
     padding: "0.7rem", borderRadius: "8px",
     fontWeight: 700, textDecoration: "none", fontSize: "0.85rem",
     backgroundColor: "transparent",

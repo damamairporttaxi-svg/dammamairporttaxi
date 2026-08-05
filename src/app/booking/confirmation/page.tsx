@@ -20,7 +20,7 @@ function ConfirmationContent() {
       .catch(() => setLoading(false));
   }, [ref]);
 
-  const gold = "var(--accent-gold)";
+  const gold = "#0C58D1";
   const s = {
     page: { minHeight: "100vh", display: "flex", flexDirection: "column" as const },
     hero: { background: "#ffffff", padding: "4rem 0 3rem", borderBottom: "1px solid #e5e7eb", textAlign: "center" as const },
@@ -36,9 +36,9 @@ function ConfirmationContent() {
       <section style={s.hero}>
         <div className="container">
           <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>✓</div>
-          <h1 style={{ color: gold, fontSize: "clamp(1.3rem,3vw,2rem)", fontWeight: 800, margin: "0 0 0.5rem" }}>Booking Confirmed!</h1>
+          <h1 style={{ color: "#0C58D1", fontSize: "clamp(1.3rem,3vw,2rem)", fontWeight: 800, margin: "0 0 0.5rem" }}>Booking Confirmed!</h1>
           <p style={{ color: "#aaa" }}>Your transfer has been received. Confirmation sent to your email.</p>
-          {ref && <p style={{ color: gold, fontWeight: 700, fontSize: "1.1rem", marginTop: 8 }}>Ref: {ref}</p>}
+          {ref && <p style={{ color: "#0C58D1", fontWeight: 700, fontSize: "1.1rem", marginTop: 8 }}>Ref: {ref}</p>}
         </div>
       </section>
 
@@ -65,7 +65,7 @@ function ConfirmationContent() {
               ].map(([l, v]) => (
                 <div key={l} style={s.row}>
                   <span style={{ color: "#777", fontSize: "0.85rem" }}>{l}</span>
-                  <span style={{ color: l === "Total" ? gold : "#fff", fontWeight: l === "Total" || l === "Status" ? 700 : 500, fontSize: "0.85rem" }}>{v}</span>
+                  <span style={{ color: l === "Total" ? "#0C58D1" : "#000000", fontWeight: l === "Total" || l === "Status" ? 700 : 500, fontSize: "0.85rem" }}>{v}</span>
                 </div>
               ))}
             </div>
@@ -92,8 +92,8 @@ function ConfirmationContent() {
             </Link>
           </div>
 
-          <div style={{ ...s.card, marginTop: "1.5rem", background: "rgba(245,197,24,0.04)", border: "1px solid rgba(245,197,24,0.2)" }}>
-            <h3 style={{ color: gold, fontSize: "0.95rem", marginBottom: "0.75rem" }}>What happens next?</h3>
+          <div style={{ ...s.card, marginTop: "1.5rem", background: "rgba(245,197,24,0.04)", border: "1px solid rgba(12,88,209,0.15)" }}>
+            <h3 style={{ color: "#0C58D1", fontSize: "0.95rem", marginBottom: "0.75rem" }}>What happens next?</h3>
             <ul style={{ color: "#aaa", fontSize: "0.85rem", paddingLeft: "1.2rem", lineHeight: 2 }}>
               <li>You'll receive a confirmation email with trip details</li>
               <li>Our team will confirm your booking within 30 minutes</li>

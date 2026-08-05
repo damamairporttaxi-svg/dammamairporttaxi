@@ -130,7 +130,7 @@ export default function JubailPage() {
                 </div>
                 <div style={s.corpCTA}>
                   <p style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>Need a corporate account for your Jubail company?</p>
-                  <Link href="/corporate-transfers" style={{ color: "var(--accent-gold)", fontWeight: "700", textDecoration: "none", fontSize: "0.9rem" }}>
+                  <Link href="/corporate-transfers" style={{ color: "#0C58D1", fontWeight: "700", textDecoration: "none", fontSize: "0.9rem" }}>
                     → Set up a Corporate Account
                   </Link>
                 </div>
@@ -205,33 +205,33 @@ const s: Record<string, React.CSSProperties> = {
   hero: { background: "#ffffff", padding: "5rem 0 3rem", borderBottom: "1px solid var(--border-color)" },
   hc: { display: "flex", flexDirection: "column", gap: "1rem" },
   bc: { display: "flex", gap: "0.5rem", alignItems: "center", fontSize: "0.82rem" },
-  bLink: { color: "var(--accent-gold)", textDecoration: "none" },
+  bLink: { color: "#0C58D1", textDecoration: "none" },
   bSep: { color: "var(--text-muted)" },
   bCur: { color: "var(--text-secondary)" },
   h1: { fontSize: "2.3rem", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.2", maxWidth: "850px" },
   sub: { fontSize: "1rem", color: "var(--text-secondary)", maxWidth: "700px", lineHeight: "1.7" },
   chips: { display: "flex", gap: "0.6rem", flexWrap: "wrap", marginTop: "0.5rem" },
-  chip: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.3)", color: "var(--accent-gold)", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.78rem", fontWeight: "600" },
+  chip: { backgroundColor: "rgba(12,88,209,0.08)", border: "1px solid rgba(12,88,209,0.25)", color: "#0C58D1", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.78rem", fontWeight: "600" },
   grid: { display: "grid", gridTemplateColumns: "1fr 280px", gap: "3rem", padding: "4rem 0", alignItems: "start" },
   col: { display: "flex", flexDirection: "column", gap: "3rem" },
   sec: { display: "flex", flexDirection: "column", gap: "1.2rem" },
-  h2: { fontSize: "1.55rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
+  h2: { fontSize: "1.55rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(12,88,209,0.25)", paddingBottom: "0.6rem" },
   p: { fontSize: "0.96rem", color: "var(--text-secondary)", lineHeight: "1.75" },
   factGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(190px,1fr))", gap: "0.7rem", marginTop: "0.5rem" },
   fact: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "6px", padding: "0.75rem 0.9rem", display: "flex", flexDirection: "column", gap: "0.25rem" },
-  fl: { fontSize: "0.7rem", color: "var(--accent-gold)", fontWeight: "700", textTransform: "uppercase" },
+  fl: { fontSize: "0.7rem", color: "#0C58D1", fontWeight: "700", textTransform: "uppercase" },
   fv: { fontSize: "0.86rem", color: "var(--text-primary)" },
   corpGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: "1rem" },
   corpCard: { padding: "1.4rem", display: "flex", flexDirection: "column", gap: "0.4rem" },
   cName: { fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: "700", margin: 0 },
-  cRole: { fontSize: "0.75rem", color: "var(--accent-gold)", fontWeight: "700" },
+  cRole: { fontSize: "0.75rem", color: "#0C58D1", fontWeight: "700" },
   cDesc: { fontSize: "0.82rem", color: "var(--text-secondary)", lineHeight: "1.5", margin: 0 },
-  corpCTA: { backgroundColor: "rgba(245,197,24,0.06)", border: "1px solid rgba(245,197,24,0.2)", borderRadius: "6px", padding: "1rem 1.2rem", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" },
+  corpCTA: { backgroundColor: "rgba(245,197,24,0.06)", border: "1px solid rgba(12,88,209,0.15)", borderRadius: "6px", padding: "1rem 1.2rem", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "1rem", flexWrap: "wrap" },
   routeList: { display: "flex", flexDirection: "column", gap: "0.6rem" },
   routeRow: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "6px", padding: "0.9rem 1.1rem", display: "flex", alignItems: "center", justifyContent: "space-between", textDecoration: "none" },
   rName: { color: "var(--text-primary)", fontSize: "0.9rem" },
   rDetail: { color: "var(--text-muted)", fontSize: "0.78rem", marginTop: "0.2rem" },
-  rArrow: { color: "var(--accent-gold)", fontWeight: "700" },
+  rArrow: { color: "#0C58D1", fontWeight: "700" },
   faqList: { display: "flex", flexDirection: "column", gap: "1rem" },
   faqItem: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.3rem", borderRadius: "6px" },
   fQ: { fontSize: "0.97rem", color: "var(--text-primary)", marginBottom: "0.5rem", fontWeight: "700" },

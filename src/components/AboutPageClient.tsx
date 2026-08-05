@@ -51,7 +51,7 @@ export function AboutPageClient() {
 
           {/* Details Sidebar / Highlights */}
           <div className="glass-card" style={styles.infoCard}>
-            <h3 style={{ ...styles.cardHeading, color: "var(--accent-gold)" }}>
+            <h3 style={{ ...styles.cardHeading, color: "#0C58D1" }}>
               {locale === "en" ? "Our Core Values" : "قيمنا الأساسية"}
             </h3>
             <ul style={styles.list}>

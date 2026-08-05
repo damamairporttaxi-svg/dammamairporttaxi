@@ -30,7 +30,7 @@ export default function TrackBookingPage() {
     else setError(data.error ?? "Booking not found");
   }
 
-  const gold = "var(--accent-gold)";
+  const gold = "#0C58D1";
   const s = {
     input: { background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.85rem 1rem", color: "var(--text-primary)", fontSize: "1rem", flex: 1, minWidth: 0 },
     card: { background: "#141414", border: "1px solid #222", borderRadius: 12, padding: "2rem", marginTop: "1.5rem" },
@@ -57,7 +57,7 @@ export default function TrackBookingPage() {
           {/* Search */}
           <div style={{ display: "flex", gap: "0.75rem" }}>
             <input style={s.input} value={ref} onChange={e => setRef(e.target.value.toUpperCase())} placeholder="e.g. DAT-20260614-AB12" onKeyDown={e => e.key === "Enter" && search()} />
-            <button onClick={search} disabled={loading} style={{ background: gold, color: "#000", border: "none", borderRadius: 6, padding: "0.85rem 1.5rem", fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+            <button onClick={search} disabled={loading} style={{ background: gold, color: "#ffffff", border: "none", borderRadius: 6, padding: "0.85rem 1.5rem", fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
               {loading ? "..." : "Track"}
             </button>
           </div>
@@ -96,7 +96,7 @@ export default function TrackBookingPage() {
                     ))}
                   </div>
                 )}
-                <p style={{ color: gold, fontWeight: 700, marginTop: "1rem", textAlign: "center" }}>
+                <p style={{ color: "#0C58D1", fontWeight: 700, marginTop: "1rem", textAlign: "center" }}>
                   {statusLabels[booking.status] ?? booking.status}
                 </p>
               </div>
@@ -116,14 +116,14 @@ export default function TrackBookingPage() {
                 ].map(([l, v]) => (
                   <div key={l} style={s.row}>
                     <span style={{ color: "#777", fontSize: "0.85rem" }}>{l}</span>
-                    <span style={{ color: l === "Total" ? gold : "#fff", fontWeight: l === "Total" ? 700 : 500, fontSize: "0.85rem" }}>{v}</span>
+                    <span style={{ color: l === "Total" ? "#0C58D1" : "#000000", fontWeight: l === "Total" ? 700 : 500, fontSize: "0.85rem" }}>{v}</span>
                   </div>
                 ))}
               </div>
 
               {/* Driver info (when assigned) */}
               {booking.driver_name && (
-                <div style={{ ...s.card, border: "1px solid rgba(245,197,24,0.3)", background: "rgba(245,197,24,0.04)" }}>
+                <div style={{ ...s.card, border: "1px solid rgba(12,88,209,0.25)", background: "rgba(245,197,24,0.04)" }}>
                   <h3 style={{ color: gold, marginBottom: "1rem", fontSize: "1rem" }}>Your Driver</h3>
                   {[
                     ["Driver Name", booking.driver_name],

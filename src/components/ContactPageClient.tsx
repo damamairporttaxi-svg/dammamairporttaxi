@@ -82,7 +82,7 @@ export function ContactPageClient() {
 
             {/* Direct WhatsApp Callout */}
             <div style={styles.whatsappCallout}>
-              <h3 style={{ color: "var(--accent-gold)", marginBottom: "0.5rem" }}>
+              <h3 style={{ color: "#0C58D1", marginBottom: "0.5rem" }}>
                 {locale === "en" ? "Need Immediate Assistance?" : "هل تحتاج مساعدة عاجلة؟"}
               </h3>
               <p style={{ fontSize: "0.85rem", color: "var(--text-secondary)", marginBottom: "1rem" }}>
@@ -186,10 +186,12 @@ export function ContactPageClient() {
 
 const styles: Record<string, React.CSSProperties> = {
   hero: {
-    background: "#ffffff",
-    padding: "5rem 0",
-    borderBottom: "1px solid var(--border-color)",
+    background: "linear-gradient(135deg, #f8fafc 0%, #EFF6FF 100%)",
+    padding: "5rem 0 4rem",
+    borderBottom: "1px solid #e5e7eb",
     textAlign: "center",
+    position: "relative",
+    overflow: "hidden",
   },
   heroContainer: {
     display: "flex",

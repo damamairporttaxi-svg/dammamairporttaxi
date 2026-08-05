@@ -134,7 +134,7 @@ export function FAQsPageClient() {
           </div>
 
           <div style={styles.ctaBox} className="glass-card text-center">
-            <h3 style={{ color: "var(--accent-gold)", marginBottom: "0.8rem" }}>
+            <h3 style={{ color: "#0C58D1", marginBottom: "0.8rem" }}>
               {locale === "en" ? "Still have questions?" : "هل لا تزال لديك أسئلة أخرى؟"}
             </h3>
             <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", marginBottom: "1.5rem" }}>
@@ -163,9 +163,9 @@ export function FAQsPageClient() {
 
 const styles: Record<string, React.CSSProperties> = {
   hero: {
-    background: "#ffffff",
-    padding: "5rem 0",
-    borderBottom: "1px solid var(--border-color)",
+    background: "linear-gradient(135deg, #f8fafc 0%, #EFF6FF 100%)",
+    padding: "5rem 0 4rem",
+    borderBottom: "1px solid #e5e7eb",
     textAlign: "center",
   },
   heroContainer: {

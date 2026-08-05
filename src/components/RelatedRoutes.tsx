@@ -57,7 +57,7 @@ const styles: Record<string, React.CSSProperties> = {
   },
   heading: {
     fontSize: "1.4rem",
-    color: "var(--accent-gold)",
+    color: "#0C58D1",
     marginBottom: "2rem",
     fontWeight: "700",
   },

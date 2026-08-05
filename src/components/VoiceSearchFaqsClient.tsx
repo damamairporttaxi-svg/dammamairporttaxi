@@ -113,11 +113,11 @@ export function VoiceSearchFaqsClient() {
             </p>
             <div style={s.heroStats}>
               <span style={s.heroStat}>
-                <strong style={{ color: "var(--accent-gold)" }}>{CATEGORIES.reduce((a, c) => a + c.faqs.length, 0)}+</strong>{" "}
+                <strong style={{ color: "#0C58D1" }}>{CATEGORIES.reduce((a, c) => a + c.faqs.length, 0)}+</strong>{" "}
                 {ar ? "سؤال مجاب" : "Questions Answered"}
               </span>
               <span style={s.heroStat}>
-                <strong style={{ color: "var(--accent-gold)" }}>{CATEGORIES.length}</strong>{" "}
+                <strong style={{ color: "#0C58D1" }}>{CATEGORIES.length}</strong>{" "}
                 {ar ? "فئات" : "Categories"}
               </span>
             </div>
@@ -156,7 +156,7 @@ export function VoiceSearchFaqsClient() {
                         <span style={{ flex: 1, textAlign: "left" }}>
                           {ar ? faq.q_ar : faq.q_en}
                         </span>
-                        <span style={{ color: "var(--accent-gold)", fontWeight: 800, marginLeft: "0.75rem", fontSize: "1.2rem" }}>
+                        <span style={{ color: "#0C58D1", fontWeight: 800, marginLeft: "0.75rem", fontSize: "1.2rem" }}>
                           {isOpen ? "−" : "+"}
                         </span>
                       </button>
@@ -234,7 +234,7 @@ const s: Record<string, React.CSSProperties> = {
   mainInner: { maxWidth: "800px", margin: "0 auto", display: "flex", flexDirection: "column", gap: "3rem" },
   section: { display: "flex", flexDirection: "column", gap: "0.5rem" },
   sectionTitle: {
-    fontSize: "1.2rem", fontWeight: 700, color: "var(--accent-gold)",
+    fontSize: "1.2rem", fontWeight: 700, color: "#0C58D1",
     marginBottom: "1rem", display: "flex", alignItems: "center", gap: "0.6rem",
     borderBottom: "1px solid var(--border-color)", paddingBottom: "0.75rem",
   },
@@ -250,11 +250,11 @@ const s: Record<string, React.CSSProperties> = {
   },
   faqQOpen: {
     borderBottomLeftRadius: 0, borderBottomRightRadius: 0,
-    borderColor: "var(--accent-gold)",
+    borderColor: "#0C58D1",
   },
   faqA: {
     backgroundColor: "rgba(245,197,24,0.04)",
-    border: "1px solid var(--accent-gold)",
+    border: "1px solid #0C58D1",
     borderTop: "none",
     borderBottomLeftRadius: "8px", borderBottomRightRadius: "8px",
     padding: "1rem 1.25rem",
@@ -262,7 +262,7 @@ const s: Record<string, React.CSSProperties> = {
   },
   faqLink: {
     display: "inline-block", marginTop: "0.75rem",
-    color: "var(--accent-gold)", fontWeight: 700, fontSize: "0.85rem",
+    color: "#0C58D1", fontWeight: 700, fontSize: "0.85rem",
     textDecoration: "none",
   },
   cta: {

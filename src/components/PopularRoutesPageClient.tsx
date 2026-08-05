@@ -81,8 +81,8 @@ export function PopularRoutesPageClient() {
 
           <h1 style={S.heroH1}>
             {ar
-              ? <><span style={{color:"var(--accent-gold)"}}>جميع وجهات التاكسي</span> من الدمام</>
-              : <>All Taxi Routes <span style={{color:"var(--accent-gold)"}}>from Dammam</span></>
+              ? <><span style={{color:"#0C58D1"}}>جميع وجهات التاكسي</span> من الدمام</>
+              : <>All Taxi Routes <span style={{color:"#0C58D1"}}>from Dammam</span></>
             }
           </h1>
           <p style={S.heroP}>
@@ -335,7 +335,7 @@ const S: Record<string,React.CSSProperties> = {
   crumb:     { display:"flex", alignItems:"center", gap:"0.4rem", fontSize:"0.8rem" },
   crumbLink: { color:"var(--text-muted)", textDecoration:"none" },
   crumbSep:  { color:"var(--text-muted)" },
-  crumbCurrent: { color:"var(--accent-gold)", fontWeight:600 },
+  crumbCurrent: { color:"#0C58D1", fontWeight:600 },
   heroH1: {
     fontSize:"clamp(1.2rem,2.5vw,1.9rem)", fontWeight:800,
     color: "var(--text-primary)", lineHeight:1.15, maxWidth:"700px",
@@ -355,7 +355,7 @@ const S: Record<string,React.CSSProperties> = {
     padding:"1rem 2rem", gap:"0.15rem",
     borderRight:"1px solid var(--border-color)",
   },
-  statN: { fontSize:"1.5rem", fontWeight:800, color:"var(--accent-gold)" },
+  statN: { fontSize:"1.5rem", fontWeight:800, color:"#0C58D1" },
   statL: { fontSize:"0.7rem", color:"var(--text-secondary)", textTransform:"uppercase", letterSpacing:"0.05em", whiteSpace:"nowrap" },
 
   /* Featured */
@@ -415,7 +415,7 @@ const S: Record<string,React.CSSProperties> = {
     transition:"all 0.18s",
   },
   tabActive: {
-    background:"var(--accent-gold)", borderColor:"var(--accent-gold)",
+    background:"#0C58D1", borderColor:"#0C58D1",
     color:"#000", fontWeight:700,
   },
   tabBadge: {

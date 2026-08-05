@@ -119,7 +119,7 @@ function VehicleCard({
       style={{
         ...s.card,
         boxShadow: hovered
-          ? "0 20px 50px rgba(0,0,0,0.8), 0 0 0 1px rgba(245,197,24,0.3)"
+          ? "0 20px 50px rgba(0,0,0,0.8), 0 0 0 1px rgba(12,88,209,0.25)"
           : "var(--shadow-md)",
         transform: hovered ? "translateY(-8px) scale(1.01)" : "translateY(0) scale(1)",
       }}
@@ -177,8 +177,8 @@ function VehicleCard({
           onClick={onBook}
           style={{
             ...s.btn,
-            background: hovered ? "var(--accent-gold)" : "transparent",
-            color: hovered ? "#000" : "var(--accent-gold)",
+            background: hovered ? "#0C58D1" : "transparent",
+            color: hovered ? "#000" : "#0C58D1",
           }}
         >
           {bookLabel}
@@ -285,12 +285,12 @@ const s: Record<string, React.CSSProperties> = {
   specVal: { fontSize: "1.3rem", fontWeight: 800, color: "var(--text-primary)" },
   feats:   { listStyle: "none", padding: 0, margin: "0 0 1.5rem 0", display: "flex", flexDirection: "column", gap: "0.4rem", flex: 1 },
   feat:    { fontSize: "0.8rem", color: "var(--text-secondary)", display: "flex", alignItems: "center", gap: "0.5rem" },
-  check:   { color: "var(--accent-gold)", fontWeight: 800, fontSize: "0.85rem" },
+  check:   { color: "#0C58D1", fontWeight: 800, fontSize: "0.85rem" },
   btn: {
     width: "100%",
     padding: "0.7rem",
     borderRadius: "8px",
-    border: "1.5px solid var(--accent-gold)",
+    border: "1.5px solid #0C58D1",
     cursor: "pointer",
     fontWeight: 700,
     fontSize: "0.875rem",

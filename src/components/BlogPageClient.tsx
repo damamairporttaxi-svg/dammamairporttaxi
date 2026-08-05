@@ -730,7 +730,7 @@ const styles: Record<string, React.CSSProperties> = {
     fontSize: "0.8rem",
   },
   cardCategory: {
-    color: "var(--accent-gold)",
+    color: "#0C58D1",
     fontWeight: "700",
     textTransform: "uppercase",
   },
@@ -772,7 +772,7 @@ const styles: Record<string, React.CSSProperties> = {
     maxHeight: "85vh",
     overflowY: "auto",
     padding: "2.5rem",
-    border: "1px solid var(--accent-gold)",
+    border: "1px solid #0C58D1",
   },
   modalHeader: {
     display: "flex",

@@ -239,7 +239,7 @@ export default function CorporateTransfersPage() {
                 ].map((r) => (
                   <Link key={r.href} href={r.href} style={styles.sideRoute}>
                     <span>{r.label}</span>
-                    <span style={{ color: "var(--accent-gold)", fontWeight: 700 }}>from {r.price}</span>
+                    <span style={{ color: "#0C58D1", fontWeight: 700 }}>from {r.price}</span>
                   </Link>
                 ))}
               </div>
@@ -260,17 +260,17 @@ const styles: Record<string, React.CSSProperties> = {
   hero: { background: "linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.98)), url('/hero-bg.jpg') center/cover no-repeat", padding: "5rem 0 3rem", borderBottom: "1px solid var(--border-color)" },
   heroCont: { display: "flex", flexDirection: "column", gap: "1rem" },
   breadcrumb: { display: "flex", gap: "0.5rem", alignItems: "center", fontSize: "0.82rem" },
-  breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
+  breadLink: { color: "#0C58D1", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
   h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
   heroSub: { fontSize: "1.05rem", color: "#333333", maxWidth: "700px", lineHeight: "1.7" },
   heroBadges: { display: "flex", gap: "0.8rem", flexWrap: "wrap", marginTop: "0.5rem" },
-  badge: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.3)", color: "var(--accent-gold)", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.82rem", fontWeight: "600" },
+  badge: { backgroundColor: "rgba(12,88,209,0.08)", border: "1px solid rgba(12,88,209,0.25)", color: "#0C58D1", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.82rem", fontWeight: "600" },
   mainGrid: { display: "grid", gridTemplateColumns: "1fr 300px", gap: "3rem", padding: "4rem 0", alignItems: "start" },
   contentCol: { display: "flex", flexDirection: "column", gap: "3rem" },
   section: { display: "flex", flexDirection: "column", gap: "1.2rem" },
-  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
+  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(12,88,209,0.25)", paddingBottom: "0.6rem" },
   p: { fontSize: "0.97rem", color: "var(--text-secondary)", lineHeight: "1.75" },
   featureGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.2rem", marginTop: "0.5rem" },
   featureCard: { padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.5rem" },
@@ -281,13 +281,13 @@ const styles: Record<string, React.CSSProperties> = {
   destCard: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem 1.2rem", display: "flex", justifyContent: "space-between", alignItems: "center", textDecoration: "none" },
   destTitle: { color: "var(--text-primary)", fontSize: "0.95rem" },
   destDetail: { color: "var(--text-muted)", fontSize: "0.82rem", marginTop: "0.2rem" },
-  destArrow: { color: "var(--accent-gold)", fontSize: "1.2rem" },
+  destArrow: { color: "#0C58D1", fontSize: "1.2rem" },
   fleetGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.2rem" },
   fleetCard: { padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.5rem" },
   fleetName: { fontSize: "0.95rem", color: "var(--text-primary)", fontWeight: "700" },
   fleetPax: { fontSize: "0.82rem", color: "var(--text-secondary)" },
   fleetUse: { fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: "1.4" },
-  fleetPrice: { color: "var(--accent-gold)", fontWeight: "700", fontSize: "0.9rem", marginTop: "auto" },
+  fleetPrice: { color: "#0C58D1", fontWeight: "700", fontSize: "0.9rem", marginTop: "auto" },
   ol: { paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.7rem", color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.7" },
   faqList: { display: "flex", flexDirection: "column", gap: "1.2rem" },
   faqItem: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.4rem", borderRadius: "6px" },

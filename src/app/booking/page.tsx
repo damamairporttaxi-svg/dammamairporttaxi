@@ -67,19 +67,19 @@ export default function BookingPage() {
     }
   }
 
-  const gold = "var(--accent-gold)";
+  const gold = "#0C58D1";
   const s = {
     hero: { background: "#ffffff", padding: "4rem 0 3rem", borderBottom: "1px solid #e5e7eb" },
     h1: { fontSize: "clamp(1.3rem,3vw,2rem)", color: "var(--text-primary)", fontWeight: 800, margin: "0.5rem 0 1rem" },
     card: { background: "#141414", border: "1px solid #222", borderRadius: 12, padding: "2rem" },
     label: { display: "block" as const, color: "#aaa", fontSize: "0.82rem", fontWeight: 600, marginBottom: 6, textTransform: "uppercase" as const },
     input: { width: "100%", background: "#0c0c0c", border: "1px solid #333", borderRadius: 6, padding: "0.75rem 1rem", color: "var(--text-primary)", fontSize: "0.95rem", boxSizing: "border-box" as const },
-    btn: { background: gold, color: "#000", border: "none", borderRadius: 6, padding: "0.9rem 2rem", fontWeight: 700, cursor: "pointer", fontSize: "1rem", width: "100%" },
+    btn: { background: gold, color: "#ffffff", border: "none", borderRadius: 6, padding: "0.9rem 2rem", fontWeight: 700, cursor: "pointer", fontSize: "1rem", width: "100%" },
     grid2: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" },
     step: (active: boolean) => ({
       width: 32, height: 32, borderRadius: "50%", display: "inline-flex", alignItems: "center", justifyContent: "center",
       fontWeight: 700, fontSize: "0.85rem",
-      background: active ? gold : "#ffffff", color: active ? "#ffffff" : "#000000", border: active ? "none" : "1px solid #e5e7eb",
+      background: active ? "#0C58D1" : "#ffffff", color: active ? "#ffffff" : "#000000", border: active ? "none" : "1px solid #e5e7eb",
     }),
   };
 
@@ -120,8 +120,8 @@ export default function BookingPage() {
                     {["airport","intercity","border","vip"].map(t => (
                       <button key={t} onClick={() => set("service_type", t)} style={{
                         padding: "0.5rem 1rem", borderRadius: 6, border: "1px solid",
-                        borderColor: form.service_type === t ? gold : "#333",
-                        background: form.service_type === t ? gold : "transparent",
+                        borderColor: form.service_type === t ? "#0C58D1" : "#e5e7eb",
+                        background: form.service_type === t ? "#0C58D1" : "transparent",
                         color: form.service_type === t ? "#000" : "#aaa",
                         fontWeight: 600, cursor: "pointer", fontSize: "0.82rem", textTransform: "capitalize",
                       }}>{t.replace("_"," ")}</button>
@@ -147,11 +147,11 @@ export default function BookingPage() {
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
                     {vehicles.map(v => (
                       <div key={v.id} onClick={() => set("vehicle_type", v.id)} style={{
-                        border: "1px solid", borderColor: form.vehicle_type === v.id ? gold : "#333",
+                        border: "1px solid", borderColor: form.vehicle_type === v.id ? "#0C58D1" : "#e5e7eb",
                         borderRadius: 8, padding: "1rem", cursor: "pointer", position: "relative",
                         background: form.vehicle_type === v.id ? "rgba(245,197,24,0.06)" : "transparent",
                       }}>
-                        {v.badge && <span style={{ position: "absolute", top: 8, right: 8, background: gold, color: "#000", fontSize: "0.65rem", fontWeight: 700, padding: "2px 6px", borderRadius: 4 }}>{v.badge}</span>}
+                        {v.badge && <span style={{ position: "absolute", top: 8, right: 8, background: gold, color: "#ffffff", fontSize: "0.65rem", fontWeight: 700, padding: "2px 6px", borderRadius: 4 }}>{v.badge}</span>}
                         <div style={{ fontWeight: 700, color: "var(--text-primary)", fontSize: "0.9rem" }}>{v.label}</div>
                         <div style={{ color: "#888", fontSize: "0.78rem", marginTop: 4 }}>{v.pax} passengers</div>
                       </div>
@@ -201,7 +201,7 @@ export default function BookingPage() {
                   ) : null}
                   <div style={{ display: "flex", justifyContent: "space-between", borderTop: "1px solid #333", paddingTop: 8 }}>
                     <span style={{ color: "var(--text-primary)", fontWeight: 700 }}>Total</span>
-                    <span style={{ color: gold, fontWeight: 800, fontSize: "1.1rem" }}>{promoResult?.final_price ?? form.price} SAR</span>
+                    <span style={{ color: "#0C58D1", fontWeight: 800, fontSize: "1.1rem" }}>{promoResult?.final_price ?? form.price} SAR</span>
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: "0.75rem" }}>
@@ -232,7 +232,7 @@ export default function BookingPage() {
                 ))}
                 <div style={{ display: "flex", justifyContent: "space-between", padding: "0.75rem 0", borderTop: "2px solid #333", marginTop: 4 }}>
                   <span style={{ color: "var(--text-primary)", fontWeight: 700 }}>Total Payable</span>
-                  <span style={{ color: gold, fontWeight: 800, fontSize: "1.2rem" }}>{promoResult?.final_price ?? form.price} SAR</span>
+                  <span style={{ color: "#0C58D1", fontWeight: 800, fontSize: "1.2rem" }}>{promoResult?.final_price ?? form.price} SAR</span>
                 </div>
               </div>
               <p style={{ color: "#888", fontSize: "0.82rem", marginBottom: "1.5rem" }}>

@@ -75,7 +75,7 @@ const styles: Record<string, React.CSSProperties> = {
   errorCode: {
     fontSize: "8rem",
     fontWeight: "900",
-    color: "var(--accent-gold)",
+    color: "#0C58D1",
     lineHeight: "1",
     textShadow: "0 0 40px rgba(245, 197, 24, 0.3)",
   },

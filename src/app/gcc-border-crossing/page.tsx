@@ -264,7 +264,7 @@ export default function GCCBorderCrossingPage() {
                   ].map((r) => (
                     <Link key={r.href} href={r.href} style={styles.sideRoute}>
                       <span>{r.label}</span>
-                      <span style={{ color: "var(--accent-gold)", fontWeight: 700 }}>from {r.price} SAR</span>
+                      <span style={{ color: "#0C58D1", fontWeight: 700 }}>from {r.price} SAR</span>
                     </Link>
                   ))}
                 </div>
@@ -308,14 +308,14 @@ const styles: Record<string, React.CSSProperties> = {
   hero: { background: "linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.98)), url('/hero-bg.jpg') center/cover no-repeat", padding: "5rem 0 3rem", borderBottom: "1px solid var(--border-color)" },
   heroCont: { display: "flex", flexDirection: "column", gap: "1rem" },
   breadcrumb: { display: "flex", gap: "0.5rem", alignItems: "center", fontSize: "0.82rem" },
-  breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
+  breadLink: { color: "#0C58D1", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
   h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
   heroSub: { fontSize: "1.05rem", color: "#333333", maxWidth: "700px", lineHeight: "1.7" },
   heroStats: { display: "flex", gap: "3rem", marginTop: "1rem", flexWrap: "wrap" },
   stat: { display: "flex", flexDirection: "column", gap: "0.2rem" },
-  statVal: { fontSize: "1.6rem", color: "var(--accent-gold)", fontWeight: "800" },
+  statVal: { fontSize: "1.6rem", color: "#0C58D1", fontWeight: "800" },
   statLbl: { fontSize: "0.8rem", color: "var(--text-primary)", textTransform: "uppercase", letterSpacing: "0.5px" },
   quickNav: { backgroundColor: "var(--bg-secondary)", padding: "2rem 0", borderBottom: "1px solid var(--border-color)" },
   quickGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem" },
@@ -326,15 +326,15 @@ const styles: Record<string, React.CSSProperties> = {
   mainGrid: { display: "grid", gridTemplateColumns: "1fr 320px", gap: "3rem", padding: "4rem 0", alignItems: "start" },
   contentCol: { display: "flex", flexDirection: "column", gap: "3rem" },
   section: { display: "flex", flexDirection: "column", gap: "1rem" },
-  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
-  h3: { fontSize: "1.1rem", color: "var(--accent-gold)", fontWeight: "700", marginTop: "0.5rem" },
+  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(12,88,209,0.25)", paddingBottom: "0.6rem" },
+  h3: { fontSize: "1.1rem", color: "#0C58D1", fontWeight: "700", marginTop: "0.5rem" },
   p: { fontSize: "0.97rem", color: "var(--text-secondary)", lineHeight: "1.75" },
   ol: { paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.6rem", color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.6" },
   ul: { paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.5rem", color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.6" },
   infoBox: { backgroundColor: "rgba(245,197,24,0.07)", border: "1px solid rgba(245,197,24,0.25)", borderRadius: "6px", padding: "1rem 1.2rem", fontSize: "0.9rem", color: "var(--text-secondary)", lineHeight: "1.7" },
-  infoLink: { color: "var(--accent-gold)", textDecoration: "none", fontWeight: "600" },
+  infoLink: { color: "#0C58D1", textDecoration: "none", fontWeight: "600" },
   table: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "6px", overflow: "hidden" },
-  tableHead: { display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: "0.5rem", padding: "0.8rem 1rem", backgroundColor: "rgba(245,197,24,0.08)", fontSize: "0.78rem", color: "var(--text-muted)", textTransform: "uppercase", fontWeight: "700" },
+  tableHead: { display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: "0.5rem", padding: "0.8rem 1rem", backgroundColor: "rgba(12,88,209,0.06)", fontSize: "0.78rem", color: "var(--text-muted)", textTransform: "uppercase", fontWeight: "700" },
   tableRow: { display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr 1fr", gap: "0.5rem", padding: "0.8rem 1rem", borderTop: "1px solid var(--border-color)", fontSize: "0.85rem", color: "var(--text-secondary)" },
   faqList: { display: "flex", flexDirection: "column", gap: "1.2rem" },
   faqItem: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.4rem", borderRadius: "6px" },
@@ -347,7 +347,7 @@ const styles: Record<string, React.CSSProperties> = {
   sideRoutes: { display: "flex", flexDirection: "column", gap: "0.6rem" },
   sideRoute: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.6rem 0.8rem", backgroundColor: "rgba(0,0,0,0.3)", borderRadius: "4px", textDecoration: "none", fontSize: "0.88rem", color: "var(--text-secondary)", border: "1px solid var(--border-color)" },
   factRow: { display: "flex", flexDirection: "column", padding: "0.6rem 0", borderBottom: "1px solid var(--border-color)" },
-  factLabel: { fontSize: "0.78rem", color: "var(--accent-gold)", fontWeight: "700", textTransform: "uppercase" },
+  factLabel: { fontSize: "0.78rem", color: "#0C58D1", fontWeight: "700", textTransform: "uppercase" },
   factVal: { fontSize: "0.85rem", color: "var(--text-secondary)", marginTop: "0.2rem" },
 };
 

@@ -298,7 +298,7 @@ export default function DammamGuidePage() {
                     { label: "Dammam → Riyadh", href: "/routes/dammam-to-riyadh" },
                   ].map(r => (
                     <Link key={r.href} href={r.href} style={s.sideRoute}>
-                      {r.label} <span style={{ color: "var(--accent-gold)" }}>→</span>
+                      {r.label} <span style={{ color: "#0C58D1" }}>→</span>
                     </Link>
                   ))}
                 </div>
@@ -313,7 +313,7 @@ export default function DammamGuidePage() {
                       { label: "Corporate Transfers", href: "/corporate-transfers" },
                     ].map(l => (
                       <Link key={l.href} href={l.href} style={{ ...s.sideRoute, justifyContent: "space-between" }}>
-                        <span>{l.label}</span><span style={{ color: "var(--accent-gold)" }}>→</span>
+                        <span>{l.label}</span><span style={{ color: "#0C58D1" }}>→</span>
                       </Link>
                     ))}
                   </div>
@@ -336,29 +336,29 @@ const s: Record<string, React.CSSProperties> = {
   hero: { background: "linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.98)), url('/hero-bg.jpg') center/cover no-repeat", padding: "5rem 0 3rem", borderBottom: "1px solid var(--border-color)" },
   heroCont: { display: "flex", flexDirection: "column", gap: "1rem" },
   breadcrumb: { display: "flex", gap: "0.5rem", alignItems: "center", fontSize: "0.82rem" },
-  breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
+  breadLink: { color: "#0C58D1", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
   h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.25", maxWidth: "900px" },
   heroSub: { fontSize: "1.05rem", color: "#333333", maxWidth: "750px", lineHeight: "1.7" },
   chips: { display: "flex", gap: "0.6rem", flexWrap: "wrap", marginTop: "0.5rem" },
-  chip: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.3)", color: "var(--accent-gold)", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.8rem", fontWeight: "600" },
+  chip: { backgroundColor: "rgba(12,88,209,0.08)", border: "1px solid rgba(12,88,209,0.25)", color: "#0C58D1", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.8rem", fontWeight: "600" },
   mainGrid: { display: "grid", gridTemplateColumns: "1fr 290px", gap: "3rem", alignItems: "start" },
   contentCol: { display: "flex", flexDirection: "column", gap: "3.5rem" },
   section: { display: "flex", flexDirection: "column", gap: "1.2rem" },
-  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
-  h3: { fontSize: "1rem", color: "var(--accent-gold)", fontWeight: "700" },
+  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(12,88,209,0.25)", paddingBottom: "0.6rem" },
+  h3: { fontSize: "1rem", color: "#0C58D1", fontWeight: "700" },
   p: { fontSize: "0.97rem", color: "var(--text-secondary)", lineHeight: "1.75" },
   factGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.8rem", marginTop: "0.5rem" },
   factCard: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "6px", padding: "0.8rem 1rem", display: "flex", flexDirection: "column", gap: "0.3rem" },
-  factLbl: { fontSize: "0.72rem", color: "var(--accent-gold)", fontWeight: "700", textTransform: "uppercase" },
+  factLbl: { fontSize: "0.72rem", color: "#0C58D1", fontWeight: "700", textTransform: "uppercase" },
   factVal: { fontSize: "0.88rem", color: "var(--text-primary)" },
   cityGrid: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.2rem" },
   cityCard: { padding: "1.5rem", display: "flex", flexDirection: "column", gap: "0.5rem" },
   cityTop: { display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" },
   cityName: { fontSize: "1.1rem", color: "var(--text-primary)", fontWeight: "700", margin: 0 },
-  cityHighlight: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.25)", color: "var(--accent-gold)", padding: "0.2rem 0.6rem", borderRadius: "4px", fontSize: "0.72rem", fontWeight: "700" },
-  cityRole: { fontSize: "0.82rem", color: "var(--accent-gold)", fontWeight: "600", margin: 0 },
+  cityHighlight: { backgroundColor: "rgba(12,88,209,0.08)", border: "1px solid rgba(245,197,24,0.25)", color: "#0C58D1", padding: "0.2rem 0.6rem", borderRadius: "4px", fontSize: "0.72rem", fontWeight: "700" },
+  cityRole: { fontSize: "0.82rem", color: "#0C58D1", fontWeight: "600", margin: 0 },
   cityDesc: { fontSize: "0.83rem", color: "var(--text-secondary)", lineHeight: "1.5", margin: 0 },
   attrList: { display: "flex", flexDirection: "column", gap: "1.2rem" },
   attrItem: { display: "flex", gap: "1rem", alignItems: "flex-start" },
@@ -369,7 +369,7 @@ const s: Record<string, React.CSSProperties> = {
   routeRow: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "6px", padding: "0.8rem 1.1rem", display: "flex", alignItems: "center", textDecoration: "none", gap: "0.5rem" },
   routeName: { color: "var(--text-primary)", fontSize: "0.9rem", fontWeight: "600", flex: 1 },
   routeMeta: { color: "var(--text-muted)", fontSize: "0.8rem" },
-  routeArrow: { color: "var(--accent-gold)", fontWeight: "700" },
+  routeArrow: { color: "#0C58D1", fontWeight: "700" },
   faqList: { display: "flex", flexDirection: "column", gap: "1.2rem" },
   faqItem: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.4rem", borderRadius: "6px" },
   faqQ: { fontSize: "1rem", color: "var(--text-primary)", marginBottom: "0.5rem", fontWeight: "700" },

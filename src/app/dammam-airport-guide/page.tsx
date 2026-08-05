@@ -161,7 +161,7 @@ export default function DammamAirportGuidePage() {
                 <h2 style={styles.h2}>Why Pre-Book vs. Hailing a Taxi at DMM Airport</h2>
                 <div style={styles.compareGrid}>
                   <div style={styles.compareCol}>
-                    <h3 style={{ ...styles.h3, color: "var(--accent-gold)" }}>Pre-Booked Private Taxi</h3>
+                    <h3 style={{ ...styles.h3, color: "#000000" }}>Pre-Booked Private Taxi</h3>
                     <ul style={styles.ul}>
                       <li>Driver waiting at arrivals before you exit</li>
                       <li>Fixed, transparent price — no meter, no surge</li>
@@ -282,7 +282,7 @@ export default function DammamAirportGuidePage() {
                 ].map((r) => (
                   <Link key={r.href} href={r.href} style={styles.sideRoute}>
                     <span>{r.label}</span>
-                    <span style={{ color: "var(--accent-gold)", fontWeight: 700 }}>from {r.price}</span>
+                    <span style={{ color: "#0C58D1", fontWeight: 700 }}>from {r.price}</span>
                   </Link>
                 ))}
               </div>
@@ -303,22 +303,22 @@ const styles: Record<string, React.CSSProperties> = {
   hero: { background: "linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.98)), url('/hero-bg.jpg') center/cover no-repeat", padding: "5rem 0 3rem", borderBottom: "1px solid var(--border-color)" },
   heroCont: { display: "flex", flexDirection: "column", gap: "1rem" },
   breadcrumb: { display: "flex", gap: "0.5rem", alignItems: "center", fontSize: "0.82rem" },
-  breadLink: { color: "var(--accent-gold)", textDecoration: "none" },
+  breadLink: { color: "#0C58D1", textDecoration: "none" },
   breadSep: { color: "var(--text-muted)" },
   breadCurrent: { color: "var(--text-secondary)" },
   h1: { fontSize: "clamp(1.1rem, 2.4vw, 1.75rem)", color: "var(--text-primary)", fontWeight: "800", lineHeight: "1.25", maxWidth: "800px" },
   heroSub: { fontSize: "1.05rem", color: "#333333", maxWidth: "700px", lineHeight: "1.7" },
   infoChips: { display: "flex", gap: "0.6rem", flexWrap: "wrap", marginTop: "0.5rem" },
-  chip: { backgroundColor: "rgba(245,197,24,0.1)", border: "1px solid rgba(245,197,24,0.3)", color: "var(--accent-gold)", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.8rem", fontWeight: "600" },
+  chip: { backgroundColor: "rgba(12,88,209,0.08)", border: "1px solid rgba(12,88,209,0.25)", color: "#0C58D1", padding: "0.3rem 0.8rem", borderRadius: "20px", fontSize: "0.8rem", fontWeight: "600" },
   mainGrid: { display: "grid", gridTemplateColumns: "1fr 300px", gap: "3rem", padding: "4rem 0", alignItems: "start" },
   contentCol: { display: "flex", flexDirection: "column", gap: "3rem" },
   section: { display: "flex", flexDirection: "column", gap: "1.2rem" },
-  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(245,197,24,0.3)", paddingBottom: "0.6rem" },
-  h3: { fontSize: "1rem", color: "var(--accent-gold)", fontWeight: "700" },
+  h2: { fontSize: "1.6rem", color: "var(--text-primary)", fontWeight: "700", borderBottom: "2px solid rgba(12,88,209,0.25)", paddingBottom: "0.6rem" },
+  h3: { fontSize: "1rem", color: "#0C58D1", fontWeight: "700" },
   p: { fontSize: "0.97rem", color: "var(--text-secondary)", lineHeight: "1.75" },
   factCards: { display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "0.8rem", marginTop: "0.5rem" },
   factCard: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "6px", padding: "0.8rem 1rem", display: "flex", flexDirection: "column", gap: "0.3rem" },
-  factLabel: { fontSize: "0.72rem", color: "var(--accent-gold)", fontWeight: "700", textTransform: "uppercase" },
+  factLabel: { fontSize: "0.72rem", color: "#0C58D1", fontWeight: "700", textTransform: "uppercase" },
   factVal: { fontSize: "0.88rem", color: "var(--text-primary)" },
   ol: { paddingLeft: "1.5rem", display: "flex", flexDirection: "column", gap: "0.7rem", color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: "1.7" },
   ul: { paddingLeft: "1.2rem", display: "flex", flexDirection: "column", gap: "0.4rem", color: "var(--text-secondary)", fontSize: "0.9rem", lineHeight: "1.6" },
@@ -329,7 +329,7 @@ const styles: Record<string, React.CSSProperties> = {
   routeRow: { backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "6px", padding: "0.9rem 1.2rem", display: "flex", justifyContent: "space-between", alignItems: "center", textDecoration: "none" },
   routeName: { color: "var(--text-primary)", fontSize: "0.9rem", display: "block" },
   routeMeta: { color: "var(--text-muted)", fontSize: "0.78rem", marginTop: "0.2rem", display: "block" },
-  routePrice: { color: "var(--accent-gold)", fontWeight: "700", fontSize: "0.88rem", flexShrink: 0 },
+  routePrice: { color: "#0C58D1", fontWeight: "700", fontSize: "0.88rem", flexShrink: 0 },
   tipsList: { display: "flex", flexDirection: "column", gap: "1.2rem" },
   tipItem: { display: "flex", gap: "1rem", alignItems: "flex-start" },
   tipIcon: { fontSize: "1.6rem", flexShrink: 0, marginTop: "0.2rem" },
