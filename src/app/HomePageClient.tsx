@@ -31,13 +31,13 @@ export function HomePageClient() {
       {/* ── HERO ── */}
       <section style={styles.hero}>
         {/* Decorative blue accent */}
-        <div style={{ position:"absolute", top:0, right:0, width:"420px", height:"420px", background:"#0C58D1", borderRadius:"0 0 0 100%", opacity:0.05, pointerEvents:"none" }} />
-        <div style={{ position:"absolute", bottom:0, left:"-60px", width:"300px", height:"300px", background:"#0C58D1", borderRadius:"50%", opacity:0.04, pointerEvents:"none" }} />
+        
+        
 
         <div className="container hero-grid" style={styles.heroGrid}>
           <div style={styles.heroTextCol}>
             {/* Label */}
-            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", background:"#EFF6FF", border:"1px solid rgba(12,88,209,0.20)", borderRadius:"50px", padding:"0.4rem 1rem" }}>
+            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", background:"#ffffff", border:"1px solid #e5e7eb", borderRadius:"50px", padding:"0.4rem 1rem" }}>
               <span style={{ width:"6px", height:"6px", borderRadius:"50%", background:"#0C58D1", display:"inline-block" }} />
               <span style={{ fontSize:"0.73rem", fontWeight:700, color:"#0C58D1", letterSpacing:"0.06em", textTransform:"uppercase" }}>
                 {locale === "en" ? "Top Rated KSA Transfer" : "خدمة التوصيل الأولى بالمملكة"}
@@ -51,7 +51,7 @@ export function HomePageClient() {
                   <span style={{ display:"block" }}>Dammam Airport</span>
                   <span style={{ display:"block", color:"#0C58D1", position:"relative" }}>
                     Taxi & Transfers
-                    <span style={{ position:"absolute", bottom:"-6px", left:0, width:"60%", height:"4px", background:"#0C58D1", borderRadius:"2px", opacity:0.3 }} />
+                    
                   </span>
                   <span style={{ display:"block", fontSize:"55%", fontWeight:400, color:"#64748B", marginTop:"0.5rem", letterSpacing:"-0.01em" }}>Private GCC Routes from King Fahd Airport</span>
                 </>
@@ -72,7 +72,7 @@ export function HomePageClient() {
                 { en: "🛰 Free Flight Tracking & 60-Min Wait", ar: "🛰 تتبع مجاني للرحلات وانتظار 60 دقيقة" },
                 { en: "🔒 Fixed Price — No Hidden Fees", ar: "🔒 سعر ثابت — بدون رسوم خفية" },
               ].map((v, i) => (
-                <div key={i} style={{ display:"flex", alignItems:"center", gap:"0.7rem", background:"#f8fafc", border:"1px solid #e5e7eb", borderLeft:"3px solid #0C58D1", borderRadius:"6px", padding:"0.55rem 0.9rem", fontSize:"0.88rem", color:"#000000", fontWeight:500 }}>
+                <div key={i} style={{ display:"flex", alignItems:"center", gap:"0.7rem", background:"#ffffff", border:"1px solid #e5e7eb", borderLeft:"3px solid #0C58D1", borderRadius:"6px", padding:"0.55rem 0.9rem", fontSize:"0.88rem", color:"#000000", fontWeight:500 }}>
                   {locale === "en" ? v.en : v.ar}
                 </div>
               ))}
@@ -90,15 +90,15 @@ export function HomePageClient() {
             </div>
 
             {/* Stats bar */}
-            <div style={{ display:"flex", gap:"0", background:"#0C58D1", borderRadius:"12px", overflow:"hidden", marginTop:"0.5rem" }}>
+            <div style={{ display:"flex", gap:"0", background:"#ffffff", border:"1px solid #e5e7eb", borderRadius:"12px", overflow:"hidden", marginTop:"0.5rem" }}>
               {[
                 { val: t("statCompletedVal"), lbl: t("statCompleted") },
                 { val: t("statDriversVal"),   lbl: t("statDrivers") },
                 { val: t("statRatingVal"),     lbl: t("statRating") },
               ].map((s, i, arr) => (
-                <div key={i} style={{ flex:1, padding:"1rem 1.2rem", borderRight: i < arr.length-1 ? "1px solid rgba(255,255,255,0.15)" : "none", textAlign:"center" as const }}>
-                  <strong style={{ display:"block", fontSize:"1.6rem", color:"#ffffff", fontWeight:800, letterSpacing:"-0.02em", lineHeight:1 }}>{s.val}</strong>
-                  <span style={{ fontSize:"0.68rem", color:"rgba(255,255,255,0.70)", textTransform:"uppercase" as const, letterSpacing:"0.07em", marginTop:"3px", display:"block" }}>{s.lbl}</span>
+                <div key={i} style={{ flex:1, padding:"1rem 1.2rem", borderRight: i < arr.length-1 ? "1px solid #e5e7eb" : "none", textAlign:"center" as const }}>
+                  <strong style={{ display:"block", fontSize:"1.6rem", color:"#000000", fontWeight:800, letterSpacing:"-0.02em", lineHeight:1 }}>{s.val}</strong>
+                  <span style={{ fontSize:"0.68rem", color:"#64748B", textTransform:"uppercase" as const, letterSpacing:"0.07em", marginTop:"3px", display:"block" }}>{s.lbl}</span>
                 </div>
               ))}
             </div>
@@ -112,7 +112,7 @@ export function HomePageClient() {
       </section>
 
       {/* ── TRUST STRIP ── */}
-      <div style={{ background:"#0C58D1", padding:"0" }}>
+      <div style={{ background:"#ffffff", borderTop:"1px solid #e5e7eb", borderBottom:"1px solid #e5e7eb", padding:"0" }}>
         <div className="container" style={{ display:"flex", overflowX:"auto" as const, minWidth:"max-content" }}>
           {[
             { icon:"✈️", en:"Government Licensed", ar:"مرخص رسمياً" },
@@ -123,7 +123,7 @@ export function HomePageClient() {
           ].map((item, i, arr) => (
             <div key={i} style={{ display:"flex", alignItems:"center", gap:"0.5rem", padding:"0.9rem 1.8rem", borderRight: i < arr.length-1 ? "1px solid rgba(255,255,255,0.15)" : "none", whiteSpace:"nowrap" as const }}>
               <span style={{ fontSize:"1rem" }}>{item.icon}</span>
-              <span style={{ fontSize:"0.82rem", fontWeight:600, color:"#ffffff" }}>{locale === "en" ? item.en : item.ar}</span>
+              <span style={{ fontSize:"0.82rem", fontWeight:600, color:"#000000" }}>{locale === "en" ? item.en : item.ar}</span>
             </div>
           ))}
         </div>
@@ -148,7 +148,7 @@ export function HomePageClient() {
                 onMouseEnter={e => { (e.currentTarget as HTMLElement).style.borderColor = "#0C58D1"; (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(12,88,209,0.12)"; }}
                 onMouseLeave={e => { (e.currentTarget as HTMLElement).style.borderColor = "#e5e7eb"; (e.currentTarget as HTMLElement).style.boxShadow = "none"; }}
               >
-                <div style={{ position:"absolute" as const, top:0, right:0, width:"80px", height:"80px", background:"#EFF6FF", borderRadius:"0 12px 0 100%", display:"flex", alignItems:"flex-start", justifyContent:"flex-end", padding:"0.8rem" }}>
+                <div style={{ position:"absolute" as const, top:0, right:0, width:"80px", height:"80px", background:"#f0f4ff", borderRadius:"0 12px 0 100%", display:"flex", alignItems:"flex-start", justifyContent:"flex-end", padding:"0.8rem" }}>
                   <span style={{ fontSize:"1.4rem" }}>{card.icon}</span>
                 </div>
                 <p style={{ fontSize:"0.68rem", fontWeight:700, color:"#0C58D1", letterSpacing:"0.08em", textTransform:"uppercase" as const, marginBottom:"0.8rem" }}>{card.num}</p>
@@ -161,7 +161,7 @@ export function HomePageClient() {
       </section>
 
       {/* ── HOW IT WORKS ── */}
-      <section className="section-padding" style={{ background:"#f8fafc", borderTop:"1px solid #e5e7eb" }}>
+      <section className="section-padding" style={{ background:"#ffffff", borderTop:"1px solid #e5e7eb" }}>
         <div className="container">
           <div style={{ textAlign:"center" as const, marginBottom:"4rem" }}>
             <p style={{ fontSize:"0.78rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase" as const, color:"#0C58D1", marginBottom:"0.5rem" }}>
@@ -245,10 +245,10 @@ export function HomePageClient() {
       </section>
 
       {/* ── GCC COVERAGE ── */}
-      <section style={{ background:"#0C58D1", padding:"4rem 0" }}>
+      <section style={{ background:"#ffffff", borderTop:"1px solid #e5e7eb", borderBottom:"1px solid #e5e7eb", padding:"4rem 0" }}>
         <div className="container">
           <div style={{ textAlign:"center" as const, marginBottom:"2.5rem" }}>
-            <p style={{ fontSize:"0.78rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase" as const, color:"rgba(255,255,255,0.60)", marginBottom:"0.5rem" }}>
+            <p style={{ fontSize:"0.78rem", fontWeight:700, letterSpacing:"0.12em", textTransform:"uppercase" as const, color:"#64748B", marginBottom:"0.5rem" }}>
               {locale === "en" ? "GCC Cross-Border Coverage" : "التغطية عبر دول الخليج"}
             </p>
             <h2 style={{ fontSize:"clamp(1.6rem,3vw,2.4rem)", fontWeight:800, color:"#ffffff", lineHeight:1.2, margin:0 }}>
@@ -262,11 +262,11 @@ export function HomePageClient() {
               { flag:"🇦🇪", country: locale==="en"?"UAE (Dubai)":"الإمارات (دبي)", route: locale==="en"?"Via Ghuwaifat Border":"عبر حدود الغويفات", price:"From 3,500 SAR", dist:"950 km" },
               { flag:"🇶🇦", country: locale==="en"?"Qatar (Doha)":"قطر (الدوحة)", route: locale==="en"?"Via Salwa Border":"عبر حدود سلوى", price:"From 1,400 SAR", dist:"400 km" },
             ].map((c, i) => (
-              <div key={i} style={{ background:"rgba(255,255,255,0.10)", border:"1px solid rgba(255,255,255,0.15)", borderRadius:"12px", padding:"1.5rem", textAlign:"center" as const, backdropFilter:"blur(4px)" }}>
+              <div key={i} style={{ background:"#ffffff", border:"1px solid #e5e7eb", borderRadius:"12px", padding:"1.5rem", textAlign:"center" as const }}>
                 <div style={{ fontSize:"2.5rem", marginBottom:"0.7rem" }}>{c.flag}</div>
-                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#ffffff", marginBottom:"0.3rem" }}>{c.country}</h3>
-                <p style={{ fontSize:"0.75rem", color:"rgba(255,255,255,0.65)", marginBottom:"0.7rem", lineHeight:1.4 }}>{c.route} · {c.dist}</p>
-                <div style={{ background:"rgba(255,255,255,0.15)", borderRadius:"6px", padding:"0.4rem 0.8rem", fontSize:"0.82rem", fontWeight:700, color:"#ffffff" }}>{c.price}</div>
+                <h3 style={{ fontSize:"1rem", fontWeight:700, color:"#000000", marginBottom:"0.3rem" }}>{c.country}</h3>
+                <p style={{ fontSize:"0.75rem", color:"#64748B", marginBottom:"0.7rem", lineHeight:1.4 }}>{c.route} · {c.dist}</p>
+                <div style={{ background:"#EFF6FF", borderRadius:"6px", padding:"0.4rem 0.8rem", fontSize:"0.82rem", fontWeight:700, color:"#0C58D1" }}>{c.price}</div>
               </div>
             ))}
           </div>
