@@ -327,21 +327,21 @@ function WaIcon(){
 const S: Record<string,React.CSSProperties> = {
   /* Hero */
   hero: {
-    background: "radial-gradient(ellipse at 60% 30%, rgba(40,30,0,0.95) 0%, #080808 70%)",
+    background: "#ffffff",
     padding: "4.5rem 0 3rem",
-    borderBottom: "1px solid var(--border-color)",
+    borderBottom: "4px solid #0C58D1",
   },
   heroInner: { display:"flex", flexDirection:"column", gap:"1.2rem" },
   crumb:     { display:"flex", alignItems:"center", gap:"0.4rem", fontSize:"0.8rem" },
-  crumbLink: { color:"var(--text-muted)", textDecoration:"none" },
-  crumbSep:  { color:"var(--text-muted)" },
+  crumbLink: { color:"#64748B", textDecoration:"none" },
+  crumbSep:  { color:"#64748B" },
   crumbCurrent: { color:"#0C58D1", fontWeight:600 },
   heroH1: {
-    fontSize:"clamp(1.2rem,2.5vw,1.9rem)", fontWeight:800,
-    color: "var(--text-primary)", lineHeight:1.15, maxWidth:"700px",
+    fontSize:"clamp(1.6rem,3vw,2.6rem)", fontWeight:800,
+    color: "#000000", lineHeight:1.15, maxWidth:"700px",
   },
   heroP: {
-    fontSize:"1.05rem", color:"var(--text-secondary)",
+    fontSize:"1.05rem", color:"#333333",
     maxWidth:"600px", lineHeight:1.7,
   },
   statsRow: {
@@ -391,7 +391,7 @@ const S: Record<string,React.CSSProperties> = {
   featMeta: { display:"flex", gap:"0.4rem", flexWrap:"wrap" },
   featPill: {
     fontSize:"0.72rem", color:"var(--text-secondary)",
-    backgroundColor: "rgba(255, 255, 255, 0.1)", border:"1px solid var(--border-color)",
+    backgroundColor: "#f8fafc", border:"1px solid var(--border-color)",
     padding:"0.2rem 0.5rem", borderRadius:"4px",
   },
   featArrow: { fontSize:"0.8rem", fontWeight:700, marginTop:"0.25rem" },
@@ -419,11 +419,11 @@ const S: Record<string,React.CSSProperties> = {
     color:"#000", fontWeight:700,
   },
   tabBadge: {
-    backgroundColor: "rgba(255, 255, 255, 0.1)", color:"var(--text-muted)",
+    backgroundColor: "#f8fafc", color:"var(--text-muted)",
     fontSize:"0.7rem", fontWeight:700, padding:"0.1rem 0.45rem",
     borderRadius:"20px",
   },
-  tabBadgeActive: { backgroundColor:"rgba(0,0,0,0.2)", color:"#000" },
+  tabBadgeActive: { backgroundColor:"#ffffff", color:"#0C58D1" },
 
   /* List section */
   listSection: { flex:1, padding:"3rem 0" },
@@ -489,7 +489,7 @@ const S: Record<string,React.CSSProperties> = {
   cardMeta: { display:"flex", gap:"0.4rem", flexWrap:"wrap" },
   cardMetaBadge: {
     fontSize:"0.72rem", color:"var(--text-secondary)",
-    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backgroundColor: "#f8fafc",
     border:"1px solid var(--border-color)",
     padding:"0.18rem 0.5rem", borderRadius:"4px",
   },
@@ -507,7 +507,7 @@ const S: Record<string,React.CSSProperties> = {
   },
   btnBook: {
     padding:"0.45rem 1rem", borderRadius:"6px",
-    backgroundColor:"#25d366", color: "var(--text-primary)",
+    backgroundColor:"#25d366", color: "#ffffff",
     fontSize:"0.78rem", fontWeight:700,
     textDecoration:"none", textAlign:"center",
     whiteSpace:"nowrap",
