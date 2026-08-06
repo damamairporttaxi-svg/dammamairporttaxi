@@ -91,13 +91,22 @@ export function ContactPageClient() {
                   : "تحدث مع مدير العمليات مباشرة عبر الواتساب للتفاوض الفوري على الأسعار."}
               </p>
               <a
-                href="https://wa.me/966569487569"
+                href="https://wa.me/966560273828"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
-                style={{ width: "100%", textDecoration: "none" }}
+                style={{ width: "100%", textDecoration: "none", marginBottom: "0.6rem" }}
               >
-                {t("whatsAppUs")}
+                {locale === "en" ? "WhatsApp KSA: +966 560 273 828" : "واتساب السعودية: 966560273828+"}
+              </a>
+              <a
+                href="https://wa.me/97334427708"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp"
+                style={{ width: "100%", textDecoration: "none", backgroundColor: "#128C7E" }}
+              >
+                {locale === "en" ? "WhatsApp Bahrain: +973 3442 7708" : "واتساب البحرين: 97334427708+"}
               </a>
             </div>
           </div>

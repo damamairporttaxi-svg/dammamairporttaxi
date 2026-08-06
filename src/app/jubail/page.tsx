@@ -168,7 +168,7 @@ export default function JubailPage() {
               <div className="glass-card" style={s.sideCard}>
                 <h3 style={s.sideT}>Book Jubail Taxi</h3>
                 <p style={s.sideSub}>Corporate & private · 24/7</p>
-                <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center", marginBottom: "1rem" }}>
+                <a href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center", marginBottom: "1rem" }}>
                   WhatsApp Booking
                 </a>
                 <Link href="/corporate-transfers" className="btn btn-secondary" style={{ display: "block", textDecoration: "none", textAlign: "center" }}>

@@ -287,7 +287,7 @@ export default function DammamGuidePage() {
                 <div className="glass-card" style={{ ...s.sideCard, marginTop: "1.5rem" }}>
                   <h3 style={s.sideTitle}>Book a Dammam Taxi</h3>
                   <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "1rem" }}>24/7 dispatch · Meet & greet · Fixed rates</p>
-                  <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center", marginBottom: "1rem" }}>
+                  <a href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center", marginBottom: "1rem" }}>
                     WhatsApp Booking
                   </a>
                   {[

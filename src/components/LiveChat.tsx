@@ -72,7 +72,7 @@ export function LiveChat() {
   const sendWhatsApp = () => {
     const last = messages.filter(m => m.from === "user").pop();
     const msg = last ? last.text : "Hello, I need help with a taxi booking.";
-    window.open(`https://wa.me/966569487569?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/966560273828?text=${encodeURIComponent(msg)}`, "_blank");
   };
 
   return (

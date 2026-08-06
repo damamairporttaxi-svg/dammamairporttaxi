@@ -30,65 +30,139 @@ export const routesData: RouteDetail[] = [
   {
     slug: "dammam-to-bahrain",
     name: { en: "Dammam to Bahrain Taxi", ar: "تاكسي من الدمام إلى البحرين" },
-    metaTitle: { 
-      en: "Dammam to Bahrain Taxi | Direct Airport & City Transfers", 
-      ar: "تاكسي من الدمام إلى البحرين | توصيل مباشر من المطار والمدينة" 
+    metaTitle: {
+      en: "Dammam to Bahrain Taxi — Fixed 350 SAR | King Fahd Causeway Private Transfer",
+      ar: "تاكسي من الدمام إلى البحرين — 350 ريال ثابت | توصيل خاص عبر جسر الملك فهد"
     },
     metaDescription: {
-      en: "Book a private taxi from Dammam or DMM Airport to Manama, Bahrain. Cross King Fahd Causeway smoothly in GMC Yukon SUVs or Sedan Camry with professional drivers.",
-      ar: "احجز تاكسي فاخر من الدمام أو مطار الملك فهد إلى المنامة البحرين. اعبر جسر الملك فهد بسلاسة مع سيارات جي إم سي يوكن أو كامري وسائقين محترفين."
+      en: "Book private Dammam to Bahrain taxi from 350 SAR. King Fahd Causeway transfer — causeway tolls included, 60-min free wait, flight tracking. WhatsApp booking 24/7. Sedan, SUV & van available.",
+      ar: "احجز تاكسي خاص من الدمام إلى البحرين من 350 ريال. توصيل عبر جسر الملك فهد — رسوم الجسر مشمولة، انتظار 60 دقيقة مجاناً، تتبع الرحلة. حجز واتساب 24/7."
     },
     distance: { en: "85 km", ar: "٨٥ كم" },
-    duration: { en: "1.5 - 2 Hours", ar: "ساعة ونصف إلى ساعتين" },
+    duration: { en: "1.5 – 2 Hours", ar: "ساعة ونصف إلى ساعتين" },
     basePrice: 350,
     pricing: { sedan: 350, suv: 600, van: 750, luxury: 1500 },
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d458022.0298075775!2d49.9868779!3d26.2575293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49faf2ef0b77b1%3A0xe54dbe5c2763f0bb!2sKing%20Fahd%20Causeway!5e0!3m2!1sen!2ssa!4v1716500000000!5m2!1sen!2ssa",
     intro: {
-      en: "Travel between Dammam and Bahrain seamlessly. Our Dammam to Bahrain taxi service offers professional cross-border transportation via the King Fahd Causeway with door-to-door comfort.",
-      ar: "سافر بين الدمام والبحرين بكل سهولة وأمان. نقدم خدمة تاكسي وتوصيل من الدمام إلى البحرين عبر جسر الملك فهد مع خدمة التوصيل من الباب إلى الباب."
+      en: "Book a private, fixed-rate taxi from Dammam to Bahrain starting from 350 SAR. Our Dammam to Bahrain taxi service covers the full 85 km journey via the King Fahd Causeway — door-to-door, with all causeway tolls included, free 60-minute waiting, and 24/7 WhatsApp booking.",
+      ar: "احجز تاكسي خاصاً بسعر ثابت من الدمام إلى البحرين يبدأ من 350 ريال. تغطي خدمتنا رحلة 85 كيلومتراً كاملة عبر جسر الملك فهد — من الباب إلى الباب، مع شمول رسوم الجسر وانتظار مجاني 60 دقيقة وحجز واتساب على مدار الساعة."
     },
     contentSections: [
       {
-        title: { en: "King Fahd Causeway Cross-Border Process", ar: "إجراءات العبور عبر جسر الملك فهد" },
+        title: { en: "Dammam to Bahrain Taxi Distance, Time & Fixed Fare", ar: "مسافة ووقت وسعر تاكسي الدمام البحرين" },
         body: {
           en: [
-            "We handle all causeway toll fees, which are included in your fixed booking fare.",
-            "Please ensure you have a valid Passport, active Saudi Iqama / GCC National ID, and any necessary visas before starting the journey.",
-            "Our professional drivers are highly experienced with border checkpoints, customs lanes, and insurance verifications, saving you valuable travel time."
+            "The Dammam to Bahrain taxi route covers approximately 85 kilometers from the Eastern Province to Manama, the capital of Bahrain. The journey crosses the King Fahd Causeway — the iconic 25-kilometer bridge connecting Saudi Arabia and Bahrain — and takes between 1.5 and 2 hours under normal traffic conditions.",
+            "Our fixed taxi fare from Dammam to Bahrain starts from 350 SAR for a standard Camry sedan (up to 4 passengers). A GMC Yukon SUV for families or groups of up to 6 costs 600 SAR. A Toyota Staria family van for up to 8 passengers and heavy luggage is 750 SAR. All fares include King Fahd Causeway tolls — there are no hidden fees or surcharges.",
+            "Compared to driving yourself, booking a private taxi eliminates the need for temporary vehicle insurance, export permits, and the stress of navigating border procedures. Your driver handles everything while you relax in the air-conditioned vehicle."
           ],
           ar: [
-            "نحن نتكفل بجميع رسوم بوابات عبور الجسر، وهي مشمولة بالكامل في قيمة رحلتك المحددة مسبقاً.",
-            "يرجى التأكد من حيازة جواز سفر ساري المفعول، إقامة سعودية سارية أو الهوية الوطنية لمواطني الخليج، وتأشيرة الدخول اللازمة قبل بدء الرحلة.",
-            "سائقونا المحترفون على دراية تامة بنقاط التفتيش الجمركية، وممرات الفحص، والتأمين، مما يوفر وقتك الثمين أثناء السفر."
+            "تمتد رحلة تاكسي من الدمام إلى البحرين حوالي 85 كيلومتراً من المنطقة الشرقية إلى المنامة عاصمة مملكة البحرين. تعبر الرحلة جسر الملك فهد الشهير — الجسر الأيقوني البالغ طوله 25 كيلومتراً الذي يربط المملكة العربية السعودية بالبحرين — وتستغرق ما بين ساعة ونصف وساعتين في الظروف الاعتيادية.",
+            "يبدأ سعر التاكسي الثابت من الدمام إلى البحرين من 350 ريالاً لسيارة كامري العادية (حتى 4 ركاب). يمتد خيار سيارة يوكن للعائلات والمجموعات حتى 6 ركاب بسعر 600 ريال. الفان العائلي ستاريا لـ8 ركاب والأمتعة الكثيرة بـ750 ريال. تشمل جميع الأسعار رسوم جسر الملك فهد — لا توجد رسوم خفية أو إضافية.",
+            "مقارنةً بقيادة سيارتك الخاصة، يلغي حجز التاكسي الخاص الحاجة إلى تأمين مؤقت للسيارة وتصاريح تصدير وضغط التعامل مع إجراءات الحدود بنفسك. سائقك يتولى كل شيء بينما تسترخي في السيارة المكيفة."
           ]
         }
       },
       {
-        title: { en: "Convenient Dammam Airport (DMM) Pickups", ar: "استقبال مريح من مطار الدمام (DMM)" },
+        title: { en: "King Fahd Causeway Border Crossing — Step by Step", ar: "عبور جسر الملك فهد خطوة بخطوة" },
         body: {
           en: [
-            "Flying into King Fahd International Airport? Your driver will monitor your flight schedule and meet you at the arrivals gate holding a customized nameboard.",
-            "We offer a 60-minute complimentary waiting time from the moment your flight lands to ensure you clear customs stress-free.",
-            "Avoid long taxi lines and navigate the border immediately in a comfortable, pre-cooled vehicle."
+            "The King Fahd Causeway has two border checkpoints: Saudi departure control on the Saudi side and Bahraini entry control on the Bahrain side. The process typically takes 15–40 minutes under normal conditions. On Fridays and public holidays, allow an extra 30–60 minutes.",
+            "At the Saudi checkpoint, officers check passports, verify Saudi exit permissions for expatriates, and inspect vehicle documents. Our driver presents all required vehicle papers — commercial registration, insurance, and border permit. You simply show your passport or GCC national ID.",
+            "At the Bahraini checkpoint, officers verify entry eligibility. GCC nationals enter on national ID. Expatriates from most countries can obtain a Bahrain eVisa online before travel, or get a visa on arrival (fees apply). Our drivers are experienced with fast-track commercial lanes that reduce waiting time significantly."
           ],
           ar: [
-            "هل تصل رحلتك إلى مطار الملك فهد الدولي بالدمام؟ سيقوم سائقنا بمتابعة جدول رحلتك واستقبالك عند بوابة الوصول حاملاً لوحة باسمك.",
-            "نقدم ساعة انتظار مجانية من لحظة هبوط الطائرة لضمان إنهاء إجراءات حقائبك دون أي توتر أو عجلة.",
-            "تجنب طوابير الانتظار الطويلة في المطار، وابدأ رحلتك فوراً في سيارة مريحة ومكيفة بشكل ممتاز."
+            "يضم جسر الملك فهد نقطتي تفتيش حدوديتين: مراقبة المغادرة السعودية من الجانب السعودي، ومراقبة الدخول البحرينية من الجانب البحريني. تستغرق العملية عادةً 15-40 دقيقة في الظروف الاعتيادية. يوم الجمعة والأيام العامة، خصص 30-60 دقيقة إضافية.",
+            "في نقطة التفتيش السعودية، يتحقق الضباط من جوازات السفر وتصاريح الخروج للمقيمين ووثائق المركبة. يُقدم سائقنا جميع الأوراق المطلوبة. أنت فقط تُبرز جواز سفرك أو بطاقة الهوية الوطنية الخليجية.",
+            "في نقطة التفتيش البحرينية، يتحقق الضباط من أهلية الدخول. مواطنو الخليج يدخلون بالهوية الوطنية. يمكن لمعظم الجنسيات الحصول على تأشيرة بحرينية إلكترونية قبل السفر أو تأشيرة عند الوصول. سائقونا خبراء في المسارات التجارية السريعة."
+          ]
+        }
+      },
+      {
+        title: { en: "Required Documents for Dammam to Bahrain Taxi", ar: "الوثائق المطلوبة لرحلة تاكسي الدمام البحرين" },
+        body: {
+          en: [
+            "For Saudi citizens: Valid Saudi passport or GCC national ID card. No visa required for Bahrain.",
+            "For GCC nationals (UAE, Kuwait, Qatar, Oman, Bahrain residents): Valid national ID or passport. GCC citizens enjoy visa-free entry to Bahrain.",
+            "For Saudi residents (Iqama holders): Valid passport (minimum 6 months validity), valid Saudi exit-re-entry visa (or final exit visa on last trip), and Bahrain eVisa obtained online through the Bahrain government portal before travel. Some nationalities are eligible for visa on arrival — check the Bahrain government website for your nationality. Our team advises on requirements when you book."
+          ],
+          ar: [
+            "للمواطنين السعوديين: جواز سفر سعودي ساري أو بطاقة الهوية الوطنية. لا تأشيرة مطلوبة للبحرين.",
+            "لمواطني دول الخليج (مقيمو الإمارات والكويت وقطر وعُمان والبحرين): بطاقة هوية وطنية سارية أو جواز سفر. مواطنو الخليج يدخلون البحرين بدون تأشيرة.",
+            "لحاملي الإقامة السعودية: جواز سفر ساري (6 أشهر كحد أدنى)، تأشيرة خروج وعودة سعودية سارية، وتأشيرة بحرينية إلكترونية متحصل عليها مسبقاً عبر البوابة الرسمية لحكومة البحرين. بعض الجنسيات مؤهلة للحصول على التأشيرة عند الوصول. فريقنا يقدم الإرشاد عند الحجز."
+          ]
+        }
+      },
+      {
+        title: { en: "Best Times to Cross King Fahd Causeway", ar: "أفضل أوقات عبور جسر الملك فهد" },
+        body: {
+          en: [
+            "The King Fahd Causeway is busiest on Thursday evenings and Friday mornings, when Eastern Province residents travel to Bahrain for the weekend. The return flow peaks on Saturday evenings and Sunday mornings. During Eid Al-Fitr and Eid Al-Adha, wait times can exceed 3–4 hours at peak moments.",
+            "The fastest crossing times are Sunday to Wednesday mornings (8am–12pm) and any night crossing between 11pm and 5am. For business travellers and those with flight connections, we recommend early morning or late-night travel.",
+            "Our drivers track causeway conditions in real-time and choose the fastest available lanes — commercial vehicle lanes are often significantly faster than tourist lanes. We will advise on expected crossing times when you book."
+          ],
+          ar: [
+            "يكون جسر الملك فهد أكثر ازدحاماً مساء الخميس وصباح الجمعة، حين يسافر سكان المنطقة الشرقية إلى البحرين في عطلة نهاية الأسبوع. يبلغ حركة العودة ذروتها مساء السبت وصباح الأحد. خلال عيد الفطر وعيد الأضحى، قد تتجاوز أوقات الانتظار 3-4 ساعات.",
+            "أسرع أوقات العبور هي من الأحد إلى الأربعاء صباحاً (8ص-12ظ) وأي عبور ليلي بين الساعة 11 مساءً و5 صباحاً. نوصي المسافرين التجاريين وأصحاب الارتباطات بالسفر مبكراً أو في الليل.",
+            "يتابع سائقونا أحوال الجسر في الوقت الفعلي ويختارون أسرع المسارات المتاحة. نقدم تقديراً لأوقات العبور المتوقعة عند الحجز."
+          ]
+        }
+      },
+      {
+        title: { en: "DMM Airport to Bahrain — Direct Transfer", ar: "من مطار الدمام إلى البحرين — توصيل مباشر" },
+        body: {
+          en: [
+            "Many international travellers land at King Fahd International Airport (DMM) and need to reach Bahrain the same day. Our direct airport-to-Bahrain taxi service includes free flight tracking and a name-board meet & greet in the arrivals hall. We monitor your flight and adjust the pickup time automatically if your flight is delayed.",
+            "The journey from DMM Airport to central Manama takes approximately 1.5 to 2 hours depending on causeway traffic. We cover all destinations in Bahrain — Manama city hotels, Bahrain International Airport (BAH), Financial Harbour, Amwaj Islands, Riffa, and Muharraq.",
+            "For corporate travellers connecting through DMM, we can arrange direct airport-to-Bahrain office transfers with 24/7 availability and VAT-compliant invoicing for corporate accounts."
+          ],
+          ar: [
+            "كثير من المسافرين الدوليين يهبطون في مطار الملك فهد الدولي ويحتاجون للوصول إلى البحرين في نفس اليوم. تشمل خدمة التوصيل المباشر من المطار إلى البحرين تتبع الرحلة مجاناً واستقبال ببطاقة الاسم في صالة الوصول.",
+            "تستغرق الرحلة من مطار الدمام إلى وسط المنامة ما بين ساعة ونصف وساعتين. نغطي جميع وجهات البحرين — فنادق مدينة المنامة، مطار البحرين الدولي، الفاتح، جزر أمواج، الرفاع، والمحرق.",
+            "للمسافرين التجاريين العابرين عبر مطار الدمام، يمكننا ترتيب توصيلات مباشرة من المطار إلى مكاتب البحرين مع توفر 24/7 وفواتير ضريبية متوافقة للحسابات المؤسسية."
+          ]
+        }
+      },
+      {
+        title: { en: "Why Choose Private Taxi Over Driving or Public Transport", ar: "لماذا تختار التاكسي الخاص بدلاً من القيادة أو المواصلات العامة" },
+        body: {
+          en: [
+            "Many Eastern Province residents consider driving their own car to Bahrain, but this requires purchasing temporary vehicle insurance at the border (additional cost), obtaining a vehicle export permit if the car has outstanding traffic fines, and navigating customs procedures yourself while managing your luggage and passengers.",
+            "Public buses (SAPTCO) run between Dammam and Bahrain but require passengers to manage their luggage through customs independently, and journey times are significantly longer due to multiple stops. Ride-hailing apps (Uber, Careem) do not operate cross-border services — Saudi-registered Uber drivers cannot enter Bahrain.",
+            "A private taxi gives you door-to-door service, a fixed price confirmed before you travel, a professional driver handling all border paperwork, and the flexibility to travel at any hour. For families, business travellers, and anyone with luggage, it is the most practical and cost-effective option."
+          ],
+          ar: [
+            "يفكر كثير من سكان المنطقة الشرقية في قيادة سياراتهم إلى البحرين، لكن هذا يتطلب شراء تأمين مؤقت للسيارة عند الحدود، والحصول على تصريح تصدير المركبة إذا كانت هناك مخالفات مرورية، والتعامل مع إجراءات الجمارك بنفسك.",
+            "الحافلات العامة تعمل بين الدمام والبحرين لكنها تتطلب من الركاب إدارة أمتعتهم عبر الجمارك بشكل مستقل، وتكون أوقات الرحلة أطول بسبب المحطات المتعددة. تطبيقات طلب السيارات لا تعمل عبر الحدود.",
+            "التاكسي الخاص يوفر خدمة من الباب إلى الباب وسعراً ثابتاً مؤكداً قبل السفر وسائقاً محترفاً يتولى جميع إجراءات الحدود. للعائلات والمسافرين التجاريين وأصحاب الأمتعة، فهو الخيار الأكثر عملية وفعالية."
           ]
         }
       }
     ],
     faqs: {
       en: [
-        { q: "What documents are required to cross the border to Bahrain?", a: "Passports must be valid for at least 6 months. GCC nationals can travel with their National ID cards. Expatriates require a valid Saudi exit-re-entry visa and a Bahrain eVisa or visa on arrival." },
-        { q: "Does the booking fare include causeway fees?", a: "Yes, our quoted price includes the King Fahd Causeway toll fee and Saudi-Bahrain bridge insurance." },
-        { q: "Can you drop me off at Bahrain International Airport (BAH)?", a: "Yes, we provide direct door-to-door transfer from Dammam directly to Bahrain Airport departures terminal." }
+        { q: "How much is a taxi from Dammam to Bahrain?", a: "Our fixed taxi fare from Dammam to Bahrain starts from 350 SAR for a Camry sedan (1–4 passengers), 600 SAR for a GMC Yukon SUV (1–6 passengers), and 750 SAR for a family van (1–8 passengers). All fares include King Fahd Causeway tolls. No hidden fees." },
+        { q: "How long does the Dammam to Bahrain taxi take?", a: "The journey takes 1.5 to 2 hours under normal traffic conditions. On Thursday evenings and Friday mornings, allow an extra 30–60 minutes for causeway traffic. Night crossings (11pm–5am) are typically the fastest." },
+        { q: "What documents are required to cross to Bahrain?", a: "Saudi citizens: national ID or passport. GCC nationals: national ID or passport (visa-free). Expatriates: valid passport (6+ months), valid Saudi exit-re-entry visa, and Bahrain eVisa obtained online. Our team advises on requirements when you book." },
+        { q: "Are causeway tolls included in the fare?", a: "Yes. The King Fahd Causeway toll is fully included in our quoted fare. There are no additional charges for tolls, border fees, or night travel." },
+        { q: "Can you pick me up from Dammam Airport (DMM) and take me to Bahrain?", a: "Yes. We provide direct DMM Airport to Bahrain transfers. Your driver tracks your flight and meets you in the arrivals hall with a name board. Free 60-minute waiting from actual landing time." },
+        { q: "Can you drop me off at Bahrain International Airport (BAH)?", a: "Yes. We cover all Bahrain destinations including Bahrain International Airport (BAH), Manama city, Financial Harbour, Amwaj Islands, Riffa, Muharraq, and all hotels and residential areas." },
+        { q: "What happens if there is a long queue at the causeway?", a: "Our drivers use commercial vehicle lanes which are typically faster than tourist lanes. We monitor causeway conditions and advise on expected crossing times. No extra charges apply for longer border wait times." },
+        { q: "Can I book a Dammam to Bahrain taxi for a same-day return trip?", a: "Yes. We can arrange round-trip bookings with flexible return timing. Your driver can wait for you in Bahrain for an hourly waiting fee, or you can book a separate return at your preferred time." },
+        { q: "Do you offer Dammam to Bahrain taxi at night or early morning?", a: "Yes. We operate 24/7 including night crossings at 2am, 3am, 4am and early morning departures. Night crossings are often the fastest due to lower traffic volume." },
+        { q: "Is Dammam to Bahrain taxi available during Eid and Saudi public holidays?", a: "Yes. We operate on all Saudi public holidays including Eid Al-Fitr and Eid Al-Adha. During peak holiday periods, causeway queues can be longer — we advise booking early morning or late-night slots." }
       ],
       ar: [
-        { q: "ما هي المستندات المطلوبة لعبور الحدود إلى البحرين؟", a: "يجب أن تكون جوازات السفر صالحة لمدة لا تقل عن 6 أشهر. يمكن لمواطني دول الخليج السفر ببطاقة الهوية الوطنية. المقيمون يحتاجون إلى تأشيرة خروج وعودة سعودية سارية وتأشيرة دخول للبحرين." },
-        { q: "هل يشمل السعر رسوم عبور الجسر؟", a: "نعم، يشمل السعر المقدر رسوم عبور جسر الملك فهد وتأمين جسر السعودية والبحرين." },
-        { q: "هل يمكن توصيلي مباشرة إلى مطار البحرين الدولي (BAH)؟", a: "نعم، نقدم خدمة التوصيل المباشر من الباب إلى الباب من أي مكان في الدمام إلى صالة المغادرة بمطار البحرين الدولي." }
+        { q: "كم سعر التاكسي من الدمام إلى البحرين؟", a: "يبدأ سعر التاكسي الثابت من 350 ريالاً لسيارة كامري (1-4 ركاب)، و600 ريال ليوكن SUV (1-6 ركاب)، و750 ريالاً للفان العائلي (1-8 ركاب). تشمل جميع الأسعار رسوم جسر الملك فهد. لا توجد رسوم خفية." },
+        { q: "كم تستغرق رحلة التاكسي من الدمام إلى البحرين؟", a: "تستغرق الرحلة ساعة ونصف إلى ساعتين في الظروف الاعتيادية. مساء الخميس وصباح الجمعة، خصص 30-60 دقيقة إضافية. العبور الليلي (11م-5ص) عادةً الأسرع." },
+        { q: "ما المستندات المطلوبة لعبور الحدود إلى البحرين؟", a: "المواطنون السعوديون: هوية وطنية أو جواز سفر. مواطنو الخليج: هوية وطنية أو جواز سفر (دخول مجاني). المقيمون: جواز سفر ساري 6 أشهر + تأشيرة خروج وعودة + تأشيرة بحرينية إلكترونية. فريقنا يقدم الإرشاد عند الحجز." },
+        { q: "هل رسوم الجسر مشمولة في السعر؟", a: "نعم. رسوم جسر الملك فهد مشمولة بالكامل في السعر المقدم. لا توجد رسوم إضافية للعبور أو الحدود أو السفر الليلي." },
+        { q: "هل يمكن الاستقبال من مطار الدمام والتوصيل إلى البحرين؟", a: "نعم. نوفر توصيلاً مباشراً من مطار الدمام إلى البحرين. يتابع السائق رحلتك ويستقبلك في صالة الوصول بلافتة باسمك. انتظار مجاني 60 دقيقة من وقت الهبوط الفعلي." },
+        { q: "هل يمكن التوصيل إلى مطار البحرين الدولي؟", a: "نعم. نغطي جميع وجهات البحرين بما فيها مطار البحرين الدولي، المنامة، الفاتح، جزر أمواج، الرفاع، المحرق، وجميع الفنادق والمناطق السكنية." },
+        { q: "ماذا يحدث إذا كان هناك طابور طويل عند الجسر؟", a: "يستخدم سائقونا المسارات التجارية الأسرع عادةً. لا توجد رسوم إضافية لأوقات الانتظار الطويلة عند الحدود." },
+        { q: "هل يمكن حجز رحلة ذهاب وعودة في نفس اليوم؟", a: "نعم. يمكن ترتيب رحلات ذهاب وعودة مرنة. يمكن لسائقك الانتظار في البحرين برسوم انتظار بالساعة، أو حجز رحلة عودة منفصلة." },
+        { q: "هل التاكسي متاح ليلاً وفي أوقات مبكرة؟", a: "نعم. نعمل على مدار الساعة 24/7 بما فيها العبور الليلي الساعة 2 و3 و4 صباحاً. العبور الليلي عادةً الأسرع." },
+        { q: "هل الخدمة متاحة في العيد والإجازات الرسمية؟", a: "نعم. نعمل في جميع أيام الإجازات الرسمية السعودية. في أوقات الذروة، ننصح بحجز المواعيد الصباحية المبكرة أو الليلية." }
       ]
     }
   },

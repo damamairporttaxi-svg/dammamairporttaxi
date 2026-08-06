@@ -157,7 +157,7 @@ export default function QatifPage() {
               <div className="glass-card" style={s.sideCard}>
                 <h3 style={s.sideT}>Book Qatif Taxi</h3>
                 <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginBottom: "1rem" }}>Tarout Island · 24/7 · Fixed rates</p>
-                <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center" }}>
+                <a href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center" }}>
                   WhatsApp Booking
                 </a>
               </div>

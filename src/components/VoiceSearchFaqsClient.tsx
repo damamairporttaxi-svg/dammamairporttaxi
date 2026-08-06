@@ -185,7 +185,7 @@ export function VoiceSearchFaqsClient() {
                   : "Contact us via WhatsApp and we'll arrange your transfer in minutes."}
               </p>
               <div style={s.ctaBtns}>
-                <Link href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" style={s.btnWa}>
+                <Link href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" style={s.btnWa}>
                   {ar ? "احجز عبر واتساب" : "Book via WhatsApp"}
                 </Link>
                 <Link href="/routes" style={s.btnRoutes}>

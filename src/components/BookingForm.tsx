@@ -94,7 +94,7 @@ export const BookingForm: React.FC = () => {
       `*Vehicle:* ${ar ? v?.ar : v?.en} (${ar ? v?.sub_ar : v?.sub_en})\n` +
       `*Price:* ${price ? `${price} SAR` : "Upon inquiry"}\n` +
       `*Notes:* ${notes || "—"}`;
-    setWaLink(`https://wa.me/966569487569?text=${encodeURIComponent(msg)}`);
+    setWaLink(`https://wa.me/966560273828?text=${encodeURIComponent(msg)}`);
     setModal(true);
   };
 

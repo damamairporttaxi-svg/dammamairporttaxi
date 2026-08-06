@@ -143,7 +143,7 @@ export function FAQsPageClient() {
                 : "فريق الدعم لدينا متصل بالإنترنت ٢٤/٧. اسألنا عن أي شيء مباشرة عبر الواتساب."}
             </p>
             <a
-              href="https://wa.me/966569487569"
+              href="https://wa.me/966560273828"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp"

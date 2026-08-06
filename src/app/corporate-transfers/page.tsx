@@ -210,7 +210,7 @@ export default function CorporateTransfersPage() {
               <div className="glass-card" style={styles.sideCard}>
                 <h3 style={styles.sideTitle}>Set Up Corporate Account</h3>
                 <p style={styles.sideSub}>Talk to our corporate desk directly on WhatsApp</p>
-                <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center" }}>
+                <a href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center" }}>
                   WhatsApp Corporate Desk
                 </a>
                 <div style={{ marginTop: "1.2rem", display: "flex", flexDirection: "column", gap: "0.6rem" }}>

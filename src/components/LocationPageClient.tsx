@@ -138,7 +138,7 @@ export function LocationPageClient({ page }: Props) {
             {/* CTA buttons */}
             <div style={s.heroBtns}>
               <Link
-                href={`https://wa.me/966569487569?text=${waText}`}
+                href={`https://wa.me/966560273828?text=${waText}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={s.btnWa}
@@ -269,7 +269,7 @@ export function LocationPageClient({ page }: Props) {
                 </div>
 
                 <Link
-                  href={`https://wa.me/966569487569?text=${waText}`}
+                  href={`https://wa.me/966560273828?text=${waText}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={s.sidebarBtnWa}

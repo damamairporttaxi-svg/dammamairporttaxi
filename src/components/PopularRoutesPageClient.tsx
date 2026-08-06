@@ -183,7 +183,7 @@ export function PopularRoutesPageClient() {
                 : "Message us on WhatsApp — we cover any destination, any time."}
             </p>
           </div>
-          <Link href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" style={S.ctaBtn}>
+          <Link href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" style={S.ctaBtn}>
             <WaIcon/> {ar?"احجز عبر واتساب":"Book via WhatsApp"}
           </Link>
         </div>
@@ -301,7 +301,7 @@ function RouteCard({route,ar}:{route:typeof routesData[0];ar:boolean}){
           {ar?"التفاصيل":"Details"}
         </Link>
         <Link
-          href={`https://wa.me/966569487569?text=${encodeURIComponent(ar?`أريد حجز: ${route.name.ar}`:`Book: ${route.name.en}`)}`}
+          href={`https://wa.me/966560273828?text=${encodeURIComponent(ar?`أريد حجز: ${route.name.ar}`:`Book: ${route.name.en}`)}`}
           target="_blank"
           rel="noopener noreferrer"
           style={S.btnBook}

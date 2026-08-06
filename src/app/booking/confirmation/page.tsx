@@ -74,7 +74,7 @@ function ConfirmationContent() {
           {/* Action buttons */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             <Link
-              href={`https://wa.me/966569487569?text=${waMsg}`}
+              href={`https://wa.me/966560273828?text=${waMsg}`}
               target="_blank"
               className="btn btn-whatsapp"
               style={{ textAlign: "center", textDecoration: "none", padding: "1rem" }}

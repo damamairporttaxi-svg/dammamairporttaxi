@@ -268,7 +268,7 @@ export default function GCCBorderCrossingPage() {
                     </Link>
                   ))}
                 </div>
-                <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center", marginTop: "1rem" }}>
+                <a href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center", marginTop: "1rem" }}>
                   WhatsApp Us Now
                 </a>
               </div>

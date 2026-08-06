@@ -167,7 +167,7 @@ export default function AlKhobarPage() {
               <div className="glass-card" style={s.sideCard}>
                 <h3 style={s.sideT}>Book Al Khobar Taxi</h3>
                 <p style={s.sideSub}>24/7 · Fixed rates · Meet & Greet</p>
-                <a href="https://wa.me/966569487569" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center", marginBottom: "1rem" }}>
+                <a href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ display: "block", textDecoration: "none", textAlign: "center", marginBottom: "1rem" }}>
                   WhatsApp Us Now
                 </a>
                 {[
