@@ -7,7 +7,7 @@ export const StickyCTA: React.FC = () => {
   const { t, isRtl } = useLanguage();
 
   const saudiWhatsappUrl = `https://wa.me/966560273828?text=Hello,%20I%20would%20like%20to%20inquire%20about%20a%20taxi%20booking.`;
-  const bahrainWhatsappUrl = `https://wa.me/97334427708?text=Hello,%20I%20would%20like%20to%20inquire%20about%20a%20taxi%20booking.`;
+  const altWhatsappUrl = `https://wa.me/966575806733?text=Hello,%20I%20would%20like%20to%20inquire%20about%20a%20taxi%20booking.`;
 
   return (
     <div style={{
@@ -29,19 +29,19 @@ export const StickyCTA: React.FC = () => {
         </svg>
         <span style={styles.ctaText}>KSA {t("whatsAppUs")}</span>
       </a>
-      {/* Bahrain WhatsApp */}
+      {/* Alternate WhatsApp */}
       <a
-        href={bahrainWhatsappUrl}
+        href={altWhatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         style={styles.ctaButtonWhatsappBh}
-        aria-label="WhatsApp Bahrain"
-        title="WhatsApp Bahrain"
+        aria-label="WhatsApp Alternate"
+        title="WhatsApp Alternate"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
         </svg>
-        <span style={styles.ctaText}>Bahrain {t("whatsAppUs")}</span>
+        <span style={styles.ctaText}>Alt {t("whatsAppUs")}</span>
       </a>
     </div>
   );

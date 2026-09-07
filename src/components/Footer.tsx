@@ -52,8 +52,8 @@ export const Footer: React.FC = () => {
               <Link href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" style={styles.link}>+966 560 273 828</Link>
             </p>
             <p style={styles.contactItem}>
-              <strong style={{ color: "#60A5FA" }}>WhatsApp (Bahrain):</strong><br />
-              <Link href="https://wa.me/97334427708" target="_blank" rel="noopener noreferrer" style={styles.link}>+973 3442 7708</Link>
+              <strong style={{ color: "#60A5FA" }}>WhatsApp (Alt):</strong><br />
+              <Link href="https://wa.me/966575806733" target="_blank" rel="noopener noreferrer" style={styles.link}>+966 57 580 6733</Link>
             </p>
             <p style={styles.contactItem}>
               <strong style={{ color: "#60A5FA" }}>{t("emailLabel")}:</strong><br />

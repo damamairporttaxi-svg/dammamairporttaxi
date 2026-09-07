@@ -100,13 +100,13 @@ export function ContactPageClient() {
                 {locale === "en" ? "WhatsApp KSA: +966 560 273 828" : "واتساب السعودية: 966560273828+"}
               </a>
               <a
-                href="https://wa.me/97334427708"
+                href="https://wa.me/966575806733"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
                 style={{ width: "100%", textDecoration: "none", backgroundColor: "#128C7E" }}
               >
-                {locale === "en" ? "WhatsApp Bahrain: +973 3442 7708" : "واتساب البحرين: 97334427708+"}
+                {locale === "en" ? "WhatsApp (Alt): +966 57 580 6733" : "واتساب (بديل): 966575806733+"}
               </a>
             </div>
           </div>
