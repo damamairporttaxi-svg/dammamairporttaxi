@@ -28,7 +28,7 @@ export const Navbar: React.FC = () => {
       <div style={styles.topBanner}>
         <div className="container" style={styles.topBannerContainer}>
           <span style={styles.bannerText}>
-            {t("urgentCall")} <strong style={{ color: "#64748B" }}>+966 50 123 4567</strong>
+            {t("urgentCall")} <strong style={{ color: "#64748B" }}>+966 57 580 6733</strong>
           </span>
           <button onClick={toggleLanguage} style={styles.langToggleBtn}>
             {locale === "en" ? "العربية (AR)" : "English (EN)"}
