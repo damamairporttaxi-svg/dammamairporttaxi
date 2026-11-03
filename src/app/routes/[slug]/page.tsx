@@ -61,7 +61,7 @@ export default async function RoutePage({ params }: PageProps) {
     provider: {
       "@type": "LocalBusiness",
       name: "Dammam Airport Taxi",
-      telephone: "+966501234567",
+      telephone: "+966 59 141 9157",
       url: "https://dammamairporttaxi.com",
     },
     areaServed: [

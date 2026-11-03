@@ -61,8 +61,8 @@ export function FAQsPageClient() {
     {
       q: locale === "en" ? "How do I book a taxi from Dammam Airport?" : "كيف أحجز تاكسي من مطار الدمام؟",
       a: locale === "en"
-        ? "Send us a WhatsApp message on +966 56 948 7569 with: your name, flight number, arrival date & time, destination, number of passengers, and preferred vehicle. You will receive a confirmation with driver details within minutes. No app download or registration needed."
-        : "أرسل لنا رسالة واتساب على 7569 948 56 966+ مع: اسمك، رقم الرحلة، تاريخ ووقت الوصول، الوجهة، عدد الركاب، والسيارة المفضلة. ستتلقى تأكيداً مع تفاصيل السائق في دقائق. لا حاجة لتحميل تطبيق أو تسجيل.",
+        ? "Send us a WhatsApp message on +966 59 141 9157 with: your name, flight number, arrival date & time, destination, number of passengers, and preferred vehicle. You will receive a confirmation with driver details within minutes. No app download or registration needed."
+        : "أرسل لنا رسالة واتساب على 7519 141 59 966+ مع: اسمك، رقم الرحلة، تاريخ ووقت الوصول، الوجهة، عدد الركاب، والسيارة المفضلة. ستتلقى تأكيداً مع تفاصيل السائق في دقائق. لا حاجة لتحميل تطبيق أو تسجيل.",
     },
     {
       q: locale === "en" ? "How far is Dammam Airport from Al Khobar, Dhahran, and Jubail?" : "كم تبعد مطار الدمام عن الخبر والظهران والجبيل؟",
@@ -143,7 +143,7 @@ export function FAQsPageClient() {
                 : "فريق الدعم لدينا متصل بالإنترنت ٢٤/٧. اسألنا عن أي شيء مباشرة عبر الواتساب."}
             </p>
             <a
-              href="https://wa.me/966560273828"
+              href="https://wa.me/966591419157"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-whatsapp"

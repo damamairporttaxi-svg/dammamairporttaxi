@@ -24,7 +24,7 @@ function baseLayout(content: string, title: string) {
         <tr><td style="padding:32px;">${content}</td></tr>
         <!-- Footer -->
         <tr><td style="background:#1a1a1a;padding:20px 32px;text-align:center;">
-          <p style="margin:0;color:#888;font-size:12px;">WhatsApp: +966 56 948 7569 · haramtaxiservice@gmail.com</p>
+          <p style="margin:0;color:#888;font-size:12px;">WhatsApp: +966 59 141 9157 · haramtaxiservice@gmail.com</p>
           <p style="margin:6px 0 0;color:#555;font-size:11px;">© 2026 Dammam Airport Taxi — All rights reserved</p>
         </td></tr>
       </table>
@@ -59,7 +59,7 @@ export function bookingConfirmationCustomer(b: Partial<Booking>) {
     <h2 style="color:${dark};margin:0 0 8px;">Booking Confirmed!</h2>
     <p style="color:#555;margin:0 0 20px;">Thank you <strong>${b.name}</strong>! Your transfer has been received and confirmed.</p>
     ${bookingTable(b)}
-    <p style="color:#555;font-size:13px;">Your driver details will be sent 2 hours before your pickup. For any changes, WhatsApp us at <strong>+966 56 948 7569</strong>.</p>
+    <p style="color:#555;font-size:13px;">Your driver details will be sent 2 hours before your pickup. For any changes, WhatsApp us at <strong>+966 59 141 9157</strong>.</p>
     <div style="text-align:center;margin:24px 0;">
       <a href="https://dammamairporttaxi.com/track-booking?ref=${b.ref}" style="background:${gold};color:#000;padding:12px 28px;border-radius:6px;font-weight:700;text-decoration:none;font-size:14px;">Track Your Booking</a>
     </div>
@@ -88,7 +88,7 @@ export function driverAssignmentEmail(b: Partial<Booking>) {
       <tr><td style="padding:8px 12px;color:#555;">Vehicle Plate</td><td style="padding:8px 12px;font-weight:700;">${b.driver_plate}</td></tr>
       <tr><td style="padding:8px 12px;color:#555;">Pickup Date</td><td style="padding:8px 12px;">${b.pickup_date} at ${b.pickup_time}</td></tr>
     </table>
-    <p style="color:#555;font-size:13px;">Your driver will contact you 2 hours before pickup. For any queries, WhatsApp: <strong>+966 56 948 7569</strong></p>
+    <p style="color:#555;font-size:13px;">Your driver will contact you 2 hours before pickup. For any queries, WhatsApp: <strong>+966 59 141 9157</strong></p>
   `, "Driver Assigned — Dammam Airport Taxi");
 }
 
@@ -108,7 +108,7 @@ export function statusUpdateEmail(b: Partial<Booking>, status: string) {
       <span style="background:${s.color};color:#fff;padding:8px 20px;border-radius:20px;font-weight:700;font-size:16px;">${s.label}</span>
     </div>
     ${bookingTable(b)}
-    <p style="color:#555;font-size:13px;">Questions? WhatsApp us: <strong>+966 56 948 7569</strong></p>
+    <p style="color:#555;font-size:13px;">Questions? WhatsApp us: <strong>+966 59 141 9157</strong></p>
   `, `Booking ${s.label} — Dammam Airport Taxi`);
 }
 
@@ -145,7 +145,7 @@ export function quoteEmail(b: Partial<Booking>) {
     <div style="text-align:center;margin:24px 0;">
       <a href="https://dammamairporttaxi.com/booking/accept-quote?ref=${b.ref}" style="background:${gold};color:#000;padding:12px 28px;border-radius:6px;font-weight:700;text-decoration:none;font-size:14px;">Accept Quote & Confirm Booking</a>
     </div>
-    <p style="color:#888;font-size:12px;text-align:center;">Quote valid for 24 hours. Questions? WhatsApp: +966 56 948 7569</p>
+    <p style="color:#888;font-size:12px;text-align:center;">Quote valid for 24 hours. Questions? WhatsApp: +966 59 141 9157</p>
   `, `Quote ${b.ref} — Dammam Airport Taxi`);
 }
 

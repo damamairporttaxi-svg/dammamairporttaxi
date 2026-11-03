@@ -48,12 +48,12 @@ export const Footer: React.FC = () => {
               {t("addressVal")}
             </p>
             <p style={styles.contactItem}>
-              <strong style={{ color: "#60A5FA" }}>WhatsApp (KSA):</strong><br />
-              <Link href="https://wa.me/966560273828" target="_blank" rel="noopener noreferrer" style={styles.link}>+966 560 273 828</Link>
+              <strong style={{ color: "#60A5FA" }}>Call:</strong><br />
+              <a href="tel:+966591419157" style={styles.link}>+966 59 141 9157</a>
             </p>
             <p style={styles.contactItem}>
-              <strong style={{ color: "#60A5FA" }}>WhatsApp (Alt):</strong><br />
-              <Link href="https://wa.me/966575806733" target="_blank" rel="noopener noreferrer" style={styles.link}>+966 57 580 6733</Link>
+              <strong style={{ color: "#60A5FA" }}>WhatsApp:</strong><br />
+              <Link href="https://wa.me/966591419157" target="_blank" rel="noopener noreferrer" style={styles.link}>+966 59 141 9157</Link>
             </p>
             <p style={styles.contactItem}>
               <strong style={{ color: "#60A5FA" }}>{t("emailLabel")}:</strong><br />

@@ -72,7 +72,7 @@ export default function RootLayout({
     "logo": "https://dammamairporttaxi.com/logo.png",
     "image": "https://dammamairporttaxi.com/hero-bg.jpg",
     "description": "private airport transfers and cross-border taxi services from Dammam to Bahrain, Kuwait, Qatar, Riyadh, and Eastern Province cities.",
-    "telephone": "+966501234567",
+    "telephone": "+966 59 141 9157",
     "priceRange": "$$",
     "areaServed": [
       {

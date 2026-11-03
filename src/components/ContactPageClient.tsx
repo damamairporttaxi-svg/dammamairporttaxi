@@ -91,22 +91,20 @@ export function ContactPageClient() {
                   : "تحدث مع مدير العمليات مباشرة عبر الواتساب للتفاوض الفوري على الأسعار."}
               </p>
               <a
-                href="https://wa.me/966560273828"
+                href="https://wa.me/966591419157"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-whatsapp"
                 style={{ width: "100%", textDecoration: "none", marginBottom: "0.6rem" }}
               >
-                {locale === "en" ? "WhatsApp KSA: +966 560 273 828" : "واتساب السعودية: 966560273828+"}
+                {locale === "en" ? "WhatsApp: +966 59 141 9157" : "واتساب: 966591419157+"}
               </a>
               <a
-                href="https://wa.me/966575806733"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-whatsapp"
-                style={{ width: "100%", textDecoration: "none", backgroundColor: "#128C7E" }}
+                href="tel:+966591419157"
+                className="btn"
+                style={{ width: "100%", textDecoration: "none", backgroundColor: "#0C58D1", color: "#fff" }}
               >
-                {locale === "en" ? "WhatsApp (Alt): +966 57 580 6733" : "واتساب (بديل): 966575806733+"}
+                {locale === "en" ? "Call: +966 59 141 9157" : "اتصال: 966591419157+"}
               </a>
             </div>
           </div>

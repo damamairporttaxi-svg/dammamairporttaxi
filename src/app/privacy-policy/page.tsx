@@ -51,8 +51,8 @@ export default function PrivacyPolicyPage() {
             <h2>{locale === "en" ? "3. WhatsApp Communications" : "٣. التواصل عبر واتساب"}</h2>
             <p>
               {locale === "en"
-                ? "Our primary communication channel is WhatsApp (+966 56 948 7569). By initiating contact with us on WhatsApp, you consent to receiving booking confirmations, driver details, and service updates via this platform. We do not send unsolicited marketing messages. You may opt out of communications at any time by informing us on WhatsApp."
-                : "قناة التواصل الرئيسية لدينا هي واتساب (+966 56 948 7569). بتواصلك معنا عبر واتساب، فإنك توافق على تلقي تأكيدات الحجز وتفاصيل السائق وتحديثات الخدمة عبر هذه المنصة. لا نرسل رسائل تسويقية غير مرغوب فيها. يمكنك إلغاء الاشتراك في التواصل في أي وقت بإبلاغنا على واتساب."}
+                ? "Our primary communication channel is WhatsApp (+966 59 141 9157). By initiating contact with us on WhatsApp, you consent to receiving booking confirmations, driver details, and service updates via this platform. We do not send unsolicited marketing messages. You may opt out of communications at any time by informing us on WhatsApp."
+                : "قناة التواصل الرئيسية لدينا هي واتساب (+966 59 141 9157). بتواصلك معنا عبر واتساب، فإنك توافق على تلقي تأكيدات الحجز وتفاصيل السائق وتحديثات الخدمة عبر هذه المنصة. لا نرسل رسائل تسويقية غير مرغوب فيها. يمكنك إلغاء الاشتراك في التواصل في أي وقت بإبلاغنا على واتساب."}
             </p>
 
             <h2>{locale === "en" ? "4. Data Sharing" : "٤. مشاركة البيانات"}</h2>
@@ -107,8 +107,8 @@ export default function PrivacyPolicyPage() {
             <h2>{locale === "en" ? "11. Contact Us" : "١١. اتصل بنا"}</h2>
             <p>
               {locale === "en"
-                ? "For any questions or requests regarding this Privacy Policy or your personal data, contact us: WhatsApp: +966 56 948 7569 | Email: haramtaxiservice@gmail.com | Operating Hours: 24/7, 365 days a year."
-                : "لأي أسئلة أو طلبات بخصوص سياسة الخصوصية هذه أو بياناتك الشخصية، تواصل معنا: واتساب: 7569 948 56 966+ | البريد الإلكتروني: haramtaxiservice@gmail.com | ساعات العمل: 24/7، 365 يوماً في السنة."}
+                ? "For any questions or requests regarding this Privacy Policy or your personal data, contact us: WhatsApp: +966 59 141 9157 | Email: haramtaxiservice@gmail.com | Operating Hours: 24/7, 365 days a year."
+                : "لأي أسئلة أو طلبات بخصوص سياسة الخصوصية هذه أو بياناتك الشخصية، تواصل معنا: واتساب: 7519 141 59 966+ | البريد الإلكتروني: haramtaxiservice@gmail.com | ساعات العمل: 24/7، 365 يوماً في السنة."}
             </p>
 
           </div>

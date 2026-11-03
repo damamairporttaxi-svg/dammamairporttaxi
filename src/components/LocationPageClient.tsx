@@ -44,7 +44,7 @@ export function LocationPageClient({ page }: Props) {
     provider: {
       "@type": "LocalBusiness",
       name: "Dammam Airport Taxi",
-      telephone: "+966501234567",
+      telephone: "+966 59 141 9157",
       url: "https://www.dammamairporttaxi.com",
       address: {
         "@type": "PostalAddress",
@@ -138,7 +138,7 @@ export function LocationPageClient({ page }: Props) {
             {/* CTA buttons */}
             <div style={s.heroBtns}>
               <Link
-                href={`https://wa.me/966560273828?text=${waText}`}
+                href={`https://wa.me/966591419157?text=${waText}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={s.btnWa}
@@ -269,7 +269,7 @@ export function LocationPageClient({ page }: Props) {
                 </div>
 
                 <Link
-                  href={`https://wa.me/966560273828?text=${waText}`}
+                  href={`https://wa.me/966591419157?text=${waText}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   style={s.sidebarBtnWa}

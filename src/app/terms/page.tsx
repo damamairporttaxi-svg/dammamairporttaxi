@@ -114,8 +114,8 @@ export default function TermsPage() {
             <h2>{locale === "en" ? "12. Contact Us" : "١٢. اتصل بنا"}</h2>
             <p>
               {locale === "en"
-                ? "For questions about these Terms, contact us: WhatsApp: +966 56 948 7569 | Email: haramtaxiservice@gmail.com | Available 24/7, 365 days a year."
-                : "للاستفسار عن هذه الشروط: واتساب: 7569 948 56 966+ | البريد الإلكتروني: haramtaxiservice@gmail.com | متاحون 24/7 طوال العام."}
+                ? "For questions about these Terms, contact us: WhatsApp: +966 59 141 9157 | Email: haramtaxiservice@gmail.com | Available 24/7, 365 days a year."
+                : "للاستفسار عن هذه الشروط: واتساب: 7519 141 59 966+ | البريد الإلكتروني: haramtaxiservice@gmail.com | متاحون 24/7 طوال العام."}
             </p>
 
           </div>

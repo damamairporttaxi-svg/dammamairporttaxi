@@ -69,7 +69,7 @@ export default function AdminInvoiceGenerator() {
             {parseFloat(form.discount||"0")>0&&<div style={{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:"0.85rem",color:"green"}}><span>Discount</span><span>-{form.discount} SAR</span></div>}
             <div style={{display:"flex",justifyContent:"space-between",borderTop:"2px solid #eee",paddingTop:8,fontWeight:800,fontSize:"1rem"}}><span>Total</span><span style={{color:"#0C58D1"}}>{finalPrice} SAR</span></div>
           </div>
-          <p style={{textAlign:"center",color:"#64748B",fontSize:"0.72rem",marginTop:"1.5rem"}}>Dammam Airport Taxi · +966 56 948 7569 · haramtaxiservice@gmail.com</p>
+          <p style={{textAlign:"center",color:"#64748B",fontSize:"0.72rem",marginTop:"1.5rem"}}>Dammam Airport Taxi · +966 59 141 9157 · haramtaxiservice@gmail.com</p>
         </div>
       </div>
     </div>

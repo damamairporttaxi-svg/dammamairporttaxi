@@ -457,3 +457,33 @@ body.rtl .btn {
 
 
 
+
+/* ── Mobile fixes for inline-styled grids (sidebar layouts, hero) ── */
+@media (max-width: 900px) {
+  [style*="1fr 280px"],
+  [style*="1fr 290px"],
+  [style*="1fr 300px"],
+  [style*="1fr 320px"],
+  [style*="1fr 340px"],
+  [style*="1.1fr 1fr"],
+  [style*="1.5fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html, body { max-width: 100%; overflow-x: hidden; }
+  img, video, iframe, svg { max-width: 100%; }
+  iframe { height: auto; min-height: 260px; }
+  table { display: block; overflow-x: auto; max-width: 100%; }
+  .btn { white-space: normal; text-align: center; }
+  /* keep long words/phone numbers from forcing horizontal scroll */
+  p, li, a, span, h1, h2, h3 { overflow-wrap: anywhere; }
+}
+
+@media (max-width: 480px) {
+  /* route/tracking tables with many fixed columns: allow scroll instead of squashing */
+  [style*="1.4fr 1fr 1fr 1fr"],
+  [style*="2fr 1fr 1.2fr 1fr 0.7fr"] { font-size: 0.72rem !important; gap: 0.3rem !important; }
+}

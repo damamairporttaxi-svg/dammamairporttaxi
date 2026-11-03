@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
         ${b.flight_number ? `<tr><td style="padding:6px;color:#555;">Flight</td><td style="padding:6px;">${b.flight_number}</td></tr>` : ""}
         ${b.special_notes ? `<tr><td style="padding:6px;color:#555;">Notes</td><td style="padding:6px;">${b.special_notes}</td></tr>` : ""}
       </table>
-      <p style="color:#888;font-size:12px;margin-top:20px;">Dammam Airport Taxi · +966 56 948 7569</p>
+      <p style="color:#888;font-size:12px;margin-top:20px;">Dammam Airport Taxi · +966 59 141 9157</p>
     </div>`;
 
   const res = await resend.emails.send({

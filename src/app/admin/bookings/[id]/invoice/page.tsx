@@ -83,7 +83,7 @@ export default function InvoicePage() {
         </div>
 
         <div style={{ textAlign: "center", color:"#64748B", fontSize: "0.78rem" }}>
-          <p>Payment on completion · WhatsApp: +966 56 948 7569 · haramtaxiservice@gmail.com</p>
+          <p>Payment on completion · WhatsApp: +966 59 141 9157 · haramtaxiservice@gmail.com</p>
           <p>Dammam Airport Taxi — King Fahd International Airport, Eastern Province, Saudi Arabia</p>
         </div>
       </div>

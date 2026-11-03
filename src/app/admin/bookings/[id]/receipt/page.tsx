@@ -32,7 +32,7 @@ export default function ReceiptPage() {
         <div style={{ background: "#f0fff0", border: "1px solid #a5d6a7", borderRadius: 8, padding: "0.75rem", color: "#2e7d32", fontWeight: 700, fontSize: "0.9rem" }}>
           PAID — Thank you!
         </div>
-        <p style={{ color:"#64748B", fontSize: "0.72rem", marginTop: "1.5rem" }}>+966 56 948 7569 · haramtaxiservice@gmail.com</p>
+        <p style={{ color:"#64748B", fontSize: "0.72rem", marginTop: "1.5rem" }}>+966 59 141 9157 · haramtaxiservice@gmail.com</p>
       </div>
     </div>
   );

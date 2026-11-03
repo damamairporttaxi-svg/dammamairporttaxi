@@ -41,7 +41,7 @@ export default function NotFound() {
         </Link>
 
         <a
-          href="https://wa.me/966560273828"
+          href="https://wa.me/966591419157"
           target="_blank"
           rel="noopener noreferrer"
           className="btn btn-whatsapp"

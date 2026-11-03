@@ -64,7 +64,7 @@ export default function AdminWhatsappTemplates() {
               <div style={{background:"#ffffff",borderRadius:6,padding:"0.85rem"}}>
                 <div style={{color:"#64748B",fontSize:"0.7rem",fontWeight:600,textTransform:"uppercase",marginBottom:6}}>Preview</div>
                 <div style={{color:"#64748B",fontSize:"0.82rem",lineHeight:1.7,whiteSpace:"pre-wrap"}}>
-                  {editing.message.replace(/\{\{name\}\}/g,"Ahmed").replace(/\{\{ref\}\}/g,"DAT-20260614-AB12").replace(/\{\{date\}\}/g,"2026-06-20").replace(/\{\{time\}\}/g,"14:00").replace(/\{\{driver_name\}\}/g,"Mohammed Ali").replace(/\{\{driver_phone\}\}/g,"+966501234567").replace(/\{\{driver_plate\}\}/g,"ABC 1234")}
+                  {editing.message.replace(/\{\{name\}\}/g,"Ahmed").replace(/\{\{ref\}\}/g,"DAT-20260614-AB12").replace(/\{\{date\}\}/g,"2026-06-20").replace(/\{\{time\}\}/g,"14:00").replace(/\{\{driver_name\}\}/g,"Mohammed Ali").replace(/\{\{driver_phone\}\}/g,"+966 59 141 9157").replace(/\{\{driver_plate\}\}/g,"ABC 1234")}
                 </div>
               </div>
             </div>
