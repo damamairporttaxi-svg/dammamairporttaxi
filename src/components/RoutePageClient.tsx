@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLanguage } from "../context/LanguageContext";
 import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
@@ -14,14 +14,8 @@ interface RoutePageClientProps {
 
 export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
   const { t, locale, isRtl } = useLanguage();
-  const [route, setRoute] = useState<RouteDetail | null>(null);
-
-  useEffect(() => {
-    const foundRoute = routesData.find((r) => r.slug === slug);
-    if (foundRoute) {
-      setRoute(foundRoute);
-    }
-  }, [slug]);
+  // Resolve synchronously so the server-rendered HTML contains the full route content (SEO)
+  const route: RouteDetail | undefined = routesData.find((r) => r.slug === slug);
 
   if (!route) {
     return (
