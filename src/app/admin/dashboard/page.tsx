@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -12,7 +13,7 @@ export default function AdminDashboard() {
   const [recent, setRecent] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("/api/admin/stats").then(r => r.json()).then(d => {
+    adminFetch("/api/admin/stats").then(r => r.json()).then(d => {
       setStats(d.stats);
       setRecent(d.recent ?? []);
     }).catch(() => null);

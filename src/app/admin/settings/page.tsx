@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminSettings() {
@@ -7,7 +8,7 @@ export default function AdminSettings() {
   const [msg, setMsg] = useState("");
   const gold = "#0C58D1";
 
-  const load = () => fetch("/api/admin/settings-manage").then(r=>r.json()).then(d => {
+  const load = () => adminFetch("/api/admin/settings-manage").then(r=>r.json()).then(d => {
     setSettings(d.settings ?? []);
     const e: Record<string,string> = {};
     (d.settings ?? []).forEach((s: any) => { e[s.key] = s.value; });
@@ -16,7 +17,7 @@ export default function AdminSettings() {
   useEffect(()=>{ load(); },[]);
 
   async function save(key: string) {
-    await fetch("/api/admin/settings-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({key, value: edits[key]}) });
+    await adminFetch("/api/admin/settings-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({key, value: edits[key]}) });
     setMsg(`${key} saved!`); setTimeout(()=>setMsg(""),2000);
   }
 

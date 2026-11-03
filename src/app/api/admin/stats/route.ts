@@ -1,7 +1,9 @@
-import { NextResponse } from "next/server";
+import { requireAdmin } from "@/lib/admin-auth";
+import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
-export async function GET() {
+export async function GET(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const today = new Date().toISOString().split("T")[0];
 
   const [all, todayB, revenue] = await Promise.all([

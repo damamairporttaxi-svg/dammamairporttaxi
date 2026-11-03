@@ -1,9 +1,11 @@
+import { requireAdmin } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from "next/server";
 import { resend, ADMIN_EMAIL, FROM_EMAIL } from "@/lib/resend";
 import { bookingConfirmationCustomer, bookingNotificationAdmin } from "@/lib/email-templates";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
 export async function POST(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const { booking_id } = await req.json();
   if (!booking_id) return NextResponse.json({ error: "booking_id required" }, { status: 400 });
 

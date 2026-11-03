@@ -1,7 +1,9 @@
+import { requireAdmin } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
 export async function GET(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const { searchParams } = new URL(req.url);
   const days = parseInt(searchParams.get("days") ?? "30");
   const since = new Date(Date.now() - days * 86400000).toISOString();

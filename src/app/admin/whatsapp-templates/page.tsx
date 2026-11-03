@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminWhatsappTemplates() {
@@ -7,12 +8,12 @@ export default function AdminWhatsappTemplates() {
   const [msg, setMsg] = useState("");
   const gold = "#0C58D1";
 
-  const load = () => fetch("/api/admin/templates-manage").then(r=>r.json()).then(d=>setTemplates(d.templates??[]));
+  const load = () => adminFetch("/api/admin/templates-manage").then(r=>r.json()).then(d=>setTemplates(d.templates??[]));
   useEffect(()=>{ load(); },[]);
 
   async function save() {
     if(!editing) return;
-    await fetch("/api/admin/templates-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify(editing) });
+    await adminFetch("/api/admin/templates-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify(editing) });
     setEditing(null); load(); setMsg("Saved!"); setTimeout(()=>setMsg(""),2000);
   }
 

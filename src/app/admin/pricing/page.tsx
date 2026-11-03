@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminPricing() {
@@ -8,11 +9,11 @@ export default function AdminPricing() {
   const [msg, setMsg] = useState("");
   const gold = "#0C58D1";
 
-  const load = () => fetch("/api/admin/pricing-manage").then(r=>r.json()).then(d=>setPricing(d.pricing??[]));
+  const load = () => adminFetch("/api/admin/pricing-manage").then(r=>r.json()).then(d=>setPricing(d.pricing??[]));
   useEffect(()=>{ load(); },[]);
 
   async function save(id: string) {
-    await fetch("/api/admin/pricing-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id,...vals[id]}) });
+    await adminFetch("/api/admin/pricing-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id,...vals[id]}) });
     setEditing(null); load(); setMsg("Saved!"); setTimeout(()=>setMsg(""),2000);
   }
 

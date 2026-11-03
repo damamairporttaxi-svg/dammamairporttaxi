@@ -1,18 +1,19 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
 export default function ReceiptPage() {
   const { id } = useParams<{ id: string }>();
   const [b, setB] = useState<any>(null);
-  useEffect(() => { fetch(`/api/admin/bookings/${id}`).then(r => r.json()).then(d => setB(d.booking)); }, [id]);
+  useEffect(() => { adminFetch(`/api/admin/bookings/${id}`).then(r => r.json()).then(d => setB(d.booking)); }, [id]);
   if (!b) return <p style={{ color:"#64748B", padding: "2rem" }}>Loading...</p>;
 
   return (
     <div style={{ maxWidth: 500, margin: "0 auto" }}>
       <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1.5rem" }}>
         <button onClick={() => window.print()} style={{ background: "#f5c518", color: "#000", border: "none", borderRadius: 6, padding: "0.65rem 1.25rem", fontWeight: 700, cursor: "pointer", fontSize: "0.85rem" }}>Print Receipt</button>
-        <button onClick={() => fetch("/api/send-receipt-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id }) }).then(() => alert("Receipt emailed!"))}
+        <button onClick={() => adminFetch("/api/send-receipt-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id }) }).then(() => alert("Receipt emailed!"))}
           style={{ background:"#f8f9fa", color:"#000000", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem 1.25rem", cursor: "pointer", fontSize: "0.85rem" }}>Email Receipt</button>
       </div>
       <div style={{ background: "#fff", color: "#111", padding: "2rem", borderRadius: 10, textAlign: "center", fontFamily:"inherit" }}>

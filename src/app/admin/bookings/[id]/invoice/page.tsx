@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 
@@ -7,7 +8,7 @@ export default function InvoicePage() {
   const [b, setB] = useState<any>(null);
 
   useEffect(() => {
-    fetch(`/api/admin/bookings/${id}`).then(r => r.json()).then(d => setB(d.booking));
+    adminFetch(`/api/admin/bookings/${id}`).then(r => r.json()).then(d => setB(d.booking));
   }, [id]);
 
   if (!b) return <p style={{ color:"#64748B", padding: "2rem" }}>Loading...</p>;
@@ -34,7 +35,7 @@ export default function InvoicePage() {
         <button onClick={() => window.print()} style={{ background:"#0C58D1", color: "#000", border: "none", borderRadius: 6, padding: "0.65rem 1.25rem", fontWeight: 700, cursor: "pointer", fontSize: "0.85rem" }}>
           Print / Save PDF
         </button>
-        <button onClick={() => fetch("/api/send-invoice-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id }) }).then(() => alert("Invoice emailed!"))}
+        <button onClick={() => adminFetch("/api/send-invoice-email", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id }) }).then(() => alert("Invoice emailed!"))}
           style={{ background:"#f8f9fa", color:"#000000", border:"1px solid #e5e7eb", borderRadius: 6, padding: "0.65rem 1.25rem", cursor: "pointer", fontSize: "0.85rem" }}>
           Email Invoice
         </button>

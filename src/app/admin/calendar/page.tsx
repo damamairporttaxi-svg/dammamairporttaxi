@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
@@ -13,7 +14,7 @@ export default function AdminCalendar() {
   const [month, setMonth] = useState(new Date());
 
   useEffect(() => {
-    fetch("/api/admin/bookings-list?limit=500").then(r => r.json()).then(d => setBookings(d.bookings ?? []));
+    adminFetch("/api/admin/bookings-list?limit=500").then(r => r.json()).then(d => setBookings(d.bookings ?? []));
   }, []);
 
   const year = month.getFullYear();

@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 const statusColor: Record<string,string> = { open:"#e65100", in_progress:"#1565c0", resolved:"#2e7d32" };
@@ -8,11 +9,11 @@ export default function AdminSupport() {
   const [selected, setSelected] = useState<any>(null);
   const gold = "#0C58D1";
 
-  const load = () => fetch("/api/admin/support-manage").then(r=>r.json()).then(d=>setTickets(d.tickets??[]));
+  const load = () => adminFetch("/api/admin/support-manage").then(r=>r.json()).then(d=>setTickets(d.tickets??[]));
   useEffect(()=>{ load(); },[]);
 
   async function updateStatus(id: string, status: string) {
-    await fetch("/api/admin/support-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id,status}) });
+    await adminFetch("/api/admin/support-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id,status}) });
     load(); if(selected?.id===id) setSelected((p: any)=>({...p,status}));
   }
 

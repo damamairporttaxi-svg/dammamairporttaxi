@@ -1,8 +1,10 @@
+import { requireAdmin } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
 // GET all promo codes
-export async function GET() {
+export async function GET(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const { data, error } = await supabaseAdmin
     .from("promo_codes")
     .select("*")
@@ -13,6 +15,7 @@ export async function GET() {
 
 // POST — create promo code
 export async function POST(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const body = await req.json();
   const { code, discount_type, discount_value, min_order, max_uses, expires_at } = body;
   if (!code || !discount_value) {
@@ -29,6 +32,7 @@ export async function POST(req: NextRequest) {
 
 // PATCH — update (toggle active, etc.)
 export async function PATCH(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const body = await req.json();
   const { id, ...updates } = body;
   if (!id) return NextResponse.json({ error: "id required" }, { status: 400 });
@@ -44,6 +48,7 @@ export async function PATCH(req: NextRequest) {
 
 // DELETE
 export async function DELETE(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const { searchParams } = new URL(req.url);
   const id = searchParams.get("id");
   if (!id) return NextResponse.json({ error: "id required" }, { status: 400 });

@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminAuditLog() {
@@ -7,7 +8,7 @@ export default function AdminAuditLog() {
   const gold = "#0C58D1";
 
   useEffect(() => {
-    fetch("/api/admin/audit-log?limit=100").then(r=>r.json()).then(d=>{ setLogs(d.logs??[]); setTotal(d.total??0); });
+    adminFetch("/api/admin/audit-log?limit=100").then(r=>r.json()).then(d=>{ setLogs(d.logs??[]); setTotal(d.total??0); });
   }, []);
 
   return (

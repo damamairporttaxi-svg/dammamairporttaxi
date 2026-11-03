@@ -1,7 +1,9 @@
+import { requireAdmin } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
 export async function GET(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const { searchParams } = new URL(req.url);
   const limit = parseInt(searchParams.get("limit") ?? "50");
   const offset = parseInt(searchParams.get("offset") ?? "0");
@@ -17,6 +19,7 @@ export async function GET(req: NextRequest) {
 }
 
 export async function POST(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const body = await req.json();
   const { admin_email, action, entity, entity_id, details } = body;
   const { data, error } = await supabaseAdmin

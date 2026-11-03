@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminReviews() {
@@ -6,17 +7,17 @@ export default function AdminReviews() {
   const [msg, setMsg] = useState("");
   const gold = "#0C58D1";
 
-  const load = () => fetch("/api/admin/reviews-manage").then(r=>r.json()).then(d=>setReviews(d.reviews??[]));
+  const load = () => adminFetch("/api/admin/reviews-manage").then(r=>r.json()).then(d=>setReviews(d.reviews??[]));
   useEffect(()=>{ load(); },[]);
 
   async function toggle(id: string, published: boolean) {
-    await fetch("/api/admin/reviews-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id,published:!published}) });
+    await adminFetch("/api/admin/reviews-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id,published:!published}) });
     load(); setMsg("Updated!"); setTimeout(()=>setMsg(""),2000);
   }
 
   async function del(id: string) {
     if(!confirm("Delete this review?")) return;
-    await fetch(`/api/admin/reviews-manage?id=${id}`,{ method:"DELETE" });
+    await adminFetch(`/api/admin/reviews-manage?id=${id}`,{ method:"DELETE" });
     load();
   }
 

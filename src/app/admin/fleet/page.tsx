@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 const STATUS_OPTS = ["available","busy","maintenance"];
@@ -12,20 +13,20 @@ export default function AdminFleet() {
   const [msg, setMsg] = useState("");
   const gold = "#0C58D1";
 
-  const load = () => fetch("/api/admin/fleet").then(r=>r.json()).then(d=>setFleet(d.fleet??[]));
+  const load = () => adminFetch("/api/admin/fleet").then(r=>r.json()).then(d=>setFleet(d.fleet??[]));
   useEffect(()=>{ load(); },[]);
 
   async function save() {
     const method = editing ? "PATCH" : "POST";
     const body = editing ? { ...form, id: editing.id } : form;
-    await fetch("/api/admin/fleet",{ method, headers:{"Content-Type":"application/json"}, body: JSON.stringify(body) });
+    await adminFetch("/api/admin/fleet",{ method, headers:{"Content-Type":"application/json"}, body: JSON.stringify(body) });
     setEditing(null); setForm({ name:"",vehicle_type:"sedan",plate:"",driver_name:"",driver_phone:"",capacity:4,status:"available" });
     load(); setMsg(editing?"Updated!":"Added!"); setTimeout(()=>setMsg(""),2000);
   }
 
   async function del(id: string) {
     if(!confirm("Delete this vehicle?")) return;
-    await fetch(`/api/admin/fleet?id=${id}`,{ method:"DELETE" });
+    await adminFetch(`/api/admin/fleet?id=${id}`,{ method:"DELETE" });
     load();
   }
 

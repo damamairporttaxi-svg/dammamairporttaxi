@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminPromoCodes() {
@@ -6,24 +7,24 @@ export default function AdminPromoCodes() {
   const [form, setForm] = useState({ code: "", discount_type: "percentage", discount_value: "", min_order: "", max_uses: "", expires_at: "" });
   const [msg, setMsg] = useState("");
 
-  const load = () => fetch("/api/admin/promo-codes").then(r => r.json()).then(d => setCodes(d.promo_codes ?? []));
+  const load = () => adminFetch("/api/admin/promo-codes").then(r => r.json()).then(d => setCodes(d.promo_codes ?? []));
   useEffect(() => { load(); }, []);
 
   async function create() {
     if (!form.code || !form.discount_value) return;
-    await fetch("/api/admin/promo-codes", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
+    await adminFetch("/api/admin/promo-codes", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
     setForm({ code: "", discount_type: "percentage", discount_value: "", min_order: "", max_uses: "", expires_at: "" });
     load(); setMsg("Created!"); setTimeout(() => setMsg(""), 2000);
   }
 
   async function toggle(id: string, active: boolean) {
-    await fetch("/api/admin/promo-codes", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, active: !active }) });
+    await adminFetch("/api/admin/promo-codes", { method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, active: !active }) });
     load();
   }
 
   async function del(id: string) {
     if (!confirm("Delete this promo code?")) return;
-    await fetch(`/api/admin/promo-codes?id=${id}`, { method: "DELETE" });
+    await adminFetch(`/api/admin/promo-codes?id=${id}`, { method: "DELETE" });
     load();
   }
 

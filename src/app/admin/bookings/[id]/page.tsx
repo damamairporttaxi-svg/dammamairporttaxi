@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
@@ -20,7 +21,7 @@ export default function AdminBookingDetail() {
   });
 
   useEffect(() => {
-    fetch(`/api/admin/bookings/${id}`)
+    adminFetch(`/api/admin/bookings/${id}`)
       .then(r => r.json())
       .then(d => {
         setB(d.booking);
@@ -36,7 +37,7 @@ export default function AdminBookingDetail() {
 
   async function save() {
     setSaving(true);
-    const res = await fetch(`/api/admin/bookings/${id}`, {
+    const res = await adminFetch(`/api/admin/bookings/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...form, admin_email: "admin" }),
@@ -44,15 +45,16 @@ export default function AdminBookingDetail() {
     const d = await res.json();
     setSaving(false);
     if (d.booking) { setB(d.booking); setMsg("Saved!"); setTimeout(() => setMsg(""), 3000); }
+    else { setMsg(d.error ?? "Save failed"); setTimeout(() => setMsg(""), 4000); }
   }
 
   async function sendEmail(type: string) {
-    await fetch(`/api/${type}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id, status: form.status }) });
+    await adminFetch(`/api/${type}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id, status: form.status }) });
     setMsg(`${type} sent!`); setTimeout(() => setMsg(""), 3000);
   }
 
   async function sendDriverAssignment() {
-    const res = await fetch("/api/send-driver-assignment", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id }) });
+    const res = await adminFetch("/api/send-driver-assignment", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ booking_id: id }) });
     const d = await res.json();
     setMsg("Driver notified! WhatsApp link copied.");
     if (d.whatsapp_link) window.open(d.whatsapp_link, "_blank");

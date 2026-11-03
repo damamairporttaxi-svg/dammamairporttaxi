@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminCustomers() {
@@ -6,7 +7,7 @@ export default function AdminCustomers() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("/api/admin/customers-list").then(r => r.json()).then(d => setCustomers(d.customers ?? []));
+    adminFetch("/api/admin/customers-list").then(r => r.json()).then(d => setCustomers(d.customers ?? []));
   }, []);
 
   const filtered = customers.filter(c =>

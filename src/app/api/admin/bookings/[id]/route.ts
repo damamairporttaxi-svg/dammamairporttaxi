@@ -1,8 +1,11 @@
+import { requireAdmin } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from "next/server";
+import { BOOKING_STATUSES } from "@/lib/bookings";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
 // GET single booking
 export async function GET(_req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const denied = await requireAdmin(_req); if (denied) return denied;
   const { id } = await params;
   const { data, error } = await supabaseAdmin
     .from("bookings")
@@ -15,11 +18,15 @@ export async function GET(_req: NextRequest, { params }: { params: Promise<{ id:
 
 // PATCH — update status, assign driver, add admin notes
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const { id } = await params;
   const body = await req.json();
 
   const allowed = ["status", "driver_name", "driver_phone", "driver_plate", "admin_notes", "price", "final_price"];
   const update: Record<string, unknown> = {};
+  if (body.status !== undefined && !BOOKING_STATUSES.includes(body.status)) {
+    return NextResponse.json({ error: "Invalid status" }, { status: 400 });
+  }
   for (const key of allowed) {
     if (body[key] !== undefined) update[key] = body[key];
   }

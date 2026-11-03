@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 
@@ -16,7 +17,7 @@ export default function AdminBookings() {
 
   const load = useCallback(async () => {
     setLoading(true);
-    const res = await fetch("/api/admin/bookings-list");
+    const res = await adminFetch("/api/admin/bookings-list");
     const d = await res.json();
     setBookings(d.bookings ?? []);
     setLoading(false);

@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminBlogs() {
@@ -8,25 +9,25 @@ export default function AdminBlogs() {
   const [msg, setMsg] = useState("");
   const gold = "#0C58D1";
 
-  const load = () => fetch("/api/admin/blogs-manage").then(r=>r.json()).then(d=>setBlogs(d.blogs??[]));
+  const load = () => adminFetch("/api/admin/blogs-manage").then(r=>r.json()).then(d=>setBlogs(d.blogs??[]));
   useEffect(()=>{ load(); },[]);
 
   async function save() {
     const method = editing ? "PATCH" : "POST";
     const body = editing ? { ...form, id: editing.id } : form;
-    await fetch("/api/admin/blogs-manage",{ method, headers:{"Content-Type":"application/json"}, body:JSON.stringify(body) });
+    await adminFetch("/api/admin/blogs-manage",{ method, headers:{"Content-Type":"application/json"}, body:JSON.stringify(body) });
     setEditing(null); setForm({ title:"",excerpt:"",content:"",category:"GCC Travel Guides",published:false });
     load(); setMsg(editing?"Updated!":"Published!"); setTimeout(()=>setMsg(""),2000);
   }
 
   async function toggle(id: string, published: boolean) {
-    await fetch("/api/admin/blogs-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id,published:!published}) });
+    await adminFetch("/api/admin/blogs-manage",{ method:"PATCH", headers:{"Content-Type":"application/json"}, body:JSON.stringify({id,published:!published}) });
     load();
   }
 
   async function del(id: string) {
     if(!confirm("Delete this blog post?")) return;
-    await fetch(`/api/admin/blogs-manage?id=${id}`,{ method:"DELETE" });
+    await adminFetch(`/api/admin/blogs-manage?id=${id}`,{ method:"DELETE" });
     load();
   }
 

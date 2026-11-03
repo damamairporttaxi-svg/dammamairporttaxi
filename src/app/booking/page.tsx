@@ -17,6 +17,7 @@ export default function BookingPage() {
   const router = useRouter();
   const [step, setStep] = useState<Step>(1);
   const [loading, setLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [promoInput, setPromoInput] = useState("");
   const [promoResult, setPromoResult] = useState<{ discount_amount: number; final_price: number; error?: string } | null>(null);
 
@@ -38,17 +39,17 @@ export default function BookingPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ code: promoInput, order_amount: form.price }),
     });
-    const data = await res.json();
+    const data = await res.json().catch(() => ({}));
     setPromoResult(data);
     if (data.valid) set("promo_code", promoInput.toUpperCase());
   }
 
   async function submitBooking() {
-    setLoading(true);
+    setLoading(true); setSubmitError("");
     const finalPrice = promoResult?.final_price ?? form.price;
     const discountAmount = promoResult?.discount_amount ?? 0;
 
-    const res = await fetch("/api/admin/bookings/create", {
+    const res = await fetch("/api/booking/create", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -60,10 +61,12 @@ export default function BookingPage() {
         status: "pending",
       }),
     });
-    const data = await res.json();
+    const data = await res.json().catch(() => ({}));
     setLoading(false);
     if (data.booking) {
       router.push(`/booking/confirmation?ref=${data.booking.ref}`);
+    } else {
+      setSubmitError(data.error ?? "Something went wrong. Please try again or contact us on WhatsApp.");
     }
   }
 
@@ -238,6 +241,7 @@ export default function BookingPage() {
               <p style={{ color: "#888", fontSize: "0.82rem", marginBottom: "1.5rem" }}>
                 Payment on arrival. By confirming you agree to our Terms of Service.
               </p>
+$line
               <div style={{ display: "flex", gap: "0.75rem" }}>
                 <button onClick={() => setStep(2)} style={{ ...s.btn, background: "#222", color: "var(--text-primary)", flex: 1 }}>← Back</button>
                 <button onClick={submitBooking} disabled={loading} style={{ ...s.btn, flex: 2, opacity: loading ? 0.7 : 1 }}>

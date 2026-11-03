@@ -1,4 +1,5 @@
 "use client";
+import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState } from "react";
 
 export default function AdminReports() {
@@ -7,7 +8,7 @@ export default function AdminReports() {
   const gold = "#0C58D1";
 
   useEffect(() => {
-    fetch(`/api/admin/reports?days=${range}`).then(r=>r.json()).then(d=>setData(d));
+    adminFetch(`/api/admin/reports?days=${range}`).then(r=>r.json()).then(d=>setData(d));
   }, [range]);
 
   return (

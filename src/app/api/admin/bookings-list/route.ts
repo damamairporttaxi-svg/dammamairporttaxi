@@ -1,7 +1,9 @@
+import { requireAdmin } from "@/lib/admin-auth";
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
 export async function GET(req: NextRequest) {
+  const denied = await requireAdmin(req); if (denied) return denied;
   const { searchParams } = new URL(req.url);
   const status = searchParams.get("status");
   const limit = parseInt(searchParams.get("limit") ?? "100");
