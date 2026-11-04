@@ -7,6 +7,7 @@ import { Footer } from "./Footer";
 import { StickyCTA } from "./StickyCTA";
 import { routesData, RouteDetail } from "../data/routesData";
 import { BookingForm } from "./BookingForm";
+import Link from "next/link";
 
 interface RoutePageClientProps {
   slug: string;
@@ -56,6 +57,27 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
         <div className="container route-grid" style={styles.mainGrid}>
           {/* Left Column: Route Details, Pricing, Description, FAQs */}
           <div style={styles.contentCol}>
+            {/* Price summary */}
+            <div style={styles.priceBox}>
+              <h2 style={{ ...styles.seoSecTitle, marginBottom: "0.75rem" }}>
+                {locale === "en" ? `${routeName} — Fares by Vehicle` : `أسعار ${routeName} حسب السيارة`}
+              </h2>
+              <div style={styles.priceRow}>
+                <div style={styles.priceItem}><span style={styles.priceLbl}>{locale === "en" ? "Sedan (Camry) · 1–4" : "سيدان (كامري) · 1–4"}</span><strong style={styles.priceVal}>{route.pricing.sedan} SAR</strong></div>
+                <div style={styles.priceItem}><span style={styles.priceLbl}>{locale === "en" ? "SUV (Yukon) · 1–6" : "دفع رباعي (يوكن) · 1–6"}</span><strong style={styles.priceVal}>{route.pricing.suv} SAR</strong></div>
+                <div style={styles.priceItem}><span style={styles.priceLbl}>{locale === "en" ? "Van (Staria) · 1–8" : "فان (ستاريا) · 1–8"}</span><strong style={styles.priceVal}>{route.pricing.van} SAR</strong></div>
+              </div>
+              <a
+                href={`https://wa.me/966591419157?text=${encodeURIComponent(`Hello, I would like to book: ${route.name.en}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-whatsapp"
+                style={{ display: "block", textAlign: "center", textDecoration: "none", marginTop: "1rem" }}
+              >
+                {locale === "en" ? "Book via WhatsApp" : "احجز عبر واتساب"}
+              </a>
+            </div>
+
             {/* Route Stats */}
             <div style={styles.statsPanel}>
               <div style={styles.statItem}>
@@ -79,6 +101,29 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
                 )) }
               </div>
             ))}
+
+            {/* How to book */}
+            <div style={styles.seoSection}>
+              <h2 style={styles.seoSecTitle}>{locale === "en" ? "How to Book" : "طريقة الحجز"}</h2>
+              <ol style={{ ...styles.seoText, paddingInlineStart: "1.25rem" }}>
+                <li>{locale === "en" ? "Send us your pickup and drop-off locations on WhatsApp or use the booking form." : "أرسل لنا موقع الاستقبال والوصول عبر واتساب أو نموذج الحجز."}</li>
+                <li>{locale === "en" ? "Choose your vehicle and receive a confirmed quotation." : "اختر سيارتك واستلم عرض سعر مؤكداً."}</li>
+                <li>{locale === "en" ? "Confirm your booking and receive your driver details." : "أكّد حجزك واستلم بيانات السائق."}</li>
+              </ol>
+            </div>
+
+            {/* Related links (internal linking) */}
+            <div style={styles.seoSection}>
+              <h2 style={styles.seoSecTitle}>{locale === "en" ? "Related Pages" : "صفحات ذات صلة"}</h2>
+              <ul style={{ ...styles.seoText, paddingInlineStart: "1.25rem" }}>
+                <li><Link href="/routes">{locale === "en" ? "All taxi routes and fares from Dammam" : "جميع مسارات وأسعار التاكسي من الدمام"}</Link></li>
+                <li><Link href="/gcc-border-crossing">{locale === "en" ? "GCC border crossing guide" : "دليل عبور الحدود الخليجية"}</Link></li>
+                <li><Link href="/dammam-airport-guide">{locale === "en" ? "Dammam airport (DMM) guide" : "دليل مطار الدمام"}</Link></li>
+                <li><Link href="/fleet">{locale === "en" ? "Our fleet: Camry, Yukon and Staria" : "أسطولنا: كامري ويوكن وستاريا"}</Link></li>
+                <li><Link href="/booking">{locale === "en" ? "Book your transfer online" : "احجز رحلتك عبر الموقع"}</Link></li>
+                <li><Link href="/contact">{locale === "en" ? "Contact us" : "تواصل معنا"}</Link></li>
+              </ul>
+            </div>
 
             {/* Route Map Embed */}
             <div className="glass-card" style={styles.mapCard}>
@@ -129,6 +174,11 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
 };
 
 const styles: Record<string, React.CSSProperties> = {
+  priceBox: { border: "1px solid #E2E8F0", borderRadius: 12, padding: "1.25rem", marginBottom: "1.5rem", background: "#F8FAFC" },
+  priceRow: { display: "flex", flexWrap: "wrap", gap: "0.75rem" },
+  priceItem: { flex: "1 1 160px", display: "flex", flexDirection: "column", gap: 4, background: "#fff", border: "1px solid #E2E8F0", borderRadius: 8, padding: "0.75rem 1rem" },
+  priceLbl: { fontSize: "0.78rem", color: "#64748B" },
+  priceVal: { fontSize: "1.25rem", color: "#0C58D1" },
   hero: {
     background: "#ffffff",
     padding: "5rem 0 4rem",

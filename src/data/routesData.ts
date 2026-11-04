@@ -137,7 +137,20 @@ export const routesData: RouteDetail[] = [
             "التاكسي الخاص يوفر خدمة من الباب إلى الباب وسعراً ثابتاً مؤكداً قبل السفر وسائقاً محترفاً يتولى جميع إجراءات الحدود. للعائلات والمسافرين التجاريين وأصحاب الأمتعة، فهو الخيار الأكثر عملية وفعالية."
           ]
         }
-      }
+      },
+      {
+        title: { en: "Destinations We Cover in Bahrain", ar: "الوجهات التي نغطيها في البحرين" },
+        body: {
+          en: [
+            "Your Dammam to Bahrain taxi can drop you at any hotel, home or business address in Bahrain. Popular drop-offs include Manama city centre, Juffair, Seef District, Bahrain International Airport (BAH), Muharraq, Amwaj Islands, Riffa and Saar.",
+            "Tell us your exact drop-off point when you book and we will confirm your fixed price. You can also request pickup from your hotel or home in Dammam, Al Khobar or Dhahran, or from King Fahd International Airport (DMM)."
+          ],
+          ar: [
+            "يمكن لتاكسي الدمام البحرين إيصالك إلى أي فندق أو منزل أو عنوان عمل في البحرين. من الوجهات الشائعة: وسط المنامة، الجفير، منطقة السيف، مطار البحرين الدولي، المحرق، جزر أمواج، الرفاع وسار.",
+            "أخبرنا بنقطة الوصول بالتحديد عند الحجز وسنؤكد لك السعر الثابت. ويمكنك أيضاً طلب الاستقبال من فندقك أو منزلك في الدمام أو الخبر أو الظهران أو من مطار الملك فهد الدولي."
+          ]
+        }
+      },
     ],
     faqs: {
       en: [
@@ -150,7 +163,12 @@ export const routesData: RouteDetail[] = [
         { q: "What happens if there is a long queue at the causeway?", a: "Our drivers are familiar with the crossing procedures and will keep you informed. Actual processing times depend on traffic and immigration queues. Please ask us on WhatsApp about our waiting policy for unusually long border delays." },
         { q: "Can I book a Dammam to Bahrain taxi for a same-day return trip?", a: "Yes. We can arrange round-trip bookings with flexible return timing. Your driver can wait for you in Bahrain for an hourly waiting fee, or you can book a separate return at your preferred time." },
         { q: "Do you offer Dammam to Bahrain taxi at night or early morning?", a: "Yes. We operate 24/7 including night crossings at 2am, 3am, 4am and early morning departures. Night crossings are often the fastest due to lower traffic volume." },
-        { q: "Is Dammam to Bahrain taxi available during Eid and Saudi public holidays?", a: "Yes. We operate on all Saudi public holidays including Eid Al-Fitr and Eid Al-Adha. During peak holiday periods, causeway queues can be longer — we advise booking early morning or late-night slots." }
+        { q: "Is Dammam to Bahrain taxi available during Eid and Saudi public holidays?", a: "Yes. We operate on all Saudi public holidays including Eid Al-Fitr and Eid Al-Adha. During peak holiday periods, causeway queues can be longer — we advise booking early morning or late-night slots." },
+        { q: "Is the Dammam to Bahrain taxi private or shared?", a: "It is a private transfer. The vehicle is booked for you and your group only, with door-to-door pickup and drop-off." },
+        { q: "Can I book a private taxi from Dammam to Bahrain for my family?", a: "Yes. A GMC Yukon (1–6 passengers) or Toyota Staria (1–8 passengers) is ideal for families. Tell us your group size and luggage when you book so we can recommend the right vehicle." },
+        { q: "Can your driver pick me up from my hotel in Dammam?", a: "Yes. We pick up from hotels and homes in Dammam, Al Khobar and Dhahran, as well as from King Fahd International Airport (DMM)." },
+        { q: "Do you provide return transfers from Bahrain to Dammam?", a: "Yes. You can book a one-way trip, a return trip, or a round trip with a set return time. Message us on WhatsApp with your dates." },
+        { q: "Can expatriates living in Saudi Arabia travel to Bahrain?", a: "Many can, but Bahrain visa rules depend on your nationality — some qualify for visa on arrival, others need an eVisa. Please check your eligibility on the official Bahrain government portal (bahrain.bh) before travelling." },
       ],
       ar: [
         { q: "كم سعر التاكسي من الدمام إلى البحرين؟", a: "يبدأ سعر التاكسي الثابت من 350 ريالاً لسيارة كامري (1-4 ركاب)، و600 ريال ليوكن SUV (1-6 ركاب)، و750 ريالاً للفان العائلي (1-8 ركاب). تشمل جميع الأسعار رسوم جسر الملك فهد. لا توجد رسوم خفية." },
@@ -162,7 +180,12 @@ export const routesData: RouteDetail[] = [
         { q: "ماذا يحدث إذا كان هناك طابور طويل عند الجسر؟", a: "يستخدم سائقونا المسارات التجارية الأسرع عادةً. لا توجد رسوم إضافية لأوقات الانتظار الطويلة عند الحدود." },
         { q: "هل يمكن حجز رحلة ذهاب وعودة في نفس اليوم؟", a: "نعم. يمكن ترتيب رحلات ذهاب وعودة مرنة. يمكن لسائقك الانتظار في البحرين برسوم انتظار بالساعة، أو حجز رحلة عودة منفصلة." },
         { q: "هل التاكسي متاح ليلاً وفي أوقات مبكرة؟", a: "نعم. نعمل على مدار الساعة 24/7 بما فيها العبور الليلي الساعة 2 و3 و4 صباحاً. العبور الليلي عادةً الأسرع." },
-        { q: "هل الخدمة متاحة في العيد والإجازات الرسمية؟", a: "نعم. نعمل في جميع أيام الإجازات الرسمية السعودية. في أوقات الذروة، ننصح بحجز المواعيد الصباحية المبكرة أو الليلية." }
+        { q: "هل الخدمة متاحة في العيد والإجازات الرسمية؟", a: "نعم. نعمل في جميع أيام الإجازات الرسمية السعودية. في أوقات الذروة، ننصح بحجز المواعيد الصباحية المبكرة أو الليلية." },
+        { q: "هل تاكسي الدمام البحرين خاص أم مشترك؟", a: "هو توصيل خاص. السيارة محجوزة لك ولمجموعتك فقط مع استقبال وتوصيل من الباب إلى الباب." },
+        { q: "هل يمكنني حجز تاكسي خاص من الدمام إلى البحرين لعائلتي؟", a: "نعم. سيارة جي إم سي يوكن (1–6 ركاب) أو تويوتا ستاريا (1–8 ركاب) مناسبة للعائلات. أخبرنا بعدد الركاب والأمتعة عند الحجز لنوصي بالسيارة المناسبة." },
+        { q: "هل يستقبلني السائق من فندقي في الدمام؟", a: "نعم. نستقبل من الفنادق والمنازل في الدمام والخبر والظهران وكذلك من مطار الملك فهد الدولي." },
+        { q: "هل تقدمون رحلات عودة من البحرين إلى الدمام؟", a: "نعم. يمكنك حجز رحلة ذهاب فقط أو ذهاب وعودة أو رحلة بموعد عودة محدد. راسلنا على واتساب بتواريخ سفرك." },
+        { q: "هل يستطيع المقيمون في السعودية السفر إلى البحرين؟", a: "كثير منهم يستطيع، لكن شروط التأشيرة البحرينية تعتمد على الجنسية؛ بعضها مؤهل للتأشيرة عند الوصول وبعضها يحتاج إلى تأشيرة إلكترونية. يرجى التحقق عبر البوابة الرسمية لحكومة البحرين (bahrain.bh) قبل السفر." },
       ]
     }
   },
