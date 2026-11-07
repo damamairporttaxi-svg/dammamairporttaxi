@@ -1,17 +1,23 @@
 "use client";
 import React, { useState } from "react";
+import { CURRENCIES } from "@/lib/currencies";
 
 export default function AdminInvoiceGenerator() {
   const [form, setForm] = useState({
     name:"", email:"", phone:"", pickup:"", dropoff:"",
     date:"", time:"", vehicle:"Sedan (Toyota Camry)",
-    passengers:"1", price:"", discount:"0", ref:`DAT-MAN-${Date.now().toString(36).toUpperCase()}`
+    passengers:"1", price:"", discount:"0", currency:"SAR", tripType:"One Way", returnDate:"", returnTime:"", paid:"0", balanceDue:"", ref:`DAT-MAN-${Date.now().toString(36).toUpperCase()}`
   });
   const gold = "#0C58D1";
   const inp = { background:"#ffffff", border:"1px solid #e5e7eb", borderRadius:6, padding:"0.65rem 0.85rem", color: "var(--text-primary)", fontSize:"0.85rem", width:"100%", boxSizing:"border-box" as const };
   const lbl = { display:"block" as const, color:"#64748B", fontSize:"0.72rem", fontWeight:600 as const, marginBottom:3, textTransform:"uppercase" as const };
 
   const finalPrice = Math.max(0, parseFloat(form.price||"0") - parseFloat(form.discount||"0"));
+  const paidAmt = Math.min(finalPrice, Math.max(0, parseFloat(form.paid||"0")));
+  const balance = Math.round((finalPrice - paidAmt) * 1000) / 1000;
+  const status = finalPrice > 0 && balance === 0 ? "PAID IN FULL" : paidAmt > 0 ? "PARTIALLY PAID" : "UNPAID";
+  const statusColor = status === "PAID IN FULL" ? "#16a34a" : status === "PARTIALLY PAID" ? "#d97706" : "#dc2626";
+  const setHalf = () => setForm(p => ({ ...p, paid: String(finalPrice / 2) }));
 
   return (
     <div style={{maxWidth:900,margin:"0 auto"}}>
@@ -33,11 +39,36 @@ export default function AdminInvoiceGenerator() {
               <div><label style={lbl}>Date</label><input type="date" style={inp} value={form.date} onChange={e=>setForm(p=>({...p,date:e.target.value}))} /></div>
               <div><label style={lbl}>Time</label><input type="time" style={inp} value={form.time} onChange={e=>setForm(p=>({...p,time:e.target.value}))} /></div>
             </div>
-            <div><label style={lbl}>Vehicle</label><input style={inp} value={form.vehicle} onChange={e=>setForm(p=>({...p,vehicle:e.target.value}))} /></div>
-            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"0.75rem"}}>
-              <div><label style={lbl}>Price (SAR)</label><input type="number" style={inp} value={form.price} onChange={e=>setForm(p=>({...p,price:e.target.value}))} /></div>
-              <div><label style={lbl}>Discount (SAR)</label><input type="number" style={inp} value={form.discount} onChange={e=>setForm(p=>({...p,discount:e.target.value}))} /></div>
+            <div><label style={lbl}>Trip Type</label>
+              <select style={inp} value={form.tripType} onChange={e=>setForm(p=>({...p,tripType:e.target.value}))}>
+                <option>One Way</option><option>Round Trip</option>
+              </select>
             </div>
+            {form.tripType==="Round Trip"&&(
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"0.75rem"}}>
+                <div><label style={lbl}>Return Date</label><input type="date" style={inp} value={form.returnDate} onChange={e=>setForm(p=>({...p,returnDate:e.target.value}))} /></div>
+                <div><label style={lbl}>Return Time</label><input type="time" style={inp} value={form.returnTime} onChange={e=>setForm(p=>({...p,returnTime:e.target.value}))} /></div>
+              </div>
+            )}
+            <div><label style={lbl}>Vehicle</label><input style={inp} value={form.vehicle} onChange={e=>setForm(p=>({...p,vehicle:e.target.value}))} /></div>
+            <div><label style={lbl}>Currency</label>
+              <select style={inp} value={form.currency} onChange={e=>setForm(p=>({...p,currency:e.target.value}))}>
+                {CURRENCIES.map(c=><option key={c.code} value={c.code}>{c.code} - {c.name}</option>)}
+              </select>
+            </div>
+            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"0.75rem"}}>
+              <div><label style={lbl}>Price ({form.currency})</label><input type="number" style={inp} value={form.price} onChange={e=>setForm(p=>({...p,price:e.target.value}))} /></div>
+              <div><label style={lbl}>Discount ({form.currency})</label><input type="number" style={inp} value={form.discount} onChange={e=>setForm(p=>({...p,discount:e.target.value}))} /></div>
+            </div>
+            <div>
+              <label style={lbl}>Amount Paid ({form.currency}) — advance / partial</label>
+              <div style={{display:"flex",gap:"0.5rem"}}>
+                <input type="number" style={inp} value={form.paid} onChange={e=>setForm(p=>({...p,paid:e.target.value}))} />
+                <button type="button" onClick={setHalf} style={{background:"#f8f9fa",color:"#000",border:"1px solid #e5e7eb",borderRadius:6,padding:"0 0.75rem",cursor:"pointer",fontSize:"0.78rem",whiteSpace:"nowrap"}}>50%</button>
+              </div>
+              <div style={{fontSize:"0.78rem",color:"#64748B",marginTop:4}}>Balance due: <b>{balance} {form.currency}</b></div>
+            </div>
+            <div><label style={lbl}>Balance Due Date (optional)</label><input type="date" style={inp} value={form.balanceDue} onChange={e=>setForm(p=>({...p,balanceDue:e.target.value}))} /></div>
           </div>
           <button onClick={()=>window.print()} style={{background:"#0C58D1",color:"#000",border:"none",borderRadius:6,padding:"0.75rem",fontWeight:700,cursor:"pointer",width:"100%",marginTop:"1.25rem"}}>Print / Save PDF</button>
         </div>
@@ -56,7 +87,7 @@ export default function AdminInvoiceGenerator() {
           </div>
           <table style={{width:"100%",borderCollapse:"collapse",fontSize:"0.83rem",marginBottom:"1.5rem"}}>
             <tbody>
-              {[["Name",form.name],["Phone",form.phone],["Email",form.email],["Pickup",form.pickup],["Dropoff",form.dropoff],["Date",form.date],["Time",form.time],["Vehicle",form.vehicle],["Passengers",form.passengers]].map(([l,v])=>(
+              {[["Name",form.name],["Phone",form.phone],["Email",form.email],["Pickup",form.pickup],["Dropoff",form.dropoff],["Date",form.date],["Time",form.time],["Trip Type",form.tripType],...(form.tripType==="Round Trip"?[["Return Date",form.returnDate],["Return Time",form.returnTime]]:[]),["Vehicle",form.vehicle],["Passengers",form.passengers]].map(([l,v])=>(
                 <tr key={l} style={{borderBottom:"1px solid #f0f0f0"}}>
                   <td style={{padding:"0.4rem 0",color:"#64748B",width:"40%"}}>{l}</td>
                   <td style={{padding:"0.4rem 0",fontWeight:500}}>{v||"-"}</td>
@@ -65,9 +96,12 @@ export default function AdminInvoiceGenerator() {
             </tbody>
           </table>
           <div style={{background:"#f9f9f9",borderRadius:6,padding:"1rem"}}>
-            <div style={{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:"0.85rem"}}><span style={{color:"#64748B"}}>Base Fare</span><span>{form.price||"0"} SAR</span></div>
-            {parseFloat(form.discount||"0")>0&&<div style={{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:"0.85rem",color:"green"}}><span>Discount</span><span>-{form.discount} SAR</span></div>}
-            <div style={{display:"flex",justifyContent:"space-between",borderTop:"2px solid #eee",paddingTop:8,fontWeight:800,fontSize:"1rem"}}><span>Total</span><span style={{color:"#0C58D1"}}>{finalPrice} SAR</span></div>
+            <div style={{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:"0.85rem"}}><span style={{color:"#64748B"}}>Base Fare</span><span>{form.price||"0"} {form.currency}</span></div>
+            {parseFloat(form.discount||"0")>0&&<div style={{display:"flex",justifyContent:"space-between",marginBottom:6,fontSize:"0.85rem",color:"green"}}><span>Discount</span><span>-{form.discount} {form.currency}</span></div>}
+            <div style={{display:"flex",justifyContent:"space-between",borderTop:"2px solid #eee",paddingTop:8,fontWeight:800,fontSize:"1rem"}}><span>Total</span><span style={{color:"#0C58D1"}}>{finalPrice} {form.currency}</span></div>
+            {paidAmt>0&&<div style={{display:"flex",justifyContent:"space-between",marginTop:8,fontSize:"0.85rem",color:"#16a34a"}}><span>Paid</span><span>-{paidAmt} {form.currency}</span></div>}
+            <div style={{display:"flex",justifyContent:"space-between",marginTop:6,fontWeight:800,fontSize:"1rem"}}><span>Balance Due{balance>0&&form.balanceDue?` (by ${form.balanceDue})`:""}</span><span style={{color:balance>0?"#dc2626":"#16a34a"}}>{balance} {form.currency}</span></div>
+            <div style={{textAlign:"center",marginTop:10,fontWeight:800,fontSize:"0.8rem",letterSpacing:1,color:statusColor,border:`2px solid ${statusColor}`,borderRadius:6,padding:"4px 0"}}>{status}</div>
           </div>
           <p style={{textAlign:"center",color:"#64748B",fontSize:"0.72rem",marginTop:"1.5rem"}}>Dammam Airport Taxi · +966 59 141 9157 · haramtaxiservice@gmail.com</p>
         </div>

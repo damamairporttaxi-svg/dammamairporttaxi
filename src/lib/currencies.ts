@@ -1,0 +1,26 @@
+export const CURRENCIES = [
+  { code: "SAR", name: "Saudi Riyal" },
+  { code: "BHD", name: "Bahraini Dinar" },
+  { code: "AED", name: "UAE Dirham" },
+  { code: "QAR", name: "Qatari Riyal" },
+  { code: "KWD", name: "Kuwaiti Dinar" },
+  { code: "OMR", name: "Omani Rial" },
+  { code: "USD", name: "US Dollar" },
+  { code: "EUR", name: "Euro" },
+  { code: "GBP", name: "British Pound" },
+  { code: "CAD", name: "Canadian Dollar" },
+  { code: "AUD", name: "Australian Dollar" },
+  { code: "CHF", name: "Swiss Franc" },
+  { code: "JPY", name: "Japanese Yen" },
+  { code: "CNY", name: "Chinese Yuan" },
+  { code: "INR", name: "Indian Rupee" },
+  { code: "PKR", name: "Pakistani Rupee" },
+  { code: "BDT", name: "Bangladeshi Taka" },
+  { code: "EGP", name: "Egyptian Pound" },
+  { code: "JOD", name: "Jordanian Dinar" },
+  { code: "TRY", name: "Turkish Lira" },
+  { code: "MYR", name: "Malaysian Ringgit" },
+  { code: "SGD", name: "Singapore Dollar" },
+] as const;
+
+export type CurrencyCode = (typeof CURRENCIES)[number]["code"];
