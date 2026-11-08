@@ -1,4 +1,5 @@
 import type { Booking } from "@/types/database";
+import type { InvoicePlan } from "@/lib/invoice-plan";
 
 const gold = "#f5c518";
 const dark = "#0c0c0c";
@@ -112,7 +113,15 @@ export function statusUpdateEmail(b: Partial<Booking>, status: string) {
   `, `Booking ${s.label} — Dammam Airport Taxi`);
 }
 
-export function invoiceEmail(b: Partial<Booking>) {
+export function invoiceEmail(b: Partial<Booking>, plan?: InvoicePlan, returnDate?: string) {
+  const esc = (s: string) => s.replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c] as string));
+  const planHtml = plan ? `
+    <table width="100%" style="margin-top:16px;border-top:1px solid #eee;padding-top:12px;font-size:14px;">
+      <tr><td colspan="3" style="font-weight:700;padding-bottom:6px;">${esc(plan.invoiceLabel)}</td></tr>
+      ${plan.legs.map(l => `<tr><td style="color:#555;">${esc(l.label)}${l.date ? ` (${esc(l.date)})` : ""}</td><td align="right">${l.amount} SAR</td><td align="right" style="font-weight:600;">${l.status}</td></tr>`).join("")}
+      <tr><td style="color:#555;padding-top:8px;">Paid</td><td colspan="2" align="right" style="color:green;font-weight:600;padding-top:8px;">${plan.paid} SAR</td></tr>
+      <tr><td style="font-weight:800;">Balance Due${plan.balance > 0 && returnDate ? ` (on ${esc(returnDate)})` : ""}</td><td colspan="2" align="right" style="font-weight:800;color:${plan.balance > 0 ? "#c62828" : "#2e7d32"};">${plan.balance} SAR</td></tr>
+    </table>` : "";
   return baseLayout(`
     <h2 style="color:${dark};margin:0 0 8px;">Invoice — ${b.ref}</h2>
     <p style="color:#555;margin:0 0 20px;">Please find your invoice details below.</p>
@@ -122,6 +131,7 @@ export function invoiceEmail(b: Partial<Booking>) {
       ${b.discount_amount ? `<tr><td style="font-size:14px;color:green;">Discount (${b.promo_code})</td><td align="right" style="color:green;font-weight:600;">-${b.discount_amount} SAR</td></tr>` : ""}
       <tr><td style="font-size:16px;font-weight:800;color:${dark};padding-top:8px;">Total</td><td align="right" style="font-size:16px;font-weight:800;color:${gold};padding-top:8px;">${b.final_price} SAR</td></tr>
     </table>
+    ${planHtml}
   `, `Invoice ${b.ref} — Dammam Airport Taxi`);
 }
 
