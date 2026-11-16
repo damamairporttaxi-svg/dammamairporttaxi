@@ -12,11 +12,12 @@ interface LanguageContextProps {
 
 const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [locale, setLocaleState] = useState<Locale>("en");
+export const LanguageProvider: React.FC<{ children: React.ReactNode; forcedLocale?: Locale }> = ({ children, forcedLocale }) => {
+  const [locale, setLocaleState] = useState<Locale>(forcedLocale ?? "en");
 
   // Load language preference from local storage if available
   useEffect(() => {
+    if (forcedLocale) return;
     const savedLocale = localStorage.getItem("locale") as Locale;
     if (savedLocale === "en" || savedLocale === "ar") {
       setLocaleState(savedLocale);
@@ -43,7 +44,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       document.body.classList.remove("rtl");
     }
     
-    localStorage.setItem("locale", locale);
+    if (!forcedLocale) localStorage.setItem("locale", locale);
   }, [locale]);
 
   const setLocale = (newLocale: Locale) => {

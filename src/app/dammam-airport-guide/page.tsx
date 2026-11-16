@@ -244,6 +244,7 @@ export default function DammamAirportGuidePage() {
                     { q: "How long is the free waiting time?", a: "60 minutes from your flight's actual landing time — enough to clear immigration, collect baggage, and exit customs without any rush." },
                     { q: "Is airport parking included in the price?", a: "Yes. All DMM Airport parking fees, road tolls, and 15% VAT are fully included in the quoted price. What you see is what you pay." },
                     { q: "What if my flight is delayed or cancelled?", a: "Our system tracks your flight live. Delays adjust your driver's schedule automatically at no charge. For cancellations, contact us on WhatsApp to reschedule — free within 12 hours of original pickup." },
+                    { q: "What is the Dammam airport WhatsApp or helpline number?", a: "Dammam Airport Taxi is a private transfer service, not the airport authority. You can reach us 24/7 on WhatsApp and phone at +966 59 141 9157 to book a fixed-fare taxi from King Fahd International Airport (DMM). For flight information, contact your airline or the official airport channels." },
                     { q: "What are the busiest routes from DMM Airport?", a: "Most booked: Airport → Khobar (150 SAR), Airport → Jubail (200 SAR), Airport → Dhahran (150 SAR), Dammam → Bahrain via Causeway (400 SAR), Dammam → Riyadh (900 SAR)." },
                   ].map((faq, i) => (
                     <div key={i} style={styles.faqItem}>

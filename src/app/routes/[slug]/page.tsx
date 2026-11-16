@@ -26,10 +26,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   return {
-    title: route.metaTitle.en,
+    title: route.metaTitle.en.split(" | ")[0],
     description: route.metaDescription.en,
     alternates: {
       canonical: `https://dammamairporttaxi.com/routes/${slug}`,
+      languages: {
+        en: `https://dammamairporttaxi.com/routes/${slug}`,
+        ar: `https://dammamairporttaxi.com/ar/routes/${slug}`,
+        "x-default": `https://dammamairporttaxi.com/routes/${slug}`,
+      },
     },
     openGraph: {
       title: route.metaTitle.en,

@@ -6,6 +6,7 @@ import { Navbar } from "./Navbar";
 import { Footer } from "./Footer";
 import { StickyCTA } from "./StickyCTA";
 import { routesData, RouteDetail } from "../data/routesData";
+import { topicalClusters } from "../data/topicalMap";
 import { BookingForm } from "./BookingForm";
 import Link from "next/link";
 
@@ -17,6 +18,15 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
   const { t, locale, isRtl } = useLanguage();
   // Resolve synchronously so the server-rendered HTML contains the full route content (SEO)
   const route: RouteDetail | undefined = routesData.find((r) => r.slug === slug);
+
+  const cluster = topicalClusters.find((c) => c.clusterUrls.includes(`/routes/${slug}`));
+  const siblings = cluster
+    ? cluster.clusterUrls
+        .filter((u) => u !== `/routes/${slug}`)
+        .map((u) => routesData.find((r) => `/routes/${r.slug}` === u))
+        .filter((r): r is RouteDetail => !!r)
+        .slice(0, 8)
+    : [];
 
   if (!route) {
     return (
@@ -122,6 +132,12 @@ export const RoutePageClient: React.FC<RoutePageClientProps> = ({ slug }) => {
                 <li><Link href="/fleet">{locale === "en" ? "Our fleet: Camry, Yukon and Staria" : "أسطولنا: كامري ويوكن وستاريا"}</Link></li>
                 <li><Link href="/booking">{locale === "en" ? "Book your transfer online" : "احجز رحلتك عبر الموقع"}</Link></li>
                 <li><Link href="/contact">{locale === "en" ? "Contact us" : "تواصل معنا"}</Link></li>
+                {cluster && cluster.id === "bahrain-hub" && (
+                  <li><Link href="/saudi-bahrain-taxi">{locale === "en" ? "Saudi–Bahrain taxi guide: fares, documents and tips" : "دليل التاكسي بين السعودية والبحرين: الأسعار والوثائق"}</Link></li>
+                )}
+                {siblings.map((r) => (
+                  <li key={r.slug}><Link href={locale === "ar" ? `/ar/routes/${r.slug}` : `/routes/${r.slug}`}>{locale === "en" ? `${r.name.en} — from ${r.pricing.sedan} SAR` : `${r.name.ar} — من ${r.pricing.sedan} ريال`}</Link></li>
+                ))}
               </ul>
             </div>
 

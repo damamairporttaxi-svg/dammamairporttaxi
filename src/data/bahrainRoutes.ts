@@ -96,8 +96,12 @@ function build(d: Dest): RouteDetail {
 }
 
 /** Dammam-side origin → Bahrain (fare same as Dammam→Bahrain: 400/550/700/1300). */
-function buildToBahrain(o: { slug: string; en: string; ar: string; km: number }): RouteDetail {
-  const sedan = 400, suv = 550, van = 700, luxury = 1300;
+function buildToBahrain(o: { slug: string; en: string; ar: string; km: number; sedan?: number }): RouteDetail {
+  const sedan = o.sedan ?? 400;
+  const standard = sedan === 400;
+  const suv = standard ? 550 : near(sedan * 1.375, 50);
+  const van = standard ? 700 : near(sedan * 1.75, 50);
+  const luxury = standard ? 1300 : near(sedan * 3.25, 100);
   return {
     slug: `${o.slug}-to-bahrain`,
     name: { en: `${o.en} to Bahrain Taxi`, ar: `تاكسي من ${o.ar} إلى البحرين` },
@@ -110,7 +114,7 @@ function buildToBahrain(o: { slug: string; en: string; ar: string; km: number })
       ar: `تاكسي خاص من ${o.ar} إلى البحرين (المنامة، الجنبية، الجفير، السيف، مطار البحرين) من ${sedan} ريال. توصيل من الباب إلى الباب عبر جسر الملك فهد، حجز واتساب 24/7.`,
     },
     distance: { en: `~${o.km} km`, ar: `~${o.km} كم` },
-    duration: { en: "1.5 – 2 Hours", ar: "ساعة ونصف إلى ساعتين" },
+    duration: { en: o.km > 100 ? "2.5 – 4 Hours" : o.km > 60 ? "1.5 – 2.5 Hours" : "1 – 1.5 Hours", ar: o.km > 100 ? "من ساعتين ونصف إلى 4 ساعات" : o.km > 60 ? "ساعة ونصف إلى ساعتين ونصف" : "ساعة إلى ساعة ونصف" },
     basePrice: sedan,
     pricing: { sedan, suv, van, luxury },
     mapUrl: `https://www.google.com/maps?q=${encodeURIComponent(o.en + " Saudi Arabia")}&output=embed`,
@@ -124,12 +128,12 @@ function buildToBahrain(o: { slug: string; en: string; ar: string; km: number })
         body: {
           en: [
             `The ${o.en} to Bahrain taxi fare starts from ${sedan} SAR for a Camry sedan (up to 4 passengers), ${suv} SAR for a GMC Yukon SUV (up to 6), ${van} SAR for a Toyota Staria family van (up to 8) and ${luxury} SAR for a luxury vehicle.`,
-            "The trip takes about 1.5 to 2 hours depending on King Fahd Causeway queues at the border. Allow extra time on Thursday evenings, Fridays and public holidays.",
+            `The trip takes about ${o.km > 100 ? "2.5 to 4" : o.km > 60 ? "1.5 to 2.5" : "1 to 1.5"} hours depending on King Fahd Causeway queues at the border. Allow extra time on Thursday evenings, Fridays and public holidays.`,
             "Carry a valid passport or GCC ID and the correct entry documents for Bahrain. Entry rules depend on your nationality, so please check your eligibility before travelling.",
           ],
           ar: [
             `يبدأ سعر التاكسي من ${o.ar} إلى البحرين من ${sedan} ريال لسيارة كامري (حتى 4 ركاب)، و${suv} ريال ليوكن SUV (حتى 6 ركاب)، و${van} ريال للفان العائلي ستاريا (حتى 8 ركاب)، و${luxury} ريال للسيارة الفاخرة.`,
-            "تستغرق الرحلة نحو ساعة ونصف إلى ساعتين بحسب الازدحام عند جسر الملك فهد. ننصح بإضافة وقت إضافي مساء الخميس والجمعة والعطلات الرسمية.",
+            `تستغرق الرحلة نحو ${o.km > 100 ? "2.5 إلى 4 ساعات" : o.km > 60 ? "ساعة ونصف إلى ساعتين ونصف" : "ساعة إلى ساعة ونصف"} بحسب الازدحام عند جسر الملك فهد. ننصح بإضافة وقت إضافي مساء الخميس والجمعة والعطلات الرسمية.`,
             "يجب حمل جواز سفر ساري أو الهوية الخليجية ووثائق الدخول المطلوبة للبحرين. تختلف الشروط بحسب الجنسية، يرجى التأكد قبل السفر.",
           ],
         },
@@ -153,4 +157,10 @@ function buildToBahrain(o: { slug: string; en: string; ar: string; km: number })
 export const bahrainOriginRoutes: RouteDetail[] = [
   ...DESTS.map(build),
   buildToBahrain({ slug: "dammam-railway-station", en: "Dammam Railway Station", ar: "محطة قطار الدمام", km: 90 }),
+  buildToBahrain({ slug: "khobar", en: "Khobar", ar: "الخبر", km: 55, sedan: 300 }),
+  buildToBahrain({ slug: "dhahran", en: "Dhahran", ar: "الظهران", km: 65, sedan: 350 }),
+  buildToBahrain({ slug: "jubail", en: "Jubail", ar: "الجبيل", km: 160, sedan: 550 }),
+  buildToBahrain({ slug: "qatif", en: "Qatif", ar: "القطيف", km: 100, sedan: 450 }),
+  buildToBahrain({ slug: "al-hassa", en: "Al Hassa", ar: "الأحساء", km: 230, sedan: 700 }),
+  buildToBahrain({ slug: "hofuf", en: "Hofuf", ar: "الهفوف", km: 240, sedan: 750 }),
 ];

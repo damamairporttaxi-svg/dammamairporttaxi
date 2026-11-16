@@ -1,5 +1,6 @@
 ﻿import { MetadataRoute } from "next";
 import { routesData } from "@/data/routesData";
+import { blogPosts } from "@/data/blogPosts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://dammamairporttaxi.com";
@@ -11,17 +12,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  const arabicRouteUrls = routesData.map((route) => ({
+    url: `${baseUrl}/ar/routes/${route.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const blogUrls = blogPosts.map((p) => ({
+    url: `${baseUrl}/blog/${p.slug}`,
+    lastModified: new Date(p.date),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     /* ── Tier 1: Core pillar pages ──────── */
     { url: baseUrl,                                     lastModified: new Date(), changeFrequency: "weekly",  priority: 1.0 },
     { url: `${baseUrl}/dammam-guide`,                   lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
     { url: `${baseUrl}/dammam-airport-guide`,           lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/saudi-bahrain-taxi`,            lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/gcc-border-crossing`,            lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/tourist-destinations`,           lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/corporate-transfers`,            lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
 
     /* ── Tier 2: Route pages ──────────────── */
     ...routeUrls,
+    ...arabicRouteUrls,
+    ...blogUrls,
 
     /* ── Tier 2.5: City landing pages ───────── */
     { url: `${baseUrl}/al-khobar`,                      lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
