@@ -43,8 +43,8 @@ function build(d: Dest): RouteDetail {
     slug: `bahrain-to-${d.slug}`,
     name: { en: `Bahrain to ${d.en} Taxi`, ar: `تاكسي من البحرين إلى ${d.ar}` },
     metaTitle: {
-      en: `Bahrain to ${d.en} Taxi — Fixed ${sedan} SAR | Private Transfer via King Fahd Causeway`,
-      ar: `تاكسي من البحرين إلى ${d.ar} — ${sedan} ريال ثابت | توصيل خاص عبر جسر الملك فهد`,
+      en: `Bahrain to ${d.en} Taxi — ${sedan} SAR | Private Transfer`,
+      ar: `تاكسي من البحرين إلى ${d.ar} — ${sedan} ريال | توصيل خاص`,
     },
     metaDescription: {
       en: `Private Bahrain to ${d.en} taxi from ${sedan} SAR. Door-to-door via the King Fahd Causeway, fixed fare, 24/7 WhatsApp booking. Sedan, SUV, van and luxury available.`,

@@ -31,8 +31,8 @@ export const routesData: RouteDetail[] = [
     slug: "dammam-to-bahrain",
     name: { en: "Dammam to Bahrain Taxi", ar: "تاكسي من الدمام إلى البحرين" },
     metaTitle: {
-      en: "Dammam to Bahrain Taxi — Fixed 400 SAR | King Fahd Causeway Private Transfer",
-      ar: "تاكسي من الدمام إلى البحرين — 400 ريال ثابت | توصيل خاص عبر جسر الملك فهد"
+      en: "Dammam to Bahrain Taxi — 400 SAR | Private Transfer",
+      ar: "تاكسي من الدمام إلى البحرين — 400 ريال | توصيل خاص"
     },
     metaDescription: {
       en: "Book private Dammam to Bahrain taxi from 400 SAR. King Fahd Causeway transfer — causeway tolls included, 60-min free wait, flight tracking. WhatsApp booking 24/7. Sedan, SUV & van available.",
