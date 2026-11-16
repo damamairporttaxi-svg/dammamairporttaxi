@@ -31,21 +31,21 @@ export const routesData: RouteDetail[] = [
     slug: "dammam-to-bahrain",
     name: { en: "Dammam to Bahrain Taxi", ar: "تاكسي من الدمام إلى البحرين" },
     metaTitle: {
-      en: "Dammam to Bahrain Taxi — Fixed 350 SAR | King Fahd Causeway Private Transfer",
-      ar: "تاكسي من الدمام إلى البحرين — 350 ريال ثابت | توصيل خاص عبر جسر الملك فهد"
+      en: "Dammam to Bahrain Taxi — Fixed 400 SAR | King Fahd Causeway Private Transfer",
+      ar: "تاكسي من الدمام إلى البحرين — 400 ريال ثابت | توصيل خاص عبر جسر الملك فهد"
     },
     metaDescription: {
-      en: "Book private Dammam to Bahrain taxi from 350 SAR. King Fahd Causeway transfer — causeway tolls included, 60-min free wait, flight tracking. WhatsApp booking 24/7. Sedan, SUV & van available.",
-      ar: "احجز تاكسي خاص من الدمام إلى البحرين من 350 ريال. توصيل عبر جسر الملك فهد — رسوم الجسر مشمولة، انتظار 60 دقيقة مجاناً، تتبع الرحلة. حجز واتساب 24/7."
+      en: "Book private Dammam to Bahrain taxi from 400 SAR. King Fahd Causeway transfer — causeway tolls included, 60-min free wait, flight tracking. WhatsApp booking 24/7. Sedan, SUV & van available.",
+      ar: "احجز تاكسي خاص من الدمام إلى البحرين من 400 ريال. توصيل عبر جسر الملك فهد — رسوم الجسر مشمولة، انتظار 60 دقيقة مجاناً، تتبع الرحلة. حجز واتساب 24/7."
     },
     distance: { en: "85 km", ar: "٨٥ كم" },
     duration: { en: "1.5 – 2 Hours", ar: "ساعة ونصف إلى ساعتين" },
-    basePrice: 350,
-    pricing: { sedan: 350, suv: 600, van: 750, luxury: 1500 },
+    basePrice: 400,
+    pricing: { sedan: 400, suv: 550, van: 700, luxury: 1300 },
     mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d458022.0298075775!2d49.9868779!3d26.2575293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49faf2ef0b77b1%3A0xe54dbe5c2763f0bb!2sKing%20Fahd%20Causeway!5e0!3m2!1sen!2ssa!4v1716500000000!5m2!1sen!2ssa",
     intro: {
-      en: "Book a private, fixed-rate taxi from Dammam to Bahrain starting from 350 SAR. Our Dammam to Bahrain taxi service covers the full 85 km journey via the King Fahd Causeway — door-to-door, with all causeway tolls included, free 60-minute waiting, and 24/7 WhatsApp booking.",
-      ar: "احجز تاكسي خاصاً بسعر ثابت من الدمام إلى البحرين يبدأ من 350 ريال. تغطي خدمتنا رحلة 85 كيلومتراً كاملة عبر جسر الملك فهد — من الباب إلى الباب، مع شمول رسوم الجسر وانتظار مجاني 60 دقيقة وحجز واتساب على مدار الساعة."
+      en: "Book a private, fixed-rate taxi from Dammam to Bahrain starting from 400 SAR. Our Dammam to Bahrain taxi service covers the full 85 km journey via the King Fahd Causeway — door-to-door, with all causeway tolls included, free 60-minute waiting, and 24/7 WhatsApp booking.",
+      ar: "احجز تاكسي خاصاً بسعر ثابت من الدمام إلى البحرين يبدأ من 400 ريال. تغطي خدمتنا رحلة 85 كيلومتراً كاملة عبر جسر الملك فهد — من الباب إلى الباب، مع شمول رسوم الجسر وانتظار مجاني 60 دقيقة وحجز واتساب على مدار الساعة."
     },
     contentSections: [
       {
@@ -53,12 +53,12 @@ export const routesData: RouteDetail[] = [
         body: {
           en: [
             "The Dammam to Bahrain taxi route covers approximately 85 kilometers from the Eastern Province to Manama, the capital of Bahrain. The journey crosses the King Fahd Causeway — the iconic 25-kilometer bridge connecting Saudi Arabia and Bahrain — and takes between 1.5 and 2 hours under normal traffic conditions.",
-            "Our fixed taxi fare from Dammam to Bahrain starts from 350 SAR for a standard Camry sedan (up to 4 passengers). A GMC Yukon SUV for families or groups of up to 6 costs 600 SAR. A Toyota Staria family van for up to 8 passengers and heavy luggage is 750 SAR. King Fahd Causeway tolls are included in your confirmed transfer price. Personal visa fees and other passenger-specific entry charges are not included.",
+            "Our fixed taxi fare from Dammam to Bahrain starts from 400 SAR for a standard Camry sedan (up to 4 passengers). A GMC Yukon SUV for families or groups of up to 6 costs 550 SAR. A Toyota Staria family van for up to 8 passengers and heavy luggage is 700 SAR. King Fahd Causeway tolls are included in your confirmed transfer price. Personal visa fees and other passenger-specific entry charges are not included.",
             "Compared to driving yourself, booking a private taxi eliminates the need for temporary vehicle insurance, export permits, and the stress of navigating border procedures. Your driver handles everything while you relax in the air-conditioned vehicle."
           ],
           ar: [
             "تمتد رحلة تاكسي من الدمام إلى البحرين حوالي 85 كيلومتراً من المنطقة الشرقية إلى المنامة عاصمة مملكة البحرين. تعبر الرحلة جسر الملك فهد الشهير — الجسر الأيقوني البالغ طوله 25 كيلومتراً الذي يربط المملكة العربية السعودية بالبحرين — وتستغرق ما بين ساعة ونصف وساعتين في الظروف الاعتيادية.",
-            "يبدأ سعر التاكسي الثابت من الدمام إلى البحرين من 350 ريالاً لسيارة كامري العادية (حتى 4 ركاب). يمتد خيار سيارة يوكن للعائلات والمجموعات حتى 6 ركاب بسعر 600 ريال. الفان العائلي ستاريا لـ8 ركاب والأمتعة الكثيرة بـ750 ريال. رسوم جسر الملك فهد مشمولة في السعر المؤكد للرحلة. رسوم التأشيرة الشخصية وأي رسوم دخول خاصة بالراكب غير مشمولة.",
+            "يبدأ سعر التاكسي الثابت من الدمام إلى البحرين من 400 ريالاً لسيارة كامري العادية (حتى 4 ركاب). يمتد خيار سيارة يوكن للعائلات والمجموعات حتى 6 ركاب بسعر 550 ريال. الفان العائلي ستاريا لـ8 ركاب والأمتعة الكثيرة بـ700 ريال. رسوم جسر الملك فهد مشمولة في السعر المؤكد للرحلة. رسوم التأشيرة الشخصية وأي رسوم دخول خاصة بالراكب غير مشمولة.",
             "مقارنةً بقيادة سيارتك الخاصة، يلغي حجز التاكسي الخاص الحاجة إلى تأمين مؤقت للسيارة وتصاريح تصدير وضغط التعامل مع إجراءات الحدود بنفسك. سائقك يتولى كل شيء بينما تسترخي في السيارة المكيفة."
           ]
         }
@@ -154,7 +154,7 @@ export const routesData: RouteDetail[] = [
     ],
     faqs: {
       en: [
-        { q: "How much is a taxi from Dammam to Bahrain?", a: "Our fixed taxi fare from Dammam to Bahrain starts from 350 SAR for a Camry sedan (1–4 passengers), 600 SAR for a GMC Yukon SUV (1–6 passengers), and 750 SAR for a family van (1–8 passengers). King Fahd Causeway tolls are included in the confirmed price. Visa fees and personal entry charges are not included." },
+        { q: "How much is a taxi from Dammam to Bahrain?", a: "Our fixed taxi fare from Dammam to Bahrain starts from 400 SAR for a Camry sedan (1–4 passengers), 550 SAR for a GMC Yukon SUV (1–6 passengers), and 700 SAR for a family van (1–8 passengers). King Fahd Causeway tolls are included in the confirmed price. Visa fees and personal entry charges are not included." },
         { q: "How long does the Dammam to Bahrain taxi take?", a: "The journey takes 1.5 to 2 hours under normal traffic conditions. On Thursday evenings and Friday mornings, allow an extra 30–60 minutes for causeway traffic. Night crossings (11pm–5am) are typically the fastest." },
         { q: "What documents are required to cross to Bahrain?", a: "Saudi citizens: national ID or passport. GCC nationals: national ID or passport (visa-free). Expatriates: valid passport (6+ months), valid Iqama and Saudi exit/re-entry permit. Bahrain visa rules depend on your nationality (visa on arrival or eVisa) — please check the official Bahrain portal (bahrain.bh) before travel." },
         { q: "Are causeway tolls included in the fare?", a: "Yes. The King Fahd Causeway toll for your vehicle is included in your confirmed transfer price. Personal visa fees and other passenger-specific entry charges are not included. There is no extra charge for night travel." },
@@ -171,7 +171,7 @@ export const routesData: RouteDetail[] = [
         { q: "Can expatriates living in Saudi Arabia travel to Bahrain?", a: "Many can, but Bahrain visa rules depend on your nationality — some qualify for visa on arrival, others need an eVisa. Please check your eligibility on the official Bahrain government portal (bahrain.bh) before travelling." },
       ],
       ar: [
-        { q: "كم سعر التاكسي من الدمام إلى البحرين؟", a: "يبدأ سعر التاكسي الثابت من 350 ريالاً لسيارة كامري (1-4 ركاب)، و600 ريال ليوكن SUV (1-6 ركاب)، و750 ريالاً للفان العائلي (1-8 ركاب). تشمل جميع الأسعار رسوم جسر الملك فهد. لا توجد رسوم خفية." },
+        { q: "كم سعر التاكسي من الدمام إلى البحرين؟", a: "يبدأ سعر التاكسي الثابت من 400 ريالاً لسيارة كامري (1-4 ركاب)، و550 ريال ليوكن SUV (1-6 ركاب)، و700 ريالاً للفان العائلي (1-8 ركاب). تشمل جميع الأسعار رسوم جسر الملك فهد. لا توجد رسوم خفية." },
         { q: "كم تستغرق رحلة التاكسي من الدمام إلى البحرين؟", a: "تستغرق الرحلة ساعة ونصف إلى ساعتين في الظروف الاعتيادية. مساء الخميس وصباح الجمعة، خصص 30-60 دقيقة إضافية. العبور الليلي (11م-5ص) عادةً الأسرع." },
         { q: "ما المستندات المطلوبة لعبور الحدود إلى البحرين؟", a: "المواطنون السعوديون: هوية وطنية أو جواز سفر. مواطنو الخليج: هوية وطنية أو جواز سفر (دخول مجاني). المقيمون: جواز سفر ساري 6 أشهر + تأشيرة خروج وعودة + تأشيرة بحرينية إلكترونية. فريقنا يقدم الإرشاد عند الحجز." },
         { q: "هل رسوم الجسر مشمولة في السعر؟", a: "نعم. رسوم جسر الملك فهد مشمولة بالكامل في السعر المقدم. لا توجد رسوم إضافية للعبور أو الحدود أو السفر الليلي." },
@@ -1701,3 +1701,6 @@ export const routesData: RouteDetail[] = [
   }
 ];
 
+
+import { bahrainOriginRoutes } from "./bahrainRoutes";
+routesData.push(...bahrainOriginRoutes);

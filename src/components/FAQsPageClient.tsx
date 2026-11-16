@@ -55,8 +55,8 @@ export function FAQsPageClient() {
     {
       q: locale === "en" ? "How much is a taxi from Dammam to Bahrain?" : "كم تكلفة التاكسي من الدمام إلى البحرين؟",
       a: locale === "en"
-        ? "Dammam to Bahrain (Manama) via the King Fahd Causeway starts from 350 SAR for a sedan. This includes all causeway tolls (~35 SAR). The distance is 85 km and the journey takes 1.5 to 2 hours. We deliver door-to-door to any address in Bahrain."
-        : "يبدأ تاكسي الدمام إلى البحرين (المنامة) عبر جسر الملك فهد من 350 ريال للسيدان ويشمل جميع رسوم الجسر (~35 ريال). المسافة 85 كم والرحلة تستغرق 1.5 إلى 2 ساعة.",
+        ? "Dammam to Bahrain (Manama) via the King Fahd Causeway starts from 400 SAR for a sedan. This includes all causeway tolls (~35 SAR). The distance is 85 km and the journey takes 1.5 to 2 hours. We deliver door-to-door to any address in Bahrain."
+        : "يبدأ تاكسي الدمام إلى البحرين (المنامة) عبر جسر الملك فهد من 400 ريال للسيدان ويشمل جميع رسوم الجسر (~35 ريال). المسافة 85 كم والرحلة تستغرق 1.5 إلى 2 ساعة.",
     },
     {
       q: locale === "en" ? "How do I book a taxi from Dammam Airport?" : "كيف أحجز تاكسي من مطار الدمام؟",

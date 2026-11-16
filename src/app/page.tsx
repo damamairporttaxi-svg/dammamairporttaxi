@@ -3,7 +3,7 @@ import { HomePageClient } from "./HomePageClient";
 
 export const metadata: Metadata = {
   title: "Dammam Airport Taxi — Private Transfers to Bahrain, Kuwait, UAE, Riyadh | King Fahd Airport DMM",
-  description: "Book private airport taxi from King Fahd International Airport (DMM) Dammam. Fixed-fare transfers to Bahrain (350 SAR), Kuwait, UAE, Riyadh. 24/7, free 60-min wait, flight tracking. WhatsApp booking.",
+  description: "Book private airport taxi from King Fahd International Airport (DMM) Dammam. Fixed-fare transfers to Bahrain (400 SAR), Kuwait, UAE, Riyadh. 24/7, free 60-min wait, flight tracking. WhatsApp booking.",
   keywords: [
     "dammam airport taxi",
     "king fahd international airport taxi",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Dammam Airport Taxi — Private Transfers to Bahrain, Kuwait, UAE, Riyadh | King Fahd Airport DMM",
-    description: "Book private airport taxi from King Fahd International Airport (DMM) Dammam. Fixed-fare transfers to Bahrain (350 SAR), Kuwait, UAE, Riyadh. 24/7, free 60-min wait, flight tracking. WhatsApp booking.",
+    description: "Book private airport taxi from King Fahd International Airport (DMM) Dammam. Fixed-fare transfers to Bahrain (400 SAR), Kuwait, UAE, Riyadh. 24/7, free 60-min wait, flight tracking. WhatsApp booking.",
     url: "https://dammamairporttaxi.com",
     type: "website",
   },

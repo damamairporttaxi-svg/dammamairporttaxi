@@ -298,7 +298,7 @@ export const relatedPagesMap: Record<string, RelatedPage[]> = {
 
   // ── GCC CROSS-BORDER ROUTES ──────────────────────────────────────
   "/gcc-border-crossing": [
-    { url: "/routes/dammam-to-bahrain", title: { en: "Dammam → Bahrain", ar: "الدمام ← البحرين" }, description: { en: "85 km · King Fahd Causeway · from 350 SAR", ar: "٨٥ كم · جسر الملك فهد" }, icon: "🇧🇭" },
+    { url: "/routes/dammam-to-bahrain", title: { en: "Dammam → Bahrain", ar: "الدمام ← البحرين" }, description: { en: "85 km · King Fahd Causeway · from 400 SAR", ar: "٨٥ كم · جسر الملك فهد" }, icon: "🇧🇭" },
     { url: "/routes/dammam-to-kuwait", title: { en: "Dammam → Kuwait", ar: "الدمام ← الكويت" }, description: { en: "420 km · Khafji border · from 1,500 SAR", ar: "٤٢٠ كم · منفذ الخفجي" }, icon: "🇰🇼" },
     { url: "/routes/dammam-to-uae", title: { en: "Dammam → Dubai, UAE", ar: "الدمام ← دبي" }, description: { en: "950 km · Al Batha border · from 3,500 SAR", ar: "٩٥٠ كم · منفذ البطحاء" }, icon: "🇦🇪" },
     { url: "/routes/dammam-to-doha", title: { en: "Dammam → Doha, Qatar", ar: "الدمام ← الدوحة" }, description: { en: "400 km · Salwa border · from 1,400 SAR", ar: "٤٠٠ كم · منفذ سلوى" }, icon: "🇶🇦" },
@@ -508,7 +508,7 @@ export const relatedPagesMap: Record<string, RelatedPage[]> = {
   "/dammam-airport-guide": [
     { url: "/routes/dammam-airport-to-khobar", title: { en: "Airport → Al Khobar", ar: "المطار ← الخبر" }, description: { en: "60 km · 45 min · most popular local route", ar: "٦٠ كم · ٤٥ دقيقة · أشهر طريق محلي" }, icon: "🏙️" },
     { url: "/routes/dammam-airport-to-jubail", title: { en: "Airport → Jubail", ar: "المطار ← الجبيل" }, description: { en: "85 km · 55 min · Aramco / SABIC hub", ar: "٨٥ كم · ٥٥ دقيقة · أرامكو وسابك" }, icon: "🏭" },
-    { url: "/routes/dammam-to-bahrain", title: { en: "Airport → Bahrain", ar: "المطار ← البحرين" }, description: { en: "85 km via King Fahd Causeway · from 350 SAR", ar: "٨٥ كم عبر جسر الملك فهد" }, icon: "🇧🇭" },
+    { url: "/routes/dammam-to-bahrain", title: { en: "Airport → Bahrain", ar: "المطار ← البحرين" }, description: { en: "85 km via King Fahd Causeway · from 400 SAR", ar: "٨٥ كم عبر جسر الملك فهد" }, icon: "🇧🇭" },
     { url: "/routes/dammam-to-riyadh", title: { en: "Airport → Riyadh", ar: "المطار ← الرياض" }, description: { en: "400 km · Saudi capital highway transfer", ar: "٤٠٠ كم · طريق العاصمة السعودية" }, icon: "🏛️" },
   ],
 

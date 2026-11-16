@@ -98,6 +98,7 @@ export function statusUpdateEmail(b: Partial<Booking>, status: string) {
     confirmed: { label: "Confirmed", color: "#2e7d32" },
     driver_assigned: { label: "Driver Assigned", color: "#1565c0" },
     in_progress: { label: "Trip In Progress", color: "#e65100" },
+    outbound_completed: { label: "Outbound Trip Completed – Return Pending", color: "#0097a7" },
     completed: { label: "Completed", color: "#2e7d32" },
     cancelled: { label: "Cancelled", color: "#c62828" },
   };

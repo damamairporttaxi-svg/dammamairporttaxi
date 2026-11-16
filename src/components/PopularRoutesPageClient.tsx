@@ -11,6 +11,7 @@ import { routesData } from "../data/routesData";
 /* ─── Category slugs ───────────────────────────────────────────── */
 const GCC_SLUGS = [
   "dammam-to-bahrain","dammam-to-kuwait","dammam-to-uae",
+  "bahrain-to-khobar","bahrain-to-dhahran","bahrain-to-jubail","bahrain-to-dammam-airport","bahrain-to-dammam-railway-station","bahrain-to-qatif","bahrain-to-ras-tanura","bahrain-to-ras-al-khair","bahrain-to-tanajib","bahrain-to-khafji","bahrain-to-al-hassa","bahrain-to-hofuf",
   "dammam-airport-to-qatar-border","dammam-to-doha","dammam-to-abu-dhabi",
   "dammam-to-sharjah","dammam-to-muscat","dammam-airport-to-bahrain-airport",
 ];

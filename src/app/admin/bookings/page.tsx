@@ -3,10 +3,10 @@ import { adminFetch } from "@/lib/admin-fetch";
 import React, { useEffect, useState, useCallback } from "react";
 import Link from "next/link";
 
-const STATUS_OPTIONS = ["all","pending","confirmed","driver_assigned","in_progress","completed","cancelled"];
+const STATUS_OPTIONS = ["all","pending","confirmed","driver_assigned","in_progress","outbound_completed","completed","cancelled"];
 const statusColor: Record<string,string> = {
   pending:"#e65100",confirmed:"#1565c0",driver_assigned:"#7b1fa2",
-  in_progress:"#00695c",completed:"#2e7d32",cancelled:"#c62828"
+  in_progress:"#00695c",outbound_completed:"#0097a7",completed:"#2e7d32",cancelled:"#c62828"
 };
 
 export default function AdminBookings() {
@@ -76,7 +76,7 @@ export default function AdminBookings() {
                   <td style={{ padding: "0.6rem 0.9rem", color:"#0C58D1", fontWeight: 700, whiteSpace: "nowrap" }}>{b.final_price} SAR</td>
                   <td style={{ padding: "0.6rem 0.9rem" }}>
                     <span style={{ background: statusColor[b.status] ?? "#333", color: "var(--text-primary)", padding: "2px 7px", borderRadius: 4, fontSize: "0.7rem", fontWeight: 700, whiteSpace: "nowrap" }}>
-                      {b.status?.replace("_"," ").toUpperCase()}
+                      {b.status==="outbound_completed"?"OUTBOUND DONE":b.status?.replace("_"," ").toUpperCase()}
                     </span>
                   </td>
                   <td style={{ padding: "0.6rem 0.9rem", whiteSpace: "nowrap" }}>

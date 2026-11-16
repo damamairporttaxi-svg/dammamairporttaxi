@@ -137,7 +137,7 @@ export default function CorporateTransfersPage() {
                     { dest: "Jubail Industrial City — SABIC & RCJY", detail: "DMM Airport → Jubail Industrial Area 1 & 2 · 85 km · 55 min · from 200 SAR", href: "/routes/dammam-airport-to-jubail" },
                     { dest: "Al Khobar Business District", detail: "DMM Airport → Al Khobar hotels & offices · 60 km · 45 min · from 150 SAR", href: "/routes/dammam-airport-to-khobar" },
                     { dest: "Riyadh — King Khalid Airport (RUH)", detail: "DMM Airport → Riyadh CBD or RUH Airport · 400 km · 3.5–4 hrs · from 900 SAR", href: "/routes/dammam-to-riyadh" },
-                    { dest: "Bahrain Financial Harbour & Manama", detail: "Dammam → Manama via King Fahd Causeway · 85 km · 1.5–2 hrs · from 350 SAR", href: "/routes/dammam-to-bahrain" },
+                    { dest: "Bahrain Financial Harbour & Manama", detail: "Dammam → Manama via King Fahd Causeway · 85 km · 1.5–2 hrs · from 400 SAR", href: "/routes/dammam-to-bahrain" },
                     { dest: "KFUPM — King Fahd University", detail: "DMM Airport → King Fahd University of Petroleum & Minerals, Dhahran · from 150 SAR", href: "/routes/dammam-airport-to-dhahran" },
                   ].map((d) => (
                     <Link key={d.dest} href={d.href} style={styles.destCard}>

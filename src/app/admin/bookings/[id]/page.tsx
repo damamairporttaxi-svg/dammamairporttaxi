@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 
-const STATUSES = ["pending","confirmed","driver_assigned","in_progress","completed","cancelled"];
+const STATUSES = ["pending","confirmed","driver_assigned","in_progress","outbound_completed","completed","cancelled"];
 const statusColor: Record<string,string> = {
   pending:"#e65100",confirmed:"#1565c0",driver_assigned:"#7b1fa2",
-  in_progress:"#00695c",completed:"#2e7d32",cancelled:"#c62828"
+  in_progress:"#00695c",outbound_completed:"#0097a7",completed:"#2e7d32",cancelled:"#c62828"
 };
 
 export default function AdminBookingDetail() {
@@ -113,7 +113,7 @@ export default function AdminBookingDetail() {
               <div>
                 <label style={label}>Status</label>
                 <select value={form.status} onChange={e => setForm(p => ({ ...p, status: e.target.value }))} style={input}>
-                  {STATUSES.map(s => <option key={s} value={s}>{s.replace("_"," ").toUpperCase()}</option>)}
+                  {STATUSES.map(s => <option key={s} value={s}>{s==="outbound_completed"?"OUTBOUND DONE – RETURN PENDING":s.replace("_"," ").toUpperCase()}</option>)}
                 </select>
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "0.75rem" }}>

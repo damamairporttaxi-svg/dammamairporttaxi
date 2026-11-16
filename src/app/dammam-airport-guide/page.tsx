@@ -55,7 +55,7 @@ const faqSchema = {
     { "@type": "Question", name: "Is airport parking included in the taxi price at DMM?", acceptedAnswer: { "@type": "Answer", text: "Yes. All DMM Airport parking fees, road tolls, and VAT (15%) are fully included in our quoted price. The price you see is the total price you pay — there are no hidden charges at the airport." } },
     { "@type": "Question", name: "What happens if my flight is delayed or cancelled?", acceptedAnswer: { "@type": "Answer", text: "We track all flights in real time. If your flight is delayed, your driver adjusts their arrival time automatically. For cancelled flights, contact us via WhatsApp as soon as possible to reschedule. Cancellations more than 12 hours before pickup are free of charge." } },
     { "@type": "Question", name: "Does DMM Airport have good facilities for long layovers?", acceptedAnswer: { "@type": "Answer", text: "King Fahd International Airport has prayer rooms, a food court, retail shops, free passenger Wi-Fi, a hotel within the terminal complex (Al-Hokair Courtyard), and multiple airline lounges. The airport is open 24 hours and handles both domestic Saudi airlines (SAUDIA, flynas, flyadeal) and major international carriers." } },
-    { "@type": "Question", name: "What are the most popular taxi routes from Dammam Airport?", acceptedAnswer: { "@type": "Answer", text: "The most booked routes from King Fahd International Airport (DMM) are: Airport to Khobar (60 km, 45 min, from 150 SAR), Airport to Jubail (85 km, 55 min, from 200 SAR), Airport to Dhahran/Aramco (55 km, 40 min, from 150 SAR), Dammam to Bahrain via King Fahd Causeway (85 km, 1.5–2 hrs, from 350 SAR), and Dammam to Riyadh (400 km, 3.5–4 hrs, from 900 SAR)." } },
+    { "@type": "Question", name: "What are the most popular taxi routes from Dammam Airport?", acceptedAnswer: { "@type": "Answer", text: "The most booked routes from King Fahd International Airport (DMM) are: Airport to Khobar (60 km, 45 min, from 150 SAR), Airport to Jubail (85 km, 55 min, from 200 SAR), Airport to Dhahran/Aramco (55 km, 40 min, from 150 SAR), Dammam to Bahrain via King Fahd Causeway (85 km, 1.5–2 hrs, from 400 SAR), and Dammam to Riyadh (400 km, 3.5–4 hrs, from 900 SAR)." } },
   ],
 };
 
@@ -196,7 +196,7 @@ export default function DammamAirportGuidePage() {
                     { name: "DMM Airport → Jubail Industrial City", dist: "85 km", time: "55 min", price: "200 SAR", href: "/routes/dammam-airport-to-jubail" },
                     { name: "DMM Airport → Dhahran (Aramco HQ)", dist: "55 km", time: "40 min", price: "150 SAR", href: "/routes/dammam-airport-to-dhahran" },
                     { name: "DMM Airport → Hofuf (Al-Ahsa)", dist: "160 km", time: "1.5–2 hrs", price: "400 SAR", href: "/routes/dammam-airport-to-hofuf" },
-                    { name: "Dammam → Bahrain (King Fahd Causeway)", dist: "85 km", time: "1.5–2 hrs", price: "350 SAR", href: "/routes/dammam-to-bahrain" },
+                    { name: "Dammam → Bahrain (King Fahd Causeway)", dist: "85 km", time: "1.5–2 hrs", price: "400 SAR", href: "/routes/dammam-to-bahrain" },
                     { name: "Dammam → Riyadh (Intercity)", dist: "400 km", time: "3.5–4 hrs", price: "900 SAR", href: "/routes/dammam-to-riyadh" },
                     { name: "Dammam → Kuwait (Khafji Border)", dist: "420 km", time: "4–4.5 hrs", price: "1,500 SAR", href: "/routes/dammam-to-kuwait" },
                     { name: "Dammam → Qatar Border (Salwa)", dist: "310 km", time: "3 hrs", price: "1,000 SAR", href: "/routes/dammam-airport-to-qatar-border" },
@@ -244,7 +244,7 @@ export default function DammamAirportGuidePage() {
                     { q: "How long is the free waiting time?", a: "60 minutes from your flight's actual landing time — enough to clear immigration, collect baggage, and exit customs without any rush." },
                     { q: "Is airport parking included in the price?", a: "Yes. All DMM Airport parking fees, road tolls, and 15% VAT are fully included in the quoted price. What you see is what you pay." },
                     { q: "What if my flight is delayed or cancelled?", a: "Our system tracks your flight live. Delays adjust your driver's schedule automatically at no charge. For cancellations, contact us on WhatsApp to reschedule — free within 12 hours of original pickup." },
-                    { q: "What are the busiest routes from DMM Airport?", a: "Most booked: Airport → Khobar (150 SAR), Airport → Jubail (200 SAR), Airport → Dhahran (150 SAR), Dammam → Bahrain via Causeway (350 SAR), Dammam → Riyadh (900 SAR)." },
+                    { q: "What are the busiest routes from DMM Airport?", a: "Most booked: Airport → Khobar (150 SAR), Airport → Jubail (200 SAR), Airport → Dhahran (150 SAR), Dammam → Bahrain via Causeway (400 SAR), Dammam → Riyadh (900 SAR)." },
                   ].map((faq, i) => (
                     <div key={i} style={styles.faqItem}>
                       <h3 style={styles.faqQ}>{faq.q}</h3>
@@ -277,7 +277,7 @@ export default function DammamAirportGuidePage() {
                   { label: "→ Khobar", price: "150 SAR", href: "/routes/dammam-airport-to-khobar" },
                   { label: "→ Jubail", price: "200 SAR", href: "/routes/dammam-airport-to-jubail" },
                   { label: "→ Dhahran", price: "150 SAR", href: "/routes/dammam-airport-to-dhahran" },
-                  { label: "→ Bahrain", price: "350 SAR", href: "/routes/dammam-to-bahrain" },
+                  { label: "→ Bahrain", price: "400 SAR", href: "/routes/dammam-to-bahrain" },
                   { label: "→ Riyadh", price: "900 SAR", href: "/routes/dammam-to-riyadh" },
                 ].map((r) => (
                   <Link key={r.href} href={r.href} style={styles.sideRoute}>

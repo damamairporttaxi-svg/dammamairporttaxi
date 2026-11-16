@@ -257,7 +257,7 @@ export function HomePageClient() {
           </div>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))", gap:"1rem" }}>
             {[
-              { flag:"🇧🇭", country: locale==="en"?"Bahrain":"البحرين", route: locale==="en"?"Via King Fahd Causeway":"عبر جسر الملك فهد", price:"From 350 SAR", dist:"85 km" },
+              { flag:"🇧🇭", country: locale==="en"?"Bahrain":"البحرين", route: locale==="en"?"Via King Fahd Causeway":"عبر جسر الملك فهد", price:"From 400 SAR", dist:"85 km" },
               { flag:"🇰🇼", country: locale==="en"?"Kuwait":"الكويت", route: locale==="en"?"Via Khafji Border":"عبر حدود خفجي", price:"From 1,500 SAR", dist:"420 km" },
               { flag:"🇦🇪", country: locale==="en"?"UAE (Dubai)":"الإمارات (دبي)", route: locale==="en"?"Via Ghuwaifat Border":"عبر حدود الغويفات", price:"From 3,500 SAR", dist:"950 km" },
               { flag:"🇶🇦", country: locale==="en"?"Qatar (Doha)":"قطر (الدوحة)", route: locale==="en"?"Via Salwa Border":"عبر حدود سلوى", price:"From 1,400 SAR", dist:"400 km" },
@@ -424,7 +424,7 @@ export function HomePageClient() {
             </p>
             <div style={art.routeGrid}>
               {[
-                { route: "Dammam to Bahrain Taxi (King Fahd Causeway)", dist: "85 km",    time: "1.5–2 hrs",  from: "350 SAR",   note: "Causeway tolls included · door-to-door Manama" },
+                { route: "Dammam to Bahrain Taxi (King Fahd Causeway)", dist: "85 km",    time: "1.5–2 hrs",  from: "400 SAR",   note: "Causeway tolls included · door-to-door Manama" },
                 { route: "Dammam to Qatar Border Taxi (Salwa)",          dist: "310 km",   time: "3 hrs",      from: "1,000 SAR", note: "Salwa–Abu Samra crossing · onward to Doha" },
                 { route: "Dammam to Doha Qatar Taxi",                    dist: "400 km",   time: "5–6 hrs",    from: "1,400 SAR", note: "Full Doha city delivery available" },
                 { route: "Dammam to Kuwait City Taxi (Khafji Border)",   dist: "420 km",   time: "4–4.5 hrs",  from: "1,500 SAR", note: "Khafji–Nuwaiseeb crossing · valid permits held" },
@@ -475,7 +475,7 @@ export function HomePageClient() {
           <div style={art.block}>
             <h3 style={art.h3}>Most Searched Dammam Taxi Routes — Distance &amp; Travel Guide</h3>
             <p style={art.p}>
-              <strong>Dammam to Bahrain taxi distance</strong> is 85 km via the King Fahd Causeway — the world-famous 25 km bridge connecting Al Khobar to Manama. Travel time is 1.5 to 2 hours under normal conditions. Our fare starts from 350 SAR for a Camry sedan and includes all causeway tolls. Bahrain is the most popular day-trip and weekend destination from the Eastern Province.
+              <strong>Dammam to Bahrain taxi distance</strong> is 85 km via the King Fahd Causeway — the world-famous 25 km bridge connecting Al Khobar to Manama. Travel time is 1.5 to 2 hours under normal conditions. Our fare starts from 400 SAR for a Camry sedan and includes all causeway tolls. Bahrain is the most popular day-trip and weekend destination from the Eastern Province.
             </p>
             <p style={art.p}>
               <strong>Dammam to Riyadh taxi distance</strong> is 400 km on the E40 highway — approximately 3.5 to 4 hours non-stop. Starting from 900 SAR, this is the preferred choice for business travellers avoiding the time cost of domestic flights between DMM and RUH airports.

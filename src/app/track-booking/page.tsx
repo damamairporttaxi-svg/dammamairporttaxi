@@ -10,6 +10,7 @@ const statusLabels: Record<string, string> = {
   confirmed: "Confirmed",
   driver_assigned: "Driver Assigned",
   in_progress: "Trip in Progress",
+  outbound_completed: "Outbound Trip Done – Return Pending",
   completed: "Completed",
   cancelled: "Cancelled",
 };
@@ -37,7 +38,7 @@ export default function TrackBookingPage() {
     row: { display: "flex" as const, justifyContent: "space-between" as const, padding: "0.6rem 0", borderBottom: "1px solid #1a1a1a" },
   };
 
-  const currentStep = booking ? statusSteps.indexOf(booking.status) : -1;
+  const currentStep = booking ? statusSteps.indexOf(booking.status === "outbound_completed" ? "in_progress" : booking.status) : -1;
 
   return (
     <div style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}>

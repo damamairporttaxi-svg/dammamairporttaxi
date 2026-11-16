@@ -2,7 +2,7 @@ import { supabaseAdmin } from "@/lib/supabase-admin";
 import { resend, ADMIN_EMAIL, FROM_EMAIL } from "@/lib/resend";
 import { bookingConfirmationCustomer, bookingNotificationAdmin } from "@/lib/email-templates";
 
-export const BOOKING_STATUSES = ["pending", "confirmed", "driver_assigned", "in_progress", "completed", "cancelled"];
+export const BOOKING_STATUSES = ["pending", "confirmed", "driver_assigned", "in_progress", "outbound_completed", "completed", "cancelled"];
 
 const str = (v: unknown, max = 500) => (typeof v === "string" ? v.trim().slice(0, max) : "");
 const num = (v: unknown, d = 0) => { const n = Number(v); return Number.isFinite(n) && n >= 0 ? n : d; };

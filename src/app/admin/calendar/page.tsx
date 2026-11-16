@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const statusColor: Record<string,string> = {
   pending:"#e65100",confirmed:"#1565c0",driver_assigned:"#7b1fa2",
-  in_progress:"#00695c",completed:"#2e7d32",cancelled:"#c62828"
+  in_progress:"#00695c",outbound_completed:"#0097a7",completed:"#2e7d32",cancelled:"#c62828"
 };
 
 export default function AdminCalendar() {

@@ -139,7 +139,7 @@ export default function GCCBorderCrossingPage() {
                 </ul>
 
                 <div style={styles.infoBox}>
-                  <strong>Dammam to Bahrain Fares:</strong> Sedan (Toyota Camry) from <strong>350 SAR</strong> · SUV (GMC Yukon) from <strong>600 SAR</strong> · Family Van from <strong>750 SAR</strong>
+                  <strong>Dammam to Bahrain Fares:</strong> Sedan (Toyota Camry) from <strong>400 SAR</strong> · SUV (GMC Yukon) from <strong>550 SAR</strong> · Family Van from <strong>700 SAR</strong>
                   <br /><Link href="/routes/dammam-to-bahrain" style={styles.infoLink}>→ View full Bahrain route details & book</Link>
                 </div>
               </article>
@@ -257,7 +257,7 @@ export default function GCCBorderCrossingPage() {
                 <p style={styles.sideSub}>Fixed rates · All tolls included · 24/7</p>
                 <div style={styles.sideRoutes}>
                   {[
-                    { label: "→ Bahrain", href: "/routes/dammam-to-bahrain", price: "350" },
+                    { label: "→ Bahrain", href: "/routes/dammam-to-bahrain", price: "400" },
                     { label: "→ Kuwait", href: "/routes/dammam-to-kuwait", price: "1,500" },
                     { label: "→ UAE", href: "/routes/dammam-to-uae", price: "3,500" },
                     { label: "→ Qatar Border", href: "/routes/dammam-airport-to-qatar-border", price: "1,000" },

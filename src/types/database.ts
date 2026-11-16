@@ -3,6 +3,7 @@ export type BookingStatus =
   | "confirmed"
   | "driver_assigned"
   | "in_progress"
+  | "outbound_completed"
   | "completed"
   | "cancelled";
 
