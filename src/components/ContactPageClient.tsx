@@ -36,6 +36,14 @@ export function ContactPageClient() {
           <span className="badge-gold">{t("navContact")}</span>
           <h1 style={styles.heroTitle}>{t("contactTitle")}</h1>
           <p style={styles.heroSub}>{t("contactSub")}</p>
+          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", justifyContent: "center", marginTop: "1.25rem" }}>
+            <a href="https://wa.me/966591419157" target="_blank" rel="noopener noreferrer" className="btn btn-whatsapp" style={{ textDecoration: "none" }}>
+              {locale === "en" ? "WhatsApp: +966 59 141 9157" : "واتساب: 966591419157+"}
+            </a>
+            <a href="tel:+966591419157" className="btn" style={{ textDecoration: "none", backgroundColor: "#0C58D1", color: "#fff" }}>
+              {locale === "en" ? "Call Now · 24/7" : "اتصل الآن · 24/7"}
+            </a>
+          </div>
         </div>
       </section>
 

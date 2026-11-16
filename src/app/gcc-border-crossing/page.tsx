@@ -208,6 +208,19 @@ export default function GCCBorderCrossingPage() {
                 </div>
               </article>
 
+              {/* BORDER NAMES */}
+              <article style={styles.section}>
+                <h2 style={styles.h2}>Saudi Border Crossings — Names on Both Sides</h2>
+                <p style={styles.p}>Each Saudi land border has a different name on the Saudi side and on the other side. If you searched for one of these names, this is how they match up:</p>
+                <ul style={styles.p as React.CSSProperties}>
+                  <li><strong>Bahrain:</strong> King Fahd Causeway (Saudi side) to Bahrain causeway passport control</li>
+                  <li><strong>Kuwait:</strong> Khafji border (Saudi side) = Nuwaiseeb border (Kuwait side). This is the crossing used from Dammam. Kuwait&apos;s other crossing, Salmi, connects to the Saudi Al Raqai crossing near Hafar Al Batin, which is on a different route.</li>
+                  <li><strong>UAE:</strong> Al Batha (Saudi side) = Ghuwaifat (UAE side)</li>
+                  <li><strong>Qatar:</strong> Salwa (Saudi side) = Abu Samra (Qatar side)</li>
+                </ul>
+                <p style={styles.p}>&quot;Durra&quot; often appears in searches, but it is an offshore gas field near Khafji, not a border crossing. For Kuwait from Dammam, use the Khafji / Nuwaiseeb crossing.</p>
+              </article>
+
               {/* DOCUMENTS SUMMARY */}
               <article style={styles.section}>
                 <h2 style={styles.h2}>Required Documents — Quick Reference Table</h2>
@@ -238,6 +251,8 @@ export default function GCCBorderCrossingPage() {
                     { q: "How long does the King Fahd Causeway crossing take?", a: "1.5–2 hours on a normal weekday. Up to 3–5 hours during GCC public holidays or Thursday/Friday weekends. Our drivers know the best lanes to minimise waiting time." },
                     { q: "Can I cross GCC borders without an Exit/Re-Entry visa?", a: "Saudi residents (non-Saudi nationals holding an Iqama) must hold a valid Exit/Re-Entry visa to leave Saudi Arabia. Without it, you cannot depart. Saudi citizens and GCC nationals are exempt." },
                     { q: "What happens if my passport is stamped with a certain country?", a: "There are no restrictions for holders of Israeli stamps at Saudi, Bahrain, Kuwait, or UAE borders as of 2024. For the latest entry rules specific to your passport, always verify with the destination country's embassy before travel." },
+                    { q: "What is the Nuwaiseeb border and is it the same as Khafji?", a: "Yes. Khafji is the Saudi side and Nuwaiseeb is the Kuwait side of the same crossing. It is the border used for taxi trips from Dammam to Kuwait." },
+                    { q: "Which border do I use from Dammam to Qatar, UAE and Bahrain?", a: "Qatar: Salwa (Saudi side) / Abu Samra. UAE: Al Batha (Saudi side) / Ghuwaifat. Bahrain: King Fahd Causeway. Our drivers handle the route for you." },
                     { q: "Do you provide same-day return trips across GCC borders?", a: "Yes. We offer discounted round-trip booking packages for same-day or next-day returns. Contact us on WhatsApp with your travel dates for a custom quote." },
                   ].map((faq, i) => (
                     <div key={i} style={styles.faqItem}>

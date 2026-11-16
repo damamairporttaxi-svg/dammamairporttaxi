@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { ContactPageClient } from "@/components/ContactPageClient";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Book by WhatsApp 24/7",
-  description: "Contact Dammam Airport Taxi 24/7 via WhatsApp, phone, or email for private airport transfers and GCC cross-border taxi bookings. Instant quote & fast response.",
+  title: "WhatsApp & Phone Number — Book Taxi 24/7",
+  description: "Dammam Airport Taxi WhatsApp & phone number +966 59 141 9157, open 24/7. Contact us via WhatsApp, phone, or email for private airport transfers and GCC cross-border taxi bookings. Instant quote & fast response.",
   alternates: {
     canonical: "https://dammamairporttaxi.com/contact",
   },
